@@ -1,0 +1,40 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/web-dev"
+  to = "/web-development.html"
+  status = 301
+
+[[redirects]]
+  from = "/seo"
+  to = "/digital-marketing-seo.html"
+  status = 301
+
+[[redirects]]
+  from = "/mobile-apps"
+  to = "/mobile-app-development.html"
+  status = 301
+
+[[redirects]]
+  from = "/e-commerce"
+  to = "/ecommerce-development.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helix24 Solutions — Web Development & Digital Marketing Agency</title>
+  <meta name="description" content="Helix24 builds fast, custom websites, mobile apps, and enterprise software, then executes SEO & ad campaigns that bring in paying customers. All under one team.">
+  <meta name="keywords" content="web development agency, digital marketing, SEO agency, custom software, mobile app development, e-commerce, Google Ads, Meta Ads">
+  <link rel="canonical" href="https://helix24.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://helix24.com/">
+  <meta property="og:title" content="Helix24 Solutions — Web Development & Digital Marketing Agency">
+  <meta property="og:description" content="We build high-converting websites, apps, and software — then run the SEO & paid ad campaigns that drive measurable growth.">
+  <meta property="og:image" content="https://helix24.com/assets/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://helix24.com/">
+  <meta name="twitter:title" content="Helix24 Solutions — Web Development & Digital Marketing Agency">
+  <meta name="twitter:description" content="Custom web & app engineering combined with data-driven SEO & PPC marketing under one roof.">
+
+  <!-- Favicon & Google Fonts -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 32'%3E%3Cpath d='M4 2C4 9 20 9 20 16C20 23 4 23 4 30' fill='none' stroke='%236D28D9' stroke-width='2.8' stroke-linecap='round'/%3E%3Cpath d='M20 2C20 9 4 9 4 16C4 23 20 23 20 30' fill='none' stroke='%238B5CF6' stroke-width='2.8' stroke-linecap='round' opacity='.6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Structured Data JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Helix24 Solutions",
+    "url": "https://helix24.com/",
+    "logo": "https://helix24.com/assets/logo.png",
+    "description": "Full-service web development, custom software engineering, and digital marketing agency.",
+    "sameAs": [
+      "https://twitter.com/helix24",
+      "https://linkedin.com/company/helix24"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Website & Software Development",
+            "url": "https://helix24.com/web-development.html"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Marketing & SEO",
+            "url": "https://helix24.com/digital-marketing-seo.html"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile App Development",
+            "url": "https://helix24.com/mobile-app-development.html"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  <!-- Google Sitelinks & SearchBox Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://helix24.com/#website",
+        "url": "https://helix24.com/",
+        "name": "Helix24 Solutions",
+        "description": "Website Development & Digital Marketing Agency",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://helix24.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://helix24.com/#sitelinks",
+        "name": "Site Navigation Sitelinks",
+        "itemListElement": [
+          {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "name": "Website Development",
+            "url": "https://helix24.com/web-development.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "name": "Digital Marketing & SEO",
+            "url": "https://helix24.com/digital-marketing-seo.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 3,
+            "name": "Mobile App Development",
+            "url": "https://helix24.com/mobile-app-development.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 4,
+            "name": "E-Commerce Solutions",
+            "url": "https://helix24.com/ecommerce-development.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 5,
+            "name": "Results & Case Studies",
+            "url": "https://helix24.com/results.html"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 6,
+            "name": "Contact Us",
+            "url": "https://helix24.com/contact.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress & Cursor Glow -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="noise"></div>
+  </div>
+
+  <!-- Shared Header Navigation -->
+  <header>
+    <div class="navbar wrap" id="navbar">
+      <a href="index.html" class="logo magnetic" aria-label="Helix24 Home">
+        <svg class="logo-mark" viewBox="0 0 24 32" width="26" height="34" fill="none">
+          <defs>
+            <linearGradient id="helixGradNav" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" style="stop-color:var(--violet)"/>
+              <stop offset="100%" style="stop-color:var(--violet-bright)"/>
+            </linearGradient>
+          </defs>
+          <path d="M4 2C4 9 20 9 20 16C20 23 4 23 4 30" stroke="url(#helixGradNav)" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 2C20 9 4 9 4 16C4 23 20 23 20 30" stroke="url(#helixGradNav)" stroke-width="2.6" stroke-linecap="round" opacity=".5"/>
+          <circle cx="12" cy="9" r="1.5" fill="var(--violet-bright)"/>
+          <circle cx="12" cy="16" r="1.5" fill="var(--violet)"/>
+          <circle cx="12" cy="23" r="1.5" fill="var(--violet-bright)"/>
+        </svg>
+        Helix<span class="logo-num">24</span>
+      </a>
+      <nav class="links">
+        <a href="index.html" class="active">Home</a>
+        <a href="web-development.html">Web Dev</a>
+        <a href="digital-marketing-seo.html">SEO & Marketing</a>
+        <a href="mobile-app-development.html">Mobile Apps</a>
+        <a href="ecommerce-development.html">E-Commerce</a>
+        <a href="results.html">Results</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="cta-btn magnetic" id="navCta" href="contact.html">Get Free Quote</a>
+      <button class="theme-toggle-btn" aria-label="Toggle theme">🌙</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="web-development.html">Web & Software Dev</a>
+        <a href="digital-marketing-seo.html">Digital Marketing & SEO</a>
+        <a href="mobile-app-development.html">Mobile App Dev</a>
+        <a href="ecommerce-development.html">E-Commerce Solutions</a>
+        <a href="branding-design.html">Branding & UI/UX</a>
+        <a href="results.html">Results & Case Studies</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a class="cta-btn" href="contact.html">Get Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="particles" id="particles"></div>
+      <div class="wrap">
+        <div class="eyebrow" id="heroEyebrow"><span class="dot"></span>Full-Service Web & Digital Marketing Agency</div>
+        <h1 id="heroTitle">We build your website.<br>Then <span class="accent">bring you customers.</span></h1>
+        <p class="hero-desc" id="heroDesc">Helix24 is a website development and digital marketing agency. We build fast websites, mobile apps, and custom software — then run the search engine optimization (SEO) and paid ad campaigns that convert visitors into revenue.</p>
+        <div class="hero-ctas" id="heroCtas">
+          <a class="cta-btn magnetic" href="contact.html">Get a free quote →</a>
+          <a class="cta-ghost magnetic" href="results.html">Explore our results</a>
+        </div>
+      </div>
+      <div class="hero-3d" id="hero3d">
+        <div class="slab-stage" id="slabStage">
+          <div class="slab s3"></div>
+          <div class="slab s2">
+            <div class="slab-line" style="top:26px;"></div>
+            <div class="slab-line" style="top:46px; width:60%;"></div>
+          </div>
+          <div class="slab s1">
+            <div class="slab-line" style="top:30px;"></div>
+            <div class="slab-line" style="top:50px; width:70%;"></div>
+            <div class="slab-line" style="top:70px; width:40%;"></div>
+            <div class="slab-seam"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Services Bento Grid -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-divider"></div>
+          <div class="eyebrow reveal-up"><span class="dot"></span>Integrated Services</div>
+          <h2 class="section-title reveal-up">Web engineering and growth marketing united.</h2>
+          <p class="section-sub reveal-up">Click any service to explore detailed solutions, tech stacks, and case studies.</p>
+        </div>
+
+        <div class="bento">
+          <a href="web-development.html" class="bcell b-w2 b-h2 b-accent reveal-scale" data-tilt>
+            <span class="tag">Flagship Expertise</span>
+            <div class="bicon">◆</div>
+            <h3>Website & Software Development</h3>
+            <p>Fast business websites, web applications, and custom enterprise software like CRM and ERP systems built for extreme performance and Google indexing.</p>
+          </a>
+          
+          <a href="digital-marketing-seo.html" class="bcell b-w2 reveal-scale" data-tilt>
+            <span class="tag">Growth & Revenue</span>
+            <div class="bicon">▲</div>
+            <h3>Digital Marketing & SEO Agency</h3>
+            <p>Search Engine Optimization, Google Ads (PPC), and Meta Ads managed by conversion math, not vanity impressions.</p>
+          </a>
+
+          <a href="mobile-app-development.html" class="bcell b-h2 reveal-scale" data-tilt>
+            <div class="bicon">●</div>
+            <h3>Mobile App Development</h3>
+            <p>Native iOS, Android, and Flutter cross-platform mobile apps engineered for speed and app store visibility.</p>
+          </a>
+
+          <a href="ecommerce-development.html" class="bcell reveal-up" data-tilt>
+            <div class="bicon">🛒</div>
+            <h3>E-Commerce Solutions</h3>
+            <p>Shopify & WooCommerce online storefronts built to convert browsers into repeat buyers.</p>
+          </a>
+
+          <a href="branding-design.html" class="bcell reveal-up" data-tilt>
+            <div class="bicon">◈</div>
+            <h3>Branding & UI/UX Design</h3>
+            <p>Logos, brand identity guidelines, and high-converting user interfaces.</p>
+          </a>
+
+          <a href="contact.html" class="bcell b-cta reveal-up" data-tilt>
+            <div class="bicon">→</div>
+            <h3>Request Free Proposal</h3>
+            <p>Get a custom engineering and marketing proposal within 24 hours.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee Tech Stack -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <span class="marquee-item">Next.js 14</span>
+        <span class="marquee-item">React & TypeScript</span>
+        <span class="marquee-item">Python / Django</span>
+        <span class="marquee-item">Node.js & Express</span>
+        <span class="marquee-item">Shopify Plus</span>
+        <span class="marquee-item">Flutter Mobile</span>
+        <span class="marquee-item">Google Ads PPC</span>
+        <span class="marquee-item">Technical SEO</span>
+        <span class="marquee-item">Meta Ads ROI</span>
+        <span class="marquee-item">Schema.org JSON-LD</span>
+        <!-- Repeat track -->
+        <span class="marquee-item">Next.js 14</span>
+        <span class="marquee-item">React & TypeScript</span>
+        <span class="marquee-item">Python / Django</span>
+        <span class="marquee-item">Node.js & Express</span>
+        <span class="marquee-item">Shopify Plus</span>
+        <span class="marquee-item">Flutter Mobile</span>
+        <span class="marquee-item">Google Ads PPC</span>
+        <span class="marquee-item">Technical SEO</span>
+        <span class="marquee-item">Meta Ads ROI</span>
+        <span class="marquee-item">Schema.org JSON-LD</span>
+      </div>
+    </div>
+
+    <!-- Measurable Results Counter -->
+    <section id="stats">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-divider"></div>
+          <div class="eyebrow reveal-up"><span class="dot"></span>Proven Track Record</div>
+          <h2 class="section-title reveal-up">Quantifiable outcome metrics for every client.</h2>
+          <p class="section-sub reveal-up">We track every line of code and ad dollar directly to customer acquisition.</p>
+        </div>
+        <div class="stats">
+          <div class="stat-card reveal-scale"><b data-count="120">0</b><span>PROJECTS DELIVERED</span></div>
+          <div class="stat-card reveal-scale"><b data-count="42" data-decimal="1">0</b><span>AVG RETURN ON AD SPEND (ROAS)</span></div>
+          <div class="stat-card reveal-scale"><b data-count="98">%</b><span>CLIENT RETENTION RATE</span></div>
+          <div class="stat-card reveal-scale"><b data-count="6">0</b><span>YEARS IN ENGINEERING & GROWTH</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operating Methodology -->
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-divider"></div>
+          <div class="eyebrow reveal-up"><span class="dot"></span>Streamlined Process</div>
+          <h2 class="section-title reveal-up">From strategy discovery to market dominance.</h2>
+        </div>
+        <div class="proc-grid">
+          <div class="proc-line" id="procLine"></div>
+          <div class="proc-card reveal-left">
+            <span class="proc-num">STEP 01</span>
+            <h4>Technical & Market Discovery</h4>
+            <p>We analyze your market niche, competitor SEO footprints, customer search intent, and technical bottlenecks.</p>
+          </div>
+          <div class="proc-card reveal-up">
+            <span class="proc-num">STEP 02</span>
+            <h4>High-Performance Build</h4>
+            <p>Your web application or mobile platform is engineered with clean code, lightning speed, and built-in search compliance.</p>
+          </div>
+          <div class="proc-card reveal-right">
+            <span class="proc-num">STEP 03</span>
+            <h4>Agile Growth & Scaling</h4>
+            <p>SEO campaigns and automated ad funnels launch simultaneously, delivering immediate lead generation and predictable ROI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="trust">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-divider"></div>
+          <div class="eyebrow reveal-up"><span class="dot"></span>Client Testimonials</div>
+          <h2 class="section-title reveal-up">What founders say about Helix24.</h2>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-card reveal-up">
+            <div class="trust-stars">★ ★ ★ ★ ★</div>
+            <p>"Helix24 built our platform and spearheaded our Google SEO campaign. Within two months, our organic lead volume tripled."</p>
+            <div class="trust-author">Priya Sharma</div>
+            <div class="trust-role">Founder, UrbanNest</div>
+          </div>
+          <div class="trust-card reveal-up">
+            <div class="trust-stars">★ ★ ★ ★ ★</div>
+            <p>"They designed our mobile booking app and optimized our digital marketing. Bookings rose from 20 to over 220 per month."</p>
+            <div class="trust-author">Rahul Verma</div>
+            <div class="trust-role">CEO, FitTrack Pro</div>
+          </div>
+          <div class="trust-card reveal-up">
+            <div class="trust-stars">★ ★ ★ ★ ★</div>
+            <p>"Having web development and marketing handled under one umbrella saved us thousands of dollars and months of lost time."</p>
+            <div class="trust-author">Aisha Khan</div>
+            <div class="trust-role">Director, Bloom Co.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section id="contact-banner">
+      <div class="wrap">
+        <div class="final-cta reveal-scale">
+          <h2>Ready to elevate your digital presence and revenue?</h2>
+          <p>Talk with our engineering and growth strategists today. Get a clear proposal and transparent quote.</p>
+          <div class="hero-ctas">
+            <a class="cta-btn magnetic" href="contact.html">Get Free Estimate →</a>
+            <a class="cta-ghost magnetic" href="about.html">Learn About Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <a href="index.html" class="logo magnetic" aria-label="Helix24 Home">
+            <svg class="logo-mark" viewBox="0 0 24 32" width="24" height="32" fill="none">
+              <defs>
+                <linearGradient id="helixGradFoot" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" style="stop-color:var(--violet)"/>
+                  <stop offset="100%" style="stop-color:var(--violet-bright)"/>
+                </linearGradient>
+              </defs>
+              <path d="M4 2C4 9 20 9 20 16C20 23 4 23 4 30" stroke="url(#helixGradFoot)" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M20 2C20 9 4 9 4 16C4 23 20 23 20 30" stroke="url(#helixGradFoot)" stroke-width="2.6" stroke-linecap="round" opacity=".5"/>
+              <circle cx="12" cy="9" r="1.5" fill="var(--violet-bright)"/>
+              <circle cx="12" cy="16" r="1.5" fill="var(--violet)"/>
+              <circle cx="12" cy="23" r="1.5" fill="var(--violet-bright)"/>
+            </svg>
+            Helix<span class="logo-num">24</span>
+          </a>
+          <p style="margin-top:16px;">Helix24 Solutions is a full-service web development and digital marketing agency delivering engineered digital products and targeted customer acquisition campaigns.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Services</h4>
+          <ul class="foot-links-list">
+            <li><a href="web-development.html">Website & Software Dev</a></li>
+            <li><a href="digital-marketing-seo.html">Digital Marketing & SEO</a></li>
+            <li><a href="mobile-app-development.html">Mobile App Dev</a></li>
+            <li><a href="ecommerce-development.html">E-Commerce Development</a></li>
+            <li><a href="branding-design.html">Branding & UI/UX</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <ul class="foot-links-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="results.html">Results & Case Studies</a></li>
+            <li><a href="contact.html">Free Quote Estimator</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Contact Us</h4>
+          <p>Ready to start your project?</p>
+          <p style="margin-top:10px;"><strong>Email:</strong> hello@helix24.com</p>
+          <p><strong>Phone:</strong> <a href="tel:+919048009044" style="color:var(--violet);">+91 9048009044</a></p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>© 2026 HELIX24 SOLUTIONS — WEBSITE DEVELOPMENT & DIGITAL MARKETING AGENCY</p>
+        <div>
+          <a href="sitemap.xml" style="margin-right:15px;">Sitemap</a>
+          <a href="robots.txt">Robots.txt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Quote FAB & Drawer Overlay -->
+    <!-- Floating Direct WhatsApp Chat Action -->
+  <a href="https://wa.me/919048009044" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    💬 WhatsApp Chat
+  </a>
+  <button class="quick-quote-fab" id="quickQuoteFab" aria-label="Request quick quote">
+    <span>⚡</span> Quick Quote
+  </button>
+
+  <div class="drawer-overlay" id="quickDrawerOverlay">
+    <div class="drawer-content">
+      <button class="drawer-close" id="drawerClose" aria-label="Close drawer">&times;</button>
+      <h3 style="font-size:24px; margin-bottom:8px;">Quick Project Inquiry</h3>
+      <p style="color:var(--muted); font-size:14px; margin-bottom:24px;">Send us a quick message and get a custom quote within hours.</p>
+      
+      <form id="quickDrawerForm">
+        <div class="form-group">
+          <label for="qdName">Your Name *</label>
+          <input type="text" id="qdName" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+        <div class="form-group">
+          <label for="qdEmail">Email Address *</label>
+          <input type="email" id="qdEmail" class="form-input" placeholder="alex@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="qdService">Service Needed</label>
+          <select id="qdService" class="form-select">
+            <option value="web">Web & Custom Software Dev</option>
+            <option value="seo">SEO & Digital Marketing</option>
+            <option value="app">Mobile App Development</option>
+            <option value="ecom">Shopify / WooCommerce Store</option>
+            <option value="branding">Branding & UI/UX Design</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="qdMessage">Brief Requirements</label>
+          <textarea id="qdMessage" class="form-textarea" style="min-height:90px;" placeholder="What are your goals or questions?" required></textarea>
+        </div>
+        <button type="submit" class="cta-btn magnetic" style="width:100%; padding:12px;">Submit Quick Request →</button>
+        <div id="quickFormNotice" class="form-notice"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
