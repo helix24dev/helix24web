@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
+  <!-- Outer Window Background -->
+  <rect width="600" height="400" rx="14" fill="#0A0616"/>
+  <rect width="598" height="398" x="1" y="1" rx="13" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1.5"/>
+
+  <!-- Google Chrome Browser Bar -->
+  <rect width="600" height="42" fill="#140B28"/>
+  <circle cx="18" cy="21" r="4.5" fill="#EF4444"/>
+  <circle cx="34" cy="21" r="4.5" fill="#F59E0B"/>
+  <circle cx="50" cy="21" r="4.5" fill="#10B981"/>
+
+  <!-- Chrome Address Bar -->
+  <rect x="75" y="10" width="450" height="22" rx="11" fill="#1E1038" stroke="rgba(255,255,255,0.1)"/>
+  <text x="90" y="25" fill="#10B981" font-family="'Inter', sans-serif" font-size="10">🔒 https://helix24.com</text>
+
+  <!-- High Speed Performance SLA Badge -->
+  <rect x="420" y="12" width="95" height="18" rx="9" fill="#10B981"/>
+  <text x="467" y="25" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="9" font-weight="700" text-anchor="middle">⚡ 100/100 SPEED</text>
+
+  <!-- Left Sidebar Navigation -->
+  <g transform="translate(15, 52)">
+    <rect width="130" height="332" rx="10" fill="#100824" stroke="rgba(255,255,255,0.06)"/>
+
+    <text x="14" y="26" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">BUSINESS SYSTEM</text>
+
+    <!-- Nav Items -->
+    <rect x="8" y="38" width="114" height="26" rx="6" fill="#6D28D9"/>
+    <text x="18" y="55" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">📊 Overview</text>
+
+    <rect x="8" y="70" width="114" height="26" rx="6" fill="#160C33"/>
+    <text x="18" y="87" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">👥 Client Accounts</text>
+
+    <rect x="8" y="102" width="114" height="26" rx="6" fill="#160C33"/>
+    <text x="18" y="119" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">🎯 Sales Pipeline</text>
+
+    <rect x="8" y="134" width="114" height="26" rx="6" fill="#160C33"/>
+    <text x="18" y="151" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">⚙️ Automation</text>
+
+    <!-- System Performance Box -->
+    <rect x="8" y="235" width="114" height="85" rx="8" fill="#180C36" stroke="#8B5CF6"/>
+    <text x="14" y="253" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">0.28s SPEED SLA</text>
+    <text x="14" y="269" fill="#FFF" font-family="'Inter', sans-serif" font-size="9">Sub-Second Load</text>
+    <text x="14" y="285" fill="#3B82F6" font-family="'Inter', sans-serif" font-size="9">99.99% Uptime</text>
+    <text x="14" y="301" fill="#10B981" font-family="'Inter', sans-serif" font-size="9">SOC 2 Security</text>
+  </g>
+
+  <!-- Right Dashboard Content -->
+  <g transform="translate(155, 52)">
+    <rect width="430" height="332" rx="10" fill="#120928" stroke="rgba(255,255,255,0.06)"/>
+
+    <text x="16" y="26" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">High-Performance Web &amp; Software System</text>
+    <text x="16" y="42" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Live operational data flow, automated lead routing, and customer retention metrics</text>
+
+    <!-- 3 Metric Cards -->
+    <rect x="16" y="55" width="124" height="60" rx="8" fill="#1A0D38"/>
+    <text x="26" y="74" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9" font-weight="600">ACTIVE CLIENT DEALS</text>
+    <text x="26" y="96" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="17" font-weight="700">$142,800</text>
+
+    <rect x="152" y="55" width="124" height="60" rx="8" fill="#1A0D38"/>
+    <text x="162" y="74" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9" font-weight="600">CONVERSION RATE</text>
+    <text x="162" y="96" fill="#8B5CF6" font-family="'Space Grotesk', sans-serif" font-size="17" font-weight="700">8.4% (+3.2%)</text>
+
+    <rect x="288" y="55" width="126" height="60" rx="8" fill="#1A0D38"/>
+    <text x="298" y="74" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9" font-weight="600">AVG RESPONSE TIME</text>
+    <text x="298" y="96" fill="#3B82F6" font-family="'Space Grotesk', sans-serif" font-size="17" font-weight="700">&lt; 3 Hours</text>
+
+    <!-- Business Sales Funnel Chart -->
+    <rect x="16" y="128" width="398" height="135" rx="8" fill="#180C36"/>
+    <text x="28" y="148" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">Enterprise Deal Conversion Trend</text>
+    <path d="M 28 230 Q 120 190, 200 205 T 320 165 T 400 145" stroke="#10B981" stroke-width="3" fill="none"/>
+    <path d="M 28 230 Q 120 190, 200 205 T 320 165 T 400 145 L 400 245 L 28 245 Z" fill="url(#saasGraphGradRegen)" opacity="0.25"/>
+    <defs>
+      <linearGradient id="saasGraphGradRegen" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#10B981"/>
+        <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bottom Action CTA -->
+    <rect x="16" y="275" width="398" height="38" rx="8" fill="#6D28D9"/>
+    <text x="215" y="299" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">Deploy Custom Web &amp; Software System →</text>
+  </g>
+</svg>

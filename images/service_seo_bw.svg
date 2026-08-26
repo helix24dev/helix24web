@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="seoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#101018"/>
+    </linearGradient>
+    <linearGradient id="chartLineGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#444455"/>
+      <stop offset="50%" stop-color="#aaaaaa"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="chartAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#seoBg)"/>
+
+  <!-- Minimalist Grid System -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="80" y1="60" x2="520" y2="60"/>
+    <line x1="80" y1="130" x2="520" y2="130"/>
+    <line x1="80" y1="200" x2="520" y2="200"/>
+    <line x1="80" y1="270" x2="520" y2="270"/>
+    <line x1="80" y1="340" x2="520" y2="340"/>
+  </g>
+
+  <!-- Growth Area Curve (Monochrome) -->
+  <path d="M 80,310 Q 180,290 260,210 T 420,130 T 520,70 L 520,340 L 80,340 Z" fill="url(#chartAreaGrad)"/>
+  
+  <!-- Main High-Contrast Trend Line -->
+  <path d="M 80,310 Q 180,290 260,210 T 420,130 T 520,70" fill="none" stroke="url(#chartLineGrad)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Data Point Beacons -->
+  <g fill="#ffffff">
+    <circle cx="80" cy="310" r="4" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="190" cy="275" r="4" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="280" cy="195" r="5" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="390" cy="145" r="5" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="520" cy="70" r="7" stroke="#000000" stroke-width="2"/>
+  </g>
+
+  <!-- Pulsing Target Pulse around Peak Data Point -->
+  <circle cx="520" cy="70" r="16" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <circle cx="520" cy="70" r="28" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Floating Metric Metric Boxes -->
+  <g transform="translate(360, 180)">
+    <rect width="130" height="55" rx="8" fill="#14141f" fill-opacity="0.9" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="16" y="24" font-family="'Space Grotesk', sans-serif" font-size="10" fill="#aaaaaa" letter-spacing="1">ORGANIC TRAFFIC</text>
+    <text x="16" y="44" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="16" fill="#ffffff">+340% ROAS</text>
+  </g>
+
+  <g transform="translate(140, 120)">
+    <rect width="110" height="48" rx="8" fill="#14141f" fill-opacity="0.8" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="14" y="22" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#aaaaaa" letter-spacing="1">CONVERSION</text>
+    <text x="14" y="38" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="14" fill="#ffffff">4.82x GAIN</text>
+  </g>
+
+  <text x="80" y="370" font-family="'JetBrains Mono', monospace" font-size="10" fill="#ffffff" opacity="0.3">GROWTH_OPTIMIZATION // DATA_MATH</text>
+</svg>

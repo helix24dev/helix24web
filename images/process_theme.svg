@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+  <defs>
+    <linearGradient id="procBgTheme" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080412"/>
+      <stop offset="100%" stop-color="#140a28"/>
+    </linearGradient>
+    <linearGradient id="beamGradTheme" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c4b5fd" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2e1065" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="300" fill="url(#procBgTheme)"/>
+
+  <!-- Horizontal Axis Pipeline Line -->
+  <line x1="100" y1="150" x2="800" y2="150" stroke="url(#beamGradTheme)" stroke-width="2.5"/>
+  <line x1="100" y1="150" x2="800" y2="150" stroke="#a78bfa" stroke-dasharray="4,8" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Step 01 Node -->
+  <g transform="translate(180, 150)">
+    <circle cx="0" cy="0" r="40" fill="#170c30" stroke="#a78bfa" stroke-opacity="0.7" stroke-width="1.8"/>
+    <circle cx="0" cy="0" r="24" fill="#26134b" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="0" cy="0" r="8" fill="#ffffff"/>
+    <text x="0" y="70" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle" letter-spacing="2">01 / DISCOVERY</text>
+    <text x="0" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">Audit &amp; Architecture</text>
+  </g>
+
+  <!-- Step 02 Node -->
+  <g transform="translate(450, 150)">
+    <circle cx="0" cy="0" r="48" fill="#1f0f42" stroke="#c4b5fd" stroke-opacity="0.9" stroke-width="2"/>
+    <circle cx="0" cy="0" r="30" fill="#351a6b" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1"/>
+    <polygon points="-6,-10 10,0 -6,10" fill="#ffffff"/>
+    <text x="0" y="75" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle" letter-spacing="2">02 / BUILD &amp; CODE</text>
+    <text x="0" y="95" font-family="'Inter', sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">High-Performance Build</text>
+  </g>
+
+  <!-- Step 03 Node -->
+  <g transform="translate(720, 150)">
+    <circle cx="0" cy="0" r="40" fill="#170c30" stroke="#a78bfa" stroke-opacity="0.7" stroke-width="1.8"/>
+    <circle cx="0" cy="0" r="24" fill="#26134b" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1"/>
+    <polyline points="-8,4 0,-6 8,4" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <text x="0" y="70" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle" letter-spacing="2">03 / SCALE &amp; ROI</text>
+    <text x="0" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">SEO &amp; Ad Funnels</text>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
+  <!-- Outer Window Background -->
+  <rect width="600" height="400" rx="14" fill="#0A0616"/>
+  <rect width="598" height="398" x="1" y="1" rx="13" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1.5"/>
+
+  <!-- Google Search Header Bar -->
+  <rect width="600" height="44" fill="#140A28"/>
+  <text x="24" y="27" fill="#4285F4" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">G<tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text>
+
+  <!-- Search Input Bar -->
+  <rect x="110" y="8" width="466" height="28" rx="14" fill="#1E1238" stroke="rgba(255,255,255,0.1)"/>
+  <text x="126" y="26" fill="#FFF" font-family="'Inter', sans-serif" font-size="11">Best Marketing &amp; Web Development Agency Near Me</text>
+  <text x="550" y="26" fill="#8B5CF6" font-family="'Inter', sans-serif" font-size="12">🔍</text>
+
+  <!-- Left: Google Business Profile Card -->
+  <g transform="translate(24, 60)">
+    <rect width="320" height="315" rx="12" fill="#140B2C" stroke="rgba(139, 92, 246, 0.3)"/>
+
+    <!-- Map Pin Header -->
+    <rect width="320" height="50" rx="12" fill="#1E103B"/>
+    <text x="16" y="30" fill="#EA4335" font-family="'Inter', sans-serif" font-size="18">📍</text>
+    <text x="42" y="25" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700">Helix24 Solutions — Agency</text>
+    <text x="42" y="40" fill="#34A853" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Verified Google Business Profile</text>
+
+    <!-- Star Rating -->
+    <text x="16" y="76" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="14" letter-spacing="2">★★★★★</text>
+    <text x="110" y="75" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">5.0 (85 Reviews)</text>
+
+    <!-- Address & GBP Link -->
+    <text x="16" y="100" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Link: https://share.google/d4G5lOm2UQObAXBUU</text>
+    <text x="16" y="118" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Services: Web Development, SEO &amp; Ads</text>
+    <text x="16" y="136" fill="#10B981" font-family="'Inter', sans-serif" font-size="10" font-weight="700">● Open Now • Phone: +91 9048009044</text>
+
+    <!-- Google Maps Local #1 Pack Badge -->
+    <rect x="16" y="155" width="288" height="65" rx="8" fill="#1B1038" stroke="#34A853"/>
+    <text x="30" y="180" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700">🟢 #1 Spot on Google Maps Local 3-Pack</text>
+    <text x="30" y="200" fill="#FFF" font-family="'Inter', sans-serif" font-size="11">+312% Phone Call &amp; Map Lead Growth</text>
+
+    <!-- Action Buttons -->
+    <rect x="16" y="235" width="136" height="34" rx="6" fill="#4285F4"/>
+    <text x="84" y="256" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">📞 Call Business</text>
+
+    <rect x="164" y="235" width="140" height="34" rx="6" fill="#1E1238" stroke="#8B5CF6"/>
+    <text x="234" y="256" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600" text-anchor="middle">🌐 Visit Website</text>
+  </g>
+
+  <!-- Right: Organic Keyword Rankings -->
+  <g transform="translate(360, 60)">
+    <rect width="216" height="315" rx="12" fill="#120826" stroke="rgba(255,255,255,0.06)"/>
+
+    <text x="16" y="28" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">Local Search Rankings</text>
+    <text x="16" y="44" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">Google Search Engine Results</text>
+
+    <!-- Ranking Row 1 -->
+    <rect x="12" y="58" width="192" height="42" rx="6" fill="#180C34"/>
+    <text x="22" y="75" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Google Business Profile SEO</text>
+    <text x="22" y="90" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">Rank #1 🟢 (12,400/mo)</text>
+
+    <!-- Ranking Row 2 -->
+    <rect x="12" y="108" width="192" height="42" rx="6" fill="#180C34"/>
+    <text x="22" y="125" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Web Development Agency</text>
+    <text x="22" y="140" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">Rank #1 🟢 (28,100/mo)</text>
+
+    <!-- Ranking Row 3 -->
+    <rect x="12" y="158" width="192" height="42" rx="6" fill="#180C34"/>
+    <text x="22" y="175" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Mobile App Development</text>
+    <text x="22" y="190" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">Rank #1 🟢 (18,900/mo)</text>
+
+    <!-- Growth Stat Box -->
+    <rect x="12" y="212" width="192" height="90" rx="8" fill="#1A0E38" stroke="#10B981"/>
+    <text x="22" y="234" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">94,800</text>
+    <text x="22" y="250" fill="#FFF" font-family="'Inter', sans-serif" font-size="10">Monthly Search Visits</text>
+    <text x="22" y="268" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">Google Search + Maps Traffic</text>
+    <text x="22" y="286" fill="#10B981" font-family="'Inter', sans-serif" font-size="9" font-weight="600">↑ 4.8x Return on Ad Spend</text>
+  </g>
+</svg>

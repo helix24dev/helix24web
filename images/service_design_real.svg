@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
+  <!-- Outer Window Background -->
+  <rect width="600" height="400" rx="14" fill="#0E091D"/>
+  <rect width="598" height="398" x="1" y="1" rx="13" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1.5"/>
+
+  <!-- Figma Style Header -->
+  <rect width="600" height="36" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="18" cy="18" r="5" fill="#EF4444"/>
+  <circle cx="34" cy="18" r="5" fill="#F59E0B"/>
+  <circle cx="50" cy="18" r="5" fill="#10B981"/>
+  <text x="300" y="23" fill="#A78BFA" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">🎨 Figma Canvas // Brand Identity &amp; UI System</text>
+
+  <!-- Left Canvas (Artboard Wireframe) -->
+  <rect x="20" y="52" width="260" height="328" rx="10" fill="#180F30" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="36" y="78" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700">Desktop Web Frame</text>
+
+  <!-- Wireframe UI Component Blocks -->
+  <rect x="36" y="94" width="228" height="34" rx="6" fill="#281750"/>
+  <rect x="46" y="104" width="60" height="14" rx="4" fill="#8B5CF6"/>
+  <rect x="180" y="104" width="70" rx="4" height="14" fill="#10B981"/>
+
+  <rect x="36" y="136" width="228" height="110" rx="8" fill="#201242"/>
+  <text x="46" y="162" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">Hero Section Layout</text>
+  <rect x="46" y="174" width="140" height="10" rx="3" fill="#A78BFA"/>
+  <rect x="46" y="190" width="100" height="10" rx="3" fill="#6B7280"/>
+  <rect x="46" y="210" width="80" height="24" rx="6" fill="#8B5CF6"/>
+
+  <rect x="36" y="256" width="228" height="100" rx="8" fill="#201242"/>
+  <text x="46" y="280" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="11">Responsive Grid System</text>
+
+  <!-- Right Palette & Design Tokens Pane -->
+  <rect x="300" y="52" width="280" height="160" rx="10" fill="#160E2A" stroke="rgba(255,255,255,0.08)"/>
+  <text x="316" y="76" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600">Brand Color System</text>
+  
+  <!-- Color Swatches -->
+  <rect x="316" y="90" width="48" height="48" rx="8" fill="#6D28D9"/>
+  <text x="320" y="152" fill="#9CA3AF" font-family="'JetBrains Mono', monospace" font-size="8">#6D28D9</text>
+
+  <rect x="372" y="90" width="48" height="48" rx="8" fill="#8B5CF6"/>
+  <text x="376" y="152" fill="#9CA3AF" font-family="'JetBrains Mono', monospace" font-size="8">#8B5CF6</text>
+
+  <rect x="428" y="90" width="48" height="48" rx="8" fill="#10B981"/>
+  <text x="432" y="152" fill="#9CA3AF" font-family="'JetBrains Mono', monospace" font-size="8">#10B981</text>
+
+  <rect x="484" y="90" width="48" height="48" rx="8" fill="#F59E0B"/>
+  <text x="488" y="152" fill="#9CA3AF" font-family="'JetBrains Mono', monospace" font-size="8">#F59E0B</text>
+
+  <!-- Typography Scale Card -->
+  <rect x="300" y="224" width="280" height="156" rx="10" fill="#1B1133" stroke="rgba(139, 92, 246, 0.3)"/>
+  <text x="316" y="250" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600">Typography &amp; UI System</text>
+  <text x="316" y="278" fill="#A78BFA" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">Space Grotesk Header</text>
+  <text x="316" y="302" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="12">Inter Body Font</text>
+  <text x="316" y="324" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11">JetBrains Mono Code</text>
+  <text x="316" y="356" fill="#8B5CF6" font-family="'Inter', sans-serif" font-size="11" font-weight="600">✓ Complete Brand Identity Handoff</text>
+</svg>

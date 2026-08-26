@@ -8,23 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const $$ = (s) => document.querySelectorAll(s);
 
   /* ========== DARK / LIGHT THEME SWITCHER ========== */
-  const themeToggleButtons = $$(".theme-toggle-btn");
-  const savedTheme = localStorage.getItem("helix_theme") || "light";
+  const themeToggleSwitches = $$(".theme-toggle-switch, .theme-toggle-btn");
+  const savedTheme = localStorage.getItem("helix_theme") || "dark";
 
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("helix_theme", theme);
-    themeToggleButtons.forEach(btn => {
-      btn.textContent = theme === "dark" ? "☀️" : "🌙";
-      btn.setAttribute("aria-label", theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode");
-    });
   }
 
   applyTheme(savedTheme);
 
-  themeToggleButtons.forEach(btn => {
+  themeToggleSwitches.forEach(btn => {
     btn.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+      const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
       const nextTheme = currentTheme === "dark" ? "light" : "dark";
       applyTheme(nextTheme);
     });
@@ -78,19 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    /* ---------- Navbar Scroll Effect ---------- */
+    /* ---------- Navbar Scroll Effect (Disappears on scrolling down) ---------- */
     const navbar = document.getElementById("navbar");
-    if (navbar && typeof ScrollTrigger !== "undefined") {
-      ScrollTrigger.create({
-        start: "top -60",
-        onUpdate: (self) => {
-          if (self.scroll() > 60) {
-            navbar.classList.add("scrolled");
-          } else {
-            navbar.classList.remove("scrolled");
-          }
+    if (navbar) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
         }
-      });
+      }, { passive: true });
     }
 
     /* ---------- Magnetic Buttons ---------- */
@@ -393,3 +386,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
