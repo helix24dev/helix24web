@@ -22,9 +22,35 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
       const nextTheme = currentTheme === "dark" ? "light" : "dark";
-      applyTheme(nextTheme);
+  /* ========== LIVE CMS IMAGE SYNC ========== */
+  function loadCMSImages() {
+    const cmsConfig = JSON.parse(localStorage.getItem("helix_cms_config") || "null");
+    if (!cmsConfig) return;
+
+    if (cmsConfig.hero) {
+      const heroImg = document.querySelector(".hero-visual-card img, #heroMockupImg");
+      if (heroImg) heroImg.src = cmsConfig.hero;
+    }
+
+    const serviceImageKeys = {
+      "web": cmsConfig.web,
+      "seo": cmsConfig.seo,
+      "app": cmsConfig.app,
+      "ecom": cmsConfig.ecom,
+      "design": cmsConfig.design
+    };
+
+    const bentoImages = document.querySelectorAll(".bcell .card-img-wrap img");
+    bentoImages.forEach((img, idx) => {
+      const keys = ["web", "seo", "app", "ecom", "design"];
+      const key = img.getAttribute("data-cms-key") || keys[idx];
+      if (key && serviceImageKeys[key]) {
+        img.src = serviceImageKeys[key];
+      }
     });
-  });
+  }
+
+  loadCMSImages();
 
   /* ========== MOBILE MENU TOGGLE ========== */
   /* ========== MOBILE MENU TOGGLE WITH INSTANT TOUCH RESPONSE ========== */

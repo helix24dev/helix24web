@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Helix24 Agency CMS — Admin Image & Content Manager</title>
+  <meta name="description" content="Secure CMS Admin Portal for Helix24 Solutions. Manage and update website images, mockup graphics, and media assets in real-time.">
+  <link rel="canonical" href="https://helix24.com/admin.html">
+  
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .admin-page { padding: 110px 0 80px; min-height: 100vh; }
+    
+    /* Login Security Screen */
+    .login-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(7, 4, 18, 0.98);
+      backdrop-filter: blur(24px);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .login-card {
+      background: rgba(25, 16, 48, 0.95);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 16px;
+      padding: 40px;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(109, 40, 217, 0.3);
+      text-align: center;
+    }
+    
+    .login-card h2 { font-size: 26px; margin-bottom: 8px; }
+    .login-card p { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+    
+    /* CMS Dashboard Panel */
+    .cms-container {
+      background: var(--surface);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 36px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .cms-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--glass-border);
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .cms-header h1 { font-size: 28px; margin: 0; }
+    
+    .cms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    
+    .cms-card {
+      background: rgba(25, 16, 48, 0.6);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+    
+    .cms-card:hover {
+      border-color: var(--violet-bright);
+      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+    }
+    
+    .cms-card-head { margin-bottom: 14px; }
+    .cms-card-title { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .cms-card-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--violet-bright); text-transform: uppercase; }
+    
+    .cms-img-preview {
+      width: 100%;
+      height: 160px;
+      background: #0A0616;
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      margin-bottom: 16px;
+    }
+    
+    .cms-img-preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+    .cms-input-group { margin-bottom: 12px; }
+    .cms-input-group label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+    .cms-input {
+      width: 100%;
+      padding: 10px 14px;
+      background: rgba(14, 7, 34, 0.9);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      color: #FFF;
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    
+    .cms-input:focus {
+      outline: none;
+      border-color: var(--violet-bright);
+      box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
+    }
+    
+    .cms-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--glass-border);
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Security Authentication Modal -->
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-card">
+      <div style="font-size:36px; margin-bottom:12px;">🔒</div>
+      <h2>Helix24 CMS Portal</h2>
+      <p>Enter Master Security Key to Access Image & Media Management System</p>
+      
+      <form id="adminLoginForm">
+        <div style="margin-bottom:16px;">
+          <input type="password" id="adminPassword" class="cms-input" style="font-size:16px; text-align:center; padding:12px;" placeholder="Enter Passcode..." required>
+        </div>
+        <button type="submit" class="cta-btn" style="width:100%; padding:12px; font-size:15px;">Authenticate Security Key →</button>
+        <div id="loginError" style="color:#EF4444; font-size:13px; margin-top:12px; display:none;">Invalid Master Security Key. Try again.</div>
+      </form>
+      <div style="margin-top:20px; font-size:12px; color:var(--muted);">Default Passcode: <code style="color:var(--violet-bright);">helix24admin</code></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar wrap">
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 2C4 9 20 9 20 16C20 23 4 23 4 30" stroke="url(#helixGradNavAdmin)" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M20 2C20 9 4 9 4 16C4 23 20 23 20 30" stroke="url(#helixGradNavAdmin)" stroke-width="2.6" stroke-linecap="round" opacity=".5"/>
+          <defs>
+            <linearGradient id="helixGradNavAdmin" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#8B5CF6"/>
+              <stop offset="1" stop-color="#6D28D9"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        Helix<span class="logo-num">24 Admin CMS</span>
+      </a>
+      <div>
+        <a href="index.html" class="cta-ghost" style="padding: 8px 16px; font-size: 13px;">View Live Site ↗</a>
+        <button class="cta-btn" id="logoutBtn" style="padding: 8px 16px; font-size: 13px; margin-left: 10px; background: #DC2626;">Lock Session</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-page wrap">
+    <div class="cms-container">
+      <div class="cms-header">
+        <div>
+          <h1>Image &amp; Media CMS Dashboard</h1>
+          <p style="color:var(--muted); font-size:14px; margin-top:4px;">Upload, edit, or replace website images in real-time with instant live sync.</p>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button class="cta-ghost" id="resetCmsBtn">Reset Defaults</button>
+          <button class="cta-btn" id="saveCmsBtn">Publish Image Changes ⚡</button>
+        </div>
+      </div>
+
+      <div id="cmsStatusNotice" style="display:none; padding:12px 18px; border-radius:8px; background:rgba(34, 197, 94, 0.15); border:1px solid rgba(34, 197, 94, 0.4); color:#4ADE80; font-size:14px; margin-bottom:24px;"></div>
+
+      <div class="cms-grid">
+        
+        <!-- Hero Visual Image -->
+        <div class="cms-card">
+          <div class="cms-card-head">
+            <div class="cms-card-tag">Hero Section</div>
+            <div class="cms-card-title">Main Dashboard Mockup</div>
+          </div>
+          <div class="cms-img-preview">
+            <img id="prev_hero" src="images/hero_real.svg" alt="Hero Mockup Preview">
+          </div>
+          <div class="cms-input-group">
+            <label for="img_hero">Image Path / URL</label>
+            <input type="text" id="img_hero" class="cms-input" value="images/hero_real.svg" data-key="hero">
+          </div>
+        </div>
+
+        <!-- Bento Card 1 Web Dev -->
+        <div class="cms-card">
+          <div class="cms-card-head">
+            <div class="cms-card-tag">Bento Card 1</div>
+            <div class="cms-card-title">Website &amp; Custom Software</div>
+          </div>
+          <div class="cms-img-preview">
+            <img id="prev_web" src="images/service_web_real.svg" alt="Web Dev Preview">
+          </div>
+          <div class="cms-input-group">
+            <label for="img_web">Image Path / URL</label>
+            <input type="text" id="img_web" class="cms-input" value="images/service_web_real.svg" data-key="web">
+          </div>
+        </div>
+
+        <!-- Bento Card 2 SEO -->
+        <div class="cms-card">
+          <div class="cms-card-head">
+            <div class="cms-card-tag">Bento Card 2</div>
+            <div class="cms-card-title">Google Ads &amp; Local SEO</div>
+          </div>
+          <div class="cms-img-preview">
+            <img id="prev_seo" src="images/service_seo_real.svg" alt="SEO Preview">
+          </div>
+          <div class="cms-input-group">
+            <label for="img_seo">Image Path / URL</label>
+            <input type="text" id="img_seo" class="cms-input" value="images/service_seo_real.svg" data-key="seo">
+          </div>
+        </div>
+
+        <!-- Bento Card 3 Mobile Apps -->
+        <div class="cms-card">
+          <div class="cms-card-head">
+            <div class="cms-card-tag">Bento Card 3</div>
+            <div class="cms-card-title">iOS &amp; Android Apps</div>
+          </div>
+          <div class="cms-img-preview">
+            <img id="prev_app" src="images/service_app_real.svg" alt="App Dev Preview">
+          </div>
+          <div class="cms-input-group">
+            <label for="img_app">Image Path / URL</label>
+            <input type="text" id="img_app" class="cms-input" value="images/service_app_real.svg" data-key="app">
+          </div>
+        </div>
+
+        <!-- Bento Card 4 E-Commerce -->
+        <div class="cms-card">
+          <div class="cms-card-head">
+            <div class="cms-card-tag">Bento Card 4</div>
+            <div class="cms-card-title">Shopify E-Commerce Store</div>
+          </div>
+          <div class="cms-img-preview">
+            <img id="prev_ecom" src="images/service_ecom_real.svg" alt="E-Commerce Preview">
+          </div>
+          <div class="cms-input-group">
+            <label for="img_ecom">Image Path / URL</label>
+            <input type="text" id="img_ecom" class="cms-input" value="images/service_ecom_real.svg" data-key="ecom">
+          </div>
+        </div>
+
+        <!-- Bento Card 5 Branding -->
+        <div class="cms-card">
+          <div class="cms-card-head">
+            <div class="cms-card-tag">Bento Card 5</div>
+            <div class="cms-card-title">Branding &amp; Design System</div>
+          </div>
+          <div class="cms-img-preview">
+            <img id="prev_design" src="images/service_design_real.svg" alt="Design Preview">
+          </div>
+          <div class="cms-input-group">
+            <label for="img_design">Image Path / URL</label>
+            <input type="text" id="img_design" class="cms-input" value="images/service_design_real.svg" data-key="design">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginOverlay = document.getElementById("loginOverlay");
+      const adminLoginForm = document.getElementById("adminLoginForm");
+      const adminPassword = document.getElementById("adminPassword");
+      const loginError = document.getElementById("loginError");
+      const logoutBtn = document.getElementById("logoutBtn");
+      const saveCmsBtn = document.getElementById("saveCmsBtn");
+      const resetCmsBtn = document.getElementById("resetCmsBtn");
+      const cmsStatusNotice = document.getElementById("cmsStatusNotice");
+
+      // Check Session Authentication State
+      const isAuthenticated = sessionStorage.getItem("helix_admin_auth") === "true";
+      if (isAuthenticated) {
+        loginOverlay.style.display = "none";
+      }
+
+      // Security Login Form Submit
+      adminLoginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (adminPassword.value === "helix24admin" || adminPassword.value === "admin2026") {
+          sessionStorage.setItem("helix_admin_auth", "true");
+          loginOverlay.style.display = "none";
+          loginError.style.display = "none";
+        } else {
+          loginError.style.display = "block";
+        }
+      });
+
+      // Logout Session
+      logoutBtn.addEventListener("click", () => {
+        sessionStorage.removeItem("helix_admin_auth");
+        window.location.reload();
+      });
+
+      // Default Image Mapping
+      const defaultMapping = {
+        hero: "images/hero_real.svg",
+        web: "images/service_web_real.svg",
+        seo: "images/service_seo_real.svg",
+        app: "images/service_app_real.svg",
+        ecom: "images/service_ecom_real.svg",
+        design: "images/service_design_real.svg"
+      };
+
+      // Load Saved CMS Config
+      const savedConfig = JSON.parse(localStorage.getItem("helix_cms_config") || "null") || defaultMapping;
+
+      // Populate Inputs & Previews
+      Object.keys(savedConfig).forEach(key => {
+        const input = document.querySelector(`.cms-input[data-key="${key}"]`);
+        const prev = document.getElementById(`prev_${key}`);
+        if (input && prev) {
+          input.value = savedConfig[key];
+          prev.src = savedConfig[key];
+          
+          input.addEventListener("input", (e) => {
+            prev.src = e.target.value;
+          });
+        }
+      });
+
+      // Save CMS Changes
+      saveCmsBtn.addEventListener("click", () => {
+        const newConfig = {};
+        document.querySelectorAll(".cms-input").forEach(input => {
+          const key = input.getAttribute("data-key");
+          if (key) {
+            newConfig[key] = input.value.trim();
+          }
+        });
+        localStorage.setItem("helix_cms_config", JSON.stringify(newConfig));
+        
+        cmsStatusNotice.style.display = "block";
+        cmsStatusNotice.textContent = "✓ Image changes published successfully! Live website will instantly use these image assets.";
+        setTimeout(() => { cmsStatusNotice.style.display = "none"; }, 4000);
+      });
+
+      // Reset Defaults
+      resetCmsBtn.addEventListener("click", () => {
+        localStorage.removeItem("helix_cms_config");
+        Object.keys(defaultMapping).forEach(key => {
+          const input = document.querySelector(`.cms-input[data-key="${key}"]`);
+          const prev = document.getElementById(`prev_${key}`);
+          if (input && prev) {
+            input.value = defaultMapping[key];
+            prev.src = defaultMapping[key];
+          }
+        });
+        cmsStatusNotice.style.display = "block";
+        cmsStatusNotice.textContent = "✓ Reset all image assets to agency defaults.";
+        setTimeout(() => { cmsStatusNotice.style.display = "none"; }, 4000);
+      });
+    });
+  </script>
+</body>
+</html>
