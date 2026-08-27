@@ -43,10 +43,28 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---------- Instant Mobile Touch Feedback (:active states) ---------- */
+a:active,
+button:active,
+.cta-btn:active,
+.cta-ghost:active,
+.pbadge:active,
+.bcell:active,
+.theme-toggle-switch:active,
+.menu-toggle:active,
+.whatsapp-fab:active,
+.mobile-nav a:active {
+  transform: scale(0.96) !important;
+  opacity: 0.88 !important;
+  transition: transform 0.08s ease, opacity 0.08s ease !important;
 }
 
 body {

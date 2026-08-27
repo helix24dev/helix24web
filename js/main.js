@@ -27,20 +27,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ========== MOBILE MENU TOGGLE ========== */
+  /* ========== MOBILE MENU TOGGLE WITH INSTANT TOUCH RESPONSE ========== */
   const menuToggle = document.getElementById("menuToggle");
   const mobileNav = document.getElementById("mobileNav");
 
   if (menuToggle && mobileNav) {
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("open");
-      mobileNav.classList.toggle("open");
-    });
+    let lastTouch = 0;
+    const toggleMenu = (e) => {
+      const now = Date.now();
+      if (now - lastTouch < 300) return; // Prevent double trigger
+      if (e.type === "touchstart") lastTouch = now;
+      
+      const isOpen = menuToggle.classList.toggle("open");
+      mobileNav.classList.toggle("open", isOpen);
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    };
+
+    menuToggle.addEventListener("touchstart", toggleMenu, { passive: true });
+    menuToggle.addEventListener("click", toggleMenu);
 
     mobileNav.querySelectorAll("a, button").forEach(el => {
-      el.addEventListener("click", () => {
+      const closeMenu = () => {
         menuToggle.classList.remove("open");
         mobileNav.classList.remove("open");
-      });
+        document.body.style.overflow = "";
+      };
+      el.addEventListener("click", closeMenu);
     });
   }
 
