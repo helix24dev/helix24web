@@ -1,76 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
-  <!-- Outer Window Background -->
-  <rect width="600" height="400" rx="14" fill="#0A0616"/>
-  <rect width="598" height="398" x="1" y="1" rx="13" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1.5"/>
+  <!-- Frame -->
+  <rect width="600" height="400" rx="16" fill="#0A0618"/>
+  <rect width="598" height="398" x="1" y="1" rx="15" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1.5"/>
 
-  <!-- Google Search Header Bar -->
-  <rect width="600" height="44" fill="#140A28"/>
-  <text x="24" y="27" fill="#4285F4" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">G<tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan></text>
-
-  <!-- Search Input Bar -->
-  <rect x="110" y="8" width="466" height="28" rx="14" fill="#1E1238" stroke="rgba(255,255,255,0.1)"/>
-  <text x="126" y="26" fill="#FFF" font-family="'Inter', sans-serif" font-size="11">Best Marketing &amp; Web Development Agency Near Me</text>
-  <text x="550" y="26" fill="#8B5CF6" font-family="'Inter', sans-serif" font-size="12">🔍</text>
-
-  <!-- Left: Google Business Profile Card -->
-  <g transform="translate(24, 60)">
-    <rect width="320" height="315" rx="12" fill="#140B2C" stroke="rgba(139, 92, 246, 0.3)"/>
-
-    <!-- Map Pin Header -->
-    <rect width="320" height="50" rx="12" fill="#1E103B"/>
-    <text x="16" y="30" fill="#EA4335" font-family="'Inter', sans-serif" font-size="18">📍</text>
-    <text x="42" y="25" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700">Helix24 Solutions — Agency</text>
-    <text x="42" y="40" fill="#34A853" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Verified Google Business Profile</text>
-
-    <!-- Star Rating -->
-    <text x="16" y="76" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="14" letter-spacing="2">★★★★★</text>
-    <text x="110" y="75" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">5.0 (85 Reviews)</text>
-
-    <!-- Address & GBP Link -->
-    <text x="16" y="100" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Link: https://share.google/d4G5lOm2UQObAXBUU</text>
-    <text x="16" y="118" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Services: Web Development, SEO &amp; Ads</text>
-    <text x="16" y="136" fill="#10B981" font-family="'Inter', sans-serif" font-size="10" font-weight="700">● Open Now • Phone: +91 9048009044</text>
-
-    <!-- Google Maps Local #1 Pack Badge -->
-    <rect x="16" y="155" width="288" height="65" rx="8" fill="#1B1038" stroke="#34A853"/>
-    <text x="30" y="180" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700">🟢 #1 Spot on Google Maps Local 3-Pack</text>
-    <text x="30" y="200" fill="#FFF" font-family="'Inter', sans-serif" font-size="11">+312% Phone Call &amp; Map Lead Growth</text>
-
-    <!-- Action Buttons -->
-    <rect x="16" y="235" width="136" height="34" rx="6" fill="#4285F4"/>
-    <text x="84" y="256" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">📞 Call Business</text>
-
-    <rect x="164" y="235" width="140" height="34" rx="6" fill="#1E1238" stroke="#8B5CF6"/>
-    <text x="234" y="256" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600" text-anchor="middle">🌐 Visit Website</text>
+  <!-- Google Search Bar Header -->
+  <rect width="600" height="52" rx="16" fill="#140B2A"/>
+  <g transform="translate(20, 12)">
+    <rect width="560" height="28" rx="14" fill="#1F123A" stroke="rgba(255,255,255,0.1)"/>
+    <!-- Official 4-Color Google Search Icon -->
+    <text x="16" y="19" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">🔍</text>
+    <text x="36" y="19" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Best Web Development &amp; SEO Agency Near Me</text>
+    <rect x="460" y="3" width="92" height="22" rx="11" fill="#8B5CF6"/>
+    <text x="506" y="18" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="700" text-anchor="middle">Search #1</text>
   </g>
 
-  <!-- Right: Organic Keyword Rankings -->
-  <g transform="translate(360, 60)">
-    <rect width="216" height="315" rx="12" fill="#120826" stroke="rgba(255,255,255,0.06)"/>
+  <!-- Google Search Rank #1 Snippet Card -->
+  <g transform="translate(20, 68)">
+    <rect width="560" height="150" rx="12" fill="#140A28" stroke="rgba(139, 92, 246, 0.35)"/>
+    
+    <text x="20" y="26" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">https://helix24.com › web-development-seo</text>
+    <text x="20" y="48" fill="#A78BFA" font-family="'Space Grotesk', sans-serif" font-size="17" font-weight="700">Helix24 Solutions — #1 Rated Web Dev &amp; Local SEO Agency</text>
 
-    <text x="16" y="28" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">Local Search Rankings</text>
-    <text x="16" y="44" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">Google Search Engine Results</text>
+    <!-- Star Rating -->
+    <text x="20" y="68" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="12">★ ★ ★ ★ ★ <tspan fill="#FFF" font-weight="700">5.0 Rating</tspan> <tspan fill="#9CA3AF">(85 Google Business Reviews)</tspan></text>
 
-    <!-- Ranking Row 1 -->
-    <rect x="12" y="58" width="192" height="42" rx="6" fill="#180C34"/>
-    <text x="22" y="75" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Google Business Profile SEO</text>
-    <text x="22" y="90" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">Rank #1 🟢 (12,400/mo)</text>
+    <text x="20" y="90" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="11" width="520">Helix24 builds sub-second custom websites, mobile apps &amp; executes Google Business Profile Local Map Pack #1 campaigns driving predictable customer acquisition.</text>
 
-    <!-- Ranking Row 2 -->
-    <rect x="12" y="108" width="192" height="42" rx="6" fill="#180C34"/>
-    <text x="22" y="125" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Web Development Agency</text>
-    <text x="22" y="140" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">Rank #1 🟢 (28,100/mo)</text>
+    <!-- Badges Row -->
+    <g transform="translate(20, 106)">
+      <rect width="130" height="24" rx="12" fill="rgba(16, 185, 129, 0.15)" stroke="#10B981"/>
+      <text x="65" y="16" fill="#10B981" font-family="'Inter', sans-serif" font-size="10" font-weight="700" text-anchor="middle">📍 Local 3-Pack #1</text>
 
-    <!-- Ranking Row 3 -->
-    <rect x="12" y="158" width="192" height="42" rx="6" fill="#180C34"/>
-    <text x="22" y="175" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">Mobile App Development</text>
-    <text x="22" y="190" fill="#34A853" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700">Rank #1 🟢 (18,900/mo)</text>
+      <rect x="140" width="130" height="24" rx="12" fill="rgba(139, 92, 246, 0.15)" stroke="#8B5CF6"/>
+      <text x="205" y="16" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="10" font-weight="700" text-anchor="middle">🎯 Google Premier Partner</text>
 
-    <!-- Growth Stat Box -->
-    <rect x="12" y="212" width="192" height="90" rx="8" fill="#1A0E38" stroke="#10B981"/>
-    <text x="22" y="234" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">94,800</text>
-    <text x="22" y="250" fill="#FFF" font-family="'Inter', sans-serif" font-size="10">Monthly Search Visits</text>
-    <text x="22" y="268" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">Google Search + Maps Traffic</text>
-    <text x="22" y="286" fill="#10B981" font-family="'Inter', sans-serif" font-size="9" font-weight="600">↑ 4.8x Return on Ad Spend</text>
+      <rect x="280" width="130" height="24" rx="12" fill="rgba(59, 130, 246, 0.15)" stroke="#3B82F6"/>
+      <text x="345" y="16" fill="#60A5FA" font-family="'Inter', sans-serif" font-size="10" font-weight="700" text-anchor="middle">📈 4.2x ROAS PPC</text>
+    </g>
+  </g>
+
+  <!-- Google Business Profile Local Map Pack Box -->
+  <g transform="translate(20, 230)">
+    <rect width="560" height="150" rx="12" fill="#160B32" stroke="rgba(245, 158, 11, 0.4)"/>
+    
+    <text x="20" y="28" fill="#F59E0B" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">📍 GOOGLE BUSINESS PROFILE LOCAL MAP PACK</text>
+
+    <g transform="translate(20, 42)">
+      <rect width="250" height="88" rx="10" fill="#1E1040" stroke="rgba(255,255,255,0.08)"/>
+      <text x="16" y="24" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">Helix24 Solutions</text>
+      <text x="16" y="42" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="11">★ 5.0 (85) • Web &amp; Marketing Agency</text>
+      <text x="16" y="60" fill="#10B981" font-family="'Inter', sans-serif" font-size="10">● Open Now • Phone: +91 9048009044</text>
+    </g>
+
+    <g transform="translate(290, 42)">
+      <rect width="250" height="88" rx="10" fill="#1E1040" stroke="rgba(255,255,255,0.08)"/>
+      <text x="16" y="24" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">LOCAL ORGANIC METRICS</text>
+      <text x="16" y="48" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">+312% Calls &amp; Leads</text>
+      <text x="16" y="68" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="10">Ranked #1 for 18 Local Terms</text>
+    </g>
   </g>
 </svg>

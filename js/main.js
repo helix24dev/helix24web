@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
       const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+    });
+  });
+
   /* ========== LIVE CMS IMAGE SYNC ========== */
   function loadCMSImages() {
     const cmsConfig = JSON.parse(localStorage.getItem("helix_cms_config") || "null");
@@ -371,11 +375,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const quickForm = $("#quickDrawerForm");
 
   if (drawerOverlay) {
-    if (quickFab) {
-      quickFab.addEventListener("click", () => {
+    $$(".quick-quote-fab, .card-action-btn, .open-drawer-btn").forEach(triggerBtn => {
+      triggerBtn.addEventListener("click", (e) => {
+        e.preventDefault();
         drawerOverlay.classList.add("active");
       });
-    }
+    });
 
     if (drawerCloseBtn) {
       drawerCloseBtn.addEventListener("click", () => {
@@ -423,6 +428,79 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  /* ========== CAPABILITIES 6-PILLAR ACCORDION ========== */
+  $$(".cap-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const pillar = header.closest(".cap-pillar");
+      const isActive = pillar.classList.contains("active");
+
+      // Optionally close other pillars for accordion effect
+      $$(".cap-pillar").forEach(other => {
+        if (other !== pillar) other.classList.remove("active");
+      });
+
+      pillar.classList.toggle("active", !isActive);
+    });
+  });
+
+  /* ========== WORKS PORTFOLIO CATEGORY FILTERS ========== */
+  const wfilterBtns = $$(".wfilter-btn");
+  const workMatrixCards = $$(".work-matrix-card");
+
+  if (wfilterBtns.length > 0 && workMatrixCards.length > 0) {
+    wfilterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        wfilterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+        workMatrixCards.forEach(card => {
+          const category = card.dataset.category || "";
+          if (filter === "all" || category.includes(filter)) {
+            card.style.display = "flex";
+            if (typeof gsap !== "undefined") {
+              gsap.fromTo(card, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.35 });
+            }
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+
+  /* ========== STORIES OF TRUST TESTIMONIAL SLIDER ========== */
+  const storiesTrack = $("#storiesTrack");
+  const prevBtn = $("#storyPrevBtn");
+  const nextBtn = $("#storyNextBtn");
+
+  if (storiesTrack && prevBtn && nextBtn) {
+    let currentSlide = 0;
+    const cards = storiesTrack.querySelectorAll(".story-card");
+    
+    function updateSlider() {
+      const cardWidth = cards[0] ? cards[0].offsetWidth + 22 : 340;
+      const maxSlides = Math.max(0, cards.length - (window.innerWidth < 900 ? 1 : 3));
+      if (currentSlide > maxSlides) currentSlide = maxSlides;
+      if (currentSlide < 0) currentSlide = 0;
+      
+      storiesTrack.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentSlide++;
+      updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentSlide--;
+      updateSlider();
+    });
+
+    window.addEventListener("resize", updateSlider);
+  }
 });
+
 
 

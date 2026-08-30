@@ -1,36 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
-  <!-- Outer Window Background -->
-  <rect width="600" height="400" rx="14" fill="#0C081A"/>
-  <rect width="598" height="398" x="1" y="1" rx="13" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1.5"/>
+  <!-- Outer Frame -->
+  <rect width="600" height="400" rx="16" fill="#0A0618"/>
+  <rect width="598" height="398" x="1" y="1" rx="15" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1.5"/>
 
   <!-- Store Header Bar -->
-  <rect width="600" height="40" fill="rgba(255,255,255,0.04)"/>
-  <text x="24" y="25" fill="#A78BFA" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">BLOOM &amp; CO. STOREFRONT</text>
-  <text x="490" y="25" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="600">🛒 Cart (2 Items)</text>
+  <rect width="600" height="46" rx="16" fill="#140B2A"/>
+  <text x="24" y="28" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">BLOOM &amp; CO. STOREFRONT</text>
+  <rect x="480" y="10" width="96" height="26" rx="13" fill="#8B5CF6"/>
+  <text x="528" y="27" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">🛒 Cart (2 Items)</text>
 
-  <!-- Product Image Showcase Box -->
-  <rect x="24" y="56" width="240" height="320" rx="12" fill="#170F2C" stroke="rgba(139, 92, 246, 0.3)"/>
-  <rect x="44" y="76" width="200" height="170" rx="10" fill="#241645"/>
-  <text x="144" y="155" fill="#A78BFA" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" text-anchor="middle">LUXURY PRODUCT</text>
-  <text x="144" y="175" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" text-anchor="middle">$149.00</text>
+  <!-- Left: E-Commerce Product Card -->
+  <g transform="translate(20, 60)">
+    <rect width="260" height="320" rx="12" fill="#140A28" stroke="rgba(139, 92, 246, 0.25)"/>
+    
+    <!-- Product Image Mockup Box -->
+    <rect x="16" y="16" width="228" height="150" rx="10" fill="#1E103A"/>
+    <circle cx="130" cy="80" r="35" fill="#8B5CF6" fill-opacity="0.3"/>
+    <text x="130" y="86" fill="#A78BFA" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" text-anchor="middle">BLOOM</text>
+    <rect x="24" y="24" width="70" height="20" rx="10" fill="#95BF47"/>
+    <text x="59" y="37" fill="#FFF" font-family="'Inter', sans-serif" font-size="9" font-weight="700" text-anchor="middle">Shopify Plus</text>
 
-  <!-- 1-Click Checkout Button -->
-  <rect x="44" y="260" width="200" height="40" rx="8" fill="#10B981"/>
-  <text x="144" y="284" fill="#FFF" font-family="'Inter', sans-serif" font-size="12" font-weight="700" text-anchor="middle">Buy Now — 1-Click Checkout</text>
+    <!-- Product Info -->
+    <text x="16" y="190" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">Signature Apparel Jacket</text>
+    <text x="16" y="208" fill="#F59E0B" font-family="'Inter', sans-serif" font-size="11">★ ★ ★ ★ ★ (142 reviews)</text>
 
-  <rect x="44" y="310" width="200" height="36" rx="8" fill="#000" stroke="rgba(255,255,255,0.2)"/>
-  <text x="144" y="333" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="600" text-anchor="middle">Pay with Pay / Shop Pay</text>
+    <text x="16" y="235" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700">$128.00 <tspan fill="#9CA3AF" font-size="12" text-decoration="line-through">$160.00</tspan></text>
 
-  <!-- Store Analytics & Conversion Funnel Right Pane -->
-  <rect x="284" y="56" width="292" height="150" rx="12" fill="#160E2A" stroke="rgba(255,255,255,0.08)"/>
-  <text x="300" y="80" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">E-Commerce Conversion Rate</text>
-  <text x="300" y="112" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700">4.2% CR</text>
-  <text x="300" y="132" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">+34% Increase in Cart Conversions</text>
-  <text x="300" y="152" fill="#8B5CF6" font-family="'Inter', sans-serif" font-size="10">Shopify Plus &amp; WooCommerce Custom Liquid</text>
+    <!-- Add to Cart CTA -->
+    <rect x="16" y="255" width="228" height="42" rx="8" fill="#6D28D9"/>
+    <text x="130" y="281" fill="#FFF" font-family="'Inter', sans-serif" font-size="12" font-weight="700" text-anchor="middle">Add to Cart • 1-Click Checkout →</text>
+  </g>
 
-  <!-- Sales Revenue Badge -->
-  <rect x="284" y="220" width="292" height="156" rx="12" fill="#1A1032" stroke="rgba(139, 92, 246, 0.3)"/>
-  <text x="300" y="248" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Total Monthly Store Revenue</text>
-  <text x="300" y="284" fill="#F59E0B" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700">$312,450</text>
-  <text x="300" y="306" fill="#10B981" font-family="'Inter', sans-serif" font-size="11">↑ 4.2x ROAS on Google Shopping &amp; Meta</text>
+  <!-- Right: E-Commerce Conversion Analytics & Apple Pay -->
+  <g transform="translate(300, 60)">
+    <rect width="280" height="150" rx="12" fill="#160B32" stroke="rgba(255,255,255,0.08)"/>
+    <text x="18" y="28" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10" font-weight="600">E-COMMERCE CONVERSION RATE</text>
+    <text x="18" y="58" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="700">4.2x ROAS</text>
+
+    <g transform="translate(18, 72)">
+      <rect width="244" height="60" rx="8" fill="#1E1040"/>
+      <text x="14" y="24" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">Cart Abandonment Reduced by 34%</text>
+      <text x="14" y="42" fill="#A78BFA" font-family="'Inter', sans-serif" font-size="10">Automated Google Merchant &amp; Meta Feeds</text>
+    </g>
+
+    <!-- 1-Click Express Payment Buttons -->
+    <g transform="translate(0, 166)">
+      <rect width="280" height="154" rx="12" fill="#160B32" stroke="rgba(16, 185, 129, 0.3)"/>
+      <text x="18" y="28" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700">Express Checkout Integrations</text>
+      
+      <rect x="18" y="42" width="244" height="40" rx="8" fill="#000000" stroke="rgba(255,255,255,0.2)"/>
+      <text x="140" y="66" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Pay  Apple Pay</text>
+
+      <rect x="18" y="94" width="244" height="40" rx="8" fill="#5A31F4"/>
+      <text x="140" y="118" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" text-anchor="middle">Shop Pay  1-Click</text>
+    </g>
+  </g>
 </svg>

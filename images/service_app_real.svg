@@ -1,65 +1,88 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" fill="none">
-  <!-- Outer Window Background -->
-  <rect width="600" height="400" rx="14" fill="#0A0616"/>
-  <rect width="598" height="398" x="1" y="1" rx="13" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1.5"/>
+  <!-- Outer Frame -->
+  <rect width="600" height="400" rx="16" fill="#0B061A"/>
+  <rect width="598" height="398" x="1" y="1" rx="15" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1.5"/>
 
-  <!-- Left: iPhone 15 Pro Native App Mockup -->
-  <g transform="translate(30, 25)">
-    <rect width="250" height="350" rx="28" fill="#140A2C" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-    <!-- iPhone Notch -->
-    <rect x="95" y="10" width="60" height="14" rx="7" fill="#05030A"/>
+  <!-- Left Side Highlights Text -->
+  <g transform="translate(30, 40)">
+    <rect width="180" height="26" rx="13" fill="rgba(139, 92, 246, 0.15)" stroke="#8B5CF6"/>
+    <text x="90" y="17" fill="#A78BFA" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="700" text-anchor="middle">📱 NATIVE MOBILE APPS</text>
+    
+    <text x="0" y="60" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">iOS &amp; Android Apps</text>
+    <text x="0" y="80" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#8B5CF6">Built in Flutter.</text>
 
-    <!-- App Header -->
-    <text x="24" y="48" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">FitTrack Pro App</text>
-    <text x="24" y="64" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Personal Training &amp; Booking</text>
+    <text x="0" y="110" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="11" width="220">Fluid 60fps animations, Apple Pay / Google Pay integrations, offline storage &amp; real-time notifications.</text>
 
-    <!-- Workout Booking Card -->
-    <rect x="20" y="80" width="210" height="120" rx="12" fill="#1E103B"/>
-    <text x="32" y="104" fill="#8B5CF6" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">TODAY'S SCHEDULE</text>
-    <text x="32" y="126" fill="#FFF" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Personal HIIT Session</text>
-    <text x="32" y="144" fill="#10B981" font-family="'Inter', sans-serif" font-size="11">● Confirmed • 10:00 AM</text>
-    <rect x="32" y="156" width="146" height="28" rx="6" fill="#10B981"/>
-    <text x="105" y="174" fill="#FFF" font-family="'Inter', sans-serif" font-size="11" font-weight="700" text-anchor="middle">Book Next Session →</text>
+    <!-- Mobile Feature Badges -->
+    <g transform="translate(0, 150)">
+      <rect width="210" height="42" rx="10" fill="#150B32" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="25" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">🍎 Apple App Store 4.8★</text>
+    </g>
 
-    <!-- Health Metrics Row -->
-    <rect x="20" y="212" width="100" height="60" rx="8" fill="#1A0D36"/>
-    <text x="28" y="232" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">CALORIES BURNED</text>
-    <text x="28" y="254" fill="#F59E0B" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700">645 kcal</text>
+    <g transform="translate(0, 202)">
+      <rect width="210" height="42" rx="10" fill="#150B32" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="25" fill="#60A5FA" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">🤖 Google Play Store 4.9★</text>
+    </g>
 
-    <rect x="130" y="212" width="100" height="60" rx="8" fill="#1A0D36"/>
-    <text x="138" y="232" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">AVG HEART RATE</text>
-    <text x="138" y="254" fill="#EF4444" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700">142 bpm</text>
-
-    <!-- App Store Download Badge -->
-    <rect x="20" y="285" width="210" height="42" rx="10" fill="#000" stroke="rgba(255,255,255,0.2)"/>
-    <text x="50" y="304" fill="#FFF" font-family="'Inter', sans-serif" font-size="10">Download on the</text>
-    <text x="50" y="318" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">App Store 🍎</text>
+    <g transform="translate(0, 254)">
+      <rect width="210" height="42" rx="10" fill="#150B32" stroke="rgba(255,255,255,0.08)"/>
+      <text x="14" y="25" fill="#F59E0B" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">📈 11x Surge in Bookings</text>
+    </g>
   </g>
 
-  <!-- Right: Android Flutter App Mockup -->
-  <g transform="translate(320, 25)">
-    <rect width="250" height="350" rx="28" fill="#140A2C" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-    <!-- Android Hole Punch Camera -->
-    <circle cx="125" cy="18" r="5" fill="#05030A"/>
+  <!-- Right Side Smartphone Device Mockups (2 Phones) -->
+  <g transform="translate(280, 20)">
+    <!-- Phone 1 (Back Device Frame) -->
+    <g transform="translate(130, 20) scale(0.9)">
+      <rect width="180" height="360" rx="30" fill="#1A0D3A" stroke="rgba(139, 92, 246, 0.4)" stroke-width="4"/>
+      <rect x="60" y="8" width="60" height="12" rx="6" fill="#0A0418"/>
+      
+      <!-- Phone 1 App Content -->
+      <rect x="12" y="32" width="156" height="316" rx="20" fill="#120828"/>
+      <text x="24" y="60" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">FitTrack Pro</text>
+      <rect x="24" y="74" width="132" height="60" rx="8" fill="#1D1040"/>
+      <text x="34" y="98" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">220 Bookings</text>
+      <text x="34" y="116" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">Active Member Pass</text>
+    </g>
 
-    <!-- App Header -->
-    <text x="24" y="48" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700">UrbanNest Villas</text>
-    <text x="24" y="64" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Real Estate &amp; Rentals</text>
+    <!-- Phone 2 (Front Device Frame - Hero Focus) -->
+    <g transform="translate(0, 0)">
+      <rect width="190" height="370" rx="32" fill="#120826" stroke="#8B5CF6" stroke-width="4"/>
+      <!-- iPhone Dynamic Island Notch -->
+      <rect x="65" y="10" width="60" height="14" rx="7" fill="#05020D"/>
 
-    <!-- Rental Booking Card -->
-    <rect x="20" y="80" width="210" height="120" rx="12" fill="#1E103B"/>
-    <rect x="30" y="92" width="190" height="60" rx="8" fill="#2A1650"/>
-    <text x="40" y="128" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" text-anchor="middle">LUXURY VILLA PREVIEW</text>
-    <text x="32" y="172" fill="#3B82F6" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700">$425 / night</text>
+      <!-- App Screen Inner UI -->
+      <g transform="translate(10, 32)">
+        <rect width="170" height="326" rx="22" fill="#180C34"/>
 
-    <!-- Apple Pay / 1-Click Pay -->
-    <rect x="20" y="212" width="210" height="60" rx="8" fill="#1A0D36"/>
-    <text x="32" y="235" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="700">✓ 1-Click Instant Booking</text>
-    <text x="32" y="255" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="10">Apple Pay &amp; Google Pay Enabled</text>
+        <!-- App Header Bar -->
+        <circle cx="24" cy="24" r="14" fill="#8B5CF6"/>
+        <text x="24" y="28" fill="#FFF" font-family="'Inter', sans-serif" font-size="10" font-weight="700" text-anchor="middle">JD</text>
+        <text x="46" y="22" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700">Welcome Back!</text>
+        <text x="46" y="34" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="9">Premium Membership</text>
 
-    <!-- Google Play Download Badge -->
-    <rect x="20" y="285" width="210" height="42" rx="10" fill="#000" stroke="rgba(255,255,255,0.2)"/>
-    <text x="50" y="304" fill="#FFF" font-family="'Inter', sans-serif" font-size="10">GET IT ON</text>
-    <text x="50" y="318" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">Google Play 🤖</text>
+        <!-- Feature Card in App -->
+        <rect x="12" y="48" width="146" height="78" rx="10" fill="linear-gradient(135deg, #6D28D9, #8B5CF6)"/>
+        <text x="22" y="70" fill="#FFF" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">Daily Training Class</text>
+        <text x="22" y="86" fill="#E9D5FF" font-family="'Inter', sans-serif" font-size="9">Today at 5:00 PM • Live Studio</text>
+        <rect x="22" y="96" width="90" height="20" rx="10" fill="#FFF"/>
+        <text x="67" y="109" fill="#6D28D9" font-family="'Inter', sans-serif" font-size="9" font-weight="700" text-anchor="middle">Book Spot →</text>
+
+        <!-- App Stats Grid -->
+        <rect x="12" y="136" width="68" height="60" rx="8" fill="#201244"/>
+        <text x="20" y="156" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="8">CALORIES</text>
+        <text x="20" y="176" fill="#10B981" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">640 kcal</text>
+
+        <rect x="90" y="136" width="68" height="60" rx="8" fill="#201244"/>
+        <text x="98" y="156" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="8">WORKOUTS</text>
+        <text x="98" y="176" fill="#60A5FA" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">18 Sessions</text>
+
+        <!-- Bottom Navigation Bar in Phone -->
+        <rect x="12" y="276" width="146" height="38" rx="19" fill="#120728" stroke="rgba(255,255,255,0.1)"/>
+        <text x="36" y="299" fill="#8B5CF6" font-family="'Inter', sans-serif" font-size="13" text-anchor="middle">🏠</text>
+        <text x="85" y="299" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="13" text-anchor="middle">📅</text>
+        <text x="134" y="299" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="13" text-anchor="middle">👤</text>
+      </g>
+    </g>
   </g>
 </svg>
