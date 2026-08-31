@@ -20,7 +20,7 @@ export default function ResultsPage() {
     {
       tag: 'Mobile App & Performance Ads',
       title: 'FitTrack Pro App',
-      summary: 'Engineered Flutter cross-platform booking mobile app and ran targeted Meta ad acquisition campaigns.',
+      summary: 'Built Flutter cross-platform booking mobile app and ran targeted Meta ad acquisition campaigns.',
       metrics: [
         { label: 'Monthly Bookings Surge', value: '11x' },
         { label: 'Acquisition CPA Reduction', value: '45%' },
@@ -43,7 +43,7 @@ export default function ResultsPage() {
         <span className="text-xs font-bold uppercase tracking-wider text-purple-400">Client Growth Showcase</span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">Real Numbers, Proven Outcomes</h1>
         <p className="text-xs sm:text-sm text-purple-200/70">
-          Explore how our integrated web engineering and targeted ad campaigns helped businesses expand revenue and capture market dominance.
+          Explore how our integrated web development and targeted ad campaigns helped businesses expand revenue and capture market dominance.
         </p>
       </div>
 

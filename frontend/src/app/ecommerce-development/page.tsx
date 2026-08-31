@@ -4,7 +4,7 @@ import { ShoppingBag, CreditCard, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'E-Commerce Storefront Development (Shopify & WooCommerce) | Helix24',
-  description: 'Custom Shopify Plus, Shopify Liquid, and WooCommerce online store development engineered for high sales conversions, mobile checkout, and ad feed sync in Kerala & GCC.',
+  description: 'Custom Shopify Plus, Shopify Liquid, and WooCommerce online store development built for high sales conversions, mobile checkout, and ad feed sync in Kerala & GCC.',
 };
 
 export default function EcommerceDevelopmentPage() {

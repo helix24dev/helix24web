@@ -49,7 +49,7 @@ export default function BrandingDesignPage() {
           </div>
           <h3 className="text-xl font-bold text-white">UI/UX Wireframing & Design Systems</h3>
           <p className="text-xs text-purple-200/75 leading-relaxed">
-            Figma prototypes, interactive wireframes, user journey mapping, and scalable UI component libraries validated before engineering.
+            Figma prototypes, interactive wireframes, user journey mapping, and scalable UI component libraries validated before development.
           </p>
           <ul className="space-y-2 text-xs text-purple-300">
             <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" /> Figma Interactive Wireframes & Prototypes</li>

@@ -11,12 +11,12 @@ export default function WebDevServicePage() {
   return (
     <div className="max-w-[1240px] mx-auto px-6 py-12 space-y-16">
       <div className="text-center space-y-4 max-w-3xl mx-auto">
-        <span className="text-xs font-bold uppercase tracking-wider text-purple-400">Enterprise Engineering</span>
+        <span className="text-xs font-bold uppercase tracking-wider text-purple-400">High-Speed Digital Solutions</span>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
           Next.js Web & <span className="gradient-text">Custom Software Development</span>
         </h1>
         <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-          We engineer lightning-fast Next.js 14 web applications, NestJS enterprise backends, custom Shopify Plus storefronts, and WooCommerce platforms designed for maximum conversion.
+          We build lightning-fast Next.js 14 web applications, NestJS enterprise backends, custom Shopify Plus storefronts, and WooCommerce platforms designed for maximum conversion.
         </p>
       </div>
 

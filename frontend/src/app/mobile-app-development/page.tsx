@@ -4,7 +4,7 @@ import { Smartphone, CheckCircle2, Sparkles, Layers } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Mobile App Development Services (iOS & Android) | Helix24 Agency',
-  description: 'Custom iOS, Android, and cross-platform mobile application development engineered for high performance, smooth UI, and app store growth in Kerala & GCC.',
+  description: 'Custom iOS, Android, and cross-platform mobile application development built for high performance, smooth UI, and app store growth in Kerala & GCC.',
 };
 
 export default function MobileAppDevelopmentPage() {
@@ -18,10 +18,10 @@ export default function MobileAppDevelopmentPage() {
           iOS, Android & Cross-Platform Applications
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
-          Mobile App Engineering for <span className="gradient-text">iOS & Android</span>
+          Mobile App Development for <span className="gradient-text">iOS & Android</span>
         </h1>
         <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-          We engineer high-performance mobile applications — from on-demand booking systems and logistics tracking to SaaS product companions and e-commerce apps.
+          We build high-performance mobile applications — from on-demand booking systems and logistics tracking to SaaS product companions and e-commerce apps.
         </p>
       </div>
 

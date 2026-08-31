@@ -16,7 +16,7 @@ export default function MetaAdsServicePage() {
           Meta Ads, SMM & <span className="gradient-text">Google Ads Performance</span>
         </h1>
         <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-          We engineer full-funnel lead generation campaigns across Meta (Facebook & Instagram) and Google Search PPC, integrated with Server-Side CAPI tracking and automated WhatsApp conversion funnels.
+          We build full-funnel lead generation campaigns across Meta (Facebook & Instagram) and Google Search PPC, integrated with Server-Side CAPI tracking and automated WhatsApp conversion funnels.
         </p>
       </div>
 

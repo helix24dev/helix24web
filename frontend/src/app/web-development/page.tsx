@@ -21,7 +21,7 @@ export default function WebDevelopmentPage() {
           Website & Custom <span className="gradient-text">Software Development</span>
         </h1>
         <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-          We build high-performance, mobile-responsive websites and custom web applications engineered for sub-second page loads, 100/100 Core Web Vitals scores, and maximum lead conversion.
+          We build high-performance, mobile-responsive websites and custom web applications optimized for sub-second page loads, 100/100 Core Web Vitals scores, and maximum lead conversion.
         </p>
       </div>
 

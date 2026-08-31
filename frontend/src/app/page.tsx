@@ -48,7 +48,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
-            Helix24 is a full-service digital marketing and web engineering agency. We run high-converting Meta Ads, end-to-end Social Media Management, Google Ads PPC, and fast web applications — helping ambitious businesses across <strong>Kerala (Kochi & Kozhikode), UAE, and the GCC</strong> scale leads and sales.
+            Helix24 is a full-service digital marketing and web development agency. We run high-converting Meta Ads, end-to-end Social Media Management, Google Ads PPC, and fast web applications — helping ambitious businesses across <strong>Kerala (Kochi & Kozhikode), UAE, and the GCC</strong> scale leads and sales.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -79,7 +79,7 @@ export default function HomePage() {
         <div className="max-w-[1240px] mx-auto">
           <div className="text-center mb-12 space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-purple-400">Core Services</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Engineered for Lead & Revenue Growth</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Designed for Lead & Revenue Growth</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -136,7 +136,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-lg font-bold text-white">Web & Custom Software Dev</h3>
               <p className="text-xs text-purple-200/70 leading-relaxed">
-                Ultra-fast, responsive web platforms and custom business software engineered for 0.8s load times, top Core Web Vitals, and maximum conversion.
+                Ultra-fast, responsive web platforms and custom business software built for 0.8s load times, top Core Web Vitals, and maximum conversion.
               </p>
               <Link href="/web-development" className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white">
                 <span>Explore Web Dev</span>
@@ -149,7 +149,7 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <Smartphone className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Mobile App Engineering</h3>
+              <h3 className="text-lg font-bold text-white">Mobile App Development</h3>
               <p className="text-xs text-purple-200/70 leading-relaxed">
                 Cross-platform Flutter and native iOS & Android applications with 60fps UI performance, App Store Optimization (ASO), and push notifications.
               </p>

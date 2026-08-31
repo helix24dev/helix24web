@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,7 +48,21 @@ body {
   background-color: var(--paper);
   color: var(--ink);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.mono, .font-mono {
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 /* Glassmorphic Utilities */

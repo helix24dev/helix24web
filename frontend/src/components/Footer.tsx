@@ -26,7 +26,7 @@ export default function Footer() {
             <li><Link href="/digital-marketing-seo" className="hover:text-white transition-colors">Meta Ads & Social Media Management</Link></li>
             <li><Link href="/digital-marketing-seo" className="hover:text-white transition-colors">Google Ads PPC & Local SEO</Link></li>
             <li><Link href="/web-development" className="hover:text-white transition-colors">Website & Custom Software Dev</Link></li>
-            <li><Link href="/mobile-app-development" className="hover:text-white transition-colors">Mobile App Engineering (iOS & Android)</Link></li>
+            <li><Link href="/mobile-app-development" className="hover:text-white transition-colors">Mobile App Development (iOS & Android)</Link></li>
             <li><Link href="/ecommerce-development" className="hover:text-white transition-colors">Shopify & WooCommerce Stores</Link></li>
             <li><Link href="/branding-design" className="hover:text-white transition-colors">Branding & Visual UI/UX Design</Link></li>
           </ul>

@@ -14,7 +14,7 @@ export default function ContactPage() {
         <span className="text-xs font-bold uppercase tracking-wider text-purple-400">Free Strategy Consultation</span>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white">Let&apos;s Scale Your Digital Growth</h1>
         <p className="text-xs sm:text-sm text-purple-200/70">
-          Submit your project details below to receive a customized engineering and ad strategy proposal within 24 hours.
+          Submit your project details below to receive a customized web development and ad strategy proposal within 24 hours.
         </p>
       </div>
 
