@@ -3,6 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="0rlXXnq2Fz1242vAXUJyC9oIb11sosDtrRLr1nYJbOA" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T88B527H');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1364676875854205');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1364676875854205&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <title>Digital Marketing, Meta Ads & Google Ads Agency | Helix24</title>
   <meta name="description" content="Drive high-ROI lead funnels with Helix24. Specialized Meta Ads (Facebook & Instagram), Social Media Management (SMM), Google Ads PPC, and Local SEO.">
   <meta name="keywords" content="Meta ads agency, Social Media Management, Google Ads PPC, Local SEO agency, Facebook lead generation, Instagram ad funnels">
@@ -29,8 +56,8 @@
   <link rel="stylesheet" href="css/style.css">
   
   <!-- GSAP Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
   <!-- Schema.org JSON-LD Markup -->
   <script type="application/ld+json">
@@ -74,6 +101,10 @@
   </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T88B527H"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <div class="scroll-progress" id="scrollProgress"></div>
   <div class="cursor-glow" id="cursorGlow"></div>
@@ -108,6 +139,7 @@
         <a href="index.html">Home</a>
         <a href="digital-marketing-seo.html" class="active">Meta & Google Ads</a>
         <a href="web-development.html">Web Dev</a>
+        <a href="blog.html">Blog & FAQs</a>
         <a href="mobile-app-development.html">Mobile Apps</a>
         <a href="ecommerce-development.html">E-Commerce</a>
         <a href="results.html">Results</a>
@@ -321,6 +353,7 @@
           <h4>Company</h4>
           <ul class="foot-links-list">
             <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog &amp; FAQs</a></li>
             <li><a href="results.html">Results & Case Studies</a></li>
             <li><a href="contact.html">Free Quote Estimator</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -358,7 +391,7 @@
       <h3 style="font-size:24px; margin-bottom:8px;">Quick Project Inquiry</h3>
       <p style="color:var(--muted); font-size:14px; margin-bottom:24px;">Send us a quick message and get a custom quote within hours.</p>
       
-      <form id="quickDrawerForm">
+      <form id="quickDrawerForm" name="quick-quote-form" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="quick-quote-form" />
         <div class="form-group">
           <label for="qdName">Your Name *</label>
           <input type="text" id="qdName" class="form-input" placeholder="e.g. Alex Morgan" required>

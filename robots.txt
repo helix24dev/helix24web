@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /admin
+Disallow: /privacy-policy.html
+Disallow: /terms.html
 
 Sitemap: https://helix24.com/sitemap.xml
+Host: https://helix24.com

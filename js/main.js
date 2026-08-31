@@ -500,6 +500,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("resize", updateSlider);
   }
+
+  /* ========== COOKIE CONSENT BANNER (UAE PDPL & GDPR COMPLIANT) ========== */
+  if (!localStorage.getItem("helix_cookie_consent")) {
+    const banner = document.createElement("div");
+    banner.id = "cookieConsentBanner";
+    banner.style.cssText = "position:fixed; bottom:20px; left:20px; right:20px; max-width:520px; z-index:9999; background:var(--glass-bg); backdrop-filter:blur(16px); border:1px solid var(--glass-border); border-radius:16px; padding:20px; box-shadow:0 20px 50px rgba(0,0,0,0.5); display:flex; flex-direction:column; gap:12px; transition:all 0.4s ease;";
+    banner.innerHTML = `
+      <div style="font-size:14px; color:var(--ink); line-height:1.5;">
+        🍪 We use privacy-compliant analytics (Meta Pixel & GTM) to optimize ad performance and user experience. Read our <a href="privacy-policy.html" style="color:var(--violet-bright); text-decoration:underline;">Privacy Policy</a>.
+      </div>
+      <div style="display:flex; gap:10px; justify-content:flex-end;">
+        <button id="acceptCookiesBtn" class="cta-btn" style="padding:8px 18px; font-size:13px;">Accept & Continue</button>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    document.getElementById("acceptCookiesBtn").addEventListener("click", () => {
+      localStorage.setItem("helix_cookie_consent", "accepted");
+      banner.style.opacity = "0";
+      banner.style.transform = "translateY(20px)";
+      setTimeout(() => banner.remove(), 400);
+    });
+  }
 });
 
 
