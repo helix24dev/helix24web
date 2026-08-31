@@ -25,8 +25,11 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/services/meta-ads', label: 'Meta & Google Ads' },
-    { href: '/services/web-development', label: 'Web Dev' },
+    { href: '/digital-marketing-seo', label: 'Meta & Google Ads' },
+    { href: '/web-development', label: 'Web Dev' },
+    { href: '/mobile-app-development', label: 'Mobile Apps' },
+    { href: '/ecommerce-development', label: 'E-Commerce' },
+    { href: '/branding-design', label: 'Branding' },
     { href: '/calculator', label: 'ROI Calculator' },
     { href: '/blog', label: 'Blog & FAQs' },
     { href: '/results', label: 'Results' },

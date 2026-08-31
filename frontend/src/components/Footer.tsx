@@ -23,11 +23,12 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-white mb-4 text-xs uppercase tracking-wider text-purple-300">Specializations</h4>
           <ul className="space-y-2 text-xs">
-            <li><Link href="/services/meta-ads" className="hover:text-white transition-colors">Meta Ads (Facebook & Instagram)</Link></li>
-            <li><Link href="/services/meta-ads" className="hover:text-white transition-colors">Social Media Management (SMM)</Link></li>
-            <li><Link href="/services/meta-ads" className="hover:text-white transition-colors">Google Ads PPC & Search</Link></li>
-            <li><Link href="/services/web-development" className="hover:text-white transition-colors">Website & Custom Software Dev</Link></li>
-            <li><Link href="/services/web-development" className="hover:text-white transition-colors">Shopify & WooCommerce Stores</Link></li>
+            <li><Link href="/digital-marketing-seo" className="hover:text-white transition-colors">Meta Ads & Social Media Management</Link></li>
+            <li><Link href="/digital-marketing-seo" className="hover:text-white transition-colors">Google Ads PPC & Local SEO</Link></li>
+            <li><Link href="/web-development" className="hover:text-white transition-colors">Website & Custom Software Dev</Link></li>
+            <li><Link href="/mobile-app-development" className="hover:text-white transition-colors">Mobile App Engineering (iOS & Android)</Link></li>
+            <li><Link href="/ecommerce-development" className="hover:text-white transition-colors">Shopify & WooCommerce Stores</Link></li>
+            <li><Link href="/branding-design" className="hover:text-white transition-colors">Branding & Visual UI/UX Design</Link></li>
           </ul>
         </div>
 
@@ -63,7 +64,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-[1240px] mx-auto px-6 mt-12 pt-6 border-t border-purple-900/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-purple-300/50">
-        <p>© 2026 HELIX24 SOLUTIONS — ENTERPRISE NEXT.JS & NESTJS PLATFORM</p>
+        <p>© 2026 HELIX24 SOLUTIONS — WEBSITE DEVELOPMENT & DIGITAL MARKETING AGENCY</p>
         <div className="flex gap-6">
           <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-white">Terms of Service</Link>

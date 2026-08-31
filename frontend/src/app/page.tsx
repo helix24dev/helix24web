@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import AdSpendCalculator from '@/components/AdSpendCalculator';
 import LeadForm from '@/components/LeadForm';
-import { Target, Share2, Search, Award, ArrowRight } from 'lucide-react';
+import { Target, Share2, Search, Code, ShoppingBag, Smartphone, Award, ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   const jsonLd = {
@@ -48,7 +48,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
-            Helix24 is a full-service digital marketing and web engineering agency. We run high-ROI Meta Ads, end-to-end Social Media Management, Google Ads PPC, and fast Next.js web applications — helping ambitious businesses across <strong>Kerala (Kochi & Kozhikode), UAE, and the GCC</strong> scale leads and sales.
+            Helix24 is a full-service digital marketing and web engineering agency. We run high-converting Meta Ads, end-to-end Social Media Management, Google Ads PPC, and fast web applications — helping ambitious businesses across <strong>Kerala (Kochi & Kozhikode), UAE, and the GCC</strong> scale leads and sales.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -74,7 +74,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Specializations Grid */}
+      {/* Bento Grid - 6 Core Agency Services */}
       <section className="px-6 py-16 border-t border-purple-900/20 bg-purple-950/20">
         <div className="max-w-[1240px] mx-auto">
           <div className="text-center mb-12 space-y-2">
@@ -84,27 +84,38 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div className="glass-panel p-6 space-y-4">
+            {/* 1. Meta Ads */}
+            <div className="glass-panel p-6 space-y-4 hover:border-purple-400/50 transition-all">
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-white">Meta Ads & Lead Funnels</h3>
               <p className="text-xs text-purple-200/70 leading-relaxed">
-                Data-driven Facebook & Instagram ad campaigns paired with server-side CAPI tracking, custom Reels video creatives, and direct WhatsApp conversion funnels.
+                Data-driven Facebook & Instagram ad campaigns paired with server-side CAPI tracking, custom Reels video creatives, and direct WhatsApp lead conversion.
               </p>
+              <Link href="/digital-marketing-seo" className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white">
+                <span>Explore Meta Ads</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
 
-            <div className="glass-panel p-6 space-y-4">
+            {/* 2. Social Media Management */}
+            <div className="glass-panel p-6 space-y-4 hover:border-purple-400/50 transition-all">
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <Share2 className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Social Media Management</h3>
+              <h3 className="text-lg font-bold text-white">Social Media Management (SMM)</h3>
               <p className="text-xs text-purple-200/70 leading-relaxed">
                 Full-service brand publishing: Instagram Reels production, visual grid designs, community engagement, and transparent growth analytics.
               </p>
+              <Link href="/digital-marketing-seo" className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white">
+                <span>Explore SMM Strategy</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
 
-            <div className="glass-panel p-6 space-y-4">
+            {/* 3. Google Ads & Local SEO */}
+            <div className="glass-panel p-6 space-y-4 hover:border-purple-400/50 transition-all">
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <Search className="w-6 h-6" />
               </div>
@@ -112,6 +123,55 @@ export default function HomePage() {
               <p className="text-xs text-purple-200/70 leading-relaxed">
                 High-intent Google Search PPC, Performance Max campaigns, and Google Maps Local 3-Pack optimization for Kochi & Kozhikode businesses.
               </p>
+              <Link href="/digital-marketing-seo" className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white">
+                <span>Explore Local SEO</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* 4. Web Development */}
+            <div className="glass-panel p-6 space-y-4 hover:border-purple-400/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
+                <Code className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-white">Web & Custom Software Dev</h3>
+              <p className="text-xs text-purple-200/70 leading-relaxed">
+                Ultra-fast, responsive web platforms and custom business software engineered for 0.8s load times, top Core Web Vitals, and maximum conversion.
+              </p>
+              <Link href="/web-development" className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white">
+                <span>Explore Web Dev</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* 5. Mobile Apps */}
+            <div className="glass-panel p-6 space-y-4 hover:border-purple-400/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
+                <Smartphone className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-white">Mobile App Engineering</h3>
+              <p className="text-xs text-purple-200/70 leading-relaxed">
+                Cross-platform Flutter and native iOS & Android applications with 60fps UI performance, App Store Optimization (ASO), and push notifications.
+              </p>
+              <Link href="/mobile-app-development" className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white">
+                <span>Explore App Dev</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* 6. E-Commerce & Branding */}
+            <div className="glass-panel p-6 space-y-4 hover:border-purple-400/50 transition-all">
+              <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
+                <ShoppingBag className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-white">Shopify & E-Commerce Stores</h3>
+              <p className="text-xs text-purple-200/70 leading-relaxed">
+                Shopify Plus and WooCommerce storefronts with custom liquid theme design, Razorpay/Stripe checkout, and automated catalog feed sync.
+              </p>
+              <Link href="/ecommerce-development" className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-300 hover:text-white">
+                <span>Explore E-Commerce</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
 
           </div>
