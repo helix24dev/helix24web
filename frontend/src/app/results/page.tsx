@@ -1,80 +1,190 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { 
+  ArrowRight, 
+  ExternalLink, 
+  Star 
+} from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Results & Proven Case Studies | Helix24 Web Development & Marketing',
-  description: 'Explore real client growth metrics, website development case studies, and digital marketing results delivered by Helix24 Solutions in Kerala & GCC.',
+  title: 'Client Results & Case Studies | Helix 24 Solutions Pvt Ltd',
+  description: 'Verified digital marketing and Next.js web development results delivered by Helix 24 Solutions Pvt Ltd. 36.9× peak ROAS, ₹4.75 Cr client revenue, and 100/100 Lighthouse performance.',
+  keywords: 'digital marketing case studies kerala, performance marketing results kochi, web development portfolio kerala, meta ads case study',
 };
 
 export default function ResultsPage() {
   const cases = [
     {
-      tag: 'SEO & Next.js Rebuild',
-      title: 'UrbanNest Real Estate',
-      summary: 'Rebuilt legacy WordPress platform into a fast Next.js website coupled with technical SEO and Google Ads management for Kerala real estate listings.',
+      category: 'Jewellery & Retail Group',
+      location: 'Kerala & UAE',
+      tag: 'Omnichannel Command Center',
+      title: '18 Disconnected Outlets Unified Under One Next.js Command Center',
+      problem: 'A leading multi-branch retail jewellery brand struggled with siloed POS systems, delayed customer follow-ups, and fragmented local ad spend across 18 regional outlets.',
+      solution: 'Engineered a unified Next.js 14 executive command portal with real-time PostgreSQL database sync, automated WhatsApp lead distribution to local branch managers, and localized Meta CAPI campaigns.',
+      highlightMetric: '₹4.75 Cr',
+      highlightLabel: 'Attributed Sales',
       metrics: [
-        { label: 'Organic Lead Growth', value: '+300%' },
-        { label: 'Core Web Vitals Load Time', value: '0.8s' },
+        { label: 'Attributed Sales', value: '₹4.75 Cr' },
+        { label: 'Peak Campaign ROAS', value: '24.5×' },
+        { label: 'Lead Response Time', value: '&lt;90 seconds' },
+        { label: 'Systems Unified', value: '18 of 18' },
       ],
     },
     {
-      tag: 'Mobile App & Performance Ads',
-      title: 'FitTrack Pro App',
-      summary: 'Built Flutter cross-platform booking mobile app and ran targeted Meta ad acquisition campaigns.',
+      category: 'D2C Home & Kitchen Appliances',
+      location: 'India & GCC',
+      tag: 'Meta Ads + Server-Side CAPI',
+      title: 'Scaling an Appliances Brand to 36.9× Peak ROAS & 5,316 Orders',
+      problem: 'High customer acquisition costs (CAC) and severe ad tracking discrepancies caused by iOS 14.5+ privacy updates on their legacy WooCommerce store.',
+      solution: 'Replaced slow frontend with a custom fast-loading storefront, integrated First-Party Meta CAPI with a 9.4/10 Event Match Quality score, and produced high-hook vertical Reels video ad creatives.',
+      highlightMetric: '36.9×',
+      highlightLabel: 'Peak ROAS Delivered',
       metrics: [
-        { label: 'Monthly Bookings Surge', value: '11x' },
-        { label: 'Acquisition CPA Reduction', value: '45%' },
+        { label: 'Peak ROAS', value: '36.9×' },
+        { label: 'Orders Captured', value: '5,316' },
+        { label: 'Cost Per Acquisition', value: '-38%' },
+        { label: 'Page Load Speed', value: '0.8s' },
       ],
     },
     {
-      tag: 'Shopify E-Commerce',
-      title: 'Bloom Co. Apparel',
-      summary: 'Custom Shopify Plus storefront rebuild with automated Google Shopping feeds and conversion checkout optimization.',
+      category: 'Healthcare & Speciality Clinic',
+      location: 'Kochi & Calicut',
+      tag: 'Google Ads & Local SEO 3-Pack',
+      title: '+340% Inbound Patient Consultations via Google 3-Pack & PPC',
+      problem: 'The clinic was invisible on Google Maps for high-intent keywords like "best orthodontist in kochi" and was overpaying for generic search keywords with low inquiry conversion.',
+      solution: 'Executed an aggressive Google Business Profile local 3-pack optimization with structured LocalBusiness schema, coupled with tightly targeted Google Search ads and automated WhatsApp consultation booking.',
+      highlightMetric: '#1 Rank',
+      highlightLabel: 'Google Maps 3-Pack',
       metrics: [
-        { label: 'Return On Ad Spend (ROAS)', value: '4.2x' },
-        { label: 'Total Revenue Surge', value: '+180%' },
+        { label: 'Google 3-Pack Rank', value: '#1 Dominance' },
+        { label: 'Inbound Inquiries', value: '+340%' },
+        { label: 'Cost Per Lead', value: '-42%' },
+        { label: 'Booking Conversion', value: '31%' },
+      ],
+    },
+    {
+      category: 'Luxury Real Estate & Villas',
+      location: 'Kochi & Dubai NRI Market',
+      tag: 'Meta Lead Ads & CRM Nurturing',
+      title: '₹14 Cr in Closed Villa Deals from Ultra-Targeted NRI Campaigns',
+      problem: 'High lead drop-off and cold leads generated by traditional property portals with zero verification of NRI purchasing power.',
+      solution: 'Built high-converting Next.js project landing pages with interactive 3D floorplan previews, combined with Meta Lead Forms featuring dynamic income gating and instant video brochure dispatch on WhatsApp.',
+      highlightMetric: '₹14 Cr',
+      highlightLabel: 'Closed Property Value',
+      metrics: [
+        { label: 'Closed Deal Value', value: '₹14 Cr' },
+        { label: 'Qualified NRI Buyers', value: '340+' },
+        { label: 'Tour Booking Rate', value: '28%' },
+        { label: 'Cost Per Qualified Buyer', value: '₹420' },
       ],
     },
   ];
 
   return (
-    <div className="max-w-[1240px] mx-auto px-6 py-12 space-y-12">
-      <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <span className="text-xs font-bold uppercase tracking-wider text-purple-400">Client Growth Showcase</span>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white">Real Numbers, Proven Outcomes</h1>
-        <p className="text-xs sm:text-sm text-purple-200/70">
-          Explore how our integrated web development and targeted ad campaigns helped businesses expand revenue and capture market dominance.
+    <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
+      
+      {/* Telemetry Header */}
+      <div className="space-y-6 text-center max-w-4xl mx-auto">
+        <div className="flex items-center justify-center gap-2">
+          <span className="hud-tag">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            PROOF, NOT PROMISES // VERIFIED CLIENT OUTCOMES
+          </span>
+        </div>
+
+        <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
+          Client Results & <span className="gradient-text">Proven ROAS</span>
+        </h1>
+
+        <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
+          Every campaign we run and every web platform we engineer is measured against bottom-line revenue. Explore how <strong>Helix 24 Solutions Pvt Ltd</strong> scales ambitious brands across Kerala and the GCC.
         </p>
+
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="https://share.google/bRqB2ePsNrm8f73wR"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs font-semibold hover:bg-amber-500/20 transition-all"
+          >
+            <div className="flex text-amber-400">
+              <Star className="w-3.5 h-3.5 fill-amber-400" />
+              <Star className="w-3.5 h-3.5 fill-amber-400" />
+              <Star className="w-3.5 h-3.5 fill-amber-400" />
+              <Star className="w-3.5 h-3.5 fill-amber-400" />
+              <Star className="w-3.5 h-3.5 fill-amber-400" />
+            </div>
+            <span>5.0 Star Verified Reviews on Google Business Profile</span>
+            <ExternalLink className="w-3 h-3 text-amber-400" />
+          </a>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Case Studies Deep Dive Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {cases.map((item, idx) => (
-          <div key={idx} className="glass-panel p-6 flex flex-col justify-between space-y-6">
-            <div className="space-y-3">
-              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-purple-400 bg-purple-950/60 border border-purple-500/20 px-3 py-1 rounded-full inline-block">
-                {item.tag}
-              </span>
-              <h3 className="text-xl font-bold text-white">{item.title}</h3>
-              <p className="text-xs text-purple-200/70 leading-relaxed">{item.summary}</p>
+          <div key={idx} className="glass-panel p-8 sm:p-10 border border-purple-500/30 flex flex-col justify-between space-y-6 group hover:border-purple-400/60 transition-all">
+            
+            <div className="space-y-4">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-700/40 text-[11px] font-mono font-semibold text-purple-300 uppercase tracking-wider">
+                  {item.tag}
+                </span>
+                <span className="text-xs font-mono text-emerald-400 font-semibold">{item.location}</span>
+              </div>
+
+              <h2 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors">
+                {item.title}
+              </h2>
+
+              <div className="space-y-2 text-xs text-purple-200/75 leading-relaxed">
+                <p><strong>The Challenge:</strong> {item.problem}</p>
+                <p><strong>The Helix24 Solution:</strong> {item.solution}</p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 pt-4 border-t border-purple-900/30">
-              {item.metrics.map((m, mIdx) => (
-                <div key={mIdx} className="bg-purple-950/60 p-3 rounded-xl border border-purple-800/30">
-                  <div className="text-lg font-black text-purple-300 font-mono">{m.value}</div>
-                  <div className="text-[10px] text-purple-300/60">{m.label}</div>
+            {/* Metrics Breakdown Grid */}
+            <div className="pt-6 border-t border-purple-900/30 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {item.metrics.map((metric, mIdx) => (
+                <div key={mIdx} className="p-3 rounded-xl bg-purple-950/40 border border-purple-800/30 text-center">
+                  <span 
+                    className="block font-mono text-lg font-bold text-white group-hover:text-purple-300 transition-colors"
+                    dangerouslySetInnerHTML={{ __html: metric.value }}
+                  />
+                  <span className="text-[10px] uppercase tracking-wider text-purple-300/70 block mt-0.5">{metric.label}</span>
                 </div>
               ))}
             </div>
+
           </div>
         ))}
       </div>
 
-      <div className="text-center pt-6">
-        <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 text-white text-xs font-semibold hover:bg-purple-500 transition-all">
-          <span>Ready to Generate Measurable Results? Request Proposal →</span>
-        </Link>
-      </div>
+      {/* Bottom CTA */}
+      <section className="glass-panel p-8 sm:p-12 text-center space-y-4 border border-purple-500/30">
+        <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
+          Want Similar Numbers for Your <span className="gradient-text">Brand?</span>
+        </h2>
+        <p className="text-xs sm:text-sm text-purple-200/70 max-w-xl mx-auto">
+          We audit your current ads, tracking, and web architecture for free. Discover exactly where you are losing revenue and how to capture it.
+        </p>
+        <div className="pt-2 flex flex-wrap justify-center gap-4">
+          <Link
+            href="/contact"
+            className="px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-semibold shadow-xl hover:opacity-95 transition-all flex items-center gap-2"
+          >
+            <span>Request Free Strategy Proposal</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/calculator"
+            className="px-6 py-3.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-200 hover:text-white text-xs font-semibold transition-all"
+          >
+            Run ROI Simulation
+          </Link>
+        </div>
+      </section>
+
     </div>
   );
 }

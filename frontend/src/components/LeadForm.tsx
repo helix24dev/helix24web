@@ -50,7 +50,7 @@ export default function LeadForm() {
   return (
     <form onSubmit={handleSubmit} className="glass-panel p-8 space-y-5 max-w-xl mx-auto">
       <div className="space-y-1">
-        <h3 className="text-xl font-bold text-white">Request Free Growth Proposal</h3>
+        <h3 className="text-xl font-bold text-white">Request Free Strategy Proposal</h3>
         <p className="text-xs text-purple-200/70">Submit your project details to receive a customized ad & web strategy proposal within 24 hours.</p>
       </div>
 
@@ -109,7 +109,7 @@ export default function LeadForm() {
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-purple-200 mb-1.5">Project Details & Growth Goals *</label>
+        <label className="block text-xs font-semibold text-purple-200 mb-1.5">Project Details & Objectives *</label>
         <textarea
           required
           rows={3}
