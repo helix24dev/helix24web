@@ -10,8 +10,6 @@ import {
   Store,
   Zap,
   Building2,
-  Globe2,
-  Landmark,
   CheckCircle2,
 } from 'lucide-react';
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
@@ -99,37 +97,6 @@ export default function HomePage() {
     },
   ];
 
-  const regionalHubs = [
-    {
-      city: 'Kochi',
-      icon: Building2,
-      region: 'Central Kerala & Infopark',
-      focus: 'Tech Startups & Commercial Growth',
-      desc: 'Centrally rooted in Ernakulam/Kakkanad, helping tech enterprises, healthcare groups, and B2B services capture statewide and national market share.',
-    },
-    {
-      city: 'Kozhikode',
-      icon: Store,
-      region: 'Malabar Commerce Corridor',
-      focus: 'Retail Groups & D2C Brands',
-      desc: 'Empowering North Kerala’s vibrant trade capital with high-converting Meta Ads, omnichannel retail funnels, and sub-second commerce storefronts.',
-    },
-    {
-      city: 'Trivandrum',
-      icon: Landmark,
-      region: 'South Kerala & Technopark',
-      focus: 'Enterprise & Institutional SEO',
-      desc: 'Supporting Technopark technology firms, professional practices, and premium builders with high-intent search optimization and digital systems.',
-    },
-    {
-      city: 'GCC Desk',
-      icon: Globe2,
-      region: 'UAE (Dubai) & Saudi Arabia',
-      focus: 'Cross-Border Commerce & NRIs',
-      desc: 'Connecting Kerala brands with high-net-worth diaspora investors, Apple Pay & Tabby BNPL checkouts, and bilingual ad funnels across the Gulf.',
-    },
-  ];
-
   const regionalSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -203,61 +170,6 @@ export default function HomePage() {
 
         {/* Proof Metrics Strip */}
         <ProofMetricsStrip />
-
-        {/* Regional Hubs & Presence Section */}
-        <section className="px-6 max-w-[1240px] mx-auto space-y-12">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-purple-900/30 pb-8">
-            <div className="space-y-2">
-              <span className="text-xs uppercase tracking-widest text-purple-400 font-semibold block font-mono">
-                Regional Authority
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-                From Kerala to the GCC.
-              </h2>
-            </div>
-
-            <p className="text-xs sm:text-sm text-purple-300/80 max-w-md">
-              Local market grounding across Central, North, and South Kerala, integrated with cross-border GCC expansion.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {regionalHubs.map((hub, idx) => {
-              const HubIcon = hub.icon;
-              return (
-                <div
-                  key={idx}
-                  className="glass-panel p-6 sm:p-8 flex flex-col justify-between space-y-6 border border-purple-500/20 hover:border-purple-400/50 transition-all"
-                >
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
-                        <HubIcon className="w-4 h-4" />
-                      </div>
-                      <span className="font-heading font-extrabold text-2xl text-white">
-                        {hub.city}
-                      </span>
-                    </div>
-
-                    <span className="block text-[11px] font-mono uppercase tracking-wider text-purple-300 font-semibold">
-                      {hub.region}
-                    </span>
-
-                    <p className="text-xs text-purple-200/80 leading-relaxed">
-                      {hub.desc}
-                    </p>
-                  </div>
-
-                  <div className="pt-4 border-t border-purple-900/40">
-                    <span className="text-[11px] text-emerald-400 metric-emerald font-semibold font-mono block">
-                      {hub.focus}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
 
         {/* Selected Work (Case Studies) */}
         <section className="px-6 max-w-[1240px] mx-auto space-y-12">
