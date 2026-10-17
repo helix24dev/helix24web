@@ -39,7 +39,7 @@ export default function Navbar() {
         
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight text-white group shrink-0">
-          <div className="w-7 h-7 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-inner">
+          <div className="w-7 h-7 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-inner keep-white">
             H
           </div>
           <span className="font-heading">Helix 24<span className="text-purple-400 font-normal"> Solutions</span></span>
@@ -77,7 +77,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold text-xs shadow-md transition-all"
+            className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold text-xs shadow-md transition-all keep-white"
           >
             <span>Let&apos;s Talk</span>
           </Link>

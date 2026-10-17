@@ -38,7 +38,7 @@ export default function RootLayout({
       <head>
         <TrackingScripts />
       </head>
-      <body className="min-h-screen flex flex-col relative antialiased bg-[#090514] text-[#F3EEFE] selection:bg-purple-600 selection:text-white">
+      <body className="min-h-screen flex flex-col relative antialiased bg-[var(--paper)] text-[var(--ink)] selection:bg-purple-600 selection:text-white transition-colors duration-200">
         <Navbar />
         <main className="flex-grow pt-24 sm:pt-28">{children}</main>
         <Footer />

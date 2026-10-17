@@ -27,17 +27,17 @@
   --paper: #FFFFFF;
   --surface: #F8F5FD;
   --surface-alt: #F1EAFC;
-  --surface-border: rgba(124, 58, 237, 0.15);
-  --ink: #150F23;
+  --surface-border: rgba(124, 58, 237, 0.12);
+  --ink: #110B22;
   --ink-secondary: #4C1D95;
-  --muted: #6B6478;
-  --violet: #7C3AED;
-  --violet-bright: #8B5CF6;
+  --muted: #64748B;
+  --violet: #6D28D9;
+  --violet-bright: #7C3AED;
   --violet-deep: #2E1065;
-  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-bg: rgba(255, 255, 255, 0.94);
   --glass-bg-hover: rgba(248, 245, 253, 0.98);
-  --glass-border: rgba(124, 58, 237, 0.16);
-  --glass-border-hover: rgba(124, 58, 237, 0.35);
+  --glass-border: rgba(109, 40, 217, 0.14);
+  --glass-border-hover: rgba(109, 40, 217, 0.35);
 }
 
 * {
@@ -59,6 +59,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
@@ -101,20 +102,170 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   -webkit-text-fill-color: transparent;
 }
 
+/* ==========================================================================
+   Complete Light / White Theme Rules & Inversions
+   ========================================================================== */
+
+[data-theme="light"] {
+  --paper: #FFFFFF;
+  --surface: #F8F5FD;
+  --surface-alt: #F1EAFC;
+  --surface-border: rgba(124, 58, 237, 0.12);
+  --ink: #110B22;
+  --ink-secondary: #4C1D95;
+  --muted: #475569;
+  --violet: #6D28D9;
+  --violet-bright: #7C3AED;
+  --violet-deep: #2E1065;
+  --glass-bg: rgba(255, 255, 255, 0.96);
+  --glass-bg-hover: rgba(248, 245, 253, 0.98);
+  --glass-border: rgba(109, 40, 217, 0.14);
+  --glass-border-hover: rgba(109, 40, 217, 0.35);
+}
+
+/* Headings and body in light mode */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #110B22 !important;
+}
+
+[data-theme="light"] .text-white:not(.keep-white):not([class*="bg-"]):not([class*="btn"]) {
+  color: #110B22 !important;
+}
+
+/* Ensure buttons, badges, and gradient elements maintain crisp white text */
+[data-theme="light"] .keep-white,
+[data-theme="light"] .keep-white *,
+[data-theme="light"] a[class*="from-purple"],
+[data-theme="light"] button[class*="from-purple"],
+[data-theme="light"] a[class*="bg-gradient"],
+[data-theme="light"] button[class*="bg-gradient"],
+[data-theme="light"] [class*="bg-purple-600"],
+[data-theme="light"] [class*="bg-purple-700"],
+[data-theme="light"] [class*="bg-indigo-600"] {
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] [class*="bg-emerald-500"] {
+  color: #090514 !important;
+}
+
+[data-theme="light"] .text-purple-100,
+[data-theme="light"] .text-purple-200,
+[data-theme="light"] .text-purple-300,
+[data-theme="light"] .text-purple-200\/80,
+[data-theme="light"] .text-purple-200\/75,
+[data-theme="light"] .text-purple-200\/70,
+[data-theme="light"] .text-purple-300\/70,
+[data-theme="light"] .text-purple-300\/80,
+[data-theme="light"] .text-zinc-400,
+[data-theme="light"] .text-zinc-500,
+[data-theme="light"] .text-\[\#A39BB5\] {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .text-purple-400 {
+  color: #6D28D9 !important;
+}
+
+/* High contrast metrics for light mode */
+[data-theme="light"] .metric-emerald,
+[data-theme="light"] .text-emerald-400 {
+  color: #059669 !important;
+}
+
+[data-theme="light"] .metric-amber,
+[data-theme="light"] .text-amber-300 {
+  color: #D97706 !important;
+}
+
+[data-theme="light"] .metric-purple,
+[data-theme="light"] .text-purple-300 {
+  color: #6D28D9 !important;
+}
+
+/* Surface backgrounds in light mode */
+[data-theme="light"] .bg-\[\#110B22\],
+[data-theme="light"] .bg-\[\#110B22\]\/85,
+[data-theme="light"] .bg-\[\#070310\],
+[data-theme="light"] .bg-\[\#090514\],
+[data-theme="light"] .bg-zinc-950,
+[data-theme="light"] .bg-slate-950 {
+  background-color: #FFFFFF !important;
+}
+
+[data-theme="light"] .bg-purple-950\/40,
+[data-theme="light"] .bg-purple-950\/30,
+[data-theme="light"] .bg-purple-950\/60,
+[data-theme="light"] .bg-purple-900\/30,
+[data-theme="light"] .bg-purple-900\/40,
+[data-theme="light"] .bg-purple-900\/50 {
+  background-color: #F8F5FD !important;
+}
+
+/* CTA Banner Inversion in light mode */
+[data-theme="light"] .cta-banner {
+  background-image: none !important;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #FAF5FF 100%) !important;
+  border-color: rgba(124, 58, 237, 0.25) !important;
+  box-shadow: 0 20px 40px -15px rgba(124, 58, 237, 0.12) !important;
+}
+
+[data-theme="light"] .cta-banner h2 {
+  color: #110B22 !important;
+}
+
+[data-theme="light"] .cta-banner p {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .cta-banner .cta-badge {
+  background-color: #EDE9FE !important;
+  border-color: rgba(124, 58, 237, 0.3) !important;
+  color: #6D28D9 !important;
+}
+
+[data-theme="light"] .cta-banner a[class*="bg-purple"] {
+  background: #6D28D9 !important;
+  color: #FFFFFF !important;
+  border-color: #6D28D9 !important;
+}
+
+[data-theme="light"] .border-white\/10,
+[data-theme="light"] .border-white\/15,
+[data-theme="light"] .border-white\/20,
+[data-theme="light"] .border-purple-900\/30,
+[data-theme="light"] .border-purple-900\/40,
+[data-theme="light"] .border-purple-500\/20,
+[data-theme="light"] .border-purple-500\/30,
+[data-theme="light"] .border-purple-500\/40 {
+  border-color: rgba(109, 40, 217, 0.16) !important;
+}
+
+[data-theme="light"] .gradient-text {
+  background: linear-gradient(135deg, #110B22 0%, #6D28D9 50%, #7C3AED 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
 /* Minimal Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #090514;
+  background: var(--paper);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2E1065;
+  background: #6D28D9;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6D28D9;
+  background: #8B5CF6;
 }

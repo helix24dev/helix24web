@@ -1,33 +1,56 @@
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, MessageCircle, MapPin } from 'lucide-react';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  MessageCircle,
+  Target,
+  Laptop,
+  Search,
+  Palette,
+  Store,
+  Zap,
+  Building2,
+  Globe2,
+  Landmark,
+  CheckCircle2,
+} from 'lucide-react';
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
 
 export default function HomePage() {
   const selectedWorks = [
     {
       category: 'Omnichannel Retail',
+      sectorBadge: 'Retail & Showrooms',
+      icon: Store,
       title: '18 Retail Outlets Unified Under One Live Digital Command Center',
       highlight: '₹4.75 Cr',
       metricLabel: 'Attributed Sales',
-      summary: 'Replaced disconnected store workflows with a unified Next.js dashboard, automated WhatsApp CRM lead routing, and Meta CAPI campaigns.',
+      summary: 'Replaced disconnected store workflows with a unified dashboard, automated WhatsApp CRM lead routing, and Meta CAPI campaigns.',
+      simpleBenefit: 'Every store walk-in and lead tracked directly from Instagram ads into WhatsApp.',
       tags: ['Next.js 14', 'Meta CAPI', 'WhatsApp Routing'],
       link: '/results',
     },
     {
       category: 'D2C Consumer Brands',
+      sectorBadge: 'Online Store',
+      icon: Zap,
       title: 'High-Converting E-Commerce Engine With Dynamic Meta Catalog Ads',
       highlight: '36.9×',
       metricLabel: 'Peak Campaign ROAS',
-      summary: 'Migrated from a slow legacy store to a sub-second Next.js commerce platform paired with dynamic catalog retargeting and 1-click checkout.',
+      summary: 'Migrated from a slow legacy store to a sub-second commerce platform paired with dynamic catalog retargeting and 1-click checkout.',
+      simpleBenefit: '0.8-second load speed doubled online sales and eliminated abandoned checkouts.',
       tags: ['0.8s Checkout', 'Dynamic Catalog', 'Automated Recovery'],
       link: '/results',
     },
     {
       category: 'Real Estate & Luxury Builders',
+      sectorBadge: 'Luxury Villas',
+      icon: Building2,
       title: 'Premium NRI Investor Funnels for Ultra-Luxury Villa Developments',
       highlight: '₹14 Cr',
       metricLabel: 'Closed Property Pipeline',
       summary: 'Interactive project landing pages with floorplans, combined with Meta Ads featuring income qualification for Dubai and Saudi investors.',
+      simpleBenefit: 'Directly reached high-net-worth Malayali NRIs in UAE & Saudi Arabia.',
       tags: ['Interactive Landing Page', 'NRI Targeting', 'WhatsApp 3D Tours'],
       link: '/results',
     },
@@ -37,6 +60,9 @@ export default function HomePage() {
     {
       num: '01',
       title: 'Performance Marketing',
+      icon: Target,
+      tagline: 'Customer Acquisition & Ad ROI',
+      simpleExplainer: 'We run targeted ads on Instagram, Facebook & Google that bring real buying customers straight to your WhatsApp and phone, without wasting your marketing budget.',
       desc: 'We build and scale Meta Ads and Google PPC funnels focused strictly on customer acquisition cost and attributed pipeline revenue, not vanity impressions.',
       link: '/digital-marketing-seo',
       tags: ['Meta Ads (CAPI 2.0)', 'Google Search PPC', 'Click-to-WhatsApp'],
@@ -44,6 +70,9 @@ export default function HomePage() {
     {
       num: '02',
       title: 'Web & App Engineering',
+      icon: Laptop,
+      tagline: 'Sub-Second Speed & Mobile Apps',
+      simpleExplainer: 'We build websites and mobile apps that open instantly in under 1 second. Your customers never leave due to slow page loading or clunky forms.',
       desc: 'Lightning-fast Next.js web applications, headless commerce storefronts, and native mobile apps engineered for speed, conversions, and clean code.',
       link: '/web-development',
       tags: ['Next.js 14/15', 'Shopify Plus & Headless', 'Flutter Apps'],
@@ -51,6 +80,9 @@ export default function HomePage() {
     {
       num: '03',
       title: 'Search & Local Dominance',
+      icon: Search,
+      tagline: 'Rank #1 on Google & Google Maps',
+      simpleExplainer: 'When customers in Kochi, Kozhikode, Trivandrum, or Dubai search for your services, your business appears at the very top of Google Search and Google Maps.',
       desc: 'Dominate Google Maps 3-Pack and high-intent organic search queries across Kochi, Kozhikode, Trivandrum, and GCC business corridors.',
       link: '/digital-marketing-seo',
       tags: ['Google 3-Pack', 'Technical SEO', 'Local Schema Sync'],
@@ -58,6 +90,9 @@ export default function HomePage() {
     {
       num: '04',
       title: 'Brand & Creative Systems',
+      icon: Palette,
+      tagline: 'High-Retention Video & Design',
+      simpleExplainer: 'We produce viral video reels, high-converting product creatives, and premium corporate branding that make your business look like an established market leader.',
       desc: 'Figma UI/UX design systems, high-retention video creative, and corporate visual identities that make ambitious brands stand out effortlessly.',
       link: '/branding-design',
       tags: ['UI/UX Design Systems', 'Video Creative', 'Brand Identity'],
@@ -67,24 +102,28 @@ export default function HomePage() {
   const regionalHubs = [
     {
       city: 'Kochi',
+      icon: Building2,
       region: 'Central Kerala & Infopark',
       focus: 'Tech Startups & Commercial Growth',
       desc: 'Centrally rooted in Ernakulam/Kakkanad, helping tech enterprises, healthcare groups, and B2B services capture statewide and national market share.',
     },
     {
       city: 'Kozhikode',
+      icon: Store,
       region: 'Malabar Commerce Corridor',
       focus: 'Retail Groups & D2C Brands',
       desc: 'Empowering North Kerala’s vibrant trade capital with high-converting Meta Ads, omnichannel retail funnels, and sub-second commerce storefronts.',
     },
     {
       city: 'Trivandrum',
+      icon: Landmark,
       region: 'South Kerala & Technopark',
       focus: 'Enterprise & Institutional SEO',
       desc: 'Supporting Technopark technology firms, professional practices, and premium builders with high-intent search optimization and digital systems.',
     },
     {
       city: 'GCC Desk',
+      icon: Globe2,
       region: 'UAE (Dubai) & Saudi Arabia',
       focus: 'Cross-Border Commerce & NRIs',
       desc: 'Connecting Kerala brands with high-net-worth diaspora investors, Apple Pay & Tabby BNPL checkouts, and bilingual ad funnels across the Gulf.',
@@ -145,7 +184,7 @@ export default function HomePage() {
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm hover:from-purple-500 hover:to-indigo-500 transition-all shadow-lg shadow-purple-950/60"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm hover:from-purple-500 hover:to-indigo-500 transition-all shadow-lg shadow-purple-950/60 keep-white"
             >
               <span>Start a Conversation</span>
               <ArrowRight className="w-4 h-4" />
@@ -177,41 +216,46 @@ export default function HomePage() {
               </h2>
             </div>
 
-            <p className="text-xs sm:text-sm text-purple-300/70 max-w-md">
+            <p className="text-xs sm:text-sm text-purple-300/80 max-w-md">
               Local market grounding across Central, North, and South Kerala, integrated with cross-border GCC expansion.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {regionalHubs.map((hub, idx) => (
-              <div
-                key={idx}
-                className="glass-panel p-6 sm:p-8 flex flex-col justify-between space-y-6 border border-purple-500/20 hover:border-purple-400/50 transition-all"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-purple-400 shrink-0" />
-                    <span className="font-heading font-extrabold text-2xl text-white">
-                      {hub.city}
+            {regionalHubs.map((hub, idx) => {
+              const HubIcon = hub.icon;
+              return (
+                <div
+                  key={idx}
+                  className="glass-panel p-6 sm:p-8 flex flex-col justify-between space-y-6 border border-purple-500/20 hover:border-purple-400/50 transition-all"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-9 h-9 rounded-lg bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                        <HubIcon className="w-4 h-4" />
+                      </div>
+                      <span className="font-heading font-extrabold text-2xl text-white">
+                        {hub.city}
+                      </span>
+                    </div>
+
+                    <span className="block text-[11px] font-mono uppercase tracking-wider text-purple-300 font-semibold">
+                      {hub.region}
                     </span>
+
+                    <p className="text-xs text-purple-200/80 leading-relaxed">
+                      {hub.desc}
+                    </p>
                   </div>
 
-                  <span className="block text-[11px] font-mono uppercase tracking-wider text-purple-300 font-semibold">
-                    {hub.region}
-                  </span>
-
-                  <p className="text-xs text-purple-200/75 leading-relaxed">
-                    {hub.desc}
-                  </p>
+                  <div className="pt-4 border-t border-purple-900/40">
+                    <span className="text-[11px] text-emerald-400 metric-emerald font-semibold font-mono block">
+                      {hub.focus}
+                    </span>
+                  </div>
                 </div>
-
-                <div className="pt-4 border-t border-purple-900/40">
-                  <span className="text-[11px] text-emerald-400 font-semibold font-mono block">
-                    {hub.focus}
-                  </span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
@@ -237,52 +281,66 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {selectedWorks.map((work, idx) => (
-              <Link
-                key={idx}
-                href={work.link}
-                className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-500/20 hover:border-purple-400/60 transition-all group relative overflow-hidden"
-              >
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono uppercase tracking-wider text-purple-400">
-                      {work.category}
-                    </span>
-                    <div className="w-8 h-8 rounded-full border border-purple-500/30 flex items-center justify-center text-purple-300 group-hover:border-purple-400 group-hover:text-white transition-all">
-                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            {selectedWorks.map((work, idx) => {
+              const WorkIcon = work.icon;
+              return (
+                <Link
+                  key={idx}
+                  href={work.link}
+                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-500/20 hover:border-purple-400/60 transition-all group relative overflow-hidden"
+                >
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 rounded-lg bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-300">
+                          <WorkIcon className="w-4 h-4" />
+                        </div>
+                        <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold">
+                          {work.sectorBadge}
+                        </span>
+                      </div>
+                      <div className="w-8 h-8 rounded-full border border-purple-500/30 flex items-center justify-center text-purple-300 group-hover:border-purple-400 group-hover:text-white transition-all">
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </div>
                     </div>
+
+                    <div className="space-y-2">
+                      <span className="block text-3xl sm:text-4xl font-extrabold text-white group-hover:text-purple-200 transition-colors font-heading">
+                        {work.highlight}
+                      </span>
+                      <span className="block text-xs uppercase tracking-wider text-purple-300/80 font-mono">
+                        {work.metricLabel}
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-purple-100 group-hover:text-white transition-colors leading-snug">
+                      {work.title}
+                    </h3>
+
+                    {/* Plain English Takeaway for Business Owners */}
+                    <div className="p-3 rounded-xl bg-purple-950/30 border border-purple-500/20 text-xs text-purple-200/90 flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 metric-emerald shrink-0 mt-0.5" />
+                      <span>{work.simpleBenefit}</span>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-purple-200/75 leading-relaxed">
+                      {work.summary}
+                    </p>
                   </div>
 
-                  <div className="space-y-2">
-                    <span className="block text-3xl sm:text-4xl font-extrabold text-white group-hover:text-purple-200 transition-colors font-heading">
-                      {work.highlight}
-                    </span>
-                    <span className="block text-xs uppercase tracking-wider text-purple-300/80 font-mono">
-                      {work.metricLabel}
-                    </span>
+                  <div className="pt-6 border-t border-purple-900/40 flex flex-wrap gap-2">
+                    {work.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="text-[11px] px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-500/30 text-purple-300 font-mono"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-
-                  <h3 className="text-lg font-bold text-purple-100 group-hover:text-white transition-colors leading-snug">
-                    {work.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-purple-200/70 leading-relaxed">
-                    {work.summary}
-                  </p>
-                </div>
-
-                <div className="pt-6 border-t border-purple-900/40 flex flex-wrap gap-2">
-                  {work.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="text-[11px] px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-500/30 text-purple-300 font-mono"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </section>
 
@@ -295,57 +353,85 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
               What we do.
             </h2>
+            <p className="text-xs sm:text-sm text-purple-300/80 max-w-xl">
+              Clear, transparent digital growth systems designed for business owners — zero marketing fluff or confusing jargon.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((item, idx) => (
-              <div
-                key={idx}
-                className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-500/20 hover:border-purple-400/50 transition-all group"
-              >
-                <div className="space-y-4">
-                  <span className="text-xs font-mono text-purple-400 block">
-                    {item.num}
-                  </span>
+            {capabilities.map((item, idx) => {
+              const CapIcon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-500/20 hover:border-purple-400/50 transition-all group"
+                >
+                  <div className="space-y-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-900/50 to-indigo-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 group-hover:text-white group-hover:border-purple-400 transition-all shadow-sm">
+                          <CapIcon className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <span className="text-xs font-mono text-purple-400 font-semibold block">
+                            Service {item.num}
+                          </span>
+                          <span className="text-[11px] text-purple-300/80 uppercase tracking-wider font-mono">
+                            {item.tagline}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
 
-                  <h3 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors">
-                    {item.title}
-                  </h3>
+                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors">
+                      {item.title}
+                    </h3>
 
-                  <p className="text-sm text-purple-200/75 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-
-                <div className="pt-6 border-t border-purple-900/40 flex flex-wrap items-center justify-between gap-4">
-                  <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="text-xs text-purple-300/80 font-mono"
-                      >
-                        {tag} {tIdx < item.tags.length - 1 && '•'}
+                    {/* Plain Language Box for Non-Technical Clients */}
+                    <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-500/20 space-y-1">
+                      <span className="text-[10px] uppercase font-mono tracking-wider text-purple-300 font-bold block">
+                        What this means for your business:
                       </span>
-                    ))}
+                      <p className="text-xs sm:text-sm text-purple-100 font-medium leading-relaxed">
+                        {item.simpleExplainer}
+                      </p>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-purple-200/75 leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
 
-                  <Link
-                    href={item.link}
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors"
-                  >
-                    <span>Learn more</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  <div className="pt-6 border-t border-purple-900/40 flex flex-wrap items-center justify-between gap-4">
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="text-xs text-purple-300/80 font-mono"
+                        >
+                          {tag} {tIdx < item.tags.length - 1 && '•'}
+                        </span>
+                      ))}
+                    </div>
+
+                    <Link
+                      href={item.link}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      <span>Explore Service</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
         {/* Direct Call to Action */}
         <section className="px-6 max-w-[1240px] mx-auto">
-          <div className="p-10 sm:p-16 rounded-3xl bg-gradient-to-br from-purple-950/80 via-slate-950 to-purple-950/50 border border-purple-500/30 text-center space-y-6 shadow-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/50 border border-purple-500/30 text-[11px] font-mono text-purple-300">
+          <div className="cta-banner p-10 sm:p-16 rounded-3xl bg-gradient-to-br from-purple-950/80 via-slate-950 to-purple-950/50 border border-purple-500/30 text-center space-y-6 shadow-2xl">
+            <div className="cta-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/50 border border-purple-500/30 text-[11px] font-mono text-purple-300">
               <span>Kochi • Kozhikode • Trivandrum • GCC</span>
             </div>
 
@@ -370,7 +456,7 @@ export default function HomePage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-500/40 bg-purple-900/30 text-white font-medium text-sm hover:bg-purple-800/40 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-500/40 bg-purple-900/30 text-white font-medium text-sm hover:bg-purple-800/40 transition-all keep-white"
               >
                 <span>Schedule Corporate Call</span>
                 <ArrowRight className="w-4 h-4" />

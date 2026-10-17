@@ -10,19 +10,19 @@ export default function ProofMetricsStrip() {
       value: '36.9×',
       label: 'Peak Campaign ROAS',
       sub: 'D2C and retail campaigns',
-      color: 'text-emerald-400',
+      color: 'text-emerald-400 metric-emerald',
     },
     {
       value: '100+',
       label: 'Deployments',
       sub: 'Web apps & paid campaigns',
-      color: 'text-purple-300',
+      color: 'text-purple-300 metric-purple',
     },
     {
       value: '5.0 Rating',
       label: 'Google Verified Profile',
       sub: 'Kochi · Calicut · Trivandrum · GCC',
-      color: 'text-amber-300',
+      color: 'text-amber-400 metric-amber',
     },
   ];
 
@@ -38,7 +38,7 @@ export default function ProofMetricsStrip() {
               <span className="block text-xs uppercase tracking-wider font-semibold text-purple-200 font-mono">
                 {item.label}
               </span>
-              <span className="block text-xs text-purple-300/70">
+              <span className="block text-xs text-purple-300/80">
                 {item.sub}
               </span>
             </div>
