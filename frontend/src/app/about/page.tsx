@@ -109,93 +109,72 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Corporate Legal Identifiers Dossier Card */}
-        <section className="glass-panel p-8 sm:p-10 border border-purple-500/30 space-y-6">
+        {/* Enterprise Governance Section */}
+        <section className="glass-panel p-8 sm:p-10 border border-purple-500/20 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-purple-900/30">
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-wider text-purple-400 font-semibold block">Official Corporate Identification</span>
-              <h2 className="text-xl sm:text-2xl font-bold text-white">Helix 24 Solutions Private Limited</h2>
+              <span className="text-[11px] font-mono uppercase tracking-wider text-purple-400 font-semibold block">Corporate Governance</span>
+              <h2 className="text-xl sm:text-2xl font-bold text-white">Enterprise Standards &amp; Client Protection</h2>
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 font-mono text-xs">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>MCA & RoC Kerala Registered</span>
+              <span>Incorporated Private Limited Entity</span>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs">
-            <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-800/30 space-y-1">
-              <span className="text-purple-400 text-[10px] uppercase tracking-wider">Corporate Identity No (CIN)</span>
-              <span className="block text-white font-bold text-sm">U62011KL2026PTC107185</span>
-            </div>
-            <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-800/30 space-y-1">
-              <span className="text-purple-400 text-[10px] uppercase tracking-wider">Income Tax PAN</span>
-              <span className="block text-white font-bold text-sm">AAJCH0136Q</span>
-            </div>
-            <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-800/30 space-y-1">
-              <span className="text-purple-400 text-[10px] uppercase tracking-wider">Tax Deduction Account (TAN)</span>
-              <span className="block text-white font-bold text-sm">CHNH05061A</span>
-            </div>
-            <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-800/30 space-y-1">
-              <span className="text-purple-400 text-[10px] uppercase tracking-wider">State / Jurisdiction</span>
-              <span className="block text-white font-bold text-sm">Kerala, India (09)</span>
-            </div>
-          </div>
-
-          <p className="text-xs text-purple-200/70 leading-relaxed pt-2">
-            Having an incorporated private limited entity guarantees enterprise compliance, GST invoicing, strict intellectual property agreements, and reliable contract delivery for corporate partners in India and overseas.
+          <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
+            As a formally incorporated Private Limited corporate entity in Kerala, Helix 24 Solutions provides corporate partners with enterprise-grade SLA agreements, transparent GST invoicing, strict NDA confidentiality, and 100% intellectual property ownership of all codebase, ad accounts, and creative assets.
           </p>
         </section>
 
-        {/* Why Helix24 — The Engineering-Led Agency Difference */}
+        {/* Why Helix24 — The Difference */}
         <section className="space-y-10">
           <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Our Core Thesis</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white">Why Modern Brands Choose Helix24</h2>
+            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Our Standards</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white">Why Modern Brands Choose Helix 24</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <div className="glass-panel p-8 space-y-4">
+            <div className="glass-panel p-8 space-y-4 border border-purple-500/20">
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <Code className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white">Engineering First</h3>
+              <h3 className="text-xl font-bold text-white">Code, Not Templates</h3>
               <p className="text-xs text-purple-200/75 leading-relaxed">
-                Most agencies are run by marketers who do not understand software. We write clean TypeScript, optimize database queries, build sub-second Next.js pages, and eliminate technical conversion leaks.
+                We write clean TypeScript, optimize database queries, build sub-second Next.js applications, and eliminate technical conversion leaks that plague traditional agencies.
               </p>
             </div>
 
-            <div className="glass-panel p-8 space-y-4">
+            <div className="glass-panel p-8 space-y-4 border border-purple-500/20">
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <Target className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white">Strict Performance Accountability</h3>
+              <h3 className="text-xl font-bold text-white">Attributed Revenue</h3>
               <p className="text-xs text-purple-200/75 leading-relaxed">
-                We do not report on vanity likes or impressions. Every rupee of ad spend is tied directly to qualified leads, ROAS, and closed sales through live first-party telemetry dashboards.
+                We do not report on vanity likes or impressions. Every rupee of ad spend is tied directly to qualified leads, ROAS, and closed customer revenue.
               </p>
             </div>
 
-            <div className="glass-panel p-8 space-y-4">
+            <div className="glass-panel p-8 space-y-4 border border-purple-500/20">
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white">100% Client Asset Ownership</h3>
+              <h3 className="text-xl font-bold text-white">100% Asset Ownership</h3>
               <p className="text-xs text-purple-200/75 leading-relaxed">
-                You retain complete, unencumbered ownership of all your ad accounts, Meta Pixels, Google Analytics data, GitHub repositories, and server infrastructure. No agency lock-in.
+                You retain complete, unencumbered ownership of all your ad accounts, Meta Pixels, Google Analytics data, GitHub repositories, and server infrastructure.
               </p>
             </div>
-
           </div>
         </section>
 
-        {/* Geographic Hubs */}
-        <section className="glass-panel p-8 sm:p-12 border border-purple-500/30 space-y-8">
+        {/* Geographic Hubs: Kochi, Kozhikode, Trivandrum, GCC */}
+        <section className="glass-panel p-8 sm:p-12 border border-purple-500/20 space-y-8">
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Geographic Reach</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Connecting Kerala Innovation With Global Markets</h2>
+            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Strategic Footprint</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Kochi · Kozhikode · Trivandrum · GCC</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
               <div className="flex items-center gap-2 text-white font-bold text-base">
                 <MapPin className="w-4 h-4 text-purple-400" />
@@ -209,24 +188,35 @@ export default function AboutPage() {
             <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
               <div className="flex items-center gap-2 text-white font-bold text-base">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span>Kozhikode (Calicut)</span>
+                <span>Kozhikode Hub</span>
               </div>
               <p className="text-xs text-purple-200/70 leading-relaxed">
-                Strategic branch supporting North Kerala D2C brands, healthcare providers, real estate, and retail chains.
+                Malabar regional hub dedicated to retail chains, healthcare brands, and high-growth D2C consumer brands across Calicut.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
               <div className="flex items-center gap-2 text-white font-bold text-base">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span>UAE & GCC Desk</span>
+                <span>Trivandrum Hub</span>
               </div>
               <p className="text-xs text-purple-200/70 leading-relaxed">
-                Dedicated cross-border growth desk managing performance marketing and e-commerce expansion into Dubai, Abu Dhabi, and Saudi Arabia.
+                South Kerala operational presence supporting Technopark technology enterprises, institutions, and premium commercial projects.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
+              <div className="flex items-center gap-2 text-white font-bold text-base">
+                <MapPin className="w-4 h-4 text-purple-400" />
+                <span>GCC Desk</span>
+              </div>
+              <p className="text-xs text-purple-200/70 leading-relaxed">
+                Cross-border desk facilitating luxury real estate marketing, NRI investor funnels, and e-commerce across Dubai, Abu Dhabi, and Saudi Arabia.
               </p>
             </div>
           </div>
         </section>
+
 
         {/* CTA */}
         <section className="glass-panel p-8 sm:p-12 text-center space-y-4 border border-purple-500/30">

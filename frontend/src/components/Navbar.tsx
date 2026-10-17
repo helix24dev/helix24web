@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Sun, Moon, Sparkles, PhoneCall } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -25,50 +25,38 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/digital-marketing-seo', label: 'Meta Ads & SEO' },
-    { href: '/web-development', label: 'Web Dev' },
-    { href: '/ecommerce-development', label: 'E-Commerce' },
-    { href: '/results', label: 'Case Studies' },
+    { href: '/digital-marketing-seo', label: 'Performance Ads' },
+    { href: '/web-development', label: 'Web & Apps' },
+    { href: '/results', label: 'Work' },
     { href: '/calculator', label: 'ROI Calculator' },
+    { href: '/blog', label: 'Playbooks' },
     { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 py-3.5 transition-all">
-      <div className="max-w-[1280px] mx-auto glass-panel px-5 py-3 flex items-center justify-between border border-purple-500/25 shadow-[0_12px_40px_-10px_rgba(0,0,0,0.7)] backdrop-blur-2xl">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 transition-all">
+      <div className="max-w-[1240px] mx-auto px-6 py-3.5 flex items-center justify-between rounded-full bg-[#110B22]/85 border border-purple-500/20 backdrop-blur-xl shadow-2xl">
         
-        {/* Brand Logo & Telemetry Indicator */}
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-2 text-lg sm:text-xl font-bold tracking-tight text-white group shrink-0">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600/40 to-indigo-600/40 border border-purple-400/40 flex items-center justify-center text-purple-300 group-hover:scale-105 transition-transform shadow-inner">
-              <Sparkles className="w-4 h-4 text-purple-200" />
-            </div>
-            <span>Helix<span className="text-purple-400 font-extrabold">24</span></span>
-          </Link>
-
-          {/* Telemetry Radar Pill */}
-          <div className="hidden xl:inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-purple-950/60 border border-purple-800/40 font-mono text-[10px] uppercase tracking-wider text-purple-300">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-            </span>
-            <span>KOCHI IST • ONLINE</span>
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight text-white group shrink-0">
+          <div className="w-7 h-7 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-inner">
+            H
           </div>
-        </div>
+          <span className="font-heading">Helix 24<span className="text-purple-400 font-normal"> Solutions</span></span>
+        </Link>
 
-        {/* Desktop Single-Line Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 bg-purple-950/50 border border-purple-800/30 rounded-full px-3 py-1 text-xs font-medium whitespace-nowrap">
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-1.5 rounded-full transition-all text-xs font-medium ${
+                className={`text-xs font-medium tracking-wide transition-colors ${
                   isActive
-                    ? 'bg-purple-600 text-white font-semibold shadow-md shadow-purple-900/60'
-                    : 'text-purple-200/80 hover:text-white hover:bg-purple-900/40'
+                    ? 'text-white font-semibold'
+                    : 'text-purple-300/80 hover:text-white'
                 }`}
               >
                 {link.label}
@@ -77,82 +65,57 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Actions & Theme Toggle */}
-        <div className="flex items-center gap-2.5 shrink-0">
+        {/* Action Button & Theme Toggle */}
+        <div className="flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full border border-purple-500/20 bg-purple-950/40 text-purple-300 hover:text-white hover:border-purple-400 transition-all"
-            aria-label="Toggle dark/light theme"
+            aria-label="Toggle visual theme"
+            className="p-2 rounded-full text-purple-300 hover:text-white hover:bg-purple-900/40 transition-all"
           >
-            {theme === 'dark' ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-
-          <a
-            href="tel:+919048009044"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-purple-500/30 bg-purple-950/40 text-purple-200 hover:text-white hover:border-purple-400 text-xs font-semibold transition-all"
-          >
-            <PhoneCall className="w-3 h-3 text-purple-400" />
-            <span className="font-mono text-[11px]">+91 9048009044</span>
-          </a>
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 text-white text-xs font-semibold hover:opacity-95 shadow-lg shadow-purple-900/50 transition-all whitespace-nowrap"
+            className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold text-xs shadow-md transition-all"
           >
-            <span>Book Strategy Call</span>
-            <span className="font-bold">→</span>
+            <span>Let&apos;s Talk</span>
           </Link>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-purple-200 hover:text-white"
-            aria-label="Toggle mobile menu"
+            aria-label="Toggle navigation menu"
+            className="lg:hidden p-2 text-purple-300 hover:text-white"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
+
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[72px] bg-slate-950/98 backdrop-blur-2xl z-40 p-6 flex flex-col gap-3 border-t border-purple-900/40 shadow-2xl">
-          <div className="flex items-center justify-between pb-3 border-b border-purple-900/30">
-            <span className="font-mono text-xs text-purple-400">{'// HELIX 24 SOLUTIONS PVT LTD'}</span>
-            <span className="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              ONLINE
-            </span>
-          </div>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`text-base font-medium py-2 px-4 rounded-xl transition-all ${
-                pathname === link.href ? 'bg-purple-900/50 text-white font-bold' : 'text-purple-200/80 hover:bg-purple-950/40'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="pt-4 flex flex-col gap-2.5">
+        <div className="lg:hidden mt-3 max-w-[1240px] mx-auto p-6 rounded-2xl bg-[#110B22] border border-purple-500/30 shadow-2xl space-y-4">
+          <nav className="flex flex-col space-y-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-sm font-medium text-purple-200 hover:text-white py-1"
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-center py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm shadow-xl"
+              className="text-center py-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-xs mt-2"
             >
-              Book Strategy Call →
+              Let&apos;s Talk
             </Link>
-            <a
-              href="https://share.google/bRqB2ePsNrm8f73wR"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-center py-2.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold"
-            >
-              ⭐ 5.0 Rating on Google Business Profile
-            </a>
-          </div>
+          </nav>
         </div>
       )}
     </header>
