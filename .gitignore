@@ -23,5 +23,15 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Build Outputs
+.next/
+dist/
+build/
+out/
+.vercel
+
+# Nested Cloned Repos
+helix24web/
+
 # Netlify Build Output
 .netlify/

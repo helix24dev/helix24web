@@ -9,7 +9,6 @@ import {
   AlertTriangle, 
   TrendingUp, 
   HelpCircle, 
-  MessageCircle, 
   MapPin,
   Building2
 } from 'lucide-react';

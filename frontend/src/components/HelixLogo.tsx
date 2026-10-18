@@ -1,84 +1,103 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface HelixLogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
   showText?: boolean;
+  variant?: 'dark' | 'light' | 'white';
+  layout?: 'horizontal' | 'icon' | 'vertical';
 }
 
 export default function HelixLogo({ 
   className = '', 
   size = 'md', 
-  showText = true 
+  showText = true,
+  variant = 'dark',
+  layout = 'horizontal'
 }: HelixLogoProps) {
-  const iconDimensions = {
-    sm: 'w-7 h-7',
-    md: 'w-8 h-8',
-    lg: 'w-10 h-10',
+  // If showText is false, force icon-only layout
+  const actualLayout = !showText ? 'icon' : layout;
+
+  if (actualLayout === 'icon') {
+    const iconDimensions = {
+      sm: 'w-8 h-8',
+      md: 'w-10 h-10',
+      lg: 'w-12 h-12',
+    }[size];
+
+    const pixelDimensions = {
+      sm: 32,
+      md: 40,
+      lg: 48,
+    }[size];
+
+    return (
+      <div className={`relative ${iconDimensions} shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform ${className}`}>
+        <Image
+          src="/assets/helix-logo.png"
+          alt="Helix24 Logo Mark"
+          width={pixelDimensions}
+          height={pixelDimensions}
+          className="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(147,51,234,0.35)]"
+          priority
+        />
+      </div>
+    );
+  }
+
+  if (actualLayout === 'vertical') {
+    const verticalDimensions = {
+      sm: 'w-24 h-24',
+      md: 'w-32 h-32',
+      lg: 'w-40 h-40',
+    }[size];
+
+    return (
+      <div className={`relative ${verticalDimensions} shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform ${className}`}>
+        <Image
+          src="/assets/helix-logo-vertical-whitebg.png"
+          alt="Helix24 Solutions Pvt. Ltd."
+          width={160}
+          height={160}
+          className="w-full h-full object-contain rounded-xl shadow-lg"
+          priority
+        />
+      </div>
+    );
+  }
+
+  // Horizontal full company name lockup ("HELIX24 SOLUTIONS PVT. LTD.")
+  const heightClasses = {
+    sm: 'h-9 sm:h-10 w-auto',
+    md: 'h-12 sm:h-14 w-auto',
+    lg: 'h-16 sm:h-18 w-auto',
   }[size];
 
-  const textClasses = {
-    sm: 'text-base',
-    md: 'text-lg',
-    lg: 'text-xl',
+  const pixelHeight = {
+    sm: 40,
+    md: 56,
+    lg: 72,
   }[size];
+
+  const pixelWidth = Math.round(pixelHeight * 2.5);
+
+  const imgSrc = variant === 'light' 
+    ? '/assets/helix-logo-horizontal.png' 
+    : '/assets/helix-logo-horizontal-darkmode.png';
 
   return (
-    <div className={`flex items-center gap-2.5 ${className}`}>
-      {/* Precision Geometric Double-Helix Vector Mark */}
-      <div className={`relative ${iconDimensions} rounded-xl bg-gradient-to-br from-[#7C3AED] via-[#6366F1] to-[#4338CA] p-0.5 shadow-md shadow-purple-950/40 shrink-0 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform`}>
-        <svg
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full p-1.5"
-        >
-          {/* Outer glowing glow effect */}
-          <circle cx="16" cy="16" r="14" stroke="url(#helix_glow)" strokeWidth="1" strokeDasharray="2 3" opacity="0.4" />
-          
-          {/* Primary Strand 1 */}
-          <path
-            d="M8 8C12 12 20 12 24 16C28 20 20 24 16 26"
-            stroke="white"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            className="drop-shadow-xs"
-          />
-          {/* Secondary Intersecting Strand 2 */}
-          <path
-            d="M24 8C20 12 12 12 8 16C4 20 12 24 16 26"
-            stroke="#A7F3D0"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeDasharray="1 3"
-            opacity="0.9"
-          />
-          {/* Core Energy Nodes */}
-          <circle cx="16" cy="12" r="2" fill="#38BDF8" />
-          <circle cx="16" cy="20" r="2" fill="#FBBF24" />
-          <circle cx="8" cy="8" r="1.5" fill="white" />
-          <circle cx="24" cy="8" r="1.5" fill="white" />
-          
-          <defs>
-            <linearGradient id="helix_glow" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#A855F7" />
-              <stop offset="1" stopColor="#3B82F6" />
-            </linearGradient>
-          </defs>
-        </svg>
+    <div className={`flex items-center shrink-0 group-hover:scale-[1.02] transition-transform ${className}`}>
+      <div className="relative flex items-center">
+        <Image
+          src={imgSrc}
+          alt="Helix24 Solutions Pvt. Ltd."
+          width={pixelWidth}
+          height={pixelHeight}
+          className={`${heightClasses} max-w-none object-contain filter drop-shadow-[0_2px_10px_rgba(147,51,234,0.35)]`}
+          priority
+        />
       </div>
-
-      {showText && (
-        <div className="flex flex-col leading-none">
-          <span className={`font-extrabold tracking-tight text-white ${textClasses} font-heading flex items-center gap-1`}>
-            <span>Helix24</span>
-            <span className="text-purple-400 font-medium">Solutions</span>
-          </span>
-          <span className="text-[9px] font-mono tracking-widest text-purple-300/70 uppercase pt-0.5">
-            Pvt Ltd • Kerala &amp; GCC
-          </span>
-        </div>
-      )}
     </div>
   );
 }
