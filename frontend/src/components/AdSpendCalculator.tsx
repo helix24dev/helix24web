@@ -62,7 +62,7 @@ export default function AdSpendCalculator() {
               onChange={(e) => setAdSpend(Number(e.target.value))}
               className="w-full h-2 bg-purple-950 rounded-lg appearance-none cursor-pointer accent-purple-500"
             />
-            <div className="flex justify-between text-[11px] text-purple-400/60 mt-1 font-mono">
+            <div className="flex justify-between text-[11px] text-purple-300 font-semibold mt-1 font-mono">
               <span>₹10,000</span>
               <span>₹1,50,000</span>
               <span>₹3,00,000+</span>
@@ -121,31 +121,31 @@ export default function AdSpendCalculator() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-purple-900/40 border border-purple-700/30 p-4 rounded-xl">
-                <div className="flex items-center gap-1.5 text-purple-300 text-xs mb-1">
+                <div className="flex items-center gap-1.5 text-purple-300 text-xs mb-1 font-medium">
                   <Users className="w-3.5 h-3.5" />
                   <span>Est. Qualified Leads</span>
                 </div>
                 <div className="text-2xl font-black text-white font-mono">{projectedLeads}</div>
-                <span className="text-[10px] text-purple-300/60">Targeted inquiries / mo</span>
+                <span className="text-[10px] text-purple-300 font-medium">Targeted inquiries / mo</span>
               </div>
 
               <div className="bg-purple-900/40 border border-purple-700/30 p-4 rounded-xl">
-                <div className="flex items-center gap-1.5 text-purple-300 text-xs mb-1">
+                <div className="flex items-center gap-1.5 text-purple-300 text-xs mb-1 font-medium">
                   <Target className="w-3.5 h-3.5" />
                   <span>Est. Cost Per Lead</span>
                 </div>
-                <div className="text-2xl font-black text-purple-300 font-mono">₹{estimatedCpl}</div>
-                <span className="text-[10px] text-purple-300/60">Based on Meta & Google Ads</span>
+                <div className="text-2xl font-black text-white font-mono">₹{estimatedCpl}</div>
+                <span className="text-[10px] text-purple-300 font-medium">Based on Meta & Google Ads</span>
               </div>
             </div>
 
             <div className="bg-purple-900/40 border border-purple-700/30 p-4 rounded-xl flex items-center justify-between">
               <div>
-                <div className="flex items-center gap-1.5 text-purple-300 text-xs mb-1">
+                <div className="flex items-center gap-1.5 text-purple-300 text-xs mb-1 font-medium">
                   <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
                   <span>Projected Campaign ROAS</span>
                 </div>
-                <span className="text-xs text-purple-200/70">Estimated Return On Ad Spend</span>
+                <span className="text-xs text-purple-200 font-medium">Estimated Return On Ad Spend</span>
               </div>
               <div className="text-2xl font-black text-emerald-400 font-mono">{projectedROAS}x</div>
             </div>

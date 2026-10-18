@@ -123,21 +123,121 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   --glass-border-hover: rgba(109, 40, 217, 0.35);
 }
 
-/* Headings and body in light mode */
+/* ==========================================================================
+   Universal High-Contrast Light Theme Typography (Guarantees 100% Readability)
+   ========================================================================== */
+
+/* 1. All Headings and Heavy Titles */
 [data-theme="light"] h1,
 [data-theme="light"] h2,
 [data-theme="light"] h3,
 [data-theme="light"] h4,
 [data-theme="light"] h5,
-[data-theme="light"] h6 {
-  color: #110B22 !important;
+[data-theme="light"] h6,
+[data-theme="light"] .font-heading {
+  color: #0F0A1C !important;
 }
 
-[data-theme="light"] .text-white:not(.keep-white):not([class*="bg-"]):not([class*="btn"]) {
-  color: #110B22 !important;
+/* 2. Universal Body Copy (Paragraphs, List Items, Table Cells, Articles) */
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] dd,
+[data-theme="light"] dt,
+[data-theme="light"] td,
+[data-theme="light"] th {
+  color: #1E293B !important; /* Deep Slate 800 - 13:1 contrast against pure white */
+  opacity: 1 !important;
 }
 
-/* Ensure buttons, badges, and gradient elements maintain crisp white text */
+[data-theme="light"] strong,
+[data-theme="light"] b,
+[data-theme="light"] .font-bold,
+[data-theme="light"] .font-extrabold,
+[data-theme="light"] .font-black {
+  color: #0F0A1C !important;
+}
+
+/* 3. Form Labels, Inputs & Placeholders */
+[data-theme="light"] label {
+  color: #0F172A !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+[data-theme="light"] input:not([type="range"]),
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: #FFFFFF !important;
+  color: #0F0A1C !important;
+  border-color: rgba(109, 40, 217, 0.25) !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #64748B !important;
+}
+
+[data-theme="light"] select option {
+  background-color: #FFFFFF !important;
+  color: #0F0A1C !important;
+}
+
+/* 4. Small Captions, Micro-Copy & Metrics Sub-Labels */
+[data-theme="light"] .text-\[10px\],
+[data-theme="light"] .text-\[11px\],
+[data-theme="light"] .text-xs:not(.keep-white):not(button):not(a[class*="from-"]):not([class*="text-emerald"]):not([class*="text-amber"]):not(.hud-tag) {
+  color: #334155 !important; /* Slate 700 - sharp, crisp legibility at small point sizes */
+  opacity: 1 !important;
+}
+
+/* 5. Invert All Light Color Classes (Lavender, Pastel Purple, Light Gray, Soft Zinc) */
+[data-theme="light"] [class*="text-purple-100"],
+[data-theme="light"] [class*="text-purple-200"],
+[data-theme="light"] [class*="text-purple-300"],
+[data-theme="light"] [class*="text-zinc-100"],
+[data-theme="light"] [class*="text-zinc-200"],
+[data-theme="light"] [class*="text-zinc-300"],
+[data-theme="light"] [class*="text-zinc-400"],
+[data-theme="light"] [class*="text-zinc-500"],
+[data-theme="light"] [class*="text-slate-200"],
+[data-theme="light"] [class*="text-slate-300"],
+[data-theme="light"] [class*="text-slate-400"],
+[data-theme="light"] [class*="text-slate-500"],
+[data-theme="light"] [class*="text-gray-200"],
+[data-theme="light"] [class*="text-gray-300"],
+[data-theme="light"] [class*="text-gray-400"],
+[data-theme="light"] [class*="text-[#A39BB5]"] {
+  color: #1E293B !important; /* Deep Slate 800 */
+  opacity: 1 !important;
+}
+
+/* 6. Accent Text & Interactive Purple Accents */
+[data-theme="light"] [class*="text-purple-400"],
+[data-theme="light"] [class*="text-purple-500"],
+[data-theme="light"] [class*="text-purple-600"],
+[data-theme="light"] [class*="text-violet-"] {
+  color: #581C87 !important; /* Deep Royal Violet 900 - 11.5:1 contrast against white */
+  opacity: 1 !important;
+}
+
+/* 7. Numbers & Metric Values */
+[data-theme="light"] .metric-purple,
+[data-theme="light"] [class*="text-2xl"][class*="text-purple-"],
+[data-theme="light"] [class*="text-3xl"][class*="text-purple-"],
+[data-theme="light"] [class*="text-4xl"][class*="text-purple-"],
+[data-theme="light"] [class*="text-5xl"][class*="text-purple-"],
+[data-theme="light"] [class*="text-6xl"][class*="text-purple-"] {
+  color: #2E1065 !important; /* Royal Purple 950 - deep and prominent */
+  opacity: 1 !important;
+}
+
+/* 8. White Text Inversion (Except Solid CTA Buttons) */
+[data-theme="light"] [class*="text-white"]:not(.keep-white):not(button):not(a[class*="from-"]):not([class*="bg-purple-600"]):not([class*="bg-indigo-600"]):not([class*="bg-emerald-"]):not([class*="bg-gradient"]):not([class*="bg-gradient-to-r"]) {
+  color: #0F0A1C !important;
+  opacity: 1 !important;
+}
+
+/* Ensure solid CTA buttons ALWAYS keep solid white text */
 [data-theme="light"] .keep-white,
 [data-theme="light"] .keep-white *,
 [data-theme="light"] a[class*="from-purple"],
@@ -146,7 +246,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 [data-theme="light"] button[class*="bg-gradient"],
 [data-theme="light"] [class*="bg-purple-600"],
 [data-theme="light"] [class*="bg-purple-700"],
-[data-theme="light"] [class*="bg-indigo-600"] {
+[data-theme="light"] [class*="bg-indigo-600"],
+[data-theme="light"] [class*="bg-emerald-600"],
+[data-theme="light"] [class*="bg-emerald-700"] {
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] a[class*="from-purple"] *,
+[data-theme="light"] button[class*="from-purple"] *,
+[data-theme="light"] a[class*="bg-gradient"] *,
+[data-theme="light"] button[class*="bg-gradient"] * {
   color: #FFFFFF !important;
 }
 
@@ -154,41 +263,86 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   color: #090514 !important;
 }
 
-[data-theme="light"] .text-purple-100,
-[data-theme="light"] .text-purple-200,
-[data-theme="light"] .text-purple-300,
-[data-theme="light"] .text-purple-200\/80,
-[data-theme="light"] .text-purple-200\/75,
-[data-theme="light"] .text-purple-200\/70,
-[data-theme="light"] .text-purple-300\/70,
-[data-theme="light"] .text-purple-300\/80,
-[data-theme="light"] .text-zinc-400,
-[data-theme="light"] .text-zinc-500,
-[data-theme="light"] .text-\[\#A39BB5\] {
+/* 9. Amber / Gold Google Review Badges & Stars (Deep Bronze - NO washed-out yellow) */
+[data-theme="light"] [class*="bg-amber-"] {
+  background-color: #FEF3C7 !important;
+  border-color: rgba(217, 119, 6, 0.4) !important;
+}
+
+[data-theme="light"] [class*="text-amber"] {
+  color: #92400E !important; /* Rich Dark Amber - 8:1 contrast on white */
+  opacity: 1 !important;
+}
+
+[data-theme="light"] [class*="text-amber-400"],
+[data-theme="light"] [class*="fill-amber-400"] {
+  color: #B45309 !important;
+  fill: #B45309 !important;
+}
+
+/* 10. Emerald / Green Status & Conversion Accents (Deep Forest Green - NO washed-out neon green) */
+[data-theme="light"] [class*="bg-emerald-950"],
+[data-theme="light"] [class*="bg-emerald-900"] {
+  background-color: #ECFDF5 !important;
+  border-color: rgba(5, 150, 105, 0.35) !important;
+}
+
+[data-theme="light"] [class*="text-emerald"],
+[data-theme="light"] .metric-emerald {
+  color: #047857 !important; /* Deep Forest Emerald - 6.5:1 contrast on white */
+  opacity: 1 !important;
+}
+
+/* 11. HUD Tags & Pills */
+[data-theme="light"] .hud-tag {
+  background-color: #EDE9FE !important;
+  border-color: rgba(109, 40, 217, 0.35) !important;
+  color: #3B0764 !important; /* Dark Purple 950 */
+}
+
+[data-theme="light"] .hud-tag * {
+  color: #3B0764 !important;
+}
+
+/* 12. Monospace Category Badges & Tags */
+[data-theme="light"] span[class*="font-mono"]:not(.keep-white):not([class*="text-emerald"]):not([class*="text-amber"]):not([class*="bg-gradient"]) {
+  color: #3B0764 !important;
+  font-weight: 600 !important;
+}
+
+/* 13. Nav & Link Hover States (Prevent disappearing into white on hover) */
+[data-theme="light"] [class*="hover:text-white"]:hover {
+  color: #4C1D95 !important;
+}
+
+[data-theme="light"] [class*="hover:text-zinc-300"]:hover {
+  color: #0F0A1C !important;
+}
+
+[data-theme="light"] [class*="hover:text-purple-200"]:hover,
+[data-theme="light"] [class*="hover:text-purple-300"]:hover {
+  color: #4C1D95 !important;
+}
+
+/* 14. Navbar Specific Light Theme Contrast */
+[data-theme="light"] header nav a {
   color: #334155 !important;
 }
 
-[data-theme="light"] .text-purple-400 {
+[data-theme="light"] header nav a:hover {
   color: #6D28D9 !important;
 }
 
-/* High contrast metrics for light mode */
-[data-theme="light"] .metric-emerald,
-[data-theme="light"] .text-emerald-400 {
-  color: #059669 !important;
+[data-theme="light"] header nav a.text-white {
+  color: #0F0A1C !important;
+  font-weight: 700 !important;
 }
 
-[data-theme="light"] .metric-amber,
-[data-theme="light"] .text-amber-300 {
-  color: #D97706 !important;
+[data-theme="light"] header button {
+  color: #1E293B !important;
 }
 
-[data-theme="light"] .metric-purple,
-[data-theme="light"] .text-purple-300 {
-  color: #6D28D9 !important;
-}
-
-/* Surface backgrounds in light mode */
+/* 15. Surface backgrounds in light mode */
 [data-theme="light"] .bg-\[\#110B22\],
 [data-theme="light"] .bg-\[\#110B22\]\/85,
 [data-theme="light"] .bg-\[\#070310\],
@@ -210,45 +364,23 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 [data-theme="light"] .bg-purple-900\/60,
 [data-theme="light"] .bg-purple-900 {
   background-color: #F8F5FD !important;
+  border-color: rgba(109, 40, 217, 0.16) !important;
 }
 
-/* Form inputs, select, and textarea in light mode */
-[data-theme="light"] input:not([type="range"]),
-[data-theme="light"] textarea,
-[data-theme="light"] select {
-  background-color: #FFFFFF !important;
-  color: #110B22 !important;
-  border-color: rgba(109, 40, 217, 0.25) !important;
-}
-
-[data-theme="light"] input::placeholder,
-[data-theme="light"] textarea::placeholder {
-  color: #64748B !important;
-}
-
-[data-theme="light"] label {
-  color: #1E1B4B !important;
-}
-
-[data-theme="light"] select option {
-  background-color: #FFFFFF !important;
-  color: #110B22 !important;
-}
-
-/* Comparison tables in light mode */
+/* 16. Comparison tables in light mode */
 [data-theme="light"] thead[class*="bg-purple"] {
   background-color: #EDE9FE !important;
 }
 
 [data-theme="light"] thead[class*="bg-purple"] th {
-  color: #110B22 !important;
+  color: #0F0A1C !important;
 }
 
 [data-theme="light"] table td.text-white {
-  color: #110B22 !important;
+  color: #0F0A1C !important;
 }
 
-/* CTA Banner Inversion in light mode */
+/* 17. CTA Banner Inversion in light mode */
 [data-theme="light"] .cta-banner {
   background-image: none !important;
   background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 50%, #FAF5FF 100%) !important;
@@ -257,7 +389,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 [data-theme="light"] .cta-banner h2 {
-  color: #110B22 !important;
+  color: #0F0A1C !important;
 }
 
 [data-theme="light"] .cta-banner p {
@@ -267,7 +399,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 [data-theme="light"] .cta-banner .cta-badge {
   background-color: #EDE9FE !important;
   border-color: rgba(124, 58, 237, 0.3) !important;
-  color: #6D28D9 !important;
+  color: #3B0764 !important;
 }
 
 [data-theme="light"] .cta-banner a[class*="bg-purple"] {
@@ -276,6 +408,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   border-color: #6D28D9 !important;
 }
 
+/* 18. Borders */
 [data-theme="light"] .border-white\/10,
 [data-theme="light"] .border-white\/15,
 [data-theme="light"] .border-white\/20,
@@ -287,8 +420,9 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   border-color: rgba(109, 40, 217, 0.16) !important;
 }
 
+/* 19. Signature Heading Gradient Inversion */
 [data-theme="light"] .gradient-text {
-  background: linear-gradient(135deg, #110B22 0%, #6D28D9 50%, #7C3AED 100%) !important;
+  background: linear-gradient(135deg, #0F0A1C 0%, #4C1D95 50%, #6D28D9 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
