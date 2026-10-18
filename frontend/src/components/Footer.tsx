@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
+import HelixLogo from '@/components/HelixLogo';
 
 export default function Footer() {
   const schemaOrgData = {
@@ -66,8 +67,8 @@ export default function Footer() {
         
         {/* Col 1 & 2: Corporate Brand & Hub Presence */}
         <div className="md:col-span-2 space-y-5">
-          <Link href="/" className="inline-block text-xl font-bold tracking-tight text-white font-heading">
-            Helix 24<span className="text-purple-400 font-normal"> Solutions</span>
+          <Link href="/" className="inline-block group">
+            <HelixLogo size="md" />
           </Link>
           <p className="text-xs leading-relaxed text-[#A39BB5] max-w-sm">
             Performance marketing agency and web engineering partner delivering high-converting Meta Ads, Google Ads PPC, Local SEO, and Next.js applications across Kerala and the GCC.

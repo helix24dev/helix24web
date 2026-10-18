@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Sun, Moon } from 'lucide-react';
+import HelixLogo from '@/components/HelixLogo';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -38,11 +39,8 @@ export default function Navbar() {
       <div className="max-w-[1240px] mx-auto px-6 py-3.5 flex items-center justify-between rounded-full bg-[#110B22]/85 border border-purple-500/20 backdrop-blur-xl shadow-2xl">
         
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight text-white group shrink-0">
-          <div className="w-7 h-7 rounded-md bg-gradient-to-br from-purple-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-inner keep-white">
-            H
-          </div>
-          <span className="font-heading">Helix 24<span className="text-purple-400 font-normal"> Solutions</span></span>
+        <Link href="/" className="group shrink-0">
+          <HelixLogo size="sm" />
         </Link>
 
         {/* Desktop Navigation Links */}

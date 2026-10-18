@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="ecomBgTheme" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080410"/>
+      <stop offset="100%" stop-color="#140a28"/>
+    </linearGradient>
+    <linearGradient id="boxTopTheme" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b21b6"/>
+      <stop offset="100%" stop-color="#2e1065"/>
+    </linearGradient>
+    <linearGradient id="boxSideTheme" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#28114b"/>
+      <stop offset="100%" stop-color="#0d051c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#ecomBgTheme)"/>
+
+  <!-- Pedestal Base (Obsidian Platform) -->
+  <polygon points="120,320 480,320 420,350 180,350" fill="#1b0c36" stroke="#8b5cf6" stroke-opacity="0.25"/>
+
+  <!-- Luxury Product Cube Sculpture (Purple Package) -->
+  <g transform="translate(300, 200)">
+    <!-- Shadow -->
+    <polygon points="-120,90 0,140 120,90 0,40" fill="#000000" opacity="0.65"/>
+
+    <!-- 3D Cube Structure -->
+    <!-- Top Face -->
+    <polygon points="-100,-30 0,-90 100,-30 0,30" fill="url(#boxTopTheme)" stroke="#c4b5fd" stroke-opacity="0.8" stroke-width="1.5"/>
+    <!-- Right Face -->
+    <polygon points="0,30 100,-30 100,70 0,130" fill="url(#boxSideTheme)" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1.5"/>
+    <!-- Left Face -->
+    <polygon points="-100,-30 0,30 0,130 -100,70" fill="#120626" stroke="#6d28d9" stroke-opacity="0.3" stroke-width="1.5"/>
+
+    <!-- Shopping Cart Laser Line Graphic overlay on box face -->
+    <g transform="translate(-50, -10)">
+      <polyline points="10,0 25,0 35,30 75,30 85,10 30,10" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="42" cy="40" r="4" fill="#c4b5fd"/>
+      <circle cx="68" cy="40" r="4" fill="#c4b5fd"/>
+    </g>
+
+    <!-- Floating Checkout Tag (Glass Badge) -->
+    <g transform="translate(40, -60)">
+      <rect width="95" height="42" rx="8" fill="#251246" fill-opacity="0.9" stroke="#a78bfa" stroke-opacity="0.6" stroke-width="1"/>
+      <text x="14" y="25" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ffffff">SHOPIFY</text>
+    </g>
+  </g>
+
+  <!-- Ambient Light Rays -->
+  <line x1="300" y1="20" x2="300" y2="100" stroke="#a78bfa" stroke-opacity="0.35" stroke-width="1.8"/>
+
+  <text x="300" y="375" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a78bfa" opacity="0.6" text-anchor="middle">ECOM_STOREFRONTS // HIGH_CONVERSION</text>
+</svg>

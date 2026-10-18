@@ -13,6 +13,8 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
+import TechEcosystemStrip from '@/components/TechEcosystemStrip';
+import CmsDashboardShowcase from '@/components/CmsDashboardShowcase';
 
 export default function HomePage() {
   const selectedWorks = [
@@ -170,6 +172,9 @@ export default function HomePage() {
 
         {/* Proof Metrics Strip */}
         <ProofMetricsStrip />
+
+        {/* Accredited Partner & Tech Ecosystem Strip */}
+        <TechEcosystemStrip />
 
         {/* Selected Work (Case Studies) */}
         <section className="px-6 max-w-[1240px] mx-auto space-y-12">
@@ -336,6 +341,9 @@ export default function HomePage() {
             })}
           </div>
         </section>
+
+        {/* Visual Headless CMS & Live Client Dashboard Showcase */}
+        <CmsDashboardShowcase />
 
         {/* Direct Call to Action */}
         <section className="px-6 max-w-[1240px] mx-auto">
