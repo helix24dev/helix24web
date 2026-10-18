@@ -70,7 +70,7 @@ export default function AboutPage() {
           <div className="flex items-center justify-center gap-2">
             <span className="hud-tag">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              REGISTERED CORPORATE ENTITY // CIN: U62011KL2026PTC107185
+              REGISTERED CORPORATE ENTITY // KERALA & GCC
             </span>
           </div>
 

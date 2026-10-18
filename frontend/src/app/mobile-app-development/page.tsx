@@ -70,12 +70,18 @@ export default function MobileAppDevelopmentPage() {
         </div>
 
         {/* Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="glass-panel p-8 space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
-              <Smartphone className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold text-white">Cross-Platform Flutter & React Native</h3>
+        <section className="space-y-10">
+          <div className="text-center space-y-2 max-w-2xl mx-auto">
+            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Mobile App Architecture</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white">Cross-Platform Engineering for iOS &amp; Android</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="glass-panel p-8 space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
+                <Smartphone className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-white">Cross-Platform Flutter & React Native</h3>
             <p className="text-xs text-purple-200/75 leading-relaxed">
               Target both iOS and Android simultaneously with one clean codebase. Enjoy buttery 60fps animations, native hardware access, and reduced development costs.
             </p>
@@ -116,6 +122,7 @@ export default function MobileAppDevelopmentPage() {
             </ul>
           </div>
         </div>
+      </section>
 
         {/* Lead Form */}
         <section className="glass-panel p-8 sm:p-12 border border-purple-500/30">

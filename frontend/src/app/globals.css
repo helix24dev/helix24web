@@ -198,13 +198,54 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background-color: #FFFFFF !important;
 }
 
-[data-theme="light"] .bg-purple-950\/40,
 [data-theme="light"] .bg-purple-950\/30,
+[data-theme="light"] .bg-purple-950\/40,
+[data-theme="light"] .bg-purple-950\/50,
 [data-theme="light"] .bg-purple-950\/60,
+[data-theme="light"] .bg-purple-950\/80,
+[data-theme="light"] .bg-purple-950,
 [data-theme="light"] .bg-purple-900\/30,
 [data-theme="light"] .bg-purple-900\/40,
-[data-theme="light"] .bg-purple-900\/50 {
+[data-theme="light"] .bg-purple-900\/50,
+[data-theme="light"] .bg-purple-900\/60,
+[data-theme="light"] .bg-purple-900 {
   background-color: #F8F5FD !important;
+}
+
+/* Form inputs, select, and textarea in light mode */
+[data-theme="light"] input:not([type="range"]),
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: #FFFFFF !important;
+  color: #110B22 !important;
+  border-color: rgba(109, 40, 217, 0.25) !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #64748B !important;
+}
+
+[data-theme="light"] label {
+  color: #1E1B4B !important;
+}
+
+[data-theme="light"] select option {
+  background-color: #FFFFFF !important;
+  color: #110B22 !important;
+}
+
+/* Comparison tables in light mode */
+[data-theme="light"] thead[class*="bg-purple"] {
+  background-color: #EDE9FE !important;
+}
+
+[data-theme="light"] thead[class*="bg-purple"] th {
+  color: #110B22 !important;
+}
+
+[data-theme="light"] table td.text-white {
+  color: #110B22 !important;
 }
 
 /* CTA Banner Inversion in light mode */

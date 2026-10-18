@@ -132,8 +132,8 @@ export default function WebDevelopmentPage() {
               <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Lighthouse Score</span>
             </div>
             <div className="glass-panel p-4 text-center">
-              <span className="block font-mono text-2xl font-bold text-white">React 19</span>
-              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Next.js 14/15</span>
+              <span className="block font-mono text-2xl font-bold text-white">100%</span>
+              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Mobile &amp; SEO Ready</span>
             </div>
             <div className="glass-panel p-4 text-center">
               <span className="block font-mono text-2xl font-bold text-purple-300">99.9%</span>
@@ -300,28 +300,28 @@ export default function WebDevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="glass-panel p-6 space-y-3">
               <span className="font-mono text-2xl font-bold text-purple-400">01</span>
-              <h4 className="text-base font-bold text-white">Architecture & Wireframing</h4>
+              <h3 className="text-base font-bold text-white">Architecture & Wireframing</h3>
               <p className="text-xs text-purple-200/70">
                 User journey mapping, technical database schema, and conversion-optimized Figma UI prototypes.
               </p>
             </div>
             <div className="glass-panel p-6 space-y-3">
               <span className="font-mono text-2xl font-bold text-purple-400">02</span>
-              <h4 className="text-base font-bold text-white">Clean TypeScript Build</h4>
+              <h3 className="text-base font-bold text-white">Clean TypeScript Build</h3>
               <p className="text-xs text-purple-200/70">
                 Next.js 14 App Router, responsive Tailwind styling, component isolation, and NestJS API integrations.
               </p>
             </div>
             <div className="glass-panel p-6 space-y-3">
               <span className="font-mono text-2xl font-bold text-purple-400">03</span>
-              <h4 className="text-base font-bold text-white">Core Web Vitals Audit</h4>
+              <h3 className="text-base font-bold text-white">Core Web Vitals Audit</h3>
               <p className="text-xs text-purple-200/70">
                 Rigorous testing on mobile 4G networks, cross-browser audits, schema validation, and security testing.
               </p>
             </div>
             <div className="glass-panel p-6 space-y-3">
               <span className="font-mono text-2xl font-bold text-purple-400">04</span>
-              <h4 className="text-base font-bold text-white">Deploy & Maintain</h4>
+              <h3 className="text-base font-bold text-white">Deploy & Maintain</h3>
               <p className="text-xs text-purple-200/70">
                 Global edge CDN deployment with Vercel/AWS, 24/7 uptime monitoring, and ongoing feature updates.
               </p>

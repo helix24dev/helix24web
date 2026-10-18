@@ -226,9 +226,9 @@ export default function DigitalMarketingSeoPage() {
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                 SERVER-SIDE CONVERSIONS API (CAPI)
               </span>
-              <h3 className="text-2xl sm:text-4xl font-extrabold text-white">
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
                 How Helix24 Eliminates 30%+ Ad Tracking Loss
-              </h3>
+              </h2>
               <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
                 Standard agency pixels run in the user&apos;s browser, where iOS 14.5+, Safari ITP, and ad blockers discard over a third of your purchase and lead events.
               </p>
@@ -237,23 +237,42 @@ export default function DigitalMarketingSeoPage() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-purple-950/50 border border-purple-800/40 space-y-4 font-mono text-xs">
+            <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/40 space-y-4 text-xs">
               <div className="flex items-center justify-between pb-3 border-b border-purple-800/40">
-                <span className="text-purple-300 font-bold">{'// CAPI DISPATCH PIPELINE'}</span>
-                <span className="text-emerald-400 text-[11px]">ACTIVE • EMQ 9.4/10</span>
+                <span className="text-purple-200 font-bold flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  Direct Server-to-Server Tracking
+                </span>
+                <span className="text-emerald-400 text-[11px] font-semibold">100% Signal Accuracy</span>
               </div>
-              <div className="space-y-2 text-[11px] text-purple-200/70">
-                <div className="p-2.5 rounded bg-purple-900/30 border border-purple-700/30">
-                  <span className="text-purple-400 font-semibold">[1] Event Trigger:</span> User completes form / checkout
+              <div className="space-y-2.5 text-xs text-purple-200/80">
+                <div className="p-3 rounded-xl bg-purple-900/30 border border-purple-700/30 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-white block">Accurate Customer Attribution</span>
+                    <span>Captures every sale and lead inquiry even when browser cookies or ad blockers are active.</span>
+                  </div>
                 </div>
-                <div className="p-2.5 rounded bg-purple-900/30 border border-purple-700/30">
-                  <span className="text-purple-400 font-semibold">[2] Hash & Secure:</span> SHA-256 phone, email & IP hashing
+                <div className="p-3 rounded-xl bg-purple-900/30 border border-purple-700/30 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-white block">Enterprise Data Privacy</span>
+                    <span>Customer contact information is securely encrypted to meet global privacy standards.</span>
+                  </div>
                 </div>
-                <div className="p-2.5 rounded bg-purple-900/30 border border-purple-700/30">
-                  <span className="text-emerald-400 font-semibold">[3] Server Dispatch:</span> Direct REST API call to Meta Graph & Google Ads
+                <div className="p-3 rounded-xl bg-purple-900/30 border border-purple-700/30 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-white block">Lower Customer Acquisition Costs</span>
+                    <span>Feeding clean data directly into Meta &amp; Google algorithms reduces wasted ad spend by up to 30%.</span>
+                  </div>
                 </div>
-                <div className="p-2.5 rounded bg-purple-900/30 border border-purple-700/30">
-                  <span className="text-amber-400 font-semibold">[4] CRM Automated Routing:</span> Instant WhatsApp notification to sales desk
+                <div className="p-3 rounded-xl bg-purple-900/30 border border-purple-700/30 flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-white block">Instant WhatsApp Lead Routing</span>
+                    <span>Your sales desk receives immediate WhatsApp alerts the instant a high-intent customer inquires.</span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -121,44 +121,55 @@ export default function ResultsPage() {
       </div>
 
       {/* Case Studies Deep Dive Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {cases.map((item, idx) => (
-          <div key={idx} className="glass-panel p-8 sm:p-10 border border-purple-500/30 flex flex-col justify-between space-y-6 group hover:border-purple-400/60 transition-all">
-            
-            <div className="space-y-4">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-700/40 text-[11px] font-mono font-semibold text-purple-300 uppercase tracking-wider">
-                  {item.tag}
-                </span>
-                <span className="text-xs font-mono text-emerald-400 font-semibold">{item.location}</span>
-              </div>
+      <section className="space-y-8">
+        <div className="border-b border-purple-900/30 pb-4">
+          <span className="text-xs uppercase tracking-widest text-purple-400 font-semibold block font-mono">
+            Direct Revenue Attribution
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+            Verified Client Case Studies
+          </h2>
+        </div>
 
-              <h2 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors">
-                {item.title}
-              </h2>
-
-              <div className="space-y-2 text-xs text-purple-200/75 leading-relaxed">
-                <p><strong>The Challenge:</strong> {item.problem}</p>
-                <p><strong>The Helix24 Solution:</strong> {item.solution}</p>
-              </div>
-            </div>
-
-            {/* Metrics Breakdown Grid */}
-            <div className="pt-6 border-t border-purple-900/30 grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {item.metrics.map((metric, mIdx) => (
-                <div key={mIdx} className="p-3 rounded-xl bg-purple-950/40 border border-purple-800/30 text-center">
-                  <span 
-                    className="block font-mono text-lg font-bold text-white group-hover:text-purple-300 transition-colors"
-                    dangerouslySetInnerHTML={{ __html: metric.value }}
-                  />
-                  <span className="text-[10px] uppercase tracking-wider text-purple-300/70 block mt-0.5">{metric.label}</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {cases.map((item, idx) => (
+            <div key={idx} className="glass-panel p-8 sm:p-10 border border-purple-500/30 flex flex-col justify-between space-y-6 group hover:border-purple-400/60 transition-all">
+              
+              <div className="space-y-4">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-700/40 text-[11px] font-mono font-semibold text-purple-300 uppercase tracking-wider">
+                    {item.tag}
+                  </span>
+                  <span className="text-xs font-mono text-emerald-400 font-semibold">{item.location}</span>
                 </div>
-              ))}
-            </div>
 
-          </div>
-        ))}
-      </div>
+                <h3 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors">
+                  {item.title}
+                </h3>
+
+                <div className="space-y-2 text-xs text-purple-200/75 leading-relaxed">
+                  <p><strong>The Challenge:</strong> {item.problem}</p>
+                  <p><strong>The Helix24 Solution:</strong> {item.solution}</p>
+                </div>
+              </div>
+
+              {/* Metrics Breakdown Grid */}
+              <div className="pt-6 border-t border-purple-900/30 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {item.metrics.map((metric, mIdx) => (
+                  <div key={mIdx} className="p-3 rounded-xl bg-purple-950/40 border border-purple-800/30 text-center">
+                    <span 
+                      className="block font-mono text-lg font-bold text-white group-hover:text-purple-300 transition-colors"
+                      dangerouslySetInnerHTML={{ __html: metric.value }}
+                    />
+                    <span className="text-[10px] uppercase tracking-wider text-purple-300/70 block mt-0.5">{metric.label}</span>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Bottom CTA */}
       <section className="glass-panel p-8 sm:p-12 text-center space-y-4 border border-purple-500/30">

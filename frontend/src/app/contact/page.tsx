@@ -75,7 +75,8 @@ export default function ContactPage() {
               
               <div>
                 <span className="text-[11px] font-mono uppercase tracking-wider text-purple-400 font-semibold block">Official Corporate Office</span>
-                <h3 className="text-xl font-bold text-white">Helix 24 Solutions Pvt Ltd</h3>
+                <h2 className="text-xl font-bold text-white">Corporate Contact &amp; Strategy Desk</h2>
+                <h3 className="text-sm font-semibold text-purple-200 mt-1">Helix 24 Solutions Pvt Ltd</h3>
               </div>
 
               {/* Legal Identifiers Card */}

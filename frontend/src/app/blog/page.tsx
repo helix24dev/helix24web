@@ -103,7 +103,7 @@ export default function BlogIndexPage() {
         {/* All Other Articles Grid */}
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-purple-900/30 pb-4">
-            <h3 className="text-xl font-bold text-white">All Strategy &amp; Architecture Guides</h3>
+            <h2 className="text-xl font-bold text-white">All Strategy &amp; Architecture Guides</h2>
             <span className="text-xs font-mono text-purple-400">{posts.length} Verified Articles</span>
           </div>
 

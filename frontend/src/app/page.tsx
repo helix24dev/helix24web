@@ -285,10 +285,7 @@ export default function HomePage() {
                           <CapIcon className="w-5 h-5" />
                         </div>
                         <div>
-                          <span className="text-xs font-mono text-purple-400 font-semibold block">
-                            Service {item.num}
-                          </span>
-                          <span className="text-[11px] text-purple-300/80 uppercase tracking-wider font-mono">
+                          <span className="text-xs font-mono text-purple-400 font-semibold block uppercase tracking-wider">
                             {item.tagline}
                           </span>
                         </div>
