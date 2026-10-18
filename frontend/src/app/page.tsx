@@ -108,17 +108,27 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative px-6 pt-16 sm:pt-24 max-w-[1240px] mx-auto text-center space-y-8">
         
-        {/* Regional Hubs Pill */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-200 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-950/40 text-xs font-mono uppercase tracking-widest text-purple-900 dark:text-purple-300 font-semibold shadow-xs">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          <span>Kochi • Kozhikode • Trivandrum • GCC</span>
-        </div>
+        {/* Display Headline with Tom Fishburne Hook + SEO Keyword Integration */}
+        <div className="max-w-5xl mx-auto space-y-4">
+          <h1 className="flex flex-col items-center">
+            {/* The Main Hook Visitors See */}
+            <span className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] font-heading">
+              &ldquo;The best marketing <span className="gradient-text">doesn&apos;t feel like marketing.&rdquo;</span>
+            </span>
 
-        {/* Display Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-[1.1] font-heading">
-          Digital Marketing &amp; Web Development{' '}
-          <span className="gradient-text">Company in Kerala.</span>
-        </h1>
+            {/* Quote Attribution */}
+            <span className="inline-flex items-center gap-3 text-xs sm:text-sm font-mono tracking-widest text-purple-400 uppercase mt-3 mb-4">
+              <span className="w-8 h-px bg-purple-500/40"></span>
+              <span>Tom Fishburne</span>
+              <span className="w-8 h-px bg-purple-500/40"></span>
+            </span>
+
+            {/* Target Category & Kerala SEO Anchor */}
+            <span className="text-lg sm:text-2xl font-semibold text-purple-700 dark:text-purple-300 tracking-tight font-heading">
+              Digital Marketing &amp; Web Development Company in Kerala.
+            </span>
+          </h1>
+        </div>
 
         {/* Subhead */}
         <p className="text-base sm:text-lg text-slate-700 dark:text-purple-200/85 font-medium max-w-2xl mx-auto leading-relaxed">
