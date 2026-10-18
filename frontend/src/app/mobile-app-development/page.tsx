@@ -5,7 +5,7 @@ import { Smartphone, CheckCircle2, Layers, ArrowRight, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Mobile App Development in Kochi, Kerala | iOS & Android | Helix24',
-  description: 'Custom iOS, Android, and Flutter cross-platform mobile application development by Helix 24 Solutions Pvt Ltd. 60fps native performance, push CRM, and app store deployment in Kerala & GCC.',
+  description: 'Custom iOS, Android, and Flutter cross-platform mobile application development by Helix24 Solutions Pvt Ltd. 60fps native performance, push CRM, and app store deployment in Kerala & GCC.',
   keywords: 'mobile app development company kochi, flutter app developers kerala, ios app development kochi, android app development calicut, react native agency kerala',
 };
 
@@ -17,7 +17,7 @@ export default function MobileAppDevelopmentPage() {
     serviceType: 'Mobile Application Development',
     provider: {
       '@type': 'Corporation',
-      name: 'Helix 24 Solutions Pvt Ltd',
+      name: 'Helix24 Solutions Pvt Ltd',
       url: 'https://helix24.com',
       telephone: '+91 9048009044',
       taxID: 'AAJCH0136Q',
@@ -55,7 +55,7 @@ export default function MobileAppDevelopmentPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            From on-demand booking systems and logistics tracking to D2C mobile shopping apps. <strong>Helix 24 Solutions Pvt Ltd</strong> builds fast, crash-resilient <strong>iOS and Android applications</strong> with seamless NestJS backend APIs.
+            From on-demand booking systems and logistics tracking to D2C mobile shopping apps. <strong>Helix24 Solutions Pvt Ltd</strong> builds fast, crash-resilient <strong>iOS and Android applications</strong> with seamless NestJS backend APIs.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -131,7 +131,7 @@ export default function MobileAppDevelopmentPage() {
               Launch Your <span className="gradient-text">Mobile Application</span>
             </h2>
             <p className="text-xs text-purple-200/70">
-              Tell us about your app concept. Helix 24 Solutions Pvt Ltd will provide a comprehensive technical scoping document and timeline.
+              Tell us about your app concept. Helix24 Solutions Pvt Ltd will provide a comprehensive technical scoping document and timeline.
             </p>
           </div>
           <LeadForm />

@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Trivandrum | SEO & IT Marketing — Helix 24',
+  title: 'Digital Marketing Agency in Trivandrum | SEO & IT Marketing — Helix24',
   description: 'Premier digital marketing company in Trivandrum (Thiruvananthapuram). Enterprise B2B lead generation, Technopark IT marketing, Google Ads, and Next.js web applications.',
   keywords: 'digital marketing agency in trivandrum, digital marketing company thiruvananthapuram, seo company trivandrum, technopark it marketing, web development trivandrum, b2b lead generation kerala',
   alternates: {
@@ -27,7 +27,7 @@ export default function TrivandrumLocationPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': 'https://helix24.com/locations/trivandrum#localbusiness',
-    name: 'Helix 24 Solutions Pvt Ltd — Trivandrum Strategy Desk',
+    name: 'Helix24 Solutions Pvt Ltd — Trivandrum Strategy Desk',
     image: 'https://helix24.com/og-image.png',
     telephone: '+91 9048009044',
     email: 'hello@helix24.com',
@@ -80,7 +80,7 @@ export default function TrivandrumLocationPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Fuel your growth in Kerala’s capital. <strong>Helix 24 Solutions Pvt Ltd</strong> engineers <strong>B2B lead generation, high-intent Google PPC, technical SEO, and modern Next.js web applications</strong> tailored for IT companies, healthcare institutions, and educational leaders across Kazhakoottam and Technopark.
+            Fuel your growth in Kerala’s capital. <strong>Helix24 Solutions Pvt Ltd</strong> engineers <strong>B2B lead generation, high-intent Google PPC, technical SEO, and modern Next.js web applications</strong> tailored for IT companies, healthcare institutions, and educational leaders across Kazhakoottam and Technopark.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -175,7 +175,7 @@ export default function TrivandrumLocationPage() {
                 Connect Directly with Our Trivandrum Team
               </h2>
               <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-                Helix 24 Solutions Pvt Ltd provides strategic marketing consultations for businesses in Technopark, Kazhakoottam, Kowdiar, and Vellayambalam.
+                Helix24 Solutions Pvt Ltd provides strategic marketing consultations for businesses in Technopark, Kazhakoottam, Kowdiar, and Vellayambalam.
               </p>
               <div className="space-y-2 text-xs text-purple-300/90 pt-2 font-mono">
                 <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-purple-400" /> Technopark &amp; Kazhakoottam Corridor, Thiruvananthapuram, Kerala 695581</div>
@@ -190,7 +190,7 @@ export default function TrivandrumLocationPage() {
                 <span className="text-white font-bold text-sm">Google Verified 5.0 Rating</span>
               </div>
               <p className="text-xs text-purple-200/80 leading-relaxed">
-                &ldquo;Helix 24 built our Next.js web application and restructured our Google Ads account. Our qualified demo requests from international clients increased by over 60% within 45 days.&rdquo;
+                &ldquo;Helix24 built our Next.js web application and restructured our Google Ads account. Our qualified demo requests from international clients increased by over 60% within 45 days.&rdquo;
               </p>
               <div className="pt-2 flex items-center justify-between text-[11px] text-purple-400 font-mono">
                 <span>Verified B2B Client</span>

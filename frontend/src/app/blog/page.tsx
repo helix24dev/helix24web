@@ -4,8 +4,8 @@ import { ArrowRight, Clock, Calendar, MapPin, Sparkles, MessageCircle } from 'lu
 import { getAllBlogPosts } from '@/data/blogPosts';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing & Web SEO Guides (Kerala & GCC) — Blog | Helix 24 Solutions Pvt Ltd',
-  description: 'In-depth research and execution playbooks on Meta Ads, Google Ads PPC, Local SEO 3-Pack, Next.js web development, and GCC cross-border e-commerce by Helix 24 Solutions Pvt Ltd.',
+  title: 'Digital Marketing & Web SEO Guides (Kerala & GCC) — Blog | Helix24 Solutions Pvt Ltd',
+  description: 'In-depth research and execution playbooks on Meta Ads, Google Ads PPC, Local SEO 3-Pack, Next.js web development, and GCC cross-border e-commerce by Helix24 Solutions Pvt Ltd.',
   alternates: {
     canonical: 'https://helix24.com/blog',
   },
@@ -17,7 +17,7 @@ export default function BlogIndexPage() {
   const blogListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Helix 24 Solutions Digital Strategy Blog',
+    name: 'Helix24 Solutions Digital Strategy Blog',
     description: 'Engineering and performance marketing insights for Kerala and GCC businesses.',
     url: 'https://helix24.com/blog',
     hasPart: posts.map((post) => ({
@@ -42,7 +42,7 @@ export default function BlogIndexPage() {
           <div className="hud-tag inline-flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             <span className="text-emerald-300 font-mono text-[11px] font-semibold tracking-wider uppercase">
-              {'// HELIX 24 INTELLIGENCE DESK • OPEN PLAYBOOKS'}
+              {'// HELIX24 INTELLIGENCE DESK • OPEN PLAYBOOKS'}
             </span>
           </div>
 
@@ -161,7 +161,7 @@ export default function BlogIndexPage() {
             Have a project in mind for Kerala or GCC?
           </h2>
           <p className="text-xs sm:text-sm text-purple-200/80 max-w-xl mx-auto">
-            Get in touch directly with the founders and engineers at Helix 24 Solutions Pvt Ltd for a direct strategy assessment of your ad campaigns or tech stack.
+            Get in touch directly with the founders and engineers at Helix24 Solutions Pvt Ltd for a direct strategy assessment of your ad campaigns or tech stack.
           </p>
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
             <a

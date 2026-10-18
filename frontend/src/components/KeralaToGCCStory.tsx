@@ -26,7 +26,7 @@ export default function KeralaToGCCStory() {
     },
     {
       year: 'CORPORATE COMPLIANCE',
-      title: 'Helix 24 Solutions Pvt Ltd',
+      title: 'Helix24 Solutions Pvt Ltd',
       accent: 'bg-[#A855F7]',
       description: 'Formally incorporated as a Private Limited company with Ministry of Corporate Affairs (CIN: U62011KL2026PTC107185). Enterprise SLA contracts and 100% intellectual property protection.',
       stats: '5.0 Verified on Google',
@@ -41,7 +41,7 @@ export default function KeralaToGCCStory() {
         <div className="space-y-6 max-w-4xl">
           <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-purple-400 font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            The Helix 24 Solutions Story
+            The Helix24 Solutions Story
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">

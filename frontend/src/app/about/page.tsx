@@ -11,16 +11,16 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us | Helix 24 Solutions Pvt Ltd — Digital Agency (Kerala & GCC)',
-  description: 'Learn about Helix 24 Solutions Pvt Ltd (CIN: U62011KL2026PTC107185). We are a government-registered digital marketing and Next.js web development agency serving Kochi, Kozhikode, and the GCC.',
-  keywords: 'Helix 24 Solutions Pvt Ltd, digital marketing agency in kochi, web development company kerala, performance marketing agency calicut, about helix24',
+  title: 'About Us | Helix24 Solutions Pvt Ltd — Digital Agency (Kerala & GCC)',
+  description: 'Learn about Helix24 Solutions Pvt Ltd (CIN: U62011KL2026PTC107185). We are a government-registered digital marketing and Next.js web development agency serving Kochi, Kozhikode, and the GCC.',
+  keywords: 'Helix24 Solutions Pvt Ltd, digital marketing agency in kochi, web development company kerala, performance marketing agency calicut, about helix24',
 };
 
 export default function AboutPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Corporation',
-    name: 'Helix 24 Solutions Pvt Ltd',
+    name: 'Helix24 Solutions Pvt Ltd',
     alternateName: 'Helix24 Solutions',
     url: 'https://helix24.com/about',
     logo: 'https://helix24.com/assets/logo.png',
@@ -46,7 +46,7 @@ export default function AboutPage() {
       },
     ],
     hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-    description: 'Helix 24 Solutions Pvt Ltd is an officially incorporated corporate entity delivering engineering-grade Next.js web applications, Meta Ads with server-side CAPI tracking, Google Ads PPC, and Local SEO.',
+    description: 'Helix24 Solutions Pvt Ltd is an officially incorporated corporate entity delivering engineering-grade Next.js web applications, Meta Ads with server-side CAPI tracking, Google Ads PPC, and Local SEO.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Kochi & Kozhikode',
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
-            About <span className="gradient-text">Helix 24 Solutions Pvt Ltd</span>
+            About <span className="gradient-text">Helix24 Solutions Pvt Ltd</span>
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
@@ -123,7 +123,7 @@ export default function AboutPage() {
           </div>
 
           <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-            As a formally incorporated Private Limited corporate entity in Kerala, Helix 24 Solutions provides corporate partners with enterprise-grade SLA agreements, transparent GST invoicing, strict NDA confidentiality, and 100% intellectual property ownership of all codebase, ad accounts, and creative assets.
+            As a formally incorporated Private Limited corporate entity in Kerala, Helix24 Solutions provides corporate partners with enterprise-grade SLA agreements, transparent GST invoicing, strict NDA confidentiality, and 100% intellectual property ownership of all codebase, ad accounts, and creative assets.
           </p>
         </section>
 
@@ -131,7 +131,7 @@ export default function AboutPage() {
         <section className="space-y-10">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Our Standards</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white">Why Modern Brands Choose Helix 24</h2>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white">Why Modern Brands Choose Helix24</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -221,7 +221,7 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="glass-panel p-8 sm:p-12 text-center space-y-4 border border-purple-500/30">
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Ready to Partner with <span className="gradient-text">Helix 24 Solutions?</span>
+            Ready to Partner with <span className="gradient-text">Helix24 Solutions?</span>
           </h2>
           <p className="text-xs sm:text-sm text-purple-200/70 max-w-xl mx-auto">
             Schedule a 30-minute discovery call with our leadership team to discuss your growth goals, web architecture, and ad budget.

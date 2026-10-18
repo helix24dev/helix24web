@@ -16,7 +16,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'E-Commerce Website Development in Kochi, Kerala | Shopify & WooCommerce | Helix24',
-  description: 'Helix 24 Solutions Pvt Ltd builds high-converting Shopify Plus, WooCommerce, and Headless Next.js online stores. Fast mobile checkouts, Razorpay/Stripe, WhatsApp cart recovery, and Meta CAPI sync for Kerala & GCC.',
+  description: 'Helix24 Solutions Pvt Ltd builds high-converting Shopify Plus, WooCommerce, and Headless Next.js online stores. Fast mobile checkouts, Razorpay/Stripe, WhatsApp cart recovery, and Meta CAPI sync for Kerala & GCC.',
   keywords: 'ecommerce website development kerala, shopify development company kochi, woocommerce developers kerala, headless ecommerce nextjs, shopify plus agency kerala, d2c ecommerce development kochi',
 };
 
@@ -28,7 +28,7 @@ export default function EcommerceDevelopmentPage() {
     serviceType: 'E-Commerce Development',
     provider: {
       '@type': 'Corporation',
-      name: 'Helix 24 Solutions Pvt Ltd',
+      name: 'Helix24 Solutions Pvt Ltd',
       url: 'https://helix24.com',
       telephone: '+91 9048009044',
       taxID: 'AAJCH0136Q',
@@ -102,7 +102,7 @@ export default function EcommerceDevelopmentPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Stop losing shoppers at the checkout page. <strong>Helix 24 Solutions Pvt Ltd</strong> engineers ultra-fast <strong>Shopify Plus, WooCommerce, and Headless Next.js</strong> storefronts with 1-click mobile checkouts, automated WhatsApp cart recovery, and seamless Meta catalog synchronization.
+            Stop losing shoppers at the checkout page. <strong>Helix24 Solutions Pvt Ltd</strong> engineers ultra-fast <strong>Shopify Plus, WooCommerce, and Headless Next.js</strong> storefronts with 1-click mobile checkouts, automated WhatsApp cart recovery, and seamless Meta catalog synchronization.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -319,7 +319,7 @@ export default function EcommerceDevelopmentPage() {
               Launch Your High-Converting <span className="gradient-text">Storefront</span>
             </h2>
             <p className="text-xs text-purple-200/70">
-              Tell us about your brand and product catalog. Helix 24 Solutions Pvt Ltd will provide a tailored e-commerce blueprint within 24 hours.
+              Tell us about your brand and product catalog. Helix24 Solutions Pvt Ltd will provide a tailored e-commerce blueprint within 24 hours.
             </p>
           </div>
           <LeadForm />

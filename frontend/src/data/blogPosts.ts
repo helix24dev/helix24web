@@ -38,7 +38,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'meta-ads-agency-kochi-kerala-guide',
     title: 'How to Choose the Right Meta Ads Agency in Kochi, Kerala: 2026 Engineering Guide',
-    metaTitle: 'How to Choose a Meta Ads Agency in Kochi, Kerala (2026 Guide) | Helix 24',
+    metaTitle: 'How to Choose a Meta Ads Agency in Kochi, Kerala (2026 Guide) | Helix24',
     metaDescription: 'Stop wasting ad spend on boosted posts. Learn what metrics, Server-Side CAPI tracking, Click-to-WhatsApp funnels, and ROAS attribution models to demand from a Kochi Meta Ads partner.',
     category: 'Meta Ads & Growth',
     categorySlug: 'meta-ads',
@@ -46,7 +46,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-02-15',
     updatedDate: '2026-03-20',
     author: {
-      name: 'Helix 24 Growth Lab',
+      name: 'Helix24 Growth Lab',
       role: 'Performance Marketing Team',
       location: 'Kochi & Kozhikode',
     },
@@ -121,7 +121,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'social-media-marketing-cost-kerala',
     title: 'Social Media Marketing Cost in Kerala: 2026 Transparent Pricing Guide',
-    metaTitle: 'Social Media Marketing Cost in Kerala (2026 Pricing Guide) | Helix 24',
+    metaTitle: 'Social Media Marketing Cost in Kerala (2026 Pricing Guide) | Helix24',
     metaDescription: 'Detailed breakdown of monthly SMM retainer costs in Kerala — from basic static graphic packages to high-production Instagram Reels and performance marketing suites.',
     category: 'Meta Ads & Growth',
     categorySlug: 'meta-ads',
@@ -129,7 +129,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-02-22',
     updatedDate: '2026-03-24',
     author: {
-      name: 'Helix 24 Pricing Desk',
+      name: 'Helix24 Pricing Desk',
       role: 'Growth Strategy',
       location: 'Kochi & Kozhikode',
     },
@@ -191,7 +191,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'local-seo-kochi-kozhikode-google-maps',
     title: 'Local SEO for Kochi & Kozhikode: How to Rank in the Google Maps 3-Pack',
-    metaTitle: 'Local SEO Kochi & Kozhikode: Google Maps 3-Pack Guide | Helix 24',
+    metaTitle: 'Local SEO Kochi & Kozhikode: Google Maps 3-Pack Guide | Helix24',
     metaDescription: 'Step-by-step Local SEO blueprint to capture high-intent searches in Kerala. Optimize Google Business Profile, LocalBusiness schema, citations, and geotagged reviews.',
     category: 'Local SEO & Search',
     categorySlug: 'local-seo',
@@ -199,7 +199,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-03-01',
     updatedDate: '2026-03-28',
     author: {
-      name: 'Helix 24 SEO Division',
+      name: 'Helix24 SEO Division',
       role: 'Search Engine Optimization',
       location: 'Kochi & Kozhikode',
     },
@@ -221,7 +221,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: '2. The Four Optimization Levers You Must Execute',
         paragraphs: [
-          'Google uses complex machine learning models to assess local trust. Here is the operational checklist Helix 24 executes for local enterprises:',
+          'Google uses complex machine learning models to assess local trust. Here is the operational checklist Helix24 executes for local enterprises:',
         ],
         bulletPoints: [
           'Primary Category Precision: Choose the exact primary category that reflects your core business (e.g. "Marketing Agency" rather than generic "Corporate Office").',
@@ -256,7 +256,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'nextjs-vs-wordpress-website-cost-kerala',
     title: 'Next.js vs. WordPress for Kerala Businesses: Speed, Security & ROI Analysis',
-    metaTitle: 'Next.js vs WordPress: Why Modern Kerala Brands Choose Next.js | Helix 24',
+    metaTitle: 'Next.js vs WordPress: Why Modern Kerala Brands Choose Next.js | Helix24',
     metaDescription: 'Compare Next.js 14 and WordPress on Core Web Vitals, mobile speed, security vulnerabilities, plugin bloat, and total cost of ownership for Kerala businesses.',
     category: 'Web Engineering',
     categorySlug: 'web-engineering',
@@ -264,7 +264,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-03-08',
     updatedDate: '2026-04-02',
     author: {
-      name: 'Helix 24 Engineering Team',
+      name: 'Helix24 Engineering Team',
       role: 'Full-Stack Web Systems',
       location: 'Kochi Kakkanad Hub',
     },
@@ -285,7 +285,7 @@ export const BLOG_POSTS: BlogPost[] = [
         callout: {
           type: 'stat',
           title: 'Benchmark Comparison',
-          text: 'Helix 24 Next.js applications routinely achieve First Contentful Paint (FCP) of <0.8 seconds and 99/100 Core Web Vitals, cutting ad landing bounce rates in half.',
+          text: 'Helix24 Next.js applications routinely achieve First Contentful Paint (FCP) of <0.8 seconds and 99/100 Core Web Vitals, cutting ad landing bounce rates in half.',
         },
       },
       {
@@ -316,7 +316,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'ecommerce-expansion-kerala-to-uae-gcc',
     title: 'Kerala to GCC E-Commerce Playbook: Expanding D2C Brands to UAE & Saudi Arabia',
-    metaTitle: 'Kerala to GCC E-Commerce: Expanding D2C to UAE & Saudi Arabia | Helix 24',
+    metaTitle: 'Kerala to GCC E-Commerce: Expanding D2C to UAE & Saudi Arabia | Helix24',
     metaDescription: 'How Kerala D2C apparel, spices, jewellery, and wellness brands successfully expand to Dubai, Abu Dhabi, and Riyadh with multi-currency checkout, Tabby BNPL, and Meta ads.',
     category: 'GCC Expansion',
     categorySlug: 'gcc-expansion',
@@ -324,7 +324,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-03-15',
     updatedDate: '2026-04-05',
     author: {
-      name: 'Helix 24 GCC Desk',
+      name: 'Helix24 GCC Desk',
       role: 'Cross-Border Commerce',
       location: 'Dubai & Kochi',
     },
@@ -380,7 +380,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'google-ads-vs-meta-ads-kerala',
     title: 'Google Ads PPC vs Meta Ads: Which Delivers Higher ROI for Kerala Companies?',
-    metaTitle: 'Google Ads vs Meta Ads: Kerala Business ROI Breakdown | Helix 24',
+    metaTitle: 'Google Ads vs Meta Ads: Kerala Business ROI Breakdown | Helix24',
     metaDescription: 'Discover whether your Kochi or Calicut business should invest in Google Search Ads or Meta (Facebook/Instagram) Ads based on purchase intent, cost-per-lead, and sales cycle.',
     category: 'Meta Ads & Growth',
     categorySlug: 'meta-ads',
@@ -388,7 +388,7 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: '2026-03-22',
     updatedDate: '2026-04-10',
     author: {
-      name: 'Helix 24 Media Buying Desk',
+      name: 'Helix24 Media Buying Desk',
       role: 'Paid Acquisition',
       location: 'Kochi & Kozhikode',
     },
@@ -411,7 +411,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: '2. Industry-by-Industry Decision Matrix',
         paragraphs: [
-          'Here is the exact allocation framework we deploy for clients at Helix 24 Solutions Pvt Ltd:',
+          'Here is the exact allocation framework we deploy for clients at Helix24 Solutions Pvt Ltd:',
         ],
         bulletPoints: [
           'Clinics, Hospitals & Specialized Legal/B2B: 70% Google Search PPC + 30% Meta Retargeting. The highest-converting patient inquiries come from people actively searching symptoms or treatments.',

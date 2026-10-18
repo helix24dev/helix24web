@@ -6,7 +6,7 @@ export default function Footer() {
   const schemaOrgData = {
     '@context': 'https://schema.org',
     '@type': 'Corporation',
-    name: 'Helix 24 Solutions Pvt Ltd',
+    name: 'Helix24 Solutions Pvt Ltd',
     alternateName: 'Helix24 Solutions',
     url: 'https://helix24.com',
     logo: 'https://helix24.com/assets/logo.png',
@@ -131,7 +131,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-[1240px] mx-auto px-6 mt-16 pt-8 border-t border-purple-900/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-        <p>© 2026 HELIX 24 SOLUTIONS PVT LTD. ALL RIGHTS RESERVED.</p>
+        <p>© 2026 HELIX24 SOLUTIONS PVT LTD. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-6">
           <Link href="/about" className="hover:text-zinc-300">Privacy Policy</Link>
           <Link href="/about" className="hover:text-zinc-300">Terms of Service</Link>

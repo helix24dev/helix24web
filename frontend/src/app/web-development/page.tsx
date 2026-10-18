@@ -13,7 +13,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Website Development Company in Kochi, Kerala | Next.js & Custom Software | Helix24',
-  description: 'Helix 24 Solutions Pvt Ltd is a premier web development company in Kochi, Kerala. We build custom Next.js web applications, enterprise portals, and high-performance websites with 100/100 Lighthouse scores for India and GCC.',
+  description: 'Helix24 Solutions Pvt Ltd is a premier web development company in Kochi, Kerala. We build custom Next.js web applications, enterprise portals, and high-performance websites with 100/100 Lighthouse scores for India and GCC.',
   keywords: 'web development company in kochi, web development agency in kerala, best website development company in kerala, custom software development kochi, next.js developers kerala, react agency kochi, core web vitals optimization',
 };
 
@@ -25,7 +25,7 @@ export default function WebDevelopmentPage() {
     serviceType: 'Web Development',
     provider: {
       '@type': 'Corporation',
-      name: 'Helix 24 Solutions Pvt Ltd',
+      name: 'Helix24 Solutions Pvt Ltd',
       url: 'https://helix24.com',
       telephone: '+91 9048009044',
       taxID: 'AAJCH0136Q',
@@ -66,7 +66,7 @@ export default function WebDevelopmentPage() {
         name: 'Do you provide maintenance and ongoing technical support?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, Helix 24 Solutions Pvt Ltd provides SLA-backed monthly maintenance contracts covering server monitoring, Core Web Vitals checks, database backups, security patches, and on-demand feature development.',
+          text: 'Yes, Helix24 Solutions Pvt Ltd provides SLA-backed monthly maintenance contracts covering server monitoring, Core Web Vitals checks, database backups, security patches, and on-demand feature development.',
         },
       },
     ],
@@ -99,7 +99,7 @@ export default function WebDevelopmentPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Say goodbye to slow, bloated templates. <strong>Helix 24 Solutions Pvt Ltd</strong> builds custom websites and web applications with <strong>under 1-second load times</strong>, 100/100 Google speed scores, and built-in SEO that turns visitors into paying customers.
+            Say goodbye to slow, bloated templates. <strong>Helix24 Solutions Pvt Ltd</strong> builds custom websites and web applications with <strong>under 1-second load times</strong>, 100/100 Google speed scores, and built-in SEO that turns visitors into paying customers.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -249,7 +249,7 @@ export default function WebDevelopmentPage() {
               <thead className="bg-purple-950/80 text-purple-200 border-b border-purple-900/40">
                 <tr>
                   <th className="p-4 font-bold">Feature / Performance Metric</th>
-                  <th className="p-4 font-bold text-purple-400">Helix 24 Solutions (Next.js)</th>
+                  <th className="p-4 font-bold text-purple-400">Helix24 Solutions (Next.js)</th>
                   <th className="p-4 font-bold text-slate-400">Standard WordPress Agency</th>
                   <th className="p-4 font-bold text-slate-400">Wix / Squarespace</th>
                 </tr>
@@ -361,7 +361,7 @@ export default function WebDevelopmentPage() {
                 <ChevronDown className="w-4 h-4 text-purple-400" />
               </h3>
               <p className="text-xs text-purple-200/75 leading-relaxed pt-1">
-                Yes. Helix 24 Solutions Pvt Ltd regularly delivers custom web platforms for clients across Bangalore, Mumbai, Dubai, Abu Dhabi, Saudi Arabia, and the UK.
+                Yes. Helix24 Solutions Pvt Ltd regularly delivers custom web platforms for clients across Bangalore, Mumbai, Dubai, Abu Dhabi, Saudi Arabia, and the UK.
               </p>
             </div>
           </div>
@@ -374,7 +374,7 @@ export default function WebDevelopmentPage() {
               Ready to Upgrade Your <span className="gradient-text">Web Architecture?</span>
             </h2>
             <p className="text-xs text-purple-200/70">
-              Get in touch with Helix 24 Solutions Pvt Ltd. We will provide a free speed audit of your existing website and a detailed project roadmap within 24 hours.
+              Get in touch with Helix24 Solutions Pvt Ltd. We will provide a free speed audit of your existing website and a detailed project roadmap within 24 hours.
             </p>
           </div>
           <LeadForm />

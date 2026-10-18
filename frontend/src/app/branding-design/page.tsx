@@ -5,7 +5,7 @@ import { Palette, PenTool, CheckCircle2, ArrowRight, Video } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Branding & UI/UX Design Services in Kochi, Kerala | Helix24',
-  description: 'Bespoke brand identity design, Figma UI/UX prototyping, vertical Reels motion creatives, and conversion-focused design systems by Helix 24 Solutions Pvt Ltd.',
+  description: 'Bespoke brand identity design, Figma UI/UX prototyping, vertical Reels motion creatives, and conversion-focused design systems by Helix24 Solutions Pvt Ltd.',
   keywords: 'branding agency kochi, ui ux design company kerala, logo design agency kerala, figma prototypes kochi, motion graphics agency kerala',
 };
 
@@ -17,7 +17,7 @@ export default function BrandingDesignPage() {
     serviceType: 'Design Services',
     provider: {
       '@type': 'Corporation',
-      name: 'Helix 24 Solutions Pvt Ltd',
+      name: 'Helix24 Solutions Pvt Ltd',
       url: 'https://helix24.com',
       telephone: '+91 9048009044',
       taxID: 'AAJCH0136Q',
@@ -55,7 +55,7 @@ export default function BrandingDesignPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Design that doesn&apos;t just look pretty — it commands trust and drives conversions. <strong>Helix 24 Solutions Pvt Ltd</strong> creates distinctive visual brand identities, interactive Figma prototypes, and scroll-stopping motion video ad creatives.
+            Design that doesn&apos;t just look pretty — it commands trust and drives conversions. <strong>Helix24 Solutions Pvt Ltd</strong> creates distinctive visual brand identities, interactive Figma prototypes, and scroll-stopping motion video ad creatives.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -131,7 +131,7 @@ export default function BrandingDesignPage() {
               Elevate Your <span className="gradient-text">Brand Visuals</span>
             </h2>
             <p className="text-xs text-purple-200/70">
-              Connect with Helix 24 Solutions Pvt Ltd to discuss your brand identity, product UI/UX, or motion ad production.
+              Connect with Helix24 Solutions Pvt Ltd to discuss your brand identity, product UI/UX, or motion ad production.
             </p>
           </div>
           <LeadForm />

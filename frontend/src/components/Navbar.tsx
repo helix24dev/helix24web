@@ -15,6 +15,7 @@ export default function Navbar() {
     const savedTheme = (localStorage.getItem('helix_theme') as 'dark' | 'light') || 'dark';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
+    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
   }, []);
 
   const toggleTheme = () => {
@@ -22,6 +23,7 @@ export default function Navbar() {
     setTheme(nextTheme);
     localStorage.setItem('helix_theme', nextTheme);
     document.documentElement.setAttribute('data-theme', nextTheme);
+    document.documentElement.classList.toggle('dark', nextTheme === 'dark');
   };
 
   const navLinks = [

@@ -71,7 +71,7 @@ export default function HelixLogo({
       {showText && (
         <div className="flex flex-col leading-none">
           <span className={`font-extrabold tracking-tight text-white ${textClasses} font-heading flex items-center gap-1`}>
-            <span>Helix 24</span>
+            <span>Helix24</span>
             <span className="text-purple-400 font-medium">Solutions</span>
           </span>
           <span className="text-[9px] font-mono tracking-widest text-purple-300/70 uppercase pt-0.5">

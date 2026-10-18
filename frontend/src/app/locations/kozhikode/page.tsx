@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Calicut | Performance Marketing & SEO Kozhikode — Helix 24',
+  title: 'Digital Marketing Agency in Calicut | Performance Marketing & SEO Kozhikode — Helix24',
   description: 'Top digital marketing agency in Calicut (Kozhikode). High-ROAS Meta Ads, D2C e-commerce scaling, Google PPC, and sub-second websites for brands across Malabar & the GCC.',
   keywords: 'digital marketing agency in calicut, digital marketing company kozhikode, seo services calicut, performance marketing malabar, meta ads agency kozhikode, shopify development calicut',
   alternates: {
@@ -27,7 +27,7 @@ export default function KozhikodeLocationPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': 'https://helix24.com/locations/kozhikode#localbusiness',
-    name: 'Helix 24 Solutions Pvt Ltd — Kozhikode Strategy Hub',
+    name: 'Helix24 Solutions Pvt Ltd — Kozhikode Strategy Hub',
     image: 'https://helix24.com/og-image.png',
     telephone: '+91 9048009044',
     email: 'hello@helix24.com',
@@ -80,7 +80,7 @@ export default function KozhikodeLocationPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Scale your brand in Kerala’s fastest-growing retail and D2C ecosystem. <strong>Helix 24 Solutions Pvt Ltd</strong> delivers <strong>high-ROAS Meta Ads, Google Ads PPC, and sub-second E-commerce websites</strong> engineered specifically for retail, jewelry, textile, and export businesses in Calicut and the GCC.
+            Scale your brand in Kerala’s fastest-growing retail and D2C ecosystem. <strong>Helix24 Solutions Pvt Ltd</strong> delivers <strong>high-ROAS Meta Ads, Google Ads PPC, and sub-second E-commerce websites</strong> engineered specifically for retail, jewelry, textile, and export businesses in Calicut and the GCC.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -123,7 +123,7 @@ export default function KozhikodeLocationPage() {
           </div>
         </div>
 
-        {/* Why Calicut Brands Choose Helix 24 */}
+        {/* Why Calicut Brands Choose Helix24 */}
         <section className="space-y-10">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Malabar Expertise</span>
@@ -175,7 +175,7 @@ export default function KozhikodeLocationPage() {
                 Visit Us or Connect Directly in Kozhikode
               </h2>
               <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-                Helix 24 Solutions Pvt Ltd maintains an active strategic presence serving businesses across Kozhikode, Malappuram, and Wayanad. Meet our performance leads for direct ad strategy reviews.
+                Helix24 Solutions Pvt Ltd maintains an active strategic presence serving businesses across Kozhikode, Malappuram, and Wayanad. Meet our performance leads for direct ad strategy reviews.
               </p>
               <div className="space-y-2 text-xs text-purple-300/90 pt-2 font-mono">
                 <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-purple-400" /> Cyberpark / Hilite Business Corridor, Kozhikode, Kerala 673016</div>
@@ -190,7 +190,7 @@ export default function KozhikodeLocationPage() {
                 <span className="text-white font-bold text-sm">Google Verified 5.0 Rating</span>
               </div>
               <p className="text-xs text-purple-200/80 leading-relaxed">
-                &ldquo;Helix 24 took our apparel brand from zero to over ₹12 Lakhs in monthly online sales in under 90 days. Their tracking precision and video ad hooks are unlike any agency in Calicut.&rdquo;
+                &ldquo;Helix24 took our apparel brand from zero to over ₹12 Lakhs in monthly online sales in under 90 days. Their tracking precision and video ad hooks are unlike any agency in Calicut.&rdquo;
               </p>
               <div className="pt-2 flex items-center justify-between text-[11px] text-purple-400 font-mono">
                 <span>Verified Retail Client</span>

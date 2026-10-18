@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Kochi | SEO & Meta Ads Agency Kakkanad — Helix 24',
+  title: 'Digital Marketing Agency in Kochi | SEO & Meta Ads Agency Kakkanad — Helix24',
   description: 'Top digital marketing company in Kochi, Ernakulam. High-converting Meta Ads, Google Ads PPC, Local SEO, and Next.js web development for businesses in Kakkanad, Infopark, and across Kerala & GCC.',
   keywords: 'digital marketing agency in kochi, digital marketing company cochin, seo company in kochi, meta ads agency kakkanad, web development company ernakulam, performance marketing kochi',
   alternates: {
@@ -27,7 +27,7 @@ export default function KochiLocationPage() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': 'https://helix24.com/locations/kochi#localbusiness',
-    name: 'Helix 24 Solutions Pvt Ltd — Kochi Strategy Hub',
+    name: 'Helix24 Solutions Pvt Ltd — Kochi Strategy Hub',
     image: 'https://helix24.com/og-image.png',
     telephone: '+91 9048009044',
     email: 'hello@helix24.com',
@@ -83,7 +83,7 @@ export default function KochiLocationPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Scale your business in Kerala’s commercial capital. <strong>Helix 24 Solutions Pvt Ltd</strong> pairs high-converting <strong>Meta Ads, Google PPC, and Local Google Map Pack SEO</strong> with sub-second <strong>Next.js websites</strong> for ambitious brands across Kakkanad, Infopark, Edappally, and MG Road.
+            Scale your business in Kerala’s commercial capital. <strong>Helix24 Solutions Pvt Ltd</strong> pairs high-converting <strong>Meta Ads, Google PPC, and Local Google Map Pack SEO</strong> with sub-second <strong>Next.js websites</strong> for ambitious brands across Kakkanad, Infopark, Edappally, and MG Road.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -126,7 +126,7 @@ export default function KochiLocationPage() {
           </div>
         </div>
 
-        {/* Why Kochi Brands Choose Helix 24 */}
+        {/* Why Kochi Brands Choose Helix24 */}
         <section className="space-y-10">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Local Advantage</span>
@@ -178,7 +178,7 @@ export default function KochiLocationPage() {
                 Visit Us or Connect Directly in Ernakulam
               </h2>
               <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-                Whether you prefer an in-person discovery session at Infopark Kakkanad or a video strategy call with our media buyers, Helix 24 Solutions Pvt Ltd provides direct access to senior performance marketers.
+                Whether you prefer an in-person discovery session at Infopark Kakkanad or a video strategy call with our media buyers, Helix24 Solutions Pvt Ltd provides direct access to senior performance marketers.
               </p>
               <div className="space-y-2 text-xs text-purple-300/90 pt-2 font-mono">
                 <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-purple-400" /> Kakkanad / Infopark Tech Corridor, Kochi, Kerala 682030</div>
@@ -193,7 +193,7 @@ export default function KochiLocationPage() {
                 <span className="text-white font-bold text-sm">Google Verified 5.0 Rating</span>
               </div>
               <p className="text-xs text-purple-200/80 leading-relaxed">
-                &ldquo;Helix 24 transformed our customer acquisition funnel in Kochi. We saw our cost per qualified lead drop by 42% while our sales desk received verified buyer inquiries via WhatsApp daily.&rdquo;
+                &ldquo;Helix24 transformed our customer acquisition funnel in Kochi. We saw our cost per qualified lead drop by 42% while our sales desk received verified buyer inquiries via WhatsApp daily.&rdquo;
               </p>
               <div className="pt-2 flex items-center justify-between text-[11px] text-purple-400 font-mono">
                 <span>Verified Client Review</span>

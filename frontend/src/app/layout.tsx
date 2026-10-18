@@ -6,9 +6,9 @@ import FloatingActions from '@/components/FloatingActions';
 import TrackingScripts from '@/components/TrackingScripts';
 
 export const metadata: Metadata = {
-  title: 'Helix 24 Solutions — Performance Marketing & Web Agency (Kochi · Kozhikode · Trivandrum · GCC)',
-  description: 'Helix 24 Solutions Pvt Ltd delivers high-ROI Meta Ads, Google Ads PPC, Local SEO, and Next.js web development for growing businesses across Kochi, Kozhikode, Trivandrum, Kerala, UAE, and the GCC.',
-  keywords: 'Helix 24 Solutions Pvt Ltd, Meta ads agency Kochi, performance marketing Kozhikode, SEO agency Trivandrum, web development company Kerala, digital marketing agency Kakkanad, Technopark web agency, Calicut advertising, Meta ads Dubai, GCC ecommerce marketing',
+  title: 'Helix24 Solutions — Performance Marketing & Web Agency (Kochi · Kozhikode · Trivandrum · GCC)',
+  description: 'Helix24 Solutions Pvt Ltd delivers high-ROI Meta Ads, Google Ads PPC, Local SEO, and Next.js web development for growing businesses across Kochi, Kozhikode, Trivandrum, Kerala, UAE, and the GCC.',
+  keywords: 'Helix24 Solutions Pvt Ltd, Meta ads agency Kochi, performance marketing Kozhikode, SEO agency Trivandrum, web development company Kerala, digital marketing agency Kakkanad, Technopark web agency, Calicut advertising, Meta ads Dubai, GCC ecommerce marketing',
   metadataBase: new URL('https://helix24.com'),
   alternates: {
     canonical: 'https://helix24.com',
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://helix24.com',
-    title: 'Helix 24 Solutions — Performance Marketing & Web Systems (Kerala & GCC)',
+    title: 'Helix24 Solutions — Performance Marketing & Web Systems (Kerala & GCC)',
     description: 'We run high-converting Meta ad funnels, Google Ads PPC, Local SEO, and custom Next.js web applications across Kochi, Kozhikode, Trivandrum, and the GCC.',
-    siteName: 'Helix 24 Solutions Pvt Ltd',
+    siteName: 'Helix24 Solutions Pvt Ltd',
     images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Helix 24 Solutions — Digital Agency (Kochi · Kozhikode · Trivandrum · GCC)',
+    title: 'Helix24 Solutions — Digital Agency (Kochi · Kozhikode · Trivandrum · GCC)',
     description: 'Performance-driven Meta Ads, Google Ads, Local SEO, and custom web engineering under one roof.',
   },
 };
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="dark" className="dark">
       <head>
         <TrackingScripts />
       </head>

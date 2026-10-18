@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -12,11 +13,8 @@ import {
   Building2,
   CheckCircle2,
 } from 'lucide-react';
-import Image from 'next/image';
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
-import ExecutionProcessSection from '@/components/ExecutionProcessSection';
-import CmsDashboardShowcase from '@/components/CmsDashboardShowcase';
 
 export default function HomePage() {
   const selectedWorks = [
@@ -25,11 +23,11 @@ export default function HomePage() {
       sectorBadge: 'Retail & Showrooms',
       icon: Store,
       illustration: '/images/service_web_real.svg',
-      title: '18 Retail Outlets Unified Under One Live Digital Command Center',
+      title: '18 Retail Outlets Unified Under One Live Digital System',
       highlight: '₹4.75 Cr',
       metricLabel: 'Attributed Sales',
-      summary: 'Replaced disconnected store workflows with a unified dashboard, automated WhatsApp CRM lead routing, and Meta CAPI campaigns.',
-      simpleBenefit: 'Every store walk-in and lead tracked directly from Instagram ads into WhatsApp.',
+      summary: 'Connected store operations with targeted Instagram ads and automated WhatsApp lead routing across all branches.',
+      simpleBenefit: 'Every store walk-in and lead tracked directly from social ads into WhatsApp.',
       tags: ['Custom Website', 'Instagram & FB Ads', 'WhatsApp Lead Routing'],
       link: '/results',
     },
@@ -38,12 +36,12 @@ export default function HomePage() {
       sectorBadge: 'Online Store',
       icon: Zap,
       illustration: '/images/service_ecom_real.svg',
-      title: 'High-Converting E-Commerce Engine With Dynamic Meta Catalog Ads',
+      title: 'High-Converting Online Store With Targeted Social Ads',
       highlight: '36.9×',
       metricLabel: 'Peak Campaign ROAS',
-      summary: 'Migrated from a slow legacy store to a sub-second commerce platform paired with dynamic catalog retargeting and 1-click checkout.',
-      simpleBenefit: '0.8-second load speed doubled online sales and eliminated abandoned checkouts.',
-      tags: ['1-Second Checkout', 'Instagram Store Ads', 'Abandoned Cart Recovery'],
+      summary: 'Launched a fast-loading mobile store paired with targeted Instagram ads and a 1-second checkout experience.',
+      simpleBenefit: 'Instant page loading doubled online sales and cut abandoned carts.',
+      tags: ['1-Second Checkout', 'Instagram Store Ads', 'Cart Recovery'],
       link: '/results',
     },
     {
@@ -51,12 +49,12 @@ export default function HomePage() {
       sectorBadge: 'Luxury Villas',
       icon: Building2,
       illustration: '/images/hero_real.svg',
-      title: 'Premium NRI Investor Funnels for Ultra-Luxury Villa Developments',
+      title: 'Connecting Premium Builders with NRI Homebuyers in the GCC',
       highlight: '₹14 Cr',
       metricLabel: 'Closed Property Pipeline',
-      summary: 'Interactive project landing pages with floorplans, combined with Meta Ads featuring income qualification for Dubai and Saudi investors.',
-      simpleBenefit: 'Directly reached high-net-worth Malayali NRIs in UAE & Saudi Arabia.',
-      tags: ['Project Showcase Page', 'UAE & Gulf NRI Ads', 'WhatsApp Virtual Tours'],
+      summary: 'Interactive project showcase pages combined with targeted ads reaching high-intent Malayali investors in Dubai and Saudi Arabia.',
+      simpleBenefit: 'Directly reached verified Malayali NRI investors with instant WhatsApp project tours.',
+      tags: ['Project Showcase Page', 'UAE & Gulf NRI Ads', 'WhatsApp Tours'],
       link: '/results',
     },
   ];
@@ -66,342 +64,308 @@ export default function HomePage() {
       num: '01',
       title: 'Performance Marketing',
       icon: Target,
-      tagline: 'Customer Acquisition & Ad ROI',
-      simpleExplainer: 'We run targeted ads on Instagram, Facebook & Google that bring real buying customers straight to your WhatsApp and phone, without wasting your marketing budget.',
-      desc: 'We build and scale Meta Ads and Google PPC funnels focused strictly on customer acquisition cost and attributed pipeline revenue, not vanity impressions.',
+      tagline: 'Targeted Social & Search Ads',
+      simpleExplainer: 'We run targeted ads on Instagram, Facebook & Google that bring real customers straight to your WhatsApp and phone, without wasting your marketing budget.',
+      desc: 'Focused strictly on real inquiries and sales revenue, not vanity likes or impressions.',
       link: '/digital-marketing-seo',
       tags: ['Instagram & Facebook Ads', 'Google Search Ads', 'Direct WhatsApp Leads'],
     },
     {
       num: '02',
-      title: 'Web & App Engineering',
+      title: 'Websites & Online Stores',
       icon: Laptop,
-      tagline: 'Sub-Second Speed & Mobile Apps',
-      simpleExplainer: 'We build websites and mobile apps that open instantly in under 1 second. Your customers never leave due to slow page loading or clunky forms.',
-      desc: 'Lightning-fast Next.js web applications, headless commerce storefronts, and native mobile apps engineered for speed, conversions, and clean code.',
+      tagline: 'Instant Load Speed & Easy CMS',
+      simpleExplainer: 'We build websites that open instantly on mobile. Every site includes an easy point-and-click CMS so you can update text, photos, and products anytime without paying a developer.',
+      desc: 'Sub-second mobile speed, clean design, and easy client editing built right in.',
       link: '/web-development',
-      tags: ['Ultra-Fast Websites', 'Shopify Online Stores', 'iOS & Android Apps'],
+      tags: ['Sub-Second Loading', 'Easy Point-and-Click CMS', 'Shopify & Custom Web'],
     },
     {
       num: '03',
-      title: 'Search & Local Dominance',
+      title: 'Local SEO & Google Maps',
       icon: Search,
-      tagline: 'Rank #1 on Google & Google Maps',
-      simpleExplainer: 'When customers in Kochi, Kozhikode, Trivandrum, or Dubai search for your services, your business appears at the very top of Google Search and Google Maps.',
-      desc: 'Dominate Google Maps 3-Pack and high-intent organic search queries across Kochi, Kozhikode, Trivandrum, and GCC business corridors.',
+      tagline: 'Top 3 on Google Maps & Search',
+      simpleExplainer: 'When customers in Kochi, Kozhikode, Trivandrum, or Dubai search for your services, your business appears at the top of Google Maps and local search.',
+      desc: 'Dominate local 3-pack rankings and high-intent customer searches in your city.',
       link: '/digital-marketing-seo',
-      tags: ['Google Maps Top 3', 'Google Search Rankings', 'Local Kerala & GCC SEO'],
+      tags: ['Google Maps Top 3', 'Local SEO in Kerala', 'Verified Customer Reviews'],
     },
     {
       num: '04',
-      title: 'Brand & Creative Systems',
+      title: 'Branding & Video Content',
       icon: Palette,
-      tagline: 'High-Retention Video & Design',
-      simpleExplainer: 'We produce viral video reels, high-converting product creatives, and premium corporate branding that make your business look like an established market leader.',
-      desc: 'Figma UI/UX design systems, high-retention video creative, and corporate visual identities that make ambitious brands stand out effortlessly.',
+      tagline: 'Professional Visuals & Reels',
+      simpleExplainer: 'We produce vertical video Reels, product creatives, and clean brand identities that make your business look like an established market leader.',
+      desc: 'Modern visual design and video production that builds trust and captures attention.',
       link: '/branding-design',
-      tags: ['Logo & Brand Identity', 'High-Hook Video Reels', 'Website & App UI Design'],
+      tags: ['Brand Identity & Logo', 'High-Hook Video Reels', 'Website UI Design'],
     },
   ];
 
-  const regionalSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Helix 24 Solutions Pvt Ltd',
-    url: 'https://helix24.com',
-    telephone: '+91 9048009044',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Kochi',
-      addressRegion: 'Kerala',
-      addressCountry: 'IN',
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Kochi' },
-      { '@type': 'City', name: 'Kozhikode' },
-      { '@type': 'City', name: 'Trivandrum' },
-      { '@type': 'Country', name: 'United Arab Emirates' },
-      { '@type': 'Country', name: 'Saudi Arabia' },
-    ],
-  };
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(regionalSchema) }}
-      />
-
-      <div className="space-y-28 sm:space-y-40 pb-24">
+    <div className="space-y-24 sm:space-y-32 pb-24">
+      
+      {/* Hero Section */}
+      <section className="relative px-6 pt-16 sm:pt-24 max-w-[1240px] mx-auto text-center space-y-8">
         
-        {/* Hero Section */}
-        <section className="relative px-6 pt-16 sm:pt-24 max-w-[1240px] mx-auto text-center space-y-8">
-          
-          {/* Regional Hubs Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-200 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-950/40 text-xs font-mono uppercase tracking-widest text-purple-900 dark:text-purple-300 font-semibold shadow-xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            <span>Kochi • Kozhikode • Trivandrum • GCC</span>
+        {/* Regional Hubs Pill */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-200 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-950/40 text-xs font-mono uppercase tracking-widest text-purple-900 dark:text-purple-300 font-semibold shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span>Kochi • Kozhikode • Trivandrum • GCC</span>
+        </div>
+
+        {/* Display Headline */}
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-[1.1] font-heading">
+          Digital Marketing &amp; Web Development{' '}
+          <span className="gradient-text">Company in Kerala.</span>
+        </h1>
+
+        {/* Subhead */}
+        <p className="text-base sm:text-lg text-slate-700 dark:text-purple-200/85 font-medium max-w-2xl mx-auto leading-relaxed">
+          We help growing businesses in Kerala and the GCC generate consistent inquiries, sales, and verified return on ad spend through targeted Meta Ads, Google PPC, Local SEO, and fast websites.
+        </p>
+
+        {/* Action Buttons */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm hover:from-purple-500 hover:to-indigo-500 transition-all shadow-lg shadow-purple-950/60 keep-white"
+          >
+            <span>Start a Conversation</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+
+          <Link
+            href="/results"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-300 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-950/30 text-purple-900 dark:text-purple-200 font-semibold text-sm hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-all shadow-xs"
+          >
+            <span>View Case Studies</span>
+            <ArrowUpRight className="w-4 h-4 text-purple-700 dark:text-purple-300" />
+          </Link>
+        </div>
+
+      </section>
+
+      {/* Proof Metrics Strip */}
+      <ProofMetricsStrip />
+
+      {/* Accredited Partner & Tech Ecosystem Strip */}
+      <TechEcosystemStrip />
+
+      {/* Selected Work (Case Studies) */}
+      <section className="px-6 max-w-[1240px] mx-auto space-y-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-purple-200 dark:border-purple-900/30 pb-8">
+          <div className="space-y-2">
+            <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+              Proven Outcomes
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+              Work that moves the needle.
+            </h2>
           </div>
 
-          {/* Display Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-[-0.035em] text-white max-w-4xl mx-auto leading-[1.08]">
-            Digital Marketing &amp; Web Development{' '}
-            <span className="gradient-text">Company in Kerala.</span>
-          </h1>
+          <Link
+            href="/results"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors shrink-0"
+          >
+            <span>All Case Studies</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
 
-          {/* Subhead */}
-          <p className="text-base sm:text-lg text-slate-700 dark:text-purple-200/85 font-medium max-w-2xl mx-auto leading-relaxed">
-            We help growing businesses in Kerala and the GCC generate consistent inquiries, sales, and verified return on ad spend through targeted Meta Ads, Google PPC, Local SEO, and fast websites.
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {selectedWorks.map((work, idx) => {
+            const WorkIcon = work.icon;
+            return (
+              <Link
+                key={idx}
+                href={work.link}
+                className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/60 transition-all group relative overflow-hidden bg-white/70 dark:bg-purple-950/20"
+              >
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 shadow-xs">
+                        <WorkIcon className="w-4.5 h-4.5" />
+                      </div>
+                      <span className="text-xs font-mono uppercase tracking-wider text-purple-700 dark:text-purple-400 font-bold">
+                        {work.sectorBadge}
+                      </span>
+                    </div>
+                    <div className="w-8 h-8 rounded-full border border-purple-200 dark:border-purple-500/30 bg-purple-50 dark:bg-transparent flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:border-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-xs">
+                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <span className="block text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors font-heading">
+                      {work.highlight}
+                    </span>
+                    <span className="block text-xs uppercase tracking-wider text-slate-700 dark:text-purple-300 font-mono font-semibold">
+                      {work.metricLabel}
+                    </span>
+                  </div>
+
+                  {/* Clean Visual Graphic */}
+                  <div className="w-full h-24 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/40 flex items-center justify-center p-3 overflow-hidden">
+                    <Image
+                      src={work.illustration}
+                      alt={work.title}
+                      width={200}
+                      height={80}
+                      className="max-h-full w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors leading-snug">
+                    {work.title}
+                  </h3>
+
+                  {/* Plain Language Benefit */}
+                  <div className="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-purple-950/40 border border-emerald-200 dark:border-purple-500/30 text-xs text-slate-800 dark:text-purple-100 flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <span className="font-medium leading-relaxed">{work.simpleBenefit}</span>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/80 leading-relaxed">
+                    {work.summary}
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-purple-100 dark:border-purple-900/40 flex flex-wrap gap-2">
+                  {work.tags.map((tag, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className="text-[11px] px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 text-purple-900 dark:text-purple-300 font-mono font-semibold"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Core Capabilities */}
+      <section className="px-6 max-w-[1240px] mx-auto space-y-12">
+        <div className="space-y-2 border-b border-purple-200 dark:border-purple-900/30 pb-8">
+          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+            What We Do
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+            Clear, Results-Driven Digital Services.
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 max-w-xl font-medium leading-relaxed">
+            Everything your business needs to attract customers, generate inquiries, and look like an established market leader.
           </p>
+        </div>
 
-          {/* Action Buttons */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm hover:from-purple-500 hover:to-indigo-500 transition-all shadow-lg shadow-purple-950/60 keep-white"
-            >
-              <span>Start a Conversation</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
-              href="/results"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-300 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-950/30 text-purple-900 dark:text-purple-200 font-semibold text-sm hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-all shadow-xs"
-            >
-              <span>View Case Studies</span>
-              <ArrowUpRight className="w-4 h-4 text-purple-700 dark:text-purple-300" />
-            </Link>
-          </div>
-
-        </section>
-
-        {/* Proof Metrics Strip */}
-        <ProofMetricsStrip />
-
-        {/* Accredited Partner & Tech Ecosystem Strip */}
-        <TechEcosystemStrip />
-
-        {/* Selected Work (Case Studies) */}
-        <section className="px-6 max-w-[1240px] mx-auto space-y-12">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-purple-900/30 pb-8">
-            <div className="space-y-2">
-              <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
-                Proven Outcomes
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-                Work that moves the needle.
-              </h2>
-            </div>
-
-            <Link
-              href="/results"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors shrink-0"
-            >
-              <span>All Case Studies</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {selectedWorks.map((work, idx) => {
-              const WorkIcon = work.icon;
-              return (
-                <Link
-                  key={idx}
-                  href={work.link}
-                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/60 transition-all group relative overflow-hidden"
-                >
-                  <div className="space-y-6">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 shadow-xs">
-                          <WorkIcon className="w-4.5 h-4.5" />
-                        </div>
-                        <span className="text-xs font-mono uppercase tracking-wider text-purple-700 dark:text-purple-400 font-bold">
-                          {work.sectorBadge}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {capabilities.map((item, idx) => {
+            const CapIcon = item.icon;
+            return (
+              <div
+                key={idx}
+                className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/50 transition-all group bg-white/70 dark:bg-purple-950/20"
+              >
+                <div className="space-y-5">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-11 h-11 rounded-xl bg-purple-100 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:text-purple-900 dark:group-hover:text-white transition-all shadow-xs">
+                        <CapIcon className="w-5 h-5 text-purple-700 dark:text-purple-300" />
+                      </div>
+                      <div>
+                        <span className="text-xs font-mono text-purple-700 dark:text-purple-400 font-bold block uppercase tracking-wider">
+                          {item.tagline}
                         </span>
                       </div>
-                      <div className="w-8 h-8 rounded-full border border-purple-200 dark:border-purple-500/30 bg-purple-50 dark:bg-transparent flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:border-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-xs">
-                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </div>
                     </div>
+                  </div>
 
-                    <div className="space-y-2">
-                      <span className="block text-3xl sm:text-4xl font-extrabold text-white group-hover:text-purple-200 transition-colors font-heading">
-                        {work.highlight}
-                      </span>
-                      <span className="block text-xs uppercase tracking-wider text-slate-700 dark:text-purple-300 font-mono font-semibold">
-                        {work.metricLabel}
-                      </span>
-                    </div>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors font-heading">
+                    {item.title}
+                  </h3>
 
-                    {/* Visual Graphic Banner */}
-                    <div className="w-full h-24 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/40 flex items-center justify-center p-3 overflow-hidden">
-                      <Image
-                        src={work.illustration}
-                        alt={work.title}
-                        width={200}
-                        height={80}
-                        className="max-h-full w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity"
-                      />
-                    </div>
-
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-purple-100 group-hover:text-purple-700 dark:group-hover:text-white transition-colors leading-snug">
-                      {work.title}
-                    </h3>
-
-                    {/* Plain English Takeaway for Business Owners */}
-                    <div className="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-purple-950/30 border border-emerald-200 dark:border-purple-500/20 text-xs text-slate-800 dark:text-purple-200/90 flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 metric-emerald shrink-0 mt-0.5" />
-                      <span className="font-medium leading-relaxed">{work.simpleBenefit}</span>
-                    </div>
-
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/75 leading-relaxed">
-                      {work.summary}
+                  {/* Plain Language Benefit Box */}
+                  <div className="p-4 rounded-xl bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-500/20 space-y-1.5">
+                    <span className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-purple-900 dark:text-purple-300 font-bold block">
+                      What this means for your business:
+                    </span>
+                    <p className="text-xs sm:text-sm text-slate-800 dark:text-purple-100 font-medium leading-relaxed">
+                      {item.simpleExplainer}
                     </p>
                   </div>
 
-                  <div className="pt-6 border-t border-purple-100 dark:border-purple-900/40 flex flex-wrap gap-2">
-                    {work.tags.map((tag, tIdx) => (
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/80 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-purple-100 dark:border-purple-900/40 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[11px] px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 text-purple-900 dark:text-purple-300 font-mono font-semibold"
+                        className="text-xs text-purple-700 dark:text-purple-300/80 font-mono"
                       >
-                        {tag}
+                        {tag} {tIdx < item.tags.length - 1 && '•'}
                       </span>
                     ))}
                   </div>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
 
-        {/* Core Capabilities */}
-        <section className="px-6 max-w-[1240px] mx-auto space-y-12">
-          <div className="space-y-2 border-b border-purple-900/30 pb-8">
-            <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
-              Capabilities
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-              What we do.
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-purple-300/80 max-w-xl font-medium leading-relaxed">
-              Clear, transparent digital growth systems designed for business owners — zero marketing fluff or confusing jargon.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((item, idx) => {
-              const CapIcon = item.icon;
-              return (
-                <div
-                  key={idx}
-                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/50 transition-all group"
-                >
-                  <div className="space-y-5">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-11 h-11 rounded-xl bg-purple-100 dark:bg-gradient-to-br dark:from-purple-900/50 dark:to-indigo-900/30 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:text-purple-900 dark:group-hover:text-white transition-all shadow-xs">
-                          <CapIcon className="w-5 h-5 text-purple-700 dark:text-purple-300" />
-                        </div>
-                        <div>
-                          <span className="text-xs font-mono text-purple-700 dark:text-purple-400 font-bold block uppercase tracking-wider">
-                            {item.tagline}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors">
-                      {item.title}
-                    </h3>
-
-                    {/* Plain Language Box for Non-Technical Clients */}
-                    <div className="p-4 rounded-xl bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-500/20 space-y-1.5">
-                      <span className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-purple-900 dark:text-purple-300 font-bold block">
-                        What this means for your business:
-                      </span>
-                      <p className="text-xs sm:text-sm text-slate-800 dark:text-purple-100 font-medium leading-relaxed">
-                        {item.simpleExplainer}
-                      </p>
-                    </div>
-
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/75 leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-
-                  <div className="pt-6 border-t border-purple-900/40 flex flex-wrap items-center justify-between gap-4">
-                    <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag, tIdx) => (
-                        <span
-                          key={tIdx}
-                          className="text-xs text-purple-300/80 font-mono"
-                        >
-                          {tag} {tIdx < item.tags.length - 1 && '•'}
-                        </span>
-                      ))}
-                    </div>
-
-                    <Link
-                      href={item.link}
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors"
-                    >
-                      <span>Explore Service</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
+                  <Link
+                    href={item.link}
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors"
+                  >
+                    <span>Explore Service</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </div>
-              );
-            })}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Direct Call to Action */}
+      <section className="px-6 max-w-[1240px] mx-auto">
+        <div className="cta-banner p-10 sm:p-16 rounded-3xl bg-gradient-to-br from-purple-950/80 via-slate-950 to-purple-950/50 border border-purple-500/30 text-center space-y-6 shadow-2xl">
+          <div className="cta-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/50 border border-purple-500/30 text-[11px] font-mono text-purple-300">
+            <span>Kochi • Kozhikode • Trivandrum • GCC</span>
           </div>
-        </section>
 
-        {/* 4-Step Execution Flywheel */}
-        <ExecutionProcessSection />
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-2xl mx-auto font-heading">
+            Ready to scale your customer acquisition?
+          </h2>
 
-        {/* Visual Headless CMS & Live Client Dashboard Showcase */}
-        <CmsDashboardShowcase />
+          <p className="text-base text-purple-200/80 max-w-xl mx-auto leading-relaxed">
+            Talk directly with our marketing leads and web engineers. We review your current online presence and ad strategy on a direct consultation call.
+          </p>
 
-        {/* Direct Call to Action */}
-        <section className="px-6 max-w-[1240px] mx-auto">
-          <div className="cta-banner p-10 sm:p-16 rounded-3xl bg-gradient-to-br from-purple-950/80 via-slate-950 to-purple-950/50 border border-purple-500/30 text-center space-y-6 shadow-2xl">
-            <div className="cta-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/50 border border-purple-500/30 text-[11px] font-mono text-purple-300">
-              <span>Kochi • Kozhikode • Trivandrum • GCC</span>
-            </div>
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://wa.me/919048009044?text=Hi%20Helix24,%20I%20would%20like%20to%20discuss%20a%20strategy%20consultation%20for%20my%20business."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-sm transition-all shadow-lg"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Chat on WhatsApp</span>
+            </a>
 
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-2xl mx-auto">
-              Ready to scale your customer acquisition?
-            </h2>
-
-            <p className="text-base text-purple-200/80 max-w-xl mx-auto leading-relaxed">
-              Talk directly with our performance media buyers and web engineers. We review your ad accounts and tech stack on a direct strategy call.
-            </p>
-
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="https://wa.me/919048009044?text=Hi%20Helix24,%20I%20would%20like%20to%20discuss%20a%20strategy%20consultation%20for%20my%20business."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-sm transition-all shadow-lg"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Chat on WhatsApp</span>
-              </a>
-
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-500/40 bg-purple-900/30 text-white font-medium text-sm hover:bg-purple-800/40 transition-all keep-white"
-              >
-                <span>Schedule Corporate Call</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-500/40 bg-purple-900/30 text-white font-medium text-sm hover:bg-purple-800/40 transition-all keep-white"
+            >
+              <span>Schedule Corporate Call</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-      </div>
-    </>
+    </div>
   );
 }

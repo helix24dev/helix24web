@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = getBlogPostBySlug(params.slug);
   if (!post) {
     return {
-      title: 'Article Not Found — Helix 24 Solutions Pvt Ltd',
+      title: 'Article Not Found — Helix24 Solutions Pvt Ltd',
     };
   }
 
@@ -87,7 +87,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Helix 24 Solutions Pvt Ltd',
+      name: 'Helix24 Solutions Pvt Ltd',
       url: 'https://helix24.com',
       logo: {
         '@type': 'ImageObject',
@@ -303,7 +303,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="flex items-center gap-3">
             <Building2 className="w-5 h-5 text-purple-400 shrink-0" />
             <div>
-              <span className="font-bold text-white block">Published by Helix 24 Solutions Pvt Ltd</span>
+              <span className="font-bold text-white block">Published by Helix24 Solutions Pvt Ltd</span>
               <span className="text-[11px] font-mono text-purple-400">
                 CIN: U62011KL2026PTC107185 • RoC Kerala • PAN: AAJCH0136Q
               </span>

@@ -12,20 +12,20 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact Helix 24 Solutions Pvt Ltd | Digital Agency Kochi & Calicut',
-  description: 'Connect with Helix 24 Solutions Pvt Ltd (CIN: U62011KL2026PTC107185). Request a customized Meta Ads, Google Ads PPC, or Next.js web development proposal for Kerala & GCC.',
-  keywords: 'contact helix24 solutions, digital marketing agency kochi contact, web development company kerala phone number, helix 24 solutions pvt ltd address',
+  title: 'Contact Helix24 Solutions Pvt Ltd | Digital Agency Kochi & Calicut',
+  description: 'Connect with Helix24 Solutions Pvt Ltd (CIN: U62011KL2026PTC107185). Request a customized Meta Ads, Google Ads PPC, or Next.js web development proposal for Kerala & GCC.',
+  keywords: 'contact helix24 solutions, digital marketing agency kochi contact, web development company kerala phone number, helix24 solutions pvt ltd address',
 };
 
 export default function ContactPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Contact Helix 24 Solutions Pvt Ltd',
-    description: 'Get in touch with Helix 24 Solutions Pvt Ltd for performance marketing, SEO, and web development consultations.',
+    name: 'Contact Helix24 Solutions Pvt Ltd',
+    description: 'Get in touch with Helix24 Solutions Pvt Ltd for performance marketing, SEO, and web development consultations.',
     mainEntity: {
       '@type': 'Corporation',
-      name: 'Helix 24 Solutions Pvt Ltd',
+      name: 'Helix24 Solutions Pvt Ltd',
       telephone: '+91 9048009044',
       email: 'hello@helix24.com',
       taxID: 'AAJCH0136Q',
@@ -63,7 +63,7 @@ export default function ContactPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-2xl mx-auto">
-            Get in touch with <strong>Helix 24 Solutions Pvt Ltd</strong>. Submit your project requirements below to receive a customized ad and web proposal, or contact our strategy desk on WhatsApp.
+            Get in touch with <strong>Helix24 Solutions Pvt Ltd</strong>. Submit your project requirements below to receive a customized ad and web proposal, or contact our strategy desk on WhatsApp.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export default function ContactPage() {
               <div>
                 <span className="text-[11px] font-mono uppercase tracking-wider text-purple-400 font-semibold block">Official Corporate Office</span>
                 <h2 className="text-xl font-bold text-white">Corporate Contact &amp; Strategy Desk</h2>
-                <h3 className="text-sm font-semibold text-purple-200 mt-1">Helix 24 Solutions Pvt Ltd</h3>
+                <h3 className="text-sm font-semibold text-purple-200 mt-1">Helix24 Solutions Pvt Ltd</h3>
               </div>
 
               {/* Legal Identifiers Card */}

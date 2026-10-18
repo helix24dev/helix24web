@@ -117,7 +117,7 @@ export default function ResultsPage() {
         </h1>
 
         <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-          Every campaign we run and every web platform we engineer is measured against bottom-line revenue. Explore how <strong>Helix 24 Solutions Pvt Ltd</strong> scales ambitious brands across Kerala and the GCC.
+          Every campaign we run and every web platform we engineer is measured against bottom-line revenue. Explore how <strong>Helix24 Solutions Pvt Ltd</strong> scales ambitious brands across Kerala and the GCC.
         </p>
 
         {/* Google 5.0 Proof Badge */}

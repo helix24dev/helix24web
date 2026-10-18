@@ -28,7 +28,7 @@ export default function CmsDashboardShowcase() {
         </h2>
 
         <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">
-          Every website built by <strong>Helix 24 Solutions</strong> comes equipped with an intuitive, visual Headless CMS and real-time lead telemetry. Update copy, change banners, launch blogs, and view sales inquiries in real time.
+          Every website built by <strong>Helix24 Solutions</strong> comes equipped with an intuitive, visual Headless CMS and real-time lead telemetry. Update copy, change banners, launch blogs, and view sales inquiries in real time.
         </p>
       </div>
 

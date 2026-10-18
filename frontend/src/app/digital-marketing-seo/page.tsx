@@ -15,7 +15,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Digital Marketing Company in Kochi, Kerala | Meta Ads & SEO Agency | Helix24',
-  description: 'Helix 24 Solutions Pvt Ltd is a premier digital marketing company in Kochi, Kerala. High-ROAS Meta Ads (Facebook & Instagram), Server-Side CAPI, Google Ads PPC, and Local SEO for Kerala & GCC.',
+  description: 'Helix24 Solutions Pvt Ltd is a premier digital marketing company in Kochi, Kerala. High-ROAS Meta Ads (Facebook & Instagram), Server-Side CAPI, Google Ads PPC, and Local SEO for Kerala & GCC.',
   keywords: 'digital marketing company in kerala, digital marketing agency in kochi, best digital marketing company in kerala, meta ads agency kochi, google ads agency kerala, local seo services kochi, performance marketing kerala',
 };
 
@@ -27,7 +27,7 @@ export default function DigitalMarketingSeoPage() {
     serviceType: 'Digital Marketing',
     provider: {
       '@type': 'Corporation',
-      name: 'Helix 24 Solutions Pvt Ltd',
+      name: 'Helix24 Solutions Pvt Ltd',
       url: 'https://helix24.com',
       telephone: '+91 9048009044',
       taxID: 'AAJCH0136Q',
@@ -49,10 +49,10 @@ export default function DigitalMarketingSeoPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What makes Helix 24 Solutions different from other digital marketing agencies in Kochi?',
+        name: 'What makes Helix24 Solutions different from other digital marketing agencies in Kochi?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Most agencies run basic boosted posts without server-side tracking, losing 30% or more of customer event data due to iOS privacy blocks and ad blockers. Helix 24 Solutions Pvt Ltd implements First-Party Server-Side Conversions API (CAPI), custom Next.js landing pages with 0.8s load times, and automated WhatsApp CRM routing to ensure maximum lead capture.',
+          text: 'Most agencies run basic boosted posts without server-side tracking, losing 30% or more of customer event data due to iOS privacy blocks and ad blockers. Helix24 Solutions Pvt Ltd implements First-Party Server-Side Conversions API (CAPI), custom Next.js landing pages with 0.8s load times, and automated WhatsApp CRM routing to ensure maximum lead capture.',
         },
       },
       {
@@ -101,7 +101,7 @@ export default function DigitalMarketingSeoPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Stop burning budget on generic agency retainers. <strong>Helix 24 Solutions Pvt Ltd</strong> delivers targeted <strong>Instagram, Facebook, and Google Ads</strong> paired with <strong>Local SEO</strong> that bring paying customers directly to your phone and WhatsApp.
+            Stop burning budget on generic agency retainers. <strong>Helix24 Solutions Pvt Ltd</strong> delivers targeted <strong>Instagram, Facebook, and Google Ads</strong> paired with <strong>Local SEO</strong> that bring paying customers directly to your phone and WhatsApp.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -324,7 +324,7 @@ export default function DigitalMarketingSeoPage() {
               Get Your Free <span className="gradient-text">Marketing Blueprint</span>
             </h2>
             <p className="text-xs text-purple-200/70">
-              Submit your project details below. Helix 24 Solutions Pvt Ltd will audit your current funnel and present a customized ad and SEO strategy within 24 hours.
+              Submit your project details below. Helix24 Solutions Pvt Ltd will audit your current funnel and present a customized ad and SEO strategy within 24 hours.
             </p>
           </div>
           <LeadForm />
