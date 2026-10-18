@@ -110,25 +110,23 @@ export default function HomePage() {
       <section className="relative px-6 pt-16 sm:pt-24 max-w-[1240px] mx-auto text-center space-y-8">
         
         {/* Display Headline with Tom Fishburne Hook + SEO Keyword Integration */}
-        <div className="max-w-5xl mx-auto space-y-4">
-          <h1 className="flex flex-col items-center">
-            {/* The Main Hook Visitors See */}
-            <span className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] font-heading">
-              &ldquo;The best marketing <span className="gradient-text">doesn&apos;t feel like marketing.&rdquo;</span>
-            </span>
-
-            {/* Quote Attribution */}
-            <span className="inline-flex items-center gap-3 text-xs sm:text-sm font-mono tracking-widest text-purple-400 uppercase mt-3 mb-4">
-              <span className="w-8 h-px bg-purple-500/40"></span>
-              <span>Tom Fishburne</span>
-              <span className="w-8 h-px bg-purple-500/40"></span>
-            </span>
-
-            {/* Target Category & Kerala SEO Anchor */}
-            <span className="text-lg sm:text-2xl font-semibold text-purple-700 dark:text-purple-300 tracking-tight font-heading">
-              Digital Marketing &amp; Web Development Company in Kerala.
-            </span>
+        <div className="max-w-5xl mx-auto space-y-6">
+          {/* Main Visual Hook */}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] font-heading block">
+            &ldquo;The best marketing <span className="gradient-text">doesn&apos;t feel like marketing.&rdquo;</span>
           </h1>
+
+          {/* Quote Attribution */}
+          <div className="flex items-center justify-center gap-3 text-xs sm:text-sm font-mono tracking-widest text-purple-400 uppercase">
+            <span className="w-10 h-px bg-purple-500/40"></span>
+            <span>Tom Fishburne</span>
+            <span className="w-10 h-px bg-purple-500/40"></span>
+          </div>
+
+          {/* Target Category & Kerala SEO Anchor */}
+          <h2 className="text-xl sm:text-2xl font-semibold text-purple-700 dark:text-purple-300 tracking-tight font-heading block">
+            Digital Marketing &amp; Web Development Company in Kerala.
+          </h2>
         </div>
 
         {/* Subhead */}
