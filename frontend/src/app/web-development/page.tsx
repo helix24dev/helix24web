@@ -90,7 +90,7 @@ export default function WebDevelopmentPage() {
           <div className="flex items-center justify-center gap-2">
             <span className="hud-tag">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              ENGINEERING-GRADE NEXT.JS & SOFTWARE DEVELOPMENT
+              FAST, MODERN WEBSITES &amp; CUSTOM SOFTWARE
             </span>
           </div>
 
@@ -99,7 +99,7 @@ export default function WebDevelopmentPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Say goodbye to slow, bloated templates. <strong>Helix 24 Solutions Pvt Ltd</strong> engineers enterprise-grade <strong>Next.js 14/15, React 19, and NestJS</strong> web applications with 0.8s load times, 100/100 Lighthouse performance, and built-in technical SEO that drives organic rankings.
+            Say goodbye to slow, bloated templates. <strong>Helix 24 Solutions Pvt Ltd</strong> builds custom websites and web applications with <strong>under 1-second load times</strong>, 100/100 Google speed scores, and built-in SEO that turns visitors into paying customers.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -268,20 +268,20 @@ export default function WebDevelopmentPage() {
                   <td className="p-4">50–70 / 100</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-white">Security & Vulnerability</td>
-                  <td className="p-4 text-emerald-400 font-bold">Zero SQL Injection / No Plugin Attacks</td>
-                  <td className="p-4 text-rose-400">High (Plugin exploits)</td>
+                  <td className="p-4 font-semibold text-white">Security &amp; Vulnerability</td>
+                  <td className="p-4 text-emerald-400 font-bold">Hacker-Proof (Zero Vulnerable WordPress Plugins)</td>
+                  <td className="p-4 text-rose-400">High Risk (Constant plugin hacks)</td>
                   <td className="p-4">Platform controlled</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-white">Custom Business Logic & APIs</td>
-                  <td className="p-4 text-emerald-400 font-bold">Unlimited Custom TypeScript APIs</td>
+                  <td className="p-4 font-semibold text-white">Custom Business Logic &amp; Tools</td>
+                  <td className="p-4 text-emerald-400 font-bold">Connects Easily to WhatsApp, CRM &amp; Billing</td>
                   <td className="p-4">Restricted by PHP plugins</td>
                   <td className="p-4">Severely restricted</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-white">Server-Side Meta CAPI Tracking</td>
-                  <td className="p-4 text-emerald-400 font-bold">Built-in First-Party Event Engine</td>
+                  <td className="p-4 font-semibold text-white">Direct Ad &amp; Conversion Tracking</td>
+                  <td className="p-4 text-emerald-400 font-bold">Built-in Server Tracking (Bypasses Ad Blockers)</td>
                   <td className="p-4">Requires 3rd party plugins</td>
                   <td className="p-4">Basic pixel only</td>
                 </tr>

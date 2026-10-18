@@ -92,7 +92,7 @@ export default function DigitalMarketingSeoPage() {
           <div className="flex items-center justify-center gap-2">
             <span className="hud-tag">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              DATA-DRIVEN META ADS & LOCAL SEO ENGINE
+              TARGETED SOCIAL ADS &amp; LOCAL GOOGLE RANKING
             </span>
           </div>
 
@@ -101,7 +101,7 @@ export default function DigitalMarketingSeoPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            Stop burning budget on generic agency retainers. <strong>Helix 24 Solutions Pvt Ltd</strong> engineers data-backed <strong>Meta Ads (Facebook & Instagram), Google Ads PPC, and Local SEO</strong> backed by first-party server-side tracking and instant WhatsApp CRM pipelines.
+            Stop burning budget on generic agency retainers. <strong>Helix 24 Solutions Pvt Ltd</strong> delivers targeted <strong>Instagram, Facebook, and Google Ads</strong> paired with <strong>Local SEO</strong> that bring paying customers directly to your phone and WhatsApp.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -125,19 +125,19 @@ export default function DigitalMarketingSeoPage() {
           <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
             <div className="glass-panel p-4 text-center">
               <span className="block font-mono text-2xl font-bold text-white">36.9×</span>
-              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Peak Ad ROAS</span>
+              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Return on Ad Spend</span>
             </div>
             <div className="glass-panel p-4 text-center">
               <span className="block font-mono text-2xl font-bold text-emerald-400">-42%</span>
-              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Average Cost Per Lead</span>
+              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Lower Cost Per Lead</span>
             </div>
             <div className="glass-panel p-4 text-center">
-              <span className="block font-mono text-2xl font-bold text-purple-300">9.4/10</span>
-              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">CAPI Event Match Quality</span>
+              <span className="block font-mono text-2xl font-bold text-purple-300">95%+</span>
+              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Tracking Accuracy</span>
             </div>
             <div className="glass-panel p-4 text-center">
-              <span className="block font-mono text-2xl font-bold text-amber-400">#1 Rank</span>
-              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Google Local 3-Pack</span>
+              <span className="block font-mono text-2xl font-bold text-amber-400">Top 3</span>
+              <span className="text-[11px] uppercase tracking-wider text-purple-300/70">Google Maps Ranking</span>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function DigitalMarketingSeoPage() {
                 Precision lead generation and dynamic e-commerce sales campaigns. We pair high-hook video ad creatives with first-party Server-Side Conversions API (CAPI) to bypass iOS 14.5+ tracking loss.
               </p>
               <ul className="space-y-2 text-xs text-purple-300/80 pt-2 border-t border-purple-900/30">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Server-side CAPI integration on Node/Next.js</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Accurate tracking that bypasses ad blockers</li>
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Custom vertical Reels video scripts & production</li>
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Direct WhatsApp instant-message lead capture</li>
               </ul>
@@ -178,8 +178,8 @@ export default function DigitalMarketingSeoPage() {
               </p>
               <ul className="space-y-2 text-xs text-purple-300/80 pt-2 border-t border-purple-900/30">
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> High-intent keyword bidding & negative lists</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Google Enhanced Conversions with SHA-256 hashing</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Offline conversion sync & call attribution tracking</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Verified inquiry tracking (zero lost leads)</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Direct phone call and store visit tracking</li>
               </ul>
             </div>
 
@@ -193,9 +193,9 @@ export default function DigitalMarketingSeoPage() {
                 Rank #1 when local customers search in Kochi, Kakkanad, Calicut, or Dubai. We optimize your Google Business Profile (GBP), build high-authority citations, and rank for high-intent queries.
               </p>
               <ul className="space-y-2 text-xs text-purple-300/80 pt-2 border-t border-purple-900/30">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Google Business Profile audit & 3-pack ranking</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Local schema markup (LocalBusiness & PostalAddress)</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Review generation system & citation consistency</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Google Business Profile top ranking in your city</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Official Google Maps verification & pin optimization</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Automated 5-star customer review collection</li>
               </ul>
             </div>
 

@@ -88,12 +88,12 @@ export default function ResultsPage() {
         <div className="flex items-center justify-center gap-2">
           <span className="hud-tag">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            PROOF, NOT PROMISES // VERIFIED CLIENT OUTCOMES
+            PROVEN RESULTS // VERIFIED CLIENT GROWTH
           </span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
-          Client Results & <span className="gradient-text">Proven ROAS</span>
+          Client Results &amp; <span className="gradient-text">Proven Sales Growth</span>
         </h1>
 
         <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">

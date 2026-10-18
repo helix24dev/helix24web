@@ -25,7 +25,7 @@ export default function HomePage() {
       metricLabel: 'Attributed Sales',
       summary: 'Replaced disconnected store workflows with a unified dashboard, automated WhatsApp CRM lead routing, and Meta CAPI campaigns.',
       simpleBenefit: 'Every store walk-in and lead tracked directly from Instagram ads into WhatsApp.',
-      tags: ['Next.js 14', 'Meta CAPI', 'WhatsApp Routing'],
+      tags: ['Custom Website', 'Instagram & FB Ads', 'WhatsApp Lead Routing'],
       link: '/results',
     },
     {
@@ -37,7 +37,7 @@ export default function HomePage() {
       metricLabel: 'Peak Campaign ROAS',
       summary: 'Migrated from a slow legacy store to a sub-second commerce platform paired with dynamic catalog retargeting and 1-click checkout.',
       simpleBenefit: '0.8-second load speed doubled online sales and eliminated abandoned checkouts.',
-      tags: ['0.8s Checkout', 'Dynamic Catalog', 'Automated Recovery'],
+      tags: ['1-Second Checkout', 'Instagram Store Ads', 'Abandoned Cart Recovery'],
       link: '/results',
     },
     {
@@ -49,7 +49,7 @@ export default function HomePage() {
       metricLabel: 'Closed Property Pipeline',
       summary: 'Interactive project landing pages with floorplans, combined with Meta Ads featuring income qualification for Dubai and Saudi investors.',
       simpleBenefit: 'Directly reached high-net-worth Malayali NRIs in UAE & Saudi Arabia.',
-      tags: ['Interactive Landing Page', 'NRI Targeting', 'WhatsApp 3D Tours'],
+      tags: ['Project Showcase Page', 'UAE & Gulf NRI Ads', 'WhatsApp Virtual Tours'],
       link: '/results',
     },
   ];
@@ -63,7 +63,7 @@ export default function HomePage() {
       simpleExplainer: 'We run targeted ads on Instagram, Facebook & Google that bring real buying customers straight to your WhatsApp and phone, without wasting your marketing budget.',
       desc: 'We build and scale Meta Ads and Google PPC funnels focused strictly on customer acquisition cost and attributed pipeline revenue, not vanity impressions.',
       link: '/digital-marketing-seo',
-      tags: ['Meta Ads (CAPI 2.0)', 'Google Search PPC', 'Click-to-WhatsApp'],
+      tags: ['Instagram & Facebook Ads', 'Google Search Ads', 'Direct WhatsApp Leads'],
     },
     {
       num: '02',
@@ -73,7 +73,7 @@ export default function HomePage() {
       simpleExplainer: 'We build websites and mobile apps that open instantly in under 1 second. Your customers never leave due to slow page loading or clunky forms.',
       desc: 'Lightning-fast Next.js web applications, headless commerce storefronts, and native mobile apps engineered for speed, conversions, and clean code.',
       link: '/web-development',
-      tags: ['Next.js 14/15', 'Shopify Plus & Headless', 'Flutter Apps'],
+      tags: ['Ultra-Fast Websites', 'Shopify Online Stores', 'iOS & Android Apps'],
     },
     {
       num: '03',
@@ -83,7 +83,7 @@ export default function HomePage() {
       simpleExplainer: 'When customers in Kochi, Kozhikode, Trivandrum, or Dubai search for your services, your business appears at the very top of Google Search and Google Maps.',
       desc: 'Dominate Google Maps 3-Pack and high-intent organic search queries across Kochi, Kozhikode, Trivandrum, and GCC business corridors.',
       link: '/digital-marketing-seo',
-      tags: ['Google 3-Pack', 'Technical SEO', 'Local Schema Sync'],
+      tags: ['Google Maps Top 3', 'Google Search Rankings', 'Local Kerala & GCC SEO'],
     },
     {
       num: '04',
@@ -93,7 +93,7 @@ export default function HomePage() {
       simpleExplainer: 'We produce viral video reels, high-converting product creatives, and premium corporate branding that make your business look like an established market leader.',
       desc: 'Figma UI/UX design systems, high-retention video creative, and corporate visual identities that make ambitious brands stand out effortlessly.',
       link: '/branding-design',
-      tags: ['UI/UX Design Systems', 'Video Creative', 'Brand Identity'],
+      tags: ['Logo & Brand Identity', 'High-Hook Video Reels', 'Website & App UI Design'],
     },
   ];
 
