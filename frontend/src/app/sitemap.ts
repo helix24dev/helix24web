@@ -19,6 +19,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/calculator`, priority: 0.7, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/blog`, priority: 0.8, changeFrequency: 'daily' as const },
+    { url: `${baseUrl}/locations/kochi`, priority: 0.85, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/locations/kozhikode`, priority: 0.85, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/locations/trivandrum`, priority: 0.85, changeFrequency: 'weekly' as const },
   ];
 
   const blogPosts = getAllBlogPosts().map((post) => ({
