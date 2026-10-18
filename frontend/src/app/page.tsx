@@ -12,8 +12,10 @@ import {
   Building2,
   CheckCircle2,
 } from 'lucide-react';
+import Image from 'next/image';
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
+import ExecutionProcessSection from '@/components/ExecutionProcessSection';
 import CmsDashboardShowcase from '@/components/CmsDashboardShowcase';
 
 export default function HomePage() {
@@ -22,6 +24,7 @@ export default function HomePage() {
       category: 'Omnichannel Retail',
       sectorBadge: 'Retail & Showrooms',
       icon: Store,
+      illustration: '/images/service_web_real.svg',
       title: '18 Retail Outlets Unified Under One Live Digital Command Center',
       highlight: '₹4.75 Cr',
       metricLabel: 'Attributed Sales',
@@ -34,6 +37,7 @@ export default function HomePage() {
       category: 'D2C Consumer Brands',
       sectorBadge: 'Online Store',
       icon: Zap,
+      illustration: '/images/service_ecom_real.svg',
       title: 'High-Converting E-Commerce Engine With Dynamic Meta Catalog Ads',
       highlight: '36.9×',
       metricLabel: 'Peak Campaign ROAS',
@@ -46,6 +50,7 @@ export default function HomePage() {
       category: 'Real Estate & Luxury Builders',
       sectorBadge: 'Luxury Villas',
       icon: Building2,
+      illustration: '/images/hero_real.svg',
       title: 'Premium NRI Investor Funnels for Ultra-Luxury Villa Developments',
       highlight: '₹14 Cr',
       metricLabel: 'Closed Property Pipeline',
@@ -230,6 +235,17 @@ export default function HomePage() {
                       </span>
                     </div>
 
+                    {/* Visual Graphic Banner */}
+                    <div className="w-full h-24 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/40 flex items-center justify-center p-3 overflow-hidden">
+                      <Image
+                        src={work.illustration}
+                        alt={work.title}
+                        width={200}
+                        height={80}
+                        className="max-h-full w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity"
+                      />
+                    </div>
+
                     <h3 className="text-lg font-bold text-slate-900 dark:text-purple-100 group-hover:text-purple-700 dark:group-hover:text-white transition-colors leading-snug">
                       {work.title}
                     </h3>
@@ -341,6 +357,9 @@ export default function HomePage() {
             })}
           </div>
         </section>
+
+        {/* 4-Step Execution Flywheel */}
+        <ExecutionProcessSection />
 
         {/* Visual Headless CMS & Live Client Dashboard Showcase */}
         <CmsDashboardShowcase />
