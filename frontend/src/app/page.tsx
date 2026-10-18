@@ -143,7 +143,7 @@ export default function HomePage() {
           </h1>
 
           {/* Subhead */}
-          <p className="text-base sm:text-lg text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-700 dark:text-purple-200/85 font-medium max-w-2xl mx-auto leading-relaxed">
             High-converting Meta Ads, Google PPC, Local SEO, and sub-second Next.js web applications tailored for market leaders across Kerala and the GCC.
           </p>
 
@@ -159,10 +159,10 @@ export default function HomePage() {
 
             <Link
               href="/results"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-500/30 bg-purple-950/30 text-purple-200 font-medium text-sm hover:bg-purple-900/40 transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-300 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-950/30 text-purple-900 dark:text-purple-200 font-semibold text-sm hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-all shadow-xs"
             >
               <span>View Case Studies</span>
-              <ArrowUpRight className="w-4 h-4 text-purple-300" />
+              <ArrowUpRight className="w-4 h-4 text-purple-700 dark:text-purple-300" />
             </Link>
           </div>
 
@@ -175,7 +175,7 @@ export default function HomePage() {
         <section className="px-6 max-w-[1240px] mx-auto space-y-12">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-purple-900/30 pb-8">
             <div className="space-y-2">
-              <span className="text-xs uppercase tracking-widest text-purple-400 font-semibold block font-mono">
+              <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
                 Proven Outcomes
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
@@ -185,7 +185,7 @@ export default function HomePage() {
 
             <Link
               href="/results"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors shrink-0"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors shrink-0"
             >
               <span>All Case Studies</span>
               <ArrowRight className="w-4 h-4" />
@@ -199,19 +199,19 @@ export default function HomePage() {
                 <Link
                   key={idx}
                   href={work.link}
-                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-500/20 hover:border-purple-400/60 transition-all group relative overflow-hidden"
+                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/60 transition-all group relative overflow-hidden"
                 >
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-lg bg-purple-950/60 border border-purple-500/30 flex items-center justify-center text-purple-300">
-                          <WorkIcon className="w-4 h-4" />
+                        <div className="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 shadow-xs">
+                          <WorkIcon className="w-4.5 h-4.5" />
                         </div>
-                        <span className="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold">
+                        <span className="text-xs font-mono uppercase tracking-wider text-purple-700 dark:text-purple-400 font-bold">
                           {work.sectorBadge}
                         </span>
                       </div>
-                      <div className="w-8 h-8 rounded-full border border-purple-500/30 flex items-center justify-center text-purple-300 group-hover:border-purple-400 group-hover:text-white transition-all">
+                      <div className="w-8 h-8 rounded-full border border-purple-200 dark:border-purple-500/30 bg-purple-50 dark:bg-transparent flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:border-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-xs">
                         <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </div>
                     </div>
@@ -220,31 +220,31 @@ export default function HomePage() {
                       <span className="block text-3xl sm:text-4xl font-extrabold text-white group-hover:text-purple-200 transition-colors font-heading">
                         {work.highlight}
                       </span>
-                      <span className="block text-xs uppercase tracking-wider text-purple-300/80 font-mono">
+                      <span className="block text-xs uppercase tracking-wider text-slate-700 dark:text-purple-300 font-mono font-semibold">
                         {work.metricLabel}
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-purple-100 group-hover:text-white transition-colors leading-snug">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-purple-100 group-hover:text-purple-700 dark:group-hover:text-white transition-colors leading-snug">
                       {work.title}
                     </h3>
 
                     {/* Plain English Takeaway for Business Owners */}
-                    <div className="p-3 rounded-xl bg-purple-950/30 border border-purple-500/20 text-xs text-purple-200/90 flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 metric-emerald shrink-0 mt-0.5" />
-                      <span>{work.simpleBenefit}</span>
+                    <div className="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-purple-950/30 border border-emerald-200 dark:border-purple-500/20 text-xs text-slate-800 dark:text-purple-200/90 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 metric-emerald shrink-0 mt-0.5" />
+                      <span className="font-medium leading-relaxed">{work.simpleBenefit}</span>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-purple-200/75 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/75 leading-relaxed">
                       {work.summary}
                     </p>
                   </div>
 
-                  <div className="pt-6 border-t border-purple-900/40 flex flex-wrap gap-2">
+                  <div className="pt-6 border-t border-purple-100 dark:border-purple-900/40 flex flex-wrap gap-2">
                     {work.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[11px] px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-500/30 text-purple-300 font-mono"
+                        className="text-[11px] px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 text-purple-900 dark:text-purple-300 font-mono font-semibold"
                       >
                         {tag}
                       </span>
@@ -259,13 +259,13 @@ export default function HomePage() {
         {/* Core Capabilities */}
         <section className="px-6 max-w-[1240px] mx-auto space-y-12">
           <div className="space-y-2 border-b border-purple-900/30 pb-8">
-            <span className="text-xs uppercase tracking-widest text-purple-400 font-semibold block font-mono">
+            <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
               Capabilities
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
               What we do.
             </h2>
-            <p className="text-xs sm:text-sm text-purple-300/80 max-w-xl">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-purple-300/80 max-w-xl font-medium leading-relaxed">
               Clear, transparent digital growth systems designed for business owners — zero marketing fluff or confusing jargon.
             </p>
           </div>
@@ -276,37 +276,37 @@ export default function HomePage() {
               return (
                 <div
                   key={idx}
-                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-500/20 hover:border-purple-400/50 transition-all group"
+                  className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/50 transition-all group"
                 >
                   <div className="space-y-5">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-900/50 to-indigo-900/30 border border-purple-500/30 flex items-center justify-center text-purple-300 group-hover:text-white group-hover:border-purple-400 transition-all shadow-sm">
-                          <CapIcon className="w-5 h-5" />
+                        <div className="w-11 h-11 rounded-xl bg-purple-100 dark:bg-gradient-to-br dark:from-purple-900/50 dark:to-indigo-900/30 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:text-purple-900 dark:group-hover:text-white transition-all shadow-xs">
+                          <CapIcon className="w-5 h-5 text-purple-700 dark:text-purple-300" />
                         </div>
                         <div>
-                          <span className="text-xs font-mono text-purple-400 font-semibold block uppercase tracking-wider">
+                          <span className="text-xs font-mono text-purple-700 dark:text-purple-400 font-bold block uppercase tracking-wider">
                             {item.tagline}
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-200 transition-colors">
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors">
                       {item.title}
                     </h3>
 
                     {/* Plain Language Box for Non-Technical Clients */}
-                    <div className="p-4 rounded-xl bg-purple-950/40 border border-purple-500/20 space-y-1">
-                      <span className="text-[10px] uppercase font-mono tracking-wider text-purple-300 font-bold block">
+                    <div className="p-4 rounded-xl bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-500/20 space-y-1.5">
+                      <span className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-purple-900 dark:text-purple-300 font-bold block">
                         What this means for your business:
                       </span>
-                      <p className="text-xs sm:text-sm text-purple-100 font-medium leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-800 dark:text-purple-100 font-medium leading-relaxed">
                         {item.simpleExplainer}
                       </p>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-purple-200/75 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/75 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>

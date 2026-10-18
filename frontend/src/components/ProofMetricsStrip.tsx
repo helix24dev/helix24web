@@ -34,11 +34,11 @@ export default function ProofMetricsStrip() {
             <span className={`block text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading ${item.color}`}>
               {item.value}
             </span>
-            <div className="space-y-0.5">
-              <span className="block text-xs uppercase tracking-wider font-semibold text-purple-200 font-mono">
+            <div className="space-y-1">
+              <span className="block text-xs sm:text-sm uppercase tracking-wider font-bold text-slate-900 dark:text-purple-200 font-mono">
                 {item.label}
               </span>
-              <span className="block text-xs text-purple-300/80">
+              <span className="block text-xs sm:text-sm text-slate-600 dark:text-purple-300/80 font-medium">
                 {item.sub}
               </span>
             </div>

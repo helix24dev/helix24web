@@ -342,7 +342,85 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   color: #1E293B !important;
 }
 
-/* 15. Surface backgrounds in light mode */
+/* 15. Complete Icon System & SVG Contrast in Light Mode */
+/* Icon Containers (Square & Rounded badges) */
+[data-theme="light"] div[class*="rounded-"][class*="bg-purple-"]:not([class*="bg-gradient-to-r"]):not(.keep-white) {
+  background-color: #EDE9FE !important; /* Soft royal lilac - clean, high-end surface */
+  border-color: rgba(109, 40, 217, 0.28) !important;
+  box-shadow: 0 1px 3px rgba(109, 40, 217, 0.08) !important;
+}
+
+/* SVG Glyphs inside containers or styled with purple */
+[data-theme="light"] div[class*="rounded-"][class*="bg-purple-"] svg:not([class*="text-emerald"]):not([class*="text-amber"]):not([class*="text-green"]),
+[data-theme="light"] svg[class*="text-purple-"],
+[data-theme="light"] [class*="text-purple-"] > svg:not([class*="text-emerald"]):not([class*="text-amber"]),
+[data-theme="light"] a svg:not([class*="text-emerald"]):not([class*="text-amber"]):not(.keep-white svg) {
+  color: #4C1D95 !important; /* Deep Royal Purple - 12:1 contrast against light backgrounds */
+  stroke: #4C1D95 !important;
+}
+
+/* Circular Arrow Badges and interactive icon buttons */
+[data-theme="light"] div[class*="rounded-full"][class*="border-purple-"],
+[data-theme="light"] a div[class*="rounded-full"][class*="border-purple-"] {
+  background-color: #EDE9FE !important;
+  border-color: rgba(109, 40, 217, 0.3) !important;
+}
+
+[data-theme="light"] div[class*="rounded-full"][class*="border-purple-"] svg,
+[data-theme="light"] a div[class*="rounded-full"][class*="border-purple-"] svg {
+  color: #4C1D95 !important;
+  stroke: #4C1D95 !important;
+}
+
+[data-theme="light"] div[class*="rounded-full"][class*="border-purple-"]:hover,
+[data-theme="light"] a:hover div[class*="rounded-full"][class*="border-purple-"] {
+  background-color: #6D28D9 !important;
+  border-color: #6D28D9 !important;
+}
+
+[data-theme="light"] div[class*="rounded-full"][class*="border-purple-"]:hover svg,
+[data-theme="light"] a:hover div[class*="rounded-full"][class*="border-purple-"] svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+/* Emerald Checkmark & Growth Icons */
+[data-theme="light"] svg[class*="text-emerald"],
+[data-theme="light"] [class*="text-emerald"] svg,
+[data-theme="light"] .metric-emerald svg {
+  color: #047857 !important;
+  stroke: #047857 !important;
+}
+
+/* Amber Review & Rating Icons */
+[data-theme="light"] svg[class*="fill-amber"],
+[data-theme="light"] svg[class*="text-amber"] {
+  color: #D97706 !important;
+  stroke: #D97706 !important;
+  fill: #D97706 !important;
+}
+
+/* 16. Subtext & Explanatory Copy Typography */
+[data-theme="light"] p[class*="text-base"],
+[data-theme="light"] p[class*="text-lg"] {
+  color: #334155 !important; /* Deep Slate 700 - optimal contrast for subhead reading */
+  font-weight: 500 !important;
+  line-height: 1.75 !important;
+}
+
+[data-theme="light"] p[class*="text-sm"],
+[data-theme="light"] p[class*="text-xs"] {
+  color: #334155 !important; /* Slate 700 */
+  line-height: 1.65 !important;
+}
+
+[data-theme="light"] .space-y-1 span[class*="text-slate-600"],
+[data-theme="light"] .space-y-0\.5 span[class*="text-purple-300"] {
+  color: #475569 !important; /* Slate 600 */
+  font-weight: 500 !important;
+}
+
+/* 17. Surface backgrounds in light mode */
 [data-theme="light"] .bg-\[\#110B22\],
 [data-theme="light"] .bg-\[\#110B22\]\/85,
 [data-theme="light"] .bg-\[\#070310\],
