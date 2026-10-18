@@ -8,10 +8,10 @@ export default function Footer() {
     '@type': 'Corporation',
     name: 'Helix24 Solutions Pvt Ltd',
     alternateName: 'Helix24 Solutions',
-    url: 'https://helix24.com',
-    logo: 'https://helix24.com/assets/logo.png',
+    url: 'https://helix24.in',
+    logo: 'https://helix24.in/assets/logo.png',
     telephone: '+91 9048009044',
-    email: 'hello@helix24.com',
+    email: 'hello@helix24.in',
     taxID: 'AAJCH0136Q',
     vatID: 'CHNH05061A',
     identifier: [
@@ -124,7 +124,7 @@ export default function Footer() {
           </p>
           <div className="pt-2 space-y-1.5">
             <div><a href="tel:+919048009044" className="hover:text-white text-purple-200">+91 9048009044</a></div>
-            <div><a href="mailto:hello@helix24.com" className="hover:text-white text-purple-200">hello@helix24.com</a></div>
+            <div><a href="mailto:hello@helix24.in" className="hover:text-white text-purple-200">hello@helix24.in</a></div>
           </div>
         </div>
 

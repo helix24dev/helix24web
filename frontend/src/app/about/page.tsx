@@ -22,10 +22,10 @@ export default function AboutPage() {
     '@type': 'Corporation',
     name: 'Helix24 Solutions Pvt Ltd',
     alternateName: 'Helix24 Solutions',
-    url: 'https://helix24.com/about',
-    logo: 'https://helix24.com/assets/logo.png',
+    url: 'https://helix24.in/about',
+    logo: 'https://helix24.in/assets/logo.png',
     telephone: '+91 9048009044',
-    email: 'hello@helix24.com',
+    email: 'hello@helix24.in',
     taxID: 'AAJCH0136Q',
     vatID: 'CHNH05061A',
     identifier: [

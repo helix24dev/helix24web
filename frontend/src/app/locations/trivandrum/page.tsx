@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: 'Premier digital marketing company in Trivandrum (Thiruvananthapuram). Enterprise B2B lead generation, Technopark IT marketing, Google Ads, and Next.js web applications.',
   keywords: 'digital marketing agency in trivandrum, digital marketing company thiruvananthapuram, seo company trivandrum, technopark it marketing, web development trivandrum, b2b lead generation kerala',
   alternates: {
-    canonical: 'https://helix24.com/locations/trivandrum',
+    canonical: 'https://helix24.in/locations/trivandrum',
   },
 };
 
@@ -26,12 +26,12 @@ export default function TrivandrumLocationPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://helix24.com/locations/trivandrum#localbusiness',
+    '@id': 'https://helix24.in/locations/trivandrum#localbusiness',
     name: 'Helix24 Solutions Pvt Ltd — Trivandrum Strategy Desk',
-    image: 'https://helix24.com/og-image.png',
+    image: 'https://helix24.in/og-image.png',
     telephone: '+91 9048009044',
-    email: 'hello@helix24.com',
-    url: 'https://helix24.com/locations/trivandrum',
+    email: 'hello@helix24.in',
+    url: 'https://helix24.in/locations/trivandrum',
     taxID: 'AAJCH0136Q',
     priceRange: '₹₹₹',
     address: {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: 'Top digital marketing company in Kochi, Ernakulam. High-converting Meta Ads, Google Ads PPC, Local SEO, and Next.js web development for businesses in Kakkanad, Infopark, and across Kerala & GCC.',
   keywords: 'digital marketing agency in kochi, digital marketing company cochin, seo company in kochi, meta ads agency kakkanad, web development company ernakulam, performance marketing kochi',
   alternates: {
-    canonical: 'https://helix24.com/locations/kochi',
+    canonical: 'https://helix24.in/locations/kochi',
   },
 };
 
@@ -26,12 +26,12 @@ export default function KochiLocationPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://helix24.com/locations/kochi#localbusiness',
+    '@id': 'https://helix24.in/locations/kochi#localbusiness',
     name: 'Helix24 Solutions Pvt Ltd — Kochi Strategy Hub',
-    image: 'https://helix24.com/og-image.png',
+    image: 'https://helix24.in/og-image.png',
     telephone: '+91 9048009044',
-    email: 'hello@helix24.com',
-    url: 'https://helix24.com/locations/kochi',
+    email: 'hello@helix24.in',
+    url: 'https://helix24.in/locations/kochi',
     taxID: 'AAJCH0136Q',
     priceRange: '₹₹₹',
     address: {

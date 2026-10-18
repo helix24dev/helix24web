@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: 'Top digital marketing agency in Calicut (Kozhikode). High-ROAS Meta Ads, D2C e-commerce scaling, Google PPC, and sub-second websites for brands across Malabar & the GCC.',
   keywords: 'digital marketing agency in calicut, digital marketing company kozhikode, seo services calicut, performance marketing malabar, meta ads agency kozhikode, shopify development calicut',
   alternates: {
-    canonical: 'https://helix24.com/locations/kozhikode',
+    canonical: 'https://helix24.in/locations/kozhikode',
   },
 };
 
@@ -26,12 +26,12 @@ export default function KozhikodeLocationPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://helix24.com/locations/kozhikode#localbusiness',
+    '@id': 'https://helix24.in/locations/kozhikode#localbusiness',
     name: 'Helix24 Solutions Pvt Ltd — Kozhikode Strategy Hub',
-    image: 'https://helix24.com/og-image.png',
+    image: 'https://helix24.in/og-image.png',
     telephone: '+91 9048009044',
-    email: 'hello@helix24.com',
-    url: 'https://helix24.com/locations/kozhikode',
+    email: 'hello@helix24.in',
+    url: 'https://helix24.in/locations/kozhikode',
     taxID: 'AAJCH0136Q',
     priceRange: '₹₹₹',
     address: {

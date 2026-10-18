@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
-  const url = `https://helix24.com/blog/${post.slug}`;
+  const url = `https://helix24.in/blog/${post.slug}`;
 
   return {
     title: post.metaTitle,
@@ -84,20 +84,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     author: {
       '@type': 'Organization',
       name: post.author.name,
-      url: 'https://helix24.com',
+      url: 'https://helix24.in',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.com',
+      url: 'https://helix24.in',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://helix24.com/assets/helix24-logo.png',
+        url: 'https://helix24.in/assets/helix24-logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://helix24.com/blog/${post.slug}`,
+      '@id': `https://helix24.in/blog/${post.slug}`,
     },
   };
 
@@ -109,19 +109,19 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://helix24.com',
+        item: 'https://helix24.in',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://helix24.com/blog',
+        item: 'https://helix24.in/blog',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://helix24.com/blog/${post.slug}`,
+        item: `https://helix24.in/blog/${post.slug}`,
       },
     ],
   };

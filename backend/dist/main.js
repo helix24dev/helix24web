@@ -8,7 +8,7 @@ async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.useGlobalPipes(new common_1.ValidationPipe({ whitelist: true, transform: true }));
     app.enableCors({
-        origin: ['http://localhost:3000', 'https://helix24.com', 'https://www.helix24.com'],
+        origin: ['http://localhost:3000', 'https://helix24.in', 'https://www.helix24.in'],
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
         credentials: true,
     });

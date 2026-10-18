@@ -27,7 +27,7 @@ export default function ContactPage() {
       '@type': 'Corporation',
       name: 'Helix24 Solutions Pvt Ltd',
       telephone: '+91 9048009044',
-      email: 'hello@helix24.com',
+      email: 'hello@helix24.in',
       taxID: 'AAJCH0136Q',
       hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
       address: {
@@ -101,7 +101,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="block font-semibold text-white">Email Consultation</span>
-                    <a href="mailto:hello@helix24.com" className="text-purple-300 hover:text-white">hello@helix24.com</a>
+                    <a href="mailto:hello@helix24.in" className="text-purple-300 hover:text-white">hello@helix24.in</a>
                   </div>
                 </div>
 

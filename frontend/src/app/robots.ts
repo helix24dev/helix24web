@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://helix24.com/sitemap.xml',
+    sitemap: 'https://helix24.in/sitemap.xml',
   };
 }

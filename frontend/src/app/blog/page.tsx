@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Digital Marketing & Web SEO Guides (Kerala & GCC) — Blog | Helix24 Solutions Pvt Ltd',
   description: 'In-depth research and execution playbooks on Meta Ads, Google Ads PPC, Local SEO 3-Pack, Next.js web development, and GCC cross-border e-commerce by Helix24 Solutions Pvt Ltd.',
   alternates: {
-    canonical: 'https://helix24.com/blog',
+    canonical: 'https://helix24.in/blog',
   },
 };
 
@@ -19,11 +19,11 @@ export default function BlogIndexPage() {
     '@type': 'CollectionPage',
     name: 'Helix24 Solutions Digital Strategy Blog',
     description: 'Engineering and performance marketing insights for Kerala and GCC businesses.',
-    url: 'https://helix24.com/blog',
+    url: 'https://helix24.in/blog',
     hasPart: posts.map((post) => ({
       '@type': 'BlogPosting',
       headline: post.title,
-      url: `https://helix24.com/blog/${post.slug}`,
+      url: `https://helix24.in/blog/${post.slug}`,
       datePublished: post.publishedDate,
     })),
   };

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllBlogPosts } from '@/data/blogPosts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://helix24.com';
+  const baseUrl = 'https://helix24.in';
   const lastModified = new Date();
 
   const coreRoutes = [

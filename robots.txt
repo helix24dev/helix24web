@@ -5,5 +5,5 @@ Disallow: /admin
 Disallow: /privacy-policy.html
 Disallow: /terms.html
 
-Sitemap: https://helix24.com/sitemap.xml
-Host: https://helix24.com
+Sitemap: https://helix24.in/sitemap.xml
+Host: https://helix24.in

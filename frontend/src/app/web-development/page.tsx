@@ -26,7 +26,7 @@ export default function WebDevelopmentPage() {
     provider: {
       '@type': 'Corporation',
       name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.com',
+      url: 'https://helix24.in',
       telephone: '+91 9048009044',
       taxID: 'AAJCH0136Q',
       hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
