@@ -13,6 +13,7 @@ import {
   MapPin,
   Building2
 } from 'lucide-react';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { getAllBlogPosts, getBlogPostBySlug } from '@/data/blogPosts';
 
 interface BlogPostPageProps {
@@ -291,9 +292,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             href="https://wa.me/919048009044?text=Hi%20Helix24,%20I%20read%20your%20blog%20article%20and%20would%20like%20a%20strategy%20consultation."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs uppercase tracking-wider transition-all shadow-lg shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-zinc-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg shrink-0"
           >
-            <MessageCircle className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4 fill-zinc-950 shrink-0" />
             <span>Chat on WhatsApp</span>
           </a>
         </section>

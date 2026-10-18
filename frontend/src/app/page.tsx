@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function HomePage() {
   const selectedWorks = [
@@ -342,8 +343,9 @@ export default function HomePage() {
       {/* Direct Call to Action */}
       <section className="px-6 max-w-[1240px] mx-auto">
         <div className="cta-banner p-10 sm:p-16 rounded-3xl bg-gradient-to-br from-purple-950/80 via-slate-950 to-purple-950/50 border border-purple-500/30 text-center space-y-6 shadow-2xl">
-          <div className="cta-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/50 border border-purple-500/30 text-[11px] font-mono text-purple-300">
-            <span>Kochi • Kozhikode • Trivandrum • GCC</span>
+          <div className="cta-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-900/50 border border-purple-500/30 text-[11px] font-mono text-purple-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Direct Strategy Consultation</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-2xl mx-auto font-heading">
@@ -359,9 +361,9 @@ export default function HomePage() {
               href="https://wa.me/919048009044?text=Hi%20Helix24,%20I%20would%20like%20to%20discuss%20a%20strategy%20consultation%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-sm transition-all shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-zinc-950 font-bold text-sm transition-all shadow-lg shadow-emerald-950/40 hover:-translate-y-0.5 active:scale-95"
             >
-              <MessageCircle className="w-4 h-4" />
+              <WhatsAppIcon className="w-5 h-5 fill-zinc-950 shrink-0" />
               <span>Chat on WhatsApp</span>
             </a>
 
