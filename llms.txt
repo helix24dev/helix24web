@@ -1,0 +1,18 @@
+# Helix24 Solutions
+
+> Helix24 Solutions is a digital marketing and web development agency serving businesses in Kochi, Kozhikode and Thiruvananthapuram (Kerala, India) and the UAE/GCC. Services: Meta Ads (Facebook & Instagram), social media management, Google Ads PPC, Local SEO, custom websites, e-commerce stores, mobile apps, and branding/UI design.
+
+## Services
+
+- [Digital Marketing, Meta Ads & Google Ads](https://helix24.in/digital-marketing-seo.html): Lead-generation ad funnels, social media management, Google Ads PPC and Local SEO
+- [Website & Software Development](https://helix24.in/web-development.html): Custom websites, web applications and CRM/ERP software
+- [E-Commerce Development](https://helix24.in/ecommerce-development.html): Shopify, WooCommerce and headless online stores
+- [Mobile App Development](https://helix24.in/mobile-app-development.html): iOS, Android and cross-platform apps
+- [Branding & UI/UX Design](https://helix24.in/branding-design.html): Logo, brand identity and interface design
+
+## Company
+
+- [About Helix24](https://helix24.in/about.html): Who we are and how we work
+- [Results & Case Studies](https://helix24.in/results.html): Client outcomes and growth metrics
+- [Blog & FAQs](https://helix24.in/blog.html): Guides on ad costs, Local SEO and website pricing in Kerala
+- [Contact](https://helix24.in/contact.html): Request a free proposal, phone +91 9048009044
