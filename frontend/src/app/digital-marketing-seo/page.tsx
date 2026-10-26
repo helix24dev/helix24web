@@ -14,6 +14,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://helix24.in/digital-marketing-seo',
+  },
   title: 'Digital Marketing Company in Kochi, Kerala | Meta Ads & SEO Agency | Helix24',
   description: 'Helix24 Solutions Pvt Ltd is a premier digital marketing company in Kochi, Kerala. High-ROAS Meta Ads (Facebook & Instagram), Server-Side CAPI, Google Ads PPC, and Local SEO for Kerala & GCC.',
   keywords: 'digital marketing company in kerala, digital marketing agency in kochi, best digital marketing company in kerala, meta ads agency kochi, google ads agency kerala, local seo services kochi, performance marketing kerala',

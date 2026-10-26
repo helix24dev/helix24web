@@ -15,6 +15,13 @@ import {
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://helix24.in',
+  },
+};
 
 export default function HomePage() {
   const selectedWorks = [

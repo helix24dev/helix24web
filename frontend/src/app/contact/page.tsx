@@ -12,6 +12,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://helix24.in/contact',
+  },
   title: 'Contact Helix24 Solutions Pvt Ltd | Digital Agency Kochi & Calicut',
   description: 'Connect with Helix24 Solutions Pvt Ltd (CIN: U62011KL2026PTC107185). Request a customized Meta Ads, Google Ads PPC, or Next.js web development proposal for Kerala & GCC.',
   keywords: 'contact helix24 solutions, digital marketing agency kochi contact, web development company kerala phone number, helix24 solutions pvt ltd address',

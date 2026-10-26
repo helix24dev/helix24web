@@ -53,11 +53,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       modifiedTime: post.updatedDate,
       authors: [post.author.name],
       tags: [post.category, 'Kerala Digital Marketing', 'Kochi Meta Ads', 'GCC E-commerce'],
+      images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.metaTitle,
       description: post.metaDescription,
+      images: ['/assets/og-image.jpg'],
     },
   };
 }

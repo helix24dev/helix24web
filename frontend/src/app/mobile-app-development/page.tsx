@@ -4,6 +4,9 @@ import LeadForm from '@/components/LeadForm';
 import { Smartphone, CheckCircle2, Layers, ArrowRight, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://helix24.in/mobile-app-development',
+  },
   title: 'Mobile App Development in Kochi, Kerala | iOS & Android | Helix24',
   description: 'Custom iOS, Android, and Flutter cross-platform mobile application development by Helix24 Solutions Pvt Ltd. 60fps native performance, push CRM, and app store deployment in Kerala & GCC.',
   keywords: 'mobile app development company kochi, flutter app developers kerala, ios app development kochi, android app development calicut, react native agency kerala',

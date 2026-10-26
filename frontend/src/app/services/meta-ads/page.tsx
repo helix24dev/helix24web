@@ -3,6 +3,9 @@ import LeadForm from '@/components/LeadForm';
 import { Target, Search, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://helix24.in/services/meta-ads',
+  },
   title: 'Meta Ads & Social Media Management Agency Kerala (Kochi & Kozhikode) — Helix24',
   description: 'Drive high-ROI Meta Ads (Facebook & Instagram), Social Media Management (SMM), Google Ads PPC, and Local SEO for businesses in Kerala, UAE & GCC.',
 };

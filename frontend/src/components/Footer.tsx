@@ -133,8 +133,8 @@ export default function Footer() {
       <div className="max-w-[1240px] mx-auto px-6 mt-16 pt-8 border-t border-purple-900/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
         <p>© 2026 HELIX24 SOLUTIONS PVT LTD. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-6">
-          <Link href="/about" className="hover:text-zinc-300">Privacy Policy</Link>
-          <Link href="/about" className="hover:text-zinc-300">Terms of Service</Link>
+          <Link href="/privacy-policy" className="hover:text-zinc-300">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-zinc-300">Terms of Service</Link>
         </div>
       </div>
     </footer>

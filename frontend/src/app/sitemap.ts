@@ -7,7 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const coreRoutes = [
     { url: `${baseUrl}`, priority: 1.0, changeFrequency: 'daily' as const },
-    { url: `${baseUrl}/services/web-development`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${baseUrl}/web-development`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${baseUrl}/ecommerce-development`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${baseUrl}/digital-marketing-seo`, priority: 0.9, changeFrequency: 'weekly' as const },

@@ -12,6 +12,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://helix24.in/web-development',
+  },
   title: 'Website Development Company in Kochi, Kerala | Next.js & Custom Software | Helix24',
   description: 'Helix24 Solutions Pvt Ltd is a premier web development company in Kochi, Kerala. We build custom Next.js web applications, enterprise portals, and high-performance websites with 100/100 Lighthouse scores for India and GCC.',
   keywords: 'web development company in kochi, web development agency in kerala, best website development company in kerala, custom software development kochi, next.js developers kerala, react agency kochi, core web vitals optimization',

@@ -1,56 +1,12 @@
+# Netlify builds the Next.js app in frontend/ (the legacy static HTML at the repo root is no longer published).
+# Next.js on Netlify is handled by the automatic Next.js runtime; legacy .html redirects live in frontend/next.config.mjs.
 [build]
-  publish = "."
+  base = "frontend"
+  command = "npm run build"
+  publish = ".next"
 
-# Post-processing: Minify assets
-[build.processing]
-  skip_processing = false
-[build.processing.css]
-  bundle = true
-  minify = true
-[build.processing.js]
-  bundle = true
-  minify = true
-[build.processing.html]
-  pretty_urls = false
-
-# Clean URL redirects
-[[redirects]]
-  from = "/web-dev"
-  to = "/web-development.html"
-  status = 301
-
-[[redirects]]
-  from = "/seo"
-  to = "/digital-marketing-seo.html"
-  status = 301
-
-[[redirects]]
-  from = "/mobile-apps"
-  to = "/mobile-app-development.html"
-  status = 301
-
-[[redirects]]
-  from = "/e-commerce"
-  to = "/ecommerce-development.html"
-  status = 301
-
-[[redirects]]
-  from = "/blog"
-  to = "/blog.html"
-  status = 301
-
-# Block admin page — return 404
-[[redirects]]
-  from = "/admin.html"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/admin"
-  to = "/404.html"
-  status = 404
-  force = true
+[build.environment]
+  NODE_VERSION = "20"
 
 # Security Headers
 [[headers]]
@@ -64,18 +20,7 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://connect.facebook.net https://www.google-analytics.com https://www.googleadservices.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.facebook.com https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://www.facebook.com https://region1.google-analytics.com; frame-src https://www.googletagmanager.com;"
 
-# Cache static assets
 [[headers]]
-  for = "/css/*"
+  for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=604800"

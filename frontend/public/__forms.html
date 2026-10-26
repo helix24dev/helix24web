@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="robots" content="noindex"></head>
+<body>
+  <!-- Netlify Forms detects this form at deploy time; LeadForm.tsx posts to it -->
+  <form name="contact-form" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact-form" />
+    <input name="bot-field" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="service" />
+    <input type="text" name="location" />
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>

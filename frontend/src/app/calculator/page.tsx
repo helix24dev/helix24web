@@ -2,6 +2,9 @@ import AdSpendCalculator from '@/components/AdSpendCalculator';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://helix24.in/calculator',
+  },
   title: 'Interactive Meta & Google Ads ROI Calculator | Helix24',
   description: 'Calculate projected CPL (Cost-Per-Lead), lead volume, and return on ad spend (ROAS) for your business in Kerala (Kochi/Kozhikode) or the GCC.',
 };

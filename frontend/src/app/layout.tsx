@@ -6,16 +6,13 @@ import FloatingActions from '@/components/FloatingActions';
 import TrackingScripts from '@/components/TrackingScripts';
 
 export const metadata: Metadata = {
-  title: 'Helix24 Solutions — Performance Marketing & Web Agency (Kochi · Kozhikode · Trivandrum · GCC)',
-  description: 'Helix24 Solutions Pvt Ltd delivers high-ROI Meta Ads, Google Ads PPC, Local SEO, and Next.js web development for growing businesses across Kochi, Kozhikode, Trivandrum, Kerala, UAE, and the GCC.',
+  title: 'Helix24 Solutions — Digital Marketing & Web Agency in Kerala',
+  description: 'Helix24 delivers Meta Ads, Google Ads PPC, Local SEO and fast web development for businesses in Kochi, Kozhikode, Trivandrum, the UAE and the GCC.',
   keywords: 'Helix24 Solutions Pvt Ltd, Meta ads agency Kochi, performance marketing Kozhikode, SEO agency Trivandrum, web development company Kerala, digital marketing agency Kakkanad, Technopark web agency, Calicut advertising, Meta ads Dubai, GCC ecommerce marketing',
   metadataBase: new URL('https://helix24.in'),
-  alternates: {
-    canonical: 'https://helix24.in',
-  },
+  // Canonicals are set per page; a canonical here would be inherited by every route
   openGraph: {
     type: 'website',
-    url: 'https://helix24.in',
     title: 'Helix24 Solutions — Performance Marketing & Web Systems (Kerala & GCC)',
     description: 'We run high-converting Meta ad funnels, Google Ads PPC, Local SEO, and custom Next.js web applications across Kochi, Kozhikode, Trivandrum, and the GCC.',
     siteName: 'Helix24 Solutions Pvt Ltd',

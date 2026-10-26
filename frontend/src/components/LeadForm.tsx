@@ -21,29 +21,28 @@ export default function LeadForm() {
     setStatus('loading');
     setResponseMsg('');
 
+    const honeypot = (e.currentTarget as HTMLFormElement).elements.namedItem('bot-field') as HTMLInputElement | null;
+
     try {
-      const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-      const res = await fetch(`${backendUrl}/leads`, {
+      // Netlify Forms: posts to the static form definition in public/__forms.html
+      const res = await fetch('/__forms.html', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact-form',
+          'bot-field': honeypot?.value ?? '',
+          ...formData,
+        }).toString(),
       });
 
-      const data = await res.json();
+      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
 
-      if (res.ok && data.success) {
-        setStatus('success');
-        setResponseMsg(data.message || 'Thank you! Your inquiry has been logged in our strategy pipeline.');
-        setFormData({ name: '', email: '', phone: '', service: 'meta-ads', message: '', location: 'Kerala' });
-      } else {
-        setStatus('error');
-        setResponseMsg(data.message || 'Unable to log inquiry. Please try again or WhatsApp us directly.');
-      }
-    } catch {
-      // Fallback response for offline / dev demo
       setStatus('success');
       setResponseMsg(`Thank you, ${formData.name}! Your inquiry has been submitted. Our strategy team will contact you within 24 hours.`);
       setFormData({ name: '', email: '', phone: '', service: 'meta-ads', message: '', location: 'Kerala' });
+    } catch {
+      setStatus('error');
+      setResponseMsg('We could not send your inquiry. Please try again, or message us on WhatsApp at +91 9048009044.');
     }
   };
 
@@ -53,6 +52,10 @@ export default function LeadForm() {
         <h3 className="text-xl font-bold text-white">Request Free Strategy Proposal</h3>
         <p className="text-xs text-purple-200/70">Submit your project details to receive a customized ad & web strategy proposal within 24 hours.</p>
       </div>
+
+      <p className="hidden">
+        <label>Leave this field empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
+      </p>
 
       <div>
         <label className="block text-xs font-semibold text-purple-200 mb-1.5">Full Name *</label>
