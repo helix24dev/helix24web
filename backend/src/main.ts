@@ -11,7 +11,7 @@ async function bootstrap() {
 
   // Enable CORS for frontend requests
   app.enableCors({
-    origin: ['http://localhost:3000', 'https://helix24.in', 'https://www.helix24.in'],
+    origin: ['http://localhost:3000', 'http://localhost:3005', 'https://helix24.in', 'https://www.helix24.in'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });
