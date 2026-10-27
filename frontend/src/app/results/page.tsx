@@ -210,13 +210,14 @@ export default function ResultsPage() {
               </div>
 
               {/* Visual SVG Illustration Banner */}
-              <div className="w-full h-32 rounded-2xl bg-purple-950/40 border border-purple-800/40 flex items-center justify-center p-4 overflow-hidden relative group-hover:scale-[1.01] transition-transform">
+              {/* 3:2 tile matches the illustrations' viewBox so the image fills it at 100% */}
+              <div className="w-full aspect-[3/2] rounded-2xl bg-purple-950/40 border border-purple-800/40 overflow-hidden relative group-hover:scale-[1.01] transition-transform">
                 <Image
                   src={item.svgIllustration}
                   alt={item.title}
-                  width={240}
-                  height={100}
-                  className="max-h-full w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity"
+                  fill
+                  sizes="(min-width: 1024px) 600px, 100vw"
+                  className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                 />
               </div>
 

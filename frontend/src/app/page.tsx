@@ -311,13 +311,14 @@ export default function HomePage() {
                   </div>
 
                   {/* Clean Visual Graphic */}
-                  <div className="w-full h-24 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/40 flex items-center justify-center p-3 overflow-hidden">
+                  {/* 3:2 tile matches the illustrations' viewBox so the image fills it at 100% */}
+                  <div className="relative w-full aspect-[3/2] rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/40 overflow-hidden">
                     <Image
                       src={work.illustration}
                       alt={work.title}
-                      width={200}
-                      height={80}
-                      className="max-h-full w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity"
+                      fill
+                      sizes="(min-width: 1024px) 380px, 100vw"
+                      className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-300"
                     />
                   </div>
 
