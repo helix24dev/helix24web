@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import LegalPage from '@/components/LegalPage';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Terms of Service | Helix24 Solutions',
   description: 'Terms of Service for Helix24 Solutions: service agreements, WhatsApp communication terms, intellectual property and liability.',
-  alternates: {
-    canonical: 'https://helix24.in/terms',
-  },
-  robots: { index: false, follow: true },
-};
+  path: '/terms',
+  noindex: true,
+});
 
 export default function TermsPage() {
   return (

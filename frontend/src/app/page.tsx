@@ -22,12 +22,13 @@ import ProofMetricsStrip from '@/components/ProofMetricsStrip';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in',
-  },
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Digital Marketing & Web Development in Kerala | Helix24',
+  description: 'Helix24 is a Kochi-based digital marketing and web development company. Meta Ads, Google Ads, local SEO and fast websites for Kerala and GCC businesses.',
+  path: '/',
+});
 
 export default function HomePage() {
   const selectedWorks = [

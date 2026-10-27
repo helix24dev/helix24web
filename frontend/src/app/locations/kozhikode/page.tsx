@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -13,14 +14,11 @@ import {
   Clock
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Calicut | Performance Marketing & SEO Kozhikode — Helix24',
-  description: 'Top digital marketing agency in Calicut (Kozhikode). High-ROAS Meta Ads, D2C e-commerce scaling, Google PPC, and sub-second websites for brands across Malabar & the GCC.',
-  keywords: 'digital marketing agency in calicut, digital marketing company kozhikode, seo services calicut, performance marketing malabar, meta ads agency kozhikode, shopify development calicut',
-  alternates: {
-    canonical: 'https://helix24.in/locations/kozhikode',
-  },
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Digital Marketing Agency in Calicut (Kozhikode) | Helix24',
+  description: 'Meta Ads, Google Ads, e-commerce and fast websites for retail, healthcare and D2C brands in Calicut, across the Malabar region and the GCC.',
+  path: '/locations/kozhikode',
+});
 
 export default function KozhikodeLocationPage() {
   const jsonLd = {

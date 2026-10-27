@@ -4,24 +4,24 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import TrackingScripts from '@/components/TrackingScripts';
+import { SITE_URL, SITE_NAME, OG_IMAGE } from '@/lib/seo';
 
+// Fallback for routes without their own metadata (e.g. 404). Pages use pageMetadata() from '@/lib/seo';
+// canonicals are set per page because one here would be inherited by every route.
 export const metadata: Metadata = {
-  title: 'Helix24 Solutions — Digital Marketing & Web Agency in Kerala',
-  description: 'Helix24 delivers Meta Ads, Google Ads PPC, Local SEO and fast web development for businesses in Kochi, Kozhikode, Trivandrum, the UAE and the GCC.',
-  keywords: 'Helix24 Solutions Pvt Ltd, Meta ads agency Kochi, performance marketing Kozhikode, SEO agency Trivandrum, web development company Kerala, digital marketing agency Kakkanad, Technopark web agency, Calicut advertising, Meta ads Dubai, GCC ecommerce marketing',
-  metadataBase: new URL('https://helix24.in'),
-  // Canonicals are set per page; a canonical here would be inherited by every route
+  metadataBase: new URL(SITE_URL),
+  title: 'Helix24 Solutions | Digital Marketing & Web Development, Kerala',
+  description: 'Helix24 is a Kochi-based digital marketing and web development company. Meta Ads, Google Ads, local SEO and fast websites for Kerala and GCC businesses.',
+  applicationName: SITE_NAME,
   openGraph: {
     type: 'website',
-    title: 'Helix24 Solutions — Performance Marketing & Web Systems (Kerala & GCC)',
-    description: 'We run high-converting Meta ad funnels, Google Ads PPC, Local SEO, and custom Next.js web applications across Kochi, Kozhikode, Trivandrum, and the GCC.',
-    siteName: 'Helix24 Solutions Pvt Ltd',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+    siteName: SITE_NAME,
+    locale: 'en_IN',
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Helix24 Solutions — Digital Agency (Kochi · Kozhikode · Trivandrum · GCC)',
-    description: 'Performance-driven Meta Ads, Google Ads, Local SEO, and custom web engineering under one roof.',
+    images: [OG_IMAGE.url],
   },
 };
 

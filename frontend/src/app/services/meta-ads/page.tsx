@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import LeadForm from '@/components/LeadForm';
 import { Target, Search, CheckCircle2 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in/services/meta-ads',
-  },
-  title: 'Meta Ads & Social Media Management Agency Kerala (Kochi & Kozhikode) — Helix24',
-  description: 'Drive high-ROI Meta Ads (Facebook & Instagram), Social Media Management (SMM), Google Ads PPC, and Local SEO for businesses in Kerala, UAE & GCC.',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Meta Ads & Social Media Agency in Kerala | Helix24',
+  description: 'Facebook and Instagram ad campaigns and social media management that bring enquiries to your WhatsApp and phone. For businesses in Kerala, UAE and GCC.',
+  path: '/services/meta-ads',
+});
 
 export default function MetaAdsServicePage() {
   return (

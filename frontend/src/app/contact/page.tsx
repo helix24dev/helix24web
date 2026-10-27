@@ -1,5 +1,6 @@
 import LeadForm from '@/components/LeadForm';
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { 
   Mail, 
   Phone, 
@@ -11,14 +12,11 @@ import {
   MessageCircle 
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in/contact',
-  },
-  title: 'Contact Helix24 Solutions Pvt Ltd | Digital Agency Kochi & Calicut',
-  description: 'Connect with Helix24 Solutions Pvt Ltd (CIN: U62011KL2026PTC107185). Request a customized Meta Ads, Google Ads PPC, or Next.js web development proposal for Kerala & GCC.',
-  keywords: 'contact helix24 solutions, digital marketing agency kochi contact, web development company kerala phone number, helix24 solutions pvt ltd address',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Contact Helix24 | Digital Marketing Agency in Kochi',
+  description: 'Call or WhatsApp +91 9048009044, or send your project details for a tailored Meta Ads, Google Ads or website proposal within 24 hours.',
+  path: '/contact',
+});
 
 export default function ContactPage() {
   const jsonLd = {

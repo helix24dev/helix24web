@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -14,14 +15,11 @@ import {
   ChevronDown
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in/ecommerce-development',
-  },
-  title: 'E-Commerce Website Development in Kochi, Kerala | Shopify & WooCommerce | Helix24',
-  description: 'Helix24 Solutions Pvt Ltd builds high-converting Shopify Plus, WooCommerce, and Headless Next.js online stores. Fast mobile checkouts, Razorpay/Stripe, WhatsApp cart recovery, and Meta CAPI sync for Kerala & GCC.',
-  keywords: 'ecommerce website development kerala, shopify development company kochi, woocommerce developers kerala, headless ecommerce nextjs, shopify plus agency kerala, d2c ecommerce development kochi',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'E-Commerce Website Development in Kerala | Helix24',
+  description: 'Shopify, WooCommerce and headless Next.js online stores with fast mobile checkout, Razorpay and Stripe payments, and WhatsApp cart recovery.',
+  path: '/ecommerce-development',
+});
 
 export default function EcommerceDevelopmentPage() {
   const jsonLd = {

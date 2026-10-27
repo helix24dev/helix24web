@@ -1,16 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { Palette, PenTool, CheckCircle2, ArrowRight, Video } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in/branding-design',
-  },
-  title: 'Branding & UI/UX Design Services in Kochi, Kerala | Helix24',
-  description: 'Bespoke brand identity design, Figma UI/UX prototyping, vertical Reels motion creatives, and conversion-focused design systems by Helix24 Solutions Pvt Ltd.',
-  keywords: 'branding agency kochi, ui ux design company kerala, logo design agency kerala, figma prototypes kochi, motion graphics agency kerala',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Branding & UI/UX Design Agency in Kochi | Helix24',
+  description: 'Brand identity, logo design, Figma UI/UX prototypes and vertical video Reels that make your business look established. Based in Kochi, Kerala.',
+  path: '/branding-design',
+});
 
 export default function BrandingDesignPage() {
   const jsonLd = {

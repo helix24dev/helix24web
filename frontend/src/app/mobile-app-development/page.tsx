@@ -1,16 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { Smartphone, CheckCircle2, Layers, ArrowRight, Zap } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in/mobile-app-development',
-  },
-  title: 'Mobile App Development in Kochi, Kerala | iOS & Android | Helix24',
-  description: 'Custom iOS, Android, and Flutter cross-platform mobile application development by Helix24 Solutions Pvt Ltd. 60fps native performance, push CRM, and app store deployment in Kerala & GCC.',
-  keywords: 'mobile app development company kochi, flutter app developers kerala, ios app development kochi, android app development calicut, react native agency kerala',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Mobile App Development Company in Kochi, Kerala | Helix24',
+  description: 'iOS, Android and Flutter app development by Helix24 in Kochi, with native performance, push notifications and App Store and Play Store launch support.',
+  path: '/mobile-app-development',
+});
 
 export default function MobileAppDevelopmentPage() {
   const jsonLd = {

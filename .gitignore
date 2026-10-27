@@ -30,8 +30,6 @@ build/
 out/
 .vercel
 
-# Nested Cloned Repos
-helix24web/
 
 # Netlify Build Output
 .netlify/

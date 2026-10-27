@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import LegalPage from '@/components/LegalPage';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Privacy Policy | Helix24 Solutions',
   description: 'How Helix24 Solutions collects, uses and protects your personal data, form submissions and WhatsApp Business communications.',
-  alternates: {
-    canonical: 'https://helix24.in/privacy-policy',
-  },
-  robots: { index: false, follow: true },
-};
+  path: '/privacy-policy',
+  noindex: true,
+});
 
 export default function PrivacyPolicyPage() {
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import { 
   Target, 
@@ -10,14 +11,11 @@ import {
   ExternalLink 
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in/about',
-  },
-  title: 'About Us | Helix24 Solutions Pvt Ltd — Digital Agency (Kerala & GCC)',
-  description: 'Learn about Helix24 Solutions Pvt Ltd (CIN: U62011KL2026PTC107185). We are a government-registered digital marketing and Next.js web development agency serving Kochi, Kozhikode, and the GCC.',
-  keywords: 'Helix24 Solutions Pvt Ltd, digital marketing agency in kochi, web development company kerala, performance marketing agency calicut, about helix24',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'About Helix24 Solutions | Digital Agency in Kochi, Kerala',
+  description: 'Helix24 Solutions Pvt Ltd is a registered digital marketing and web development company in Kochi, serving businesses across Kerala and the GCC.',
+  path: '/about',
+});
 
 export default function AboutPage() {
   const jsonLd = {

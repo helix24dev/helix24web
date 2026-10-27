@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SITE_NAME, OG_IMAGE } from '@/lib/seo';
 import { 
   ArrowLeft, 
   Calendar, 
@@ -32,7 +33,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = getBlogPostBySlug(params.slug);
   if (!post) {
     return {
-      title: 'Article Not Found — Helix24 Solutions Pvt Ltd',
+      title: 'Article Not Found | Helix24',
+      robots: { index: false, follow: true },
     };
   }
 
@@ -53,13 +55,15 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       modifiedTime: post.updatedDate,
       authors: [post.author.name],
       tags: [post.category, 'Kerala Digital Marketing', 'Kochi Meta Ads', 'GCC E-commerce'],
-      images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+      siteName: SITE_NAME,
+      locale: 'en_IN',
+      images: [OG_IMAGE],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.metaTitle,
       description: post.metaDescription,
-      images: ['/assets/og-image.jpg'],
+      images: [OG_IMAGE.url],
     },
   };
 }

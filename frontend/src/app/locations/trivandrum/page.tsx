@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -13,14 +14,11 @@ import {
   Briefcase
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Trivandrum | SEO & IT Marketing — Helix24',
-  description: 'Premier digital marketing company in Trivandrum (Thiruvananthapuram). Enterprise B2B lead generation, Technopark IT marketing, Google Ads, and Next.js web applications.',
-  keywords: 'digital marketing agency in trivandrum, digital marketing company thiruvananthapuram, seo company trivandrum, technopark it marketing, web development trivandrum, b2b lead generation kerala',
-  alternates: {
-    canonical: 'https://helix24.in/locations/trivandrum',
-  },
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Digital Marketing Agency in Trivandrum | Helix24',
+  description: 'B2B lead generation, Google Ads, SEO and web applications for Technopark companies and businesses across Trivandrum (Thiruvananthapuram).',
+  path: '/locations/trivandrum',
+});
 
 export default function TrivandrumLocationPage() {
   const jsonLd = {

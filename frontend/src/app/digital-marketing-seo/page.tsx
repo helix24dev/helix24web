@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -13,14 +14,11 @@ import {
   Zap
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://helix24.in/digital-marketing-seo',
-  },
-  title: 'Digital Marketing Company in Kochi, Kerala | Meta Ads & SEO Agency | Helix24',
-  description: 'Helix24 Solutions Pvt Ltd is a premier digital marketing company in Kochi, Kerala. High-ROAS Meta Ads (Facebook & Instagram), Server-Side CAPI, Google Ads PPC, and Local SEO for Kerala & GCC.',
-  keywords: 'digital marketing company in kerala, digital marketing agency in kochi, best digital marketing company in kerala, meta ads agency kochi, google ads agency kerala, local seo services kochi, performance marketing kerala',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Digital Marketing Company in Kochi | Ads & SEO | Helix24',
+  description: 'Meta Ads, Google Ads, server-side conversion tracking and local SEO from Helix24, a digital marketing company in Kochi serving Kerala and the GCC.',
+  path: '/digital-marketing-seo',
+});
 
 export default function DigitalMarketingSeoPage() {
   const jsonLd = {

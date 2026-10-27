@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -13,14 +14,11 @@ import {
   Clock
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Kochi | SEO & Meta Ads Agency Kakkanad — Helix24',
-  description: 'Top digital marketing company in Kochi, Ernakulam. High-converting Meta Ads, Google Ads PPC, Local SEO, and Next.js web development for businesses in Kakkanad, Infopark, and across Kerala & GCC.',
-  keywords: 'digital marketing agency in kochi, digital marketing company cochin, seo company in kochi, meta ads agency kakkanad, web development company ernakulam, performance marketing kochi',
-  alternates: {
-    canonical: 'https://helix24.in/locations/kochi',
-  },
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Digital Marketing Agency in Kochi, Ernakulam | Helix24',
+  description: 'Meta Ads, Google Ads, local SEO and web development for businesses in Kochi, Kakkanad, Infopark and across Ernakulam, from a Kochi-based team.',
+  path: '/locations/kochi',
+});
 
 export default function KochiLocationPage() {
   const jsonLd = {

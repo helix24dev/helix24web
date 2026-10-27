@@ -1,15 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import { ArrowRight, Clock, Calendar, MapPin, Sparkles, MessageCircle } from 'lucide-react';
 import { getAllBlogPosts } from '@/data/blogPosts';
 
-export const metadata: Metadata = {
-  title: 'Digital Marketing & Web SEO Guides (Kerala & GCC) — Blog | Helix24 Solutions Pvt Ltd',
-  description: 'In-depth research and execution playbooks on Meta Ads, Google Ads PPC, Local SEO 3-Pack, Next.js web development, and GCC cross-border e-commerce by Helix24 Solutions Pvt Ltd.',
-  alternates: {
-    canonical: 'https://helix24.in/blog',
-  },
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Digital Marketing & SEO Guides for Kerala | Helix24 Blog',
+  description: 'Practical guides on Meta Ads, Google Ads, local SEO, web development and GCC e-commerce for businesses in Kerala, written by the Helix24 team.',
+  path: '/blog',
+});
 
 export default function BlogIndexPage() {
   const posts = getAllBlogPosts();

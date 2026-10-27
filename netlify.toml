@@ -1,4 +1,4 @@
-# Netlify builds the Next.js app in frontend/ (the legacy static HTML at the repo root is no longer published).
+# Netlify builds the Next.js app in frontend/.
 # The Next.js runtime is declared explicitly: auto-detection did not apply it, which uploaded raw .next and 404'd every route.
 # Legacy .html redirects live in frontend/next.config.mjs.
 [build]
