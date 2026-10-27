@@ -11,6 +11,12 @@ import {
   Zap,
   Building2,
   CheckCircle2,
+  ShieldCheck,
+  KeyRound,
+  ChartColumn,
+  Phone,
+  MapPin,
+  ChevronDown,
 } from 'lucide-react';
 import ProofMetricsStrip from '@/components/ProofMetricsStrip';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
@@ -109,30 +115,113 @@ export default function HomePage() {
     },
   ];
 
+  const trustPoints = [
+    {
+      icon: ShieldCheck,
+      title: 'A Registered Private Limited Company',
+      text: 'Helix24 Solutions Pvt Ltd is incorporated with the Registrar of Companies, Kerala (CIN U62011KL2026PTC107185). Every engagement comes with GST invoices and an NDA on request.',
+    },
+    {
+      icon: KeyRound,
+      title: 'You Own Every Account and Asset',
+      text: 'Your ad accounts, Meta Pixel, Google Analytics data, website code and domain stay in your name. If you ever leave, nothing is held back.',
+    },
+    {
+      icon: ChartColumn,
+      title: 'Reports Built on Leads and Sales',
+      text: 'We report on enquiries, cost per lead and return on ad spend, not likes or impressions, so you can see exactly what your budget delivers.',
+    },
+    {
+      icon: Phone,
+      title: 'Talk to the People Doing the Work',
+      text: 'Reach the team directly on WhatsApp or phone at +91 9048009044. No call centres and no account managers passing messages along.',
+    },
+  ];
+
+  const serviceAreas = [
+    {
+      name: 'Kochi',
+      href: '/locations/kochi',
+      text: 'Our home base. Meta Ads, Google Ads, local SEO and websites for businesses in Ernakulam, Kakkanad and Infopark.',
+    },
+    {
+      name: 'Kozhikode',
+      href: '/locations/kozhikode',
+      text: 'Digital marketing for retail chains, healthcare brands and D2C businesses across Calicut and the Malabar region.',
+    },
+    {
+      name: 'Trivandrum',
+      href: '/locations/trivandrum',
+      text: 'Lead generation and web development for Technopark companies, institutions and commercial projects in South Kerala.',
+    },
+    {
+      name: 'UAE & GCC',
+      href: '/services/meta-ads',
+      text: 'Meta Ads and e-commerce for brands in Dubai, Abu Dhabi and Saudi Arabia, including campaigns that reach Malayali NRI buyers.',
+    },
+  ];
+
+  const faqs = [
+    {
+      q: 'What services does Helix24 offer?',
+      a: 'Helix24 is a digital marketing and web development company in Kerala. We run Meta Ads (Facebook and Instagram), Google Ads, local SEO and Google Maps optimisation, and build fast websites, online stores (Shopify, WooCommerce and custom Next.js) and mobile apps. We also produce branding, ad creatives and video Reels.',
+    },
+    {
+      q: 'Where is Helix24 based, and which areas do you serve?',
+      a: 'We are based in Kochi, Kerala. We work with businesses across Kochi, Kozhikode and Trivandrum, and run campaigns for clients in the UAE, Saudi Arabia and the wider GCC.',
+    },
+    {
+      q: 'How soon will Meta Ads or Google Ads bring enquiries?',
+      a: 'Well-targeted campaigns usually start bringing enquiries within 24 to 72 hours of launch. Results then improve over the first 14 to 30 days as the ad platforms learn which audiences convert best and we refine targeting and creatives.',
+    },
+    {
+      q: 'How long does it take to build a business website?',
+      a: 'A business website or landing page typically takes 2 to 3 weeks. Larger web applications, dashboards and portals take 4 to 8 weeks, with demos at each milestone so you can review progress.',
+    },
+    {
+      q: 'Will I own my website, ad accounts and data?',
+      a: 'Yes. Your website code, domain, ad accounts, Meta Pixel and analytics data are set up in your name and remain fully yours, whether or not you continue working with us.',
+    },
+    {
+      q: 'How do I get started with Helix24?',
+      a: 'Message us on WhatsApp or call +91 9048009044, email hello@helix24.in, or send your details through the contact form. We review your current website and ads and send a tailored proposal within 24 hours.',
+    },
+  ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+
   return (
     <div className="space-y-24 sm:space-y-32 pb-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       {/* Hero Section */}
       <section className="relative px-6 pt-16 sm:pt-24 max-w-[1240px] mx-auto text-center space-y-8">
         
-        {/* Display Headline with Tom Fishburne Hook + SEO Keyword Integration */}
+        {/* Display Headline with Tom Fishburne Hook; the H1 carries the search keyword, the quote is the visual hook */}
         <div className="max-w-5xl mx-auto space-y-6">
-          {/* Main Visual Hook */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] font-heading block">
-            &ldquo;The best marketing <span className="gradient-text">doesn&apos;t feel like marketing.&rdquo;</span>
+          <figure className="space-y-6">
+            <blockquote className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] font-heading block">
+              &ldquo;The best marketing <span className="gradient-text">doesn&apos;t feel like marketing.&rdquo;</span>
+            </blockquote>
+
+            <figcaption className="flex items-center justify-center gap-3 text-xs sm:text-sm font-mono tracking-widest text-purple-400 uppercase">
+              <span className="w-10 h-px bg-purple-500/40"></span>
+              <cite className="not-italic">Tom Fishburne</cite>
+              <span className="w-10 h-px bg-purple-500/40"></span>
+            </figcaption>
+          </figure>
+
+          <h1 className="text-xl sm:text-2xl font-semibold text-purple-700 dark:text-purple-300 tracking-tight font-heading block">
+            Digital Marketing &amp; Web Development Company in Kerala
           </h1>
-
-          {/* Quote Attribution */}
-          <div className="flex items-center justify-center gap-3 text-xs sm:text-sm font-mono tracking-widest text-purple-400 uppercase">
-            <span className="w-10 h-px bg-purple-500/40"></span>
-            <span>Tom Fishburne</span>
-            <span className="w-10 h-px bg-purple-500/40"></span>
-          </div>
-
-          {/* Target Category & Kerala SEO Anchor */}
-          <h2 className="text-xl sm:text-2xl font-semibold text-purple-700 dark:text-purple-300 tracking-tight font-heading block">
-            Digital Marketing &amp; Web Development Company in Kerala.
-          </h2>
         </div>
 
         {/* Subhead */}
@@ -237,12 +326,12 @@ export default function HomePage() {
                   </h3>
 
                   {/* Plain Language Benefit */}
-                  <div className="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-purple-950/40 border border-emerald-200 dark:border-purple-500/30 text-xs text-slate-800 dark:text-purple-100 flex items-start gap-2.5">
+                  <div className="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-purple-950/40 border border-emerald-200 dark:border-purple-500/30 text-sm text-slate-800 dark:text-purple-100 flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <span className="font-medium leading-relaxed">{work.simpleBenefit}</span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/80 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">
                     {work.summary}
                   </p>
                 </div>
@@ -251,7 +340,7 @@ export default function HomePage() {
                   {work.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="text-[11px] px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 text-purple-900 dark:text-purple-300 font-mono font-semibold"
+                      className="text-xs px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 text-purple-900 dark:text-purple-300 font-mono font-semibold"
                     >
                       {tag}
                     </span>
@@ -305,15 +394,15 @@ export default function HomePage() {
 
                   {/* Plain Language Benefit Box */}
                   <div className="p-4 rounded-xl bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-500/20 space-y-1.5">
-                    <span className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-purple-900 dark:text-purple-300 font-bold block">
+                    <span className="text-xs uppercase font-mono tracking-wider text-purple-900 dark:text-purple-300 font-bold block">
                       What this means for your business:
                     </span>
-                    <p className="text-xs sm:text-sm text-slate-800 dark:text-purple-100 font-medium leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-800 dark:text-purple-100 font-medium leading-relaxed">
                       {item.simpleExplainer}
                     </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-purple-200/80 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -332,7 +421,8 @@ export default function HomePage() {
 
                   <Link
                     href={item.link}
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors"
+                    aria-label={`Explore ${item.title}`}
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors"
                   >
                     <span>Explore Service</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -341,6 +431,104 @@ export default function HomePage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Trust & Accountability */}
+      <section aria-labelledby="trust-heading" className="px-6 max-w-[1240px] mx-auto space-y-12">
+        <div className="space-y-2 border-b border-purple-200 dark:border-purple-900/30 pb-8">
+          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+            Why Businesses Trust Us
+          </span>
+          <h2 id="trust-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+            A digital partner you can hold accountable.
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 dark:text-purple-200/80 max-w-2xl font-medium leading-relaxed">
+            Choosing a marketing agency is a decision about trust. Here is what you get from us in writing, from the first call onwards.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+          {trustPoints.map((point) => {
+            const PointIcon = point.icon;
+            return (
+              <div
+                key={point.title}
+                className="glass-panel p-7 sm:p-8 flex gap-5 border border-purple-200 dark:border-purple-500/20 bg-white/70 dark:bg-purple-950/20"
+              >
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-purple-100 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center">
+                  <PointIcon className="w-5 h-5 text-purple-700 dark:text-purple-300" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">{point.title}</h3>
+                  <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">{point.text}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Service Areas: internal links to location pages */}
+      <section aria-labelledby="areas-heading" className="px-6 max-w-[1240px] mx-auto space-y-12">
+        <div className="space-y-2 border-b border-purple-200 dark:border-purple-900/30 pb-8">
+          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+            Where We Work
+          </span>
+          <h2 id="areas-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+            Digital marketing across Kerala and the GCC.
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 dark:text-purple-200/80 max-w-2xl font-medium leading-relaxed">
+            We know how customers in each market search, scroll and buy, and plan campaigns and websites around that.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {serviceAreas.map((area) => (
+            <Link
+              key={area.name}
+              href={area.href}
+              className="glass-panel p-7 space-y-3 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/60 transition-all group bg-white/70 dark:bg-purple-950/20"
+            >
+              <div className="flex items-center justify-between">
+                <span className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white font-heading">
+                  <MapPin className="w-4 h-4 text-purple-700 dark:text-purple-400" />
+                  {area.name}
+                </span>
+                <ArrowUpRight className="w-4 h-4 text-purple-700 dark:text-purple-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </div>
+              <p className="text-sm text-slate-600 dark:text-purple-200/80 leading-relaxed">{area.text}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ: mirrors the FAQPage JSON-LD above */}
+      <section aria-labelledby="faq-heading" className="px-6 max-w-[900px] mx-auto space-y-10">
+        <div className="space-y-2 text-center">
+          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+            Questions & Answers
+          </span>
+          <h2 id="faq-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+            Frequently asked questions
+          </h2>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((item) => (
+            <details
+              key={item.q}
+              className="group glass-panel border border-purple-200 dark:border-purple-500/20 bg-white/70 dark:bg-purple-950/20 [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="flex cursor-pointer items-center justify-between gap-4 p-6 text-base sm:text-lg font-semibold text-slate-900 dark:text-white">
+                <h3 className="font-heading">{item.q}</h3>
+                <ChevronDown className="w-5 h-5 shrink-0 text-purple-700 dark:text-purple-300 transition-transform group-open:rotate-180" />
+              </summary>
+              <p className="px-6 pb-6 -mt-1 text-sm sm:text-base text-slate-600 dark:text-purple-200/85 leading-relaxed">
+                {item.a}
+              </p>
+            </details>
+          ))}
         </div>
       </section>
 

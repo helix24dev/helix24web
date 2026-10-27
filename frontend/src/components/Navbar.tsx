@@ -10,6 +10,30 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [hidden, setHidden] = useState(false);
+
+  // Hide on scroll down, reveal on scroll up; always shown near the top of the page
+  useEffect(() => {
+    let lastY = window.scrollY;
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (y < 80) setHidden(false);
+        else if (Math.abs(y - lastY) > 8) setHidden(y > lastY);
+        if (Math.abs(y - lastY) > 8 || y < 80) lastY = y;
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    setHidden(false);
+  }, [pathname]);
 
   useEffect(() => {
     const savedTheme = (localStorage.getItem('helix_theme') as 'dark' | 'light') || 'dark';
@@ -37,7 +61,12 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 transition-all">
+    <header
+      onFocusCapture={() => setHidden(false)}
+      className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 transition-transform duration-300 ease-out ${
+        hidden && !mobileMenuOpen ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
       <div className="max-w-[1240px] mx-auto px-6 py-3.5 flex items-center justify-between rounded-full bg-[#110B22]/85 border border-purple-500/20 backdrop-blur-xl shadow-2xl">
         
         {/* Brand Logo */}
