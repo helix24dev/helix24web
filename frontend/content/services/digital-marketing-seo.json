@@ -1,0 +1,153 @@
+{
+  "seo": {
+    "title": "Digital Marketing & SEO Company in Kerala | Helix24",
+    "description": "Google Ads, SEO, local Google Maps ranking and Meta Ads from Helix24, a digital marketing company in Kochi working with businesses across Kerala and the GCC."
+  },
+  "breadcrumb": "Digital Marketing & SEO",
+  "schema": {
+    "name": "Digital Marketing & SEO",
+    "serviceType": "Digital Marketing",
+    "areaServed": [
+      "Kerala",
+      "United Arab Emirates",
+      "Saudi Arabia"
+    ]
+  },
+  "hero": {
+    "eyebrow": "Google Ads · SEO · Local SEO · Meta Ads",
+    "title": "Digital Marketing & SEO Company in",
+    "highlight": "Kerala",
+    "intro": "Helix24 helps businesses in Kochi, Kozhikode, Trivandrum and the GCC get found on Google and get more calls, WhatsApp messages and sales.",
+    "primaryLabel": "Get a Free Marketing Review",
+    "primaryHref": "/contact",
+    "whatsappMessage": "Hi Helix24, I would like to discuss digital marketing for my business."
+  },
+  "servicesSection": {
+    "title": "What we do",
+    "intro": "Pick one channel or combine them. Everything is set up in your own accounts and measured by the enquiries it brings."
+  },
+  "stepsTitle": "How we work",
+  "related": [
+    {
+      "label": "Social media marketing",
+      "href": "/social-media-marketing"
+    },
+    {
+      "label": "Website development",
+      "href": "/web-development"
+    },
+    {
+      "label": "Google Ads vs Meta Ads",
+      "href": "/blog/google-ads-vs-meta-ads-kerala"
+    },
+    {
+      "label": "How to rank on Google Maps",
+      "href": "/blog/local-seo-kochi-kozhikode-google-maps"
+    }
+  ],
+  "faqTitle": "Digital marketing & SEO FAQs",
+  "contact": {
+    "title": "Get a free marketing review",
+    "text": "Tell us about your business and goals. We will look at your website, Google profile and ads, and reply with a plan within 24 hours."
+  },
+  "services": [
+    {
+      "icons": [
+        "logo-googleAds"
+      ],
+      "title": "Google Ads",
+      "text": "Search campaigns that show your business when people are already looking for what you sell, with budgets and keywords set around enquiries rather than clicks.",
+      "points": [
+        "Keyword research for your city and service",
+        "Negative keywords to stop wasted spend",
+        "Call and form tracking"
+      ]
+    },
+    {
+      "icons": [
+        "logo-google"
+      ],
+      "title": "Search Engine Optimisation (SEO)",
+      "text": "Fixing the technical basics, writing pages that answer what your customers search for, and building the signals that help Google trust your site.",
+      "points": [
+        "Technical SEO audit and fixes",
+        "Service and location page content",
+        "Monthly ranking and traffic reports"
+      ]
+    },
+    {
+      "icons": [
+        "logo-googleMaps"
+      ],
+      "title": "Local SEO & Google Maps",
+      "text": "A complete, active Google Business Profile, consistent listings across directories and a steady flow of genuine reviews, so you show up for \"near me\" searches.",
+      "points": [
+        "Google Business Profile setup and posts",
+        "Directory listings with matching details",
+        "Review requests from real customers"
+      ]
+    },
+    {
+      "icons": [
+        "logo-meta"
+      ],
+      "title": "Meta Ads",
+      "text": "Facebook and Instagram campaigns that reach people before they start searching. See our social media marketing page for content and Reels.",
+      "points": [
+        "Audience targeting by city or region",
+        "Lead forms and Click-to-WhatsApp ads",
+        "Creative testing"
+      ]
+    },
+    {
+      "icons": [
+        "logo-analytics"
+      ],
+      "title": "Tracking & Reporting",
+      "text": "Google Analytics, Meta Pixel and conversion tracking set up properly, so every report shows where your enquiries actually came from."
+    },
+    {
+      "icons": [
+        "logo-whatsapp"
+      ],
+      "title": "WhatsApp Lead Handling",
+      "text": "Enquiries from ads and your website routed to WhatsApp, where most Kerala customers prefer to talk, so your team can reply quickly."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Audit",
+      "text": "We review your website, Google Business Profile, past ads and competitors, and agree on goals."
+    },
+    {
+      "title": "Plan",
+      "text": "A channel plan and budget split between Google, Meta and SEO, planned around how your customers buy."
+    },
+    {
+      "title": "Launch",
+      "text": "Tracking first, then campaigns, page updates and profile improvements."
+    },
+    {
+      "title": "Review",
+      "text": "Monthly reports on enquiries and cost per lead, with changes made from what the numbers show."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is the difference between SEO and Google Ads?",
+      "a": "Google Ads puts you at the top of search results straight away, and you pay for each click. SEO improves your free (organic) rankings over a few months and keeps bringing visitors without paying per click. Most businesses use ads for quick enquiries while SEO builds up."
+    },
+    {
+      "q": "How long does SEO take to show results?",
+      "a": "Local SEO and Google Business Profile improvements can show within a few weeks. Ranking for competitive searches usually takes three to six months of steady work, depending on your website and competitors."
+    },
+    {
+      "q": "Do you manage the ad budget, or do we pay Google and Meta directly?",
+      "a": "You pay Google and Meta directly from your own ad accounts, so you always control the spend. Our management fee is separate and agreed upfront."
+    },
+    {
+      "q": "Can you run campaigns for both Kerala and the GCC?",
+      "a": "Yes. Campaigns can target specific cities in Kerala as well as the UAE, Saudi Arabia and other GCC countries, with separate budgets and messaging for each market."
+    }
+  ]
+}

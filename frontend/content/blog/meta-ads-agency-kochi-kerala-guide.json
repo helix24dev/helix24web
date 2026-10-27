@@ -1,0 +1,86 @@
+{
+  "slug": "meta-ads-agency-kochi-kerala-guide",
+  "title": "How to Choose a Digital Marketing Agency in Kerala (2026 Guide)",
+  "metaTitle": "How to Choose a Digital Marketing Agency in Kerala | Helix24",
+  "metaDescription": "Questions to ask before hiring a digital marketing agency in Kerala: account ownership, tracking, reporting, contracts and what a fair proposal includes.",
+  "category": "Choosing an Agency",
+  "readTime": "6 min read",
+  "publishedDate": "2026-02-15",
+  "updatedDate": "2026-10-27",
+  "author": {
+    "name": "Helix24 Team",
+    "role": "Digital marketing and web development",
+    "location": "Kochi, Kerala"
+  },
+  "excerpt": "Most business owners in Kerala hire an agency on the strength of a good sales call. Here is what to check before you sign, so you know what you are paying for and can see whether it is working.",
+  "keyTakeaways": [
+    "Why your ad accounts, pixel and website must stay in your name",
+    "How to tell useful reporting from vanity numbers",
+    "The questions to ask about tracking and lead handling",
+    "What a clear proposal and contract should include"
+  ],
+  "sections": [
+    {
+      "heading": "Start with what you want to achieve",
+      "paragraphs": [
+        "Before you speak to any agency, write down the result you are after: more calls, more WhatsApp enquiries, more online orders or more store visits. An agency can only be judged against a goal, and a good one will ask you about it in the first conversation.",
+        "Be wary of anyone who leads with followers, likes or \"reach\". Those numbers are easy to grow and rarely pay the bills."
+      ]
+    },
+    {
+      "heading": "Make sure you own every account",
+      "paragraphs": [
+        "Your Meta Business account, ad accounts, Meta Pixel, Google Ads, Google Analytics, Google Business Profile, website code and domain should all be created in your business name, with the agency added as a partner or user.",
+        "If an agency runs ads from its own account, you lose the history and data when you part ways, and you cannot check what is really happening with your money."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "A common trap",
+        "text": "If an agency says it is \"easier\" to run campaigns from its account, ask for access to yours instead. A trustworthy agency will have no problem with this."
+      }
+    },
+    {
+      "heading": "Ask how results are tracked",
+      "paragraphs": [
+        "Good marketing decisions depend on knowing which ads and keywords bring enquiries. Ask the agency how they will track calls, form submissions, WhatsApp chats and sales, and how those numbers will appear in your report."
+      ],
+      "bulletPoints": [
+        "Will the Meta Pixel and Google tags be set up and tested before ads go live?",
+        "Will you use the Meta Conversions API so results are measured more accurately?",
+        "How will enquiries that close over the phone or in store be counted?",
+        "Who on your team receives new leads, and how quickly?"
+      ]
+    },
+    {
+      "heading": "Know what good reporting looks like",
+      "paragraphs": [
+        "A monthly report should tell you what was spent, how many enquiries or sales came in, what each one cost and what the agency plans to change next month. Impressions and clicks are useful context, not the result."
+      ]
+    },
+    {
+      "heading": "Read the proposal carefully",
+      "paragraphs": [
+        "A clear proposal separates the agency fee from your ad budget, lists the deliverables (for example, number of posts, videos or landing pages), states the notice period, and confirms that you own the work produced."
+      ],
+      "callout": {
+        "type": "pro-tip",
+        "title": "Ask for a three-month plan",
+        "text": "Most campaigns need a few weeks to settle. A sensible plan explains what will happen in the first month, what will be tested, and when you should expect to judge results."
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much should I spend on ads when starting out?",
+      "answer": "It depends on your industry, location and how much a customer is worth to you. Start with a budget you can sustain for at least two to three months, so the campaigns have time to learn and you have enough data to make decisions."
+    },
+    {
+      "question": "How long before I know if an agency is working?",
+      "answer": "You should see tracking set up and first enquiries within the first few weeks. Give a campaign two to three months before judging it properly, as long as you are getting clear monthly reports."
+    },
+    {
+      "question": "Should I hire an agency or a freelancer?",
+      "answer": "A freelancer can be a good fit for a single task, such as designing posts. If you need ads, content, tracking and a website working together, an agency with a small team usually covers more ground."
+    }
+  ]
+}

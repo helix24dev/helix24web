@@ -1,24 +1,21 @@
 import type { Metadata } from 'next';
-import { Mail, Phone, MapPin, Clock, ExternalLink } from 'lucide-react';
-import { pageMetadata, SITE_URL, WEBSITE_ID, ORG_ID, GBP_URL } from '@/lib/seo';
+import { ExternalLink } from 'lucide-react';
+import { pageMetadata, SITE_URL, WEBSITE_ID, ORG_ID } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeadForm from '@/components/LeadForm';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import FeatureIcon from '@/components/FeatureIcon';
-import { whatsappLink } from '@/components/ServiceSections';
-import { logos } from '@/data/platforms';
+import { CONTACT, SETTINGS, phoneHref, whatsappLink } from '@/lib/content';
 
-export const metadata: Metadata = pageMetadata({
-  title: 'Contact Helix24 | Digital Marketing Agency in Kochi',
-  description: 'Call or WhatsApp +91 9048009044, or send your project details and get a Meta Ads, Google Ads or website proposal within 24 hours.',
-  path: '/contact',
-});
+// Content: /content/contact.json (CMS: Contact page); phone, email, address and hours: CMS → Site settings
+export const metadata: Metadata = pageMetadata({ ...CONTACT.seo, path: '/contact' });
 
+const { address } = SETTINGS;
 const details = [
-  { icon: Phone, brands: logos('whatsapp'), label: 'Phone & WhatsApp', value: '+91 9048009044', href: 'tel:+919048009044' },
-  { icon: Mail, label: 'Email', value: 'info@helix24.in', href: 'mailto:info@helix24.in' },
-  { icon: MapPin, label: 'Registered office', value: 'Helix24 Solutions Pvt Ltd, Kochi, Kerala 682030, India' },
-  { icon: Clock, label: 'Hours', value: 'Monday to Saturday, 9:30 AM to 7:00 PM IST' },
+  { icons: ['logo-whatsapp'], label: 'Phone & WhatsApp', value: SETTINGS.phone, href: phoneHref() },
+  { icons: ['3d-e-mail'], label: 'Email', value: SETTINGS.email, href: `mailto:${SETTINGS.email}` },
+  { icons: ['3d-round-pushpin'], label: 'Registered office', value: `${SETTINGS.companyName}, ${address.locality}, ${address.region} ${address.postalCode}, ${address.country}` },
+  { icons: ['3d-alarm-clock'], label: 'Hours', value: SETTINGS.hours },
 ];
 
 export default function ContactPage() {
@@ -39,10 +36,10 @@ export default function ContactPage() {
       <div className="max-w-[1240px] mx-auto px-6 py-10 space-y-14">
         <section className="text-center space-y-4 max-w-2xl mx-auto">
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight font-heading">
-            Contact <span className="gradient-text">Helix24</span>
+            {CONTACT.title} <span className="gradient-text">{CONTACT.highlight}</span>
           </h1>
           <p className="text-base sm:text-lg text-purple-200 leading-relaxed">
-            Tell us about your business and what you need. We reply to every enquiry within 24 hours, usually much sooner on WhatsApp.
+            {CONTACT.intro}
           </p>
         </section>
 
@@ -54,7 +51,7 @@ export default function ContactPage() {
               {details.map((d) => {
                 return (
                   <li key={d.label} className="flex items-start gap-3">
-                    <FeatureIcon icon={d.icon} brands={d.brands} size="sm" />
+                    <FeatureIcon icons={d.icons} size="sm" />
                     <span>
                       <span className="block font-semibold text-white">{d.label}</span>
                       {d.href ? (
@@ -79,7 +76,7 @@ export default function ContactPage() {
                 <span>Chat on WhatsApp</span>
               </a>
               <a
-                href={GBP_URL}
+                href={SETTINGS.googleBusinessProfile}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary flex items-center justify-center gap-2 w-full py-3 rounded-full font-semibold text-sm"
@@ -90,7 +87,7 @@ export default function ContactPage() {
             </div>
 
             <div className="pt-4 border-t border-purple-900/30 text-xs text-purple-300 font-mono space-y-1">
-              <div>CIN: U62011KL2026PTC107185</div>
+              {SETTINGS.cin && <div>CIN: {SETTINGS.cin}</div>}
             </div>
           </aside>
 

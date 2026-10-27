@@ -1,0 +1,282 @@
+[
+  {
+    "key": "logo-google",
+    "label": "Logo: Google Search",
+    "src": "/assets/brands/google.svg"
+  },
+  {
+    "key": "logo-googleAds",
+    "label": "Logo: Google Ads",
+    "src": "/assets/platforms/google-ads.svg"
+  },
+  {
+    "key": "logo-googleMaps",
+    "label": "Logo: Google Maps",
+    "src": "/assets/brands/google-maps.svg"
+  },
+  {
+    "key": "logo-analytics",
+    "label": "Logo: Google Analytics",
+    "src": "/assets/platforms/google-analytics.svg"
+  },
+  {
+    "key": "logo-facebook",
+    "label": "Logo: Facebook",
+    "src": "/assets/platforms/facebook.svg"
+  },
+  {
+    "key": "logo-instagram",
+    "label": "Logo: Instagram",
+    "src": "/assets/platforms/instagram.svg"
+  },
+  {
+    "key": "logo-meta",
+    "label": "Logo: Meta",
+    "src": "/assets/brands/meta.svg"
+  },
+  {
+    "key": "logo-whatsapp",
+    "label": "Logo: WhatsApp",
+    "src": "/assets/platforms/whatsapp.svg"
+  },
+  {
+    "key": "logo-youtube",
+    "label": "Logo: YouTube",
+    "src": "/assets/brands/youtube.svg"
+  },
+  {
+    "key": "logo-shopify",
+    "label": "Logo: Shopify",
+    "src": "/assets/brands/shopify.svg"
+  },
+  {
+    "key": "logo-woocommerce",
+    "label": "Logo: WooCommerce",
+    "src": "/assets/platforms/woocommerce.svg"
+  },
+  {
+    "key": "logo-wordpress",
+    "label": "Logo: WordPress",
+    "src": "/assets/platforms/wordpress.svg"
+  },
+  {
+    "key": "logo-razorpay",
+    "label": "Logo: Razorpay",
+    "src": "/assets/brands/razorpay.svg"
+  },
+  {
+    "key": "logo-nextjs",
+    "label": "Logo: Next.js",
+    "src": "/assets/brands/nextjs.svg"
+  },
+  {
+    "key": "logo-figma",
+    "label": "Logo: Figma",
+    "src": "/assets/platforms/figma.svg"
+  },
+  {
+    "key": "logo-appStore",
+    "label": "Logo: App Store",
+    "src": "/assets/brands/app-store.svg"
+  },
+  {
+    "key": "logo-googlePlay",
+    "label": "Logo: Google Play",
+    "src": "/assets/brands/google-play.svg"
+  },
+  {
+    "key": "logo-flutter",
+    "label": "Logo: Flutter",
+    "src": "/assets/platforms/flutter.svg"
+  },
+  {
+    "key": "logo-firebase",
+    "label": "Logo: Firebase",
+    "src": "/assets/platforms/firebase.svg"
+  },
+  {
+    "key": "3d-alarm-clock",
+    "label": "3D: Alarm clock",
+    "src": "/icons/3d/alarm-clock.svg"
+  },
+  {
+    "key": "3d-artist-palette",
+    "label": "3D: Artist palette",
+    "src": "/icons/3d/artist-palette.svg"
+  },
+  {
+    "key": "3d-bar-chart",
+    "label": "3D: Bar chart",
+    "src": "/icons/3d/bar-chart.svg"
+  },
+  {
+    "key": "3d-bell",
+    "label": "3D: Bell",
+    "src": "/icons/3d/bell.svg"
+  },
+  {
+    "key": "3d-briefcase",
+    "label": "3D: Briefcase",
+    "src": "/icons/3d/briefcase.svg"
+  },
+  {
+    "key": "3d-bullseye",
+    "label": "3D: Bullseye",
+    "src": "/icons/3d/bullseye.svg"
+  },
+  {
+    "key": "3d-chart-increasing",
+    "label": "3D: Chart increasing",
+    "src": "/icons/3d/chart-increasing.svg"
+  },
+  {
+    "key": "3d-clapper-board",
+    "label": "3D: Clapper board",
+    "src": "/icons/3d/clapper-board.svg"
+  },
+  {
+    "key": "3d-convenience-store",
+    "label": "3D: Convenience store",
+    "src": "/icons/3d/convenience-store.svg"
+  },
+  {
+    "key": "3d-credit-card",
+    "label": "3D: Credit card",
+    "src": "/icons/3d/credit-card.svg"
+  },
+  {
+    "key": "3d-delivery-truck",
+    "label": "3D: Delivery truck",
+    "src": "/icons/3d/delivery-truck.svg"
+  },
+  {
+    "key": "3d-e-mail",
+    "label": "3D: Email",
+    "src": "/icons/3d/e-mail.svg"
+  },
+  {
+    "key": "3d-electric-plug",
+    "label": "3D: Electric plug",
+    "src": "/icons/3d/electric-plug.svg"
+  },
+  {
+    "key": "3d-framed-picture",
+    "label": "3D: Framed picture",
+    "src": "/icons/3d/framed-picture.svg"
+  },
+  {
+    "key": "3d-gear",
+    "label": "3D: Gear",
+    "src": "/icons/3d/gear.svg"
+  },
+  {
+    "key": "3d-globe-with-meridians",
+    "label": "3D: Globe with meridians",
+    "src": "/icons/3d/globe-with-meridians.svg"
+  },
+  {
+    "key": "3d-graduation-cap",
+    "label": "3D: Graduation cap",
+    "src": "/icons/3d/graduation-cap.svg"
+  },
+  {
+    "key": "3d-high-voltage",
+    "label": "3D: High voltage",
+    "src": "/icons/3d/high-voltage.svg"
+  },
+  {
+    "key": "3d-key",
+    "label": "3D: Key",
+    "src": "/icons/3d/key.svg"
+  },
+  {
+    "key": "3d-laptop",
+    "label": "3D: Laptop",
+    "src": "/icons/3d/laptop.svg"
+  },
+  {
+    "key": "3d-magnifying-glass-tilted-left",
+    "label": "3D: Magnifying glass tilted left",
+    "src": "/icons/3d/magnifying-glass-tilted-left.svg"
+  },
+  {
+    "key": "3d-megaphone",
+    "label": "3D: Megaphone",
+    "src": "/icons/3d/megaphone.svg"
+  },
+  {
+    "key": "3d-mobile-phone",
+    "label": "3D: Mobile phone",
+    "src": "/icons/3d/mobile-phone.svg"
+  },
+  {
+    "key": "3d-office-building",
+    "label": "3D: Office building",
+    "src": "/icons/3d/office-building.svg"
+  },
+  {
+    "key": "3d-open-book",
+    "label": "3D: Open book",
+    "src": "/icons/3d/open-book.svg"
+  },
+  {
+    "key": "3d-package",
+    "label": "3D: Package",
+    "src": "/icons/3d/package.svg"
+  },
+  {
+    "key": "3d-page-facing-up",
+    "label": "3D: Page facing up",
+    "src": "/icons/3d/page-facing-up.svg"
+  },
+  {
+    "key": "3d-ring-buoy",
+    "label": "3D: Ring buoy",
+    "src": "/icons/3d/ring-buoy.svg"
+  },
+  {
+    "key": "3d-round-pushpin",
+    "label": "3D: Round pushpin",
+    "src": "/icons/3d/round-pushpin.svg"
+  },
+  {
+    "key": "3d-shield",
+    "label": "3D: Shield",
+    "src": "/icons/3d/shield.svg"
+  },
+  {
+    "key": "3d-shopping-bags",
+    "label": "3D: Shopping bags",
+    "src": "/icons/3d/shopping-bags.svg"
+  },
+  {
+    "key": "3d-speech-balloon",
+    "label": "3D: Speech balloon",
+    "src": "/icons/3d/speech-balloon.svg"
+  },
+  {
+    "key": "3d-spiral-calendar",
+    "label": "3D: Spiral calendar",
+    "src": "/icons/3d/spiral-calendar.svg"
+  },
+  {
+    "key": "3d-stethoscope",
+    "label": "3D: Stethoscope",
+    "src": "/icons/3d/stethoscope.svg"
+  },
+  {
+    "key": "3d-stopwatch",
+    "label": "3D: Stopwatch",
+    "src": "/icons/3d/stopwatch.svg"
+  },
+  {
+    "key": "3d-telephone-receiver",
+    "label": "3D: Telephone receiver",
+    "src": "/icons/3d/telephone-receiver.svg"
+  },
+  {
+    "key": "3d-triangular-ruler",
+    "label": "3D: Triangular ruler",
+    "src": "/icons/3d/triangular-ruler.svg"
+  }
+]

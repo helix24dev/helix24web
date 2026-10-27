@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllBlogPosts } from '@/data/blogPosts';
+import { getAllBlogPosts } from '@/lib/blog';
 import { SITE_URL } from '@/lib/seo';
 
 // lastModified is the date the page's content last changed. Update a route's date when you edit that page:

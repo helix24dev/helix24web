@@ -1,0 +1,73 @@
+{
+  "seo": {
+    "title": "Our Work: Marketing & Website Projects | Helix24",
+    "description": "Examples of Helix24 projects for retail, healthcare and real estate businesses in Kerala and the GCC: the challenge and what we did."
+  },
+  "title": "Our",
+  "highlight": "Work",
+  "intro": "Real problems from businesses like yours, and how their customers now find them and get in touch. Client names are kept private.",
+  "items": [
+    {
+      "id": "retail-group",
+      "category": "retail",
+      "icon": "3d-convenience-store",
+      "sector": "Shop with several branches",
+      "region": "Kerala",
+      "title": "Getting every enquiry to the right branch",
+      "problem": "Enquiries all went to one number, so other branches replied late or not at all.",
+      "journey": [
+        "Instagram or Facebook ad",
+        "WhatsApp chat",
+        "Nearest branch replies"
+      ],
+      "featured": true
+    },
+    {
+      "id": "d2c-store",
+      "category": "retail",
+      "icon": "3d-shopping-bags",
+      "sector": "Brand selling online",
+      "region": "Kerala & GCC",
+      "title": "Making an online store easy to buy from on a phone",
+      "problem": "Shoppers came from Instagram on their phones, but the store was slow and checkout was long.",
+      "journey": [
+        "Instagram video ad",
+        "Quick phone checkout",
+        "UPI or card payment",
+        "WhatsApp cart reminder"
+      ],
+      "featured": true
+    },
+    {
+      "id": "clinic",
+      "category": "healthcare",
+      "icon": "3d-stethoscope",
+      "sector": "Specialist clinic",
+      "region": "Kochi",
+      "title": "Helping a clinic show up on Google Maps",
+      "problem": "People searching nearby rarely found the clinic, and its ads paid for searches that never booked.",
+      "journey": [
+        "Google search nearby",
+        "Google Maps listing",
+        "Call or booking"
+      ],
+      "featured": false
+    },
+    {
+      "id": "real-estate",
+      "category": "realestate",
+      "icon": "3d-office-building",
+      "sector": "Home builder",
+      "region": "Kochi & GCC",
+      "title": "Selling Kerala homes to Malayalis in the Gulf",
+      "problem": "Portals sent plenty of enquiries, but few serious buyers, and families abroad were hard to reach.",
+      "journey": [
+        "Facebook ad in the Gulf",
+        "Project page",
+        "Brochure on WhatsApp",
+        "Site visit on their trip home"
+      ],
+      "featured": true
+    }
+  ]
+}

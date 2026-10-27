@@ -1,0 +1,126 @@
+{
+  "title": "Platforms we work with",
+  "intro": "The tools behind our campaigns, websites and apps.",
+  "groups": [
+    {
+      "title": "Ads & analytics",
+      "items": [
+        {
+          "name": "Google Ads",
+          "logo": "/assets/platforms/google-ads.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Meta",
+          "logo": "/assets/platforms/meta.svg",
+          "wordmark": true
+        },
+        {
+          "name": "Facebook",
+          "logo": "/assets/platforms/facebook.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Instagram",
+          "logo": "/assets/platforms/instagram.svg",
+          "wordmark": false
+        },
+        {
+          "name": "WhatsApp",
+          "logo": "/assets/platforms/whatsapp.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Google Analytics",
+          "logo": "/assets/platforms/google-analytics.svg",
+          "wordmark": false
+        }
+      ]
+    },
+    {
+      "title": "Websites & online stores",
+      "items": [
+        {
+          "name": "Figma",
+          "logo": "/assets/platforms/figma.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Next.js",
+          "logo": "/assets/platforms/nextjs.svg",
+          "wordmark": true
+        },
+        {
+          "name": "React",
+          "logo": "/assets/platforms/react.svg",
+          "wordmark": false
+        },
+        {
+          "name": "WordPress",
+          "logo": "/assets/platforms/wordpress.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Shopify",
+          "logo": "/assets/platforms/shopify.svg",
+          "wordmark": true
+        },
+        {
+          "name": "WooCommerce",
+          "logo": "/assets/platforms/woocommerce.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Razorpay",
+          "logo": "/assets/platforms/razorpay.svg",
+          "wordmark": true
+        }
+      ]
+    },
+    {
+      "title": "Apps, hosting & cloud",
+      "items": [
+        {
+          "name": "Flutter",
+          "logo": "/assets/platforms/flutter.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Node.js",
+          "logo": "/assets/platforms/nodejs.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Firebase",
+          "logo": "/assets/platforms/firebase.svg",
+          "wordmark": false
+        },
+        {
+          "name": "AWS",
+          "logo": "/assets/platforms/aws.svg",
+          "wordmark": true
+        },
+        {
+          "name": "Google Cloud",
+          "logo": "/assets/platforms/google-cloud.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Docker",
+          "logo": "/assets/platforms/docker.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Cloudflare",
+          "logo": "/assets/platforms/cloudflare.svg",
+          "wordmark": false
+        },
+        {
+          "name": "Netlify",
+          "logo": "/assets/platforms/netlify.svg",
+          "wordmark": false
+        }
+      ]
+    }
+  ]
+}

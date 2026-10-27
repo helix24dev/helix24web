@@ -1,0 +1,82 @@
+{
+  "seo": {
+    "title": "About Helix24 Solutions | Digital Agency in Kochi, Kerala",
+    "description": "Helix24 Solutions Pvt Ltd is a registered digital marketing and web development company in Kochi, serving businesses across Kerala and the GCC."
+  },
+  "hero": {
+    "eyebrow": "About Helix24",
+    "title": "Marketing and websites,",
+    "highlight": "under one roof",
+    "intro": "Helix24 Solutions Pvt Ltd is a digital marketing and web development company in Kochi, Kerala. We help businesses across Kerala and the GCC get found online, build websites that work well on a phone, and get more calls and WhatsApp messages from customers."
+  },
+  "story": {
+    "title": "What we do",
+    "paragraphs": [
+      "Most businesses we meet have been told to choose between a marketing agency and a web developer. In practice the two depend on each other: ads send people to a website, and the website decides whether they enquire. So we do both, with one team responsible for the result.",
+      "Our services cover [social media marketing](/social-media-marketing), [Google Ads and SEO](/digital-marketing-seo), [websites](/web-development), [online stores](/ecommerce-development), [mobile apps](/mobile-app-development) and [branding](/branding-design)."
+    ]
+  },
+  "principles": {
+    "title": "How we work",
+    "items": [
+      {
+        "icons": [
+          "3d-bar-chart"
+        ],
+        "title": "Measured by enquiries and sales",
+        "text": "We set up tracking before we spend your budget, and report on leads, cost per lead and sales rather than likes and impressions."
+      },
+      {
+        "icons": [
+          "3d-key"
+        ],
+        "title": "Everything stays in your name",
+        "text": "Ad accounts, Meta Pixel, analytics, website code and domains are created in your name. If you ever move on, you keep all of it."
+      },
+      {
+        "icons": [
+          "logo-whatsapp"
+        ],
+        "title": "Direct communication",
+        "text": "You talk to the people doing the work, on WhatsApp, phone or video call, without messages passing through layers of account managers."
+      },
+      {
+        "icons": [
+          "3d-shield"
+        ],
+        "title": "A registered company",
+        "text": "Helix24 Solutions Pvt Ltd is registered with the Registrar of Companies, Kerala. We work with written proposals, GST invoices and NDAs on request."
+      }
+    ]
+  },
+  "areas": {
+    "title": "From Kochi, working across Kerala and the GCC",
+    "intro": "We work with clients in these regions on WhatsApp, phone and video calls.",
+    "items": [
+      {
+        "name": "Kochi",
+        "href": "/locations/kochi",
+        "text": "Our registered office. We work with businesses across Ernakulam."
+      },
+      {
+        "name": "Kozhikode (Calicut)",
+        "href": "/locations/kozhikode",
+        "text": "Retail, healthcare and D2C brands across Calicut and the Malabar region."
+      },
+      {
+        "name": "Trivandrum",
+        "href": "/locations/trivandrum",
+        "text": "Technopark companies, institutions and local businesses in South Kerala."
+      },
+      {
+        "name": "UAE & GCC",
+        "href": "/social-media-marketing",
+        "text": "Campaigns for brands selling to customers in Dubai, Abu Dhabi and Saudi Arabia."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Let's talk about your business",
+    "text": "Tell us what you are working on. We will reply within 24 hours with honest advice on what is worth doing first."
+  }
+}

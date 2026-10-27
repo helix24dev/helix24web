@@ -1,16 +1,12 @@
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, type LucideIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import FeatureIcon from '@/components/FeatureIcon';
-import type { BrandId } from '@/data/platforms';
+import { whatsappLink, type Card } from '@/lib/content';
 
 // Shared building blocks for service and location pages, so headings, cards and buttons look the same everywhere
 
-export const WHATSAPP_NUMBER = '919048009044';
-
-export function whatsappLink(message: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
+export { whatsappLink };
 
 export function PageHero({
   eyebrow,
@@ -18,6 +14,7 @@ export function PageHero({
   highlight,
   intro,
   primary,
+  secondary,
   whatsappMessage,
 }: {
   eyebrow: string;
@@ -25,7 +22,8 @@ export function PageHero({
   highlight?: string;
   intro: string;
   primary: { label: string; href: string };
-  whatsappMessage: string;
+  secondary?: { label: string; href: string };
+  whatsappMessage?: string;
 }) {
   return (
     <section className="text-center space-y-5 max-w-3xl mx-auto">
@@ -48,6 +46,12 @@ export function PageHero({
           <span>{primary.label}</span>
           <ArrowRight className="w-4 h-4" />
         </Link>
+        {secondary?.label && secondary.href && (
+          <Link href={secondary.href} className="btn-secondary inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold transition-all">
+            {secondary.label}
+          </Link>
+        )}
+        {whatsappMessage && (
         <a
           href={whatsappLink(whatsappMessage)}
           target="_blank"
@@ -57,6 +61,7 @@ export function PageHero({
           <WhatsAppIcon className="w-4 h-4" />
           <span>WhatsApp Us</span>
         </a>
+        )}
       </div>
     </section>
   );
@@ -71,15 +76,13 @@ export function SectionHeading({ id, title, intro }: { id: string; title: string
   );
 }
 
-export type ServiceCard = { icon: LucideIcon; brands?: BrandId[]; title: string; text: string; points?: string[] };
-
-export function CardGrid({ items, columns = 3 }: { items: ServiceCard[]; columns?: 2 | 3 }) {
+export function CardGrid({ items, columns = 3 }: { items: Card[]; columns?: 2 | 3 }) {
   return (
     <div className={`grid grid-cols-1 md:grid-cols-2 ${columns === 3 ? 'lg:grid-cols-3' : ''} gap-6`}>
       {items.map((item) => {
         return (
           <div key={item.title} className="glass-panel p-7 space-y-3 border border-purple-500/20">
-            <FeatureIcon icon={item.icon} brands={item.brands} />
+            <FeatureIcon icons={item.icons} image={item.image} />
             <h3 className="text-lg font-bold text-white font-heading">{item.title}</h3>
             <p className="text-sm text-purple-200 leading-relaxed">{item.text}</p>
             {item.points && (

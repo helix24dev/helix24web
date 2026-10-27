@@ -7,13 +7,16 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Faq from '@/components/Faq';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { whatsappLink } from '@/components/ServiceSections';
-import { getAllBlogPosts, getBlogPostBySlug } from '@/data/blogPosts';
+import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/blog';
 
 interface BlogPostPageProps {
   params: {
     slug: string;
   };
 }
+
+// Posts are built at deploy time; a slug without a JSON file in content/blog is a 404
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({ slug: post.slug }));

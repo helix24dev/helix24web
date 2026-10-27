@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import { SETTINGS, whatsappLink } from '@/lib/settings';
 
 export default function FloatingActions() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -34,12 +35,12 @@ export default function FloatingActions() {
 
       {/* Official WhatsApp Floating Action Button */}
       <a
-        href="https://wa.me/919048009044?text=Hi%20Helix24,%20I%20would%20like%20to%20discuss%20a%20strategy%20consultation%20for%20my%20business."
+        href={whatsappLink()}
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex items-center justify-center gap-2.5 w-14 h-14 sm:w-auto sm:h-auto sm:px-5 sm:py-3 rounded-full btn-whatsapp font-semibold text-sm shadow-lg shadow-emerald-900/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:scale-95"
         aria-label="Chat directly with Helix24 on WhatsApp"
-        title="Chat on WhatsApp (+91 9048009044)"
+        title={`Chat on WhatsApp (${SETTINGS.phone})`}
       >
         {/* Pulsing Online Indicator */}
         <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">

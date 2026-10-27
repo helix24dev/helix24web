@@ -5,7 +5,7 @@ import { pageMetadata, SITE_URL } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { whatsappLink } from '@/components/ServiceSections';
-import { getAllBlogPosts } from '@/data/blogPosts';
+import { getAllBlogPosts } from '@/lib/blog';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing & SEO Guides for Kerala | Helix24 Blog',

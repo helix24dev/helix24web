@@ -1,0 +1,80 @@
+{
+  "slug": "local-seo-kochi-kozhikode-google-maps",
+  "title": "How to Rank on Google Maps: A Local SEO Guide for Kerala Businesses",
+  "metaTitle": "How to Rank on Google Maps in Kerala | Helix24",
+  "metaDescription": "A practical guide to ranking on Google Maps in Kochi, Kozhikode and across Kerala: Google Business Profile, reviews, listings and your website.",
+  "category": "Local SEO",
+  "readTime": "7 min read",
+  "publishedDate": "2026-03-01",
+  "updatedDate": "2026-10-27",
+  "author": {
+    "name": "Helix24 Team",
+    "role": "Digital marketing and web development",
+    "location": "Kochi, Kerala"
+  },
+  "excerpt": "When people search for a service \"near me\", Google shows a map with a few businesses before the normal results. This guide covers what you can do to appear there.",
+  "keyTakeaways": [
+    "The three things Google says it uses to rank local results",
+    "How to complete and maintain your Google Business Profile",
+    "Why your name, address and phone must match everywhere",
+    "How to get more genuine reviews"
+  ],
+  "sections": [
+    {
+      "heading": "How Google ranks local results",
+      "paragraphs": [
+        "Google says it ranks local results mainly on relevance (how well your profile matches the search), distance (how far you are from the searcher) and prominence (how well known and well reviewed your business is). You cannot change distance, so the work goes into the other two."
+      ]
+    },
+    {
+      "heading": "Complete your Google Business Profile",
+      "paragraphs": [
+        "Your profile is the single most important factor you control. Make sure:"
+      ],
+      "bulletPoints": [
+        "Your primary category describes your main service as precisely as possible.",
+        "Every section is filled in: services, hours, description, website and booking link.",
+        "You add real photos of your work, team and premises, and keep adding them.",
+        "You post updates or offers regularly so the profile stays active.",
+        "If you visit customers rather than receive them, you set it up as a service-area business."
+      ]
+    },
+    {
+      "heading": "Keep your details consistent everywhere",
+      "paragraphs": [
+        "Your business name, address and phone number should appear exactly the same on your website, Google profile, Facebook, Instagram and directories such as Justdial and Sulekha. Inconsistent details make it harder for Google to trust that they all belong to one business."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Do not use addresses you do not operate from",
+        "text": "Listing virtual offices or addresses where you have no staff breaks Google's guidelines and can get a profile suspended. If you serve several cities from one office, create helpful pages for each area on your website instead."
+      }
+    },
+    {
+      "heading": "Get more genuine reviews",
+      "paragraphs": [
+        "Ask every happy customer for a review, and make it easy with a direct link or QR code. Reply to every review, good or bad, politely and specifically. Never buy reviews or offer rewards for positive ones: both are against Google's policies."
+      ]
+    },
+    {
+      "heading": "Support it with your website",
+      "paragraphs": [
+        "Your website should clearly say what you do and where, have a page for each main service, show the same contact details as your profile and load quickly on a phone. Local business schema markup helps Google read those details."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "How long does it take to rank on Google Maps?",
+      "answer": "Small improvements can show within a few weeks of completing your profile. Moving up in competitive categories usually takes a few months of steady profile updates and new reviews."
+    },
+    {
+      "question": "Can I rank in a city where I do not have an office?",
+      "answer": "Google Maps rankings depend heavily on distance from the searcher, so it is hard to appear in the map for a city where you have no location. Service pages on your website and Google Ads can still reach customers there."
+    },
+    {
+      "question": "Does posting on Google Business Profile help?",
+      "answer": "Regular posts and photos keep your profile active and give customers more reasons to choose you. They work best alongside a complete profile and steady reviews."
+    }
+  ]
+}

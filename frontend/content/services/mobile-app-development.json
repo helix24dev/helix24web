@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "Mobile App Development Company in Kochi, Kerala | Helix24",
+    "description": "iOS, Android and Flutter app development by Helix24 in Kochi, with native performance, push notifications and App Store and Play Store launch support."
+  },
+  "breadcrumb": "Mobile App Development",
+  "schema": {
+    "name": "Mobile App Development",
+    "serviceType": "Mobile Application Development",
+    "areaServed": [
+      "Kerala",
+      "India",
+      "United Arab Emirates"
+    ]
+  },
+  "hero": {
+    "eyebrow": "iOS · Android · Flutter · React Native",
+    "title": "Mobile App Development in",
+    "highlight": "Kochi, Kerala",
+    "intro": "Helix24 designs and builds mobile apps for businesses in Kerala and the GCC, from booking and delivery apps to customer loyalty and shopping apps.",
+    "primaryLabel": "Discuss Your App Idea",
+    "primaryHref": "/contact",
+    "whatsappMessage": "Hi Helix24, I would like to discuss a mobile app."
+  },
+  "servicesSection": {
+    "title": "What we offer",
+    "intro": "Design, development and launch handled by one team."
+  },
+  "stepsTitle": "How an app project works",
+  "related": [
+    {
+      "label": "Website development",
+      "href": "/web-development"
+    },
+    {
+      "label": "E-commerce websites",
+      "href": "/ecommerce-development"
+    },
+    {
+      "label": "Branding & design",
+      "href": "/branding-design"
+    },
+    {
+      "label": "Contact our team",
+      "href": "/contact"
+    }
+  ],
+  "faqTitle": "Mobile app FAQs",
+  "contact": {
+    "title": "Tell us about your app",
+    "text": "Share your idea and we will reply within 24 hours with questions and next steps."
+  },
+  "services": [
+    {
+      "icons": [
+        "3d-mobile-phone"
+      ],
+      "title": "iOS & Android Apps",
+      "text": "One codebase in Flutter or React Native for both platforms, which keeps cost and timelines down without giving up a native feel.",
+      "points": [
+        "Booking, delivery and shopping apps",
+        "Camera, location and login features",
+        "Works offline where needed"
+      ]
+    },
+    {
+      "icons": [
+        "logo-figma"
+      ],
+      "title": "App Design",
+      "text": "Screens designed and prototyped in Figma, so you can tap through the app and approve it before development starts."
+    },
+    {
+      "icons": [
+        "logo-firebase"
+      ],
+      "title": "Backend & Admin Panel",
+      "text": "The server, database and admin dashboard your team needs to manage users, orders and content."
+    },
+    {
+      "icons": [
+        "3d-bell"
+      ],
+      "title": "Push Notifications",
+      "text": "Order updates, reminders and offers sent to users through Firebase notifications."
+    },
+    {
+      "icons": [
+        "logo-appStore",
+        "logo-googlePlay"
+      ],
+      "title": "App Store & Play Store Launch",
+      "text": "We prepare listings, screenshots and submissions, and handle review feedback from Apple and Google."
+    },
+    {
+      "icons": [
+        "3d-ring-buoy"
+      ],
+      "title": "Updates & Support",
+      "text": "Bug fixes, OS updates and new features after launch, on a monthly plan or as needed."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Scope",
+      "text": "Features, users and budget agreed, with a written scope and timeline."
+    },
+    {
+      "title": "Design",
+      "text": "Clickable Figma prototype for you to review on your phone."
+    },
+    {
+      "title": "Build",
+      "text": "App and backend development with regular test builds you can install."
+    },
+    {
+      "title": "Launch",
+      "text": "Store submission, launch and a support period for fixes."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to build a mobile app?",
+      "a": "A simple app usually takes 6 to 10 weeks. Apps with payments, real-time tracking or complex admin panels take longer. We give you a timeline after scoping."
+    },
+    {
+      "q": "Should I build a native app or a cross-platform app?",
+      "a": "For most businesses, a cross-platform app in Flutter or React Native is the better value: one codebase covers both iPhone and Android. Fully native apps make sense for very graphics-heavy or hardware-specific features."
+    },
+    {
+      "q": "Do you publish the app to the App Store and Play Store?",
+      "a": "Yes. We prepare the listings and handle the submission. The developer accounts are created in your business name so you own the apps."
+    }
+  ]
+}

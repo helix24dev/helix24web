@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import HelixLogo from '@/components/HelixLogo';
 import { organizationSchema } from '@/lib/seo';
+import { SETTINGS, phoneHref } from '@/lib/content';
 
 export default function Footer() {
   return (
@@ -20,17 +21,17 @@ export default function Footer() {
             <HelixLogo size="md" />
           </Link>
           <p className="text-xs leading-relaxed text-[#A39BB5] max-w-sm">
-            Digital marketing and web development company in Kochi, Kerala. Social media marketing, Google Ads, SEO, websites and apps for businesses across Kerala and the GCC.
+            {SETTINGS.footerText}
           </p>
 
           <div className="text-xs text-purple-300/80 space-y-1 pt-1 font-mono">
             <span className="block text-zinc-400 font-sans text-[11px] uppercase tracking-wider font-semibold">Serving:</span>
-            <span>Kochi • Kozhikode • Trivandrum • UAE &amp; GCC</span>
+            <span>{SETTINGS.servingLine}</span>
           </div>
 
           <div className="pt-2">
             <a
-              href="https://share.google/9wuyhr3TC4Utsw4V1"
+              href={SETTINGS.googleBusinessProfile}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-purple-200 hover:text-white transition-colors"
@@ -78,19 +79,19 @@ export default function Footer() {
           <h4 className="font-semibold text-white mb-4 text-xs uppercase tracking-wider text-purple-300">Direct Contact</h4>
           {/* NAP: keep identical to organizationSchema in lib/seo.ts and the Google Business Profile */}
           <address className="not-italic text-[#A39BB5] leading-relaxed text-xs">
-            Helix24 Solutions Pvt Ltd<br />
-            Kochi, Kerala 682030, India
+            {SETTINGS.companyName}<br />
+            {SETTINGS.address.locality}, {SETTINGS.address.region} {SETTINGS.address.postalCode}, {SETTINGS.address.country}
           </address>
           <div className="pt-2 space-y-1.5">
-            <div><a href="tel:+919048009044" className="hover:text-white text-purple-200">+91 9048009044</a></div>
-            <div><a href="mailto:info@helix24.in" className="hover:text-white text-purple-200">info@helix24.in</a></div>
+            <div><a href={phoneHref()} className="hover:text-white text-purple-200">{SETTINGS.phone}</a></div>
+            <div><a href={`mailto:${SETTINGS.email}`} className="hover:text-white text-purple-200">{SETTINGS.email}</a></div>
           </div>
         </div>
 
       </div>
 
       <div className="max-w-[1240px] mx-auto px-6 mt-16 pt-8 border-t border-purple-900/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-        <p>© 2026 HELIX24 SOLUTIONS PVT LTD. ALL RIGHTS RESERVED.</p>
+        <p>© {new Date().getFullYear()} {SETTINGS.companyName.toUpperCase()}. ALL RIGHTS RESERVED.</p>
         <div className="flex gap-6">
           <Link href="/privacy-policy" className="hover:text-zinc-300">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-zinc-300">Terms of Service</Link>

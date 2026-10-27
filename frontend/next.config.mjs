@@ -13,6 +13,18 @@ const securityHeaders = [
   },
 ];
 
+// The CMS editor (/admin, Decap CMS) needs its script from unpkg and API access to GitHub and Netlify's OAuth provider.
+// On Netlify /admin is a static file, so production gets these headers from netlify.toml; this copy covers `next start`.
+// (localhost:8081 is decap-server, used when editing on this computer with `npm run cms`)
+const adminHeaders = [
+  { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+  {
+    key: 'Content-Security-Policy',
+    value:
+      "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https://*.githubusercontent.com; connect-src 'self' https://api.github.com https://api.netlify.com https://unpkg.com http://localhost:8081; frame-src 'self';",
+  },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -20,7 +32,15 @@ const nextConfig = {
     workerThreads: false,
   },
   async headers() {
-    return [{ source: '/:path*', headers: securityHeaders }];
+    // Later rules override earlier ones for the same header, so the editor's CSP replaces the site CSP on /admin
+    return [
+      { source: '/:path*', headers: securityHeaders },
+      { source: '/admin', headers: adminHeaders },
+      { source: '/admin/:path*', headers: adminHeaders },
+    ];
+  },
+  async rewrites() {
+    return [{ source: '/admin', destination: '/admin/index.html' }];
   },
   async redirects() {
     return [

@@ -1,0 +1,183 @@
+{
+  "seo": {
+    "title": "Digital Marketing & Web Development in Kerala | Helix24",
+    "description": "Helix24 is a digital marketing and web development company in Kochi. Meta Ads, Google Ads, local SEO and fast websites for Kerala and GCC businesses."
+  },
+  "hero": {
+    "quote": "The best marketing",
+    "quoteHighlight": "doesn't feel like marketing.",
+    "quoteAuthor": "Tom Fishburne",
+    "heading": "Digital Marketing & Web Development Company in Kerala",
+    "intro": "We help businesses in Kerala and the GCC get more enquiries and sales through social media marketing, Google Ads, local SEO and fast websites.",
+    "primaryLabel": "Start a Conversation",
+    "primaryHref": "/contact",
+    "secondaryLabel": "See Our Work",
+    "secondaryHref": "/results"
+  },
+  "projects": {
+    "eyebrow": "Our Work",
+    "title": "Recent projects",
+    "linkLabel": "See all projects"
+  },
+  "services": {
+    "eyebrow": "What We Do",
+    "title": "Our services",
+    "intro": "Ads, websites, local search and design, each aimed at getting you more enquiries.",
+    "items": [
+      {
+        "icons": [
+          "3d-bullseye"
+        ],
+        "title": "Digital Marketing",
+        "tagline": "Google, Instagram & Facebook Ads",
+        "text": "Ads on Google, Instagram and Facebook that send enquiries to your phone and WhatsApp, with tracking so you can see what each rupee brings in.",
+        "tags": [
+          "Meta Ads",
+          "Google Ads",
+          "WhatsApp leads"
+        ],
+        "link": "/digital-marketing-seo"
+      },
+      {
+        "icons": [
+          "3d-laptop"
+        ],
+        "title": "Websites & Online Stores",
+        "tagline": "Fast, Mobile-First Websites",
+        "text": "Websites and online stores that load quickly on a phone and are easy for your team to update, so you do not need a developer for every change.",
+        "tags": [
+          "Business websites",
+          "Online stores",
+          "Easy editing"
+        ],
+        "link": "/web-development"
+      },
+      {
+        "icons": [
+          "3d-magnifying-glass-tilted-left"
+        ],
+        "title": "Local SEO & Google Maps",
+        "tagline": "Get Found in Local Search",
+        "text": "A complete Google Business Profile, consistent listings and genuine reviews, so you show up when people nearby search for what you do.",
+        "tags": [
+          "Google Business Profile",
+          "Local SEO",
+          "Reviews"
+        ],
+        "link": "/digital-marketing-seo"
+      },
+      {
+        "icons": [
+          "3d-artist-palette"
+        ],
+        "title": "Branding & Video Content",
+        "tagline": "Logos, Design & Reels",
+        "text": "Logos, brand identities, social media creatives and short videos that make your business look professional and consistent everywhere.",
+        "tags": [
+          "Brand identity",
+          "Reels & video",
+          "Website design"
+        ],
+        "link": "/branding-design"
+      }
+    ]
+  },
+  "trust": {
+    "eyebrow": "Why Businesses Trust Us",
+    "title": "What you get when you work with us.",
+    "intro": "These are the terms we work on with every client.",
+    "items": [
+      {
+        "icons": [
+          "3d-shield"
+        ],
+        "title": "A Registered Private Limited Company",
+        "text": "Helix24 Solutions Pvt Ltd is incorporated with the Registrar of Companies, Kerala (CIN U62011KL2026PTC107185). Every engagement comes with GST invoices and an NDA on request."
+      },
+      {
+        "icons": [
+          "3d-key"
+        ],
+        "title": "You Own Every Account and Asset",
+        "text": "Your ad accounts, Meta Pixel, Google Analytics data, website code and domain stay in your name. If you ever leave, nothing is held back."
+      },
+      {
+        "icons": [
+          "3d-bar-chart"
+        ],
+        "title": "Reports Built on Leads and Sales",
+        "text": "We report on enquiries, cost per lead and return on ad spend, not likes or impressions, so you can see what your budget brings in."
+      },
+      {
+        "icons": [
+          "3d-telephone-receiver"
+        ],
+        "title": "Talk to the People Doing the Work",
+        "text": "Reach the team directly on WhatsApp or phone at +91 9048009044. No call centres and no account managers passing messages along."
+      }
+    ]
+  },
+  "areas": {
+    "eyebrow": "Where We Work",
+    "title": "Digital marketing across Kerala and the GCC.",
+    "intro": "We know how customers in each market search, scroll and buy, and plan campaigns and websites around that.",
+    "items": [
+      {
+        "name": "Kochi",
+        "href": "/locations/kochi",
+        "text": "Where our registered office is. Meta Ads, Google Ads, local SEO and websites for businesses in Ernakulam, Kakkanad and Infopark."
+      },
+      {
+        "name": "Kozhikode",
+        "href": "/locations/kozhikode",
+        "text": "Digital marketing for retail chains, healthcare brands and D2C businesses across Calicut and the Malabar region."
+      },
+      {
+        "name": "Trivandrum",
+        "href": "/locations/trivandrum",
+        "text": "Lead generation and web development for Technopark companies, institutions and commercial projects in South Kerala."
+      },
+      {
+        "name": "UAE & GCC",
+        "href": "/social-media-marketing",
+        "text": "Meta Ads and e-commerce for brands in Dubai, Abu Dhabi and Saudi Arabia, including campaigns that reach Malayali NRI buyers."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions & Answers",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What services does Helix24 offer?",
+        "a": "Helix24 is a digital marketing and web development company in Kerala. We run Meta Ads (Facebook and Instagram), Google Ads, local SEO and Google Maps optimisation, and build fast websites, online stores (Shopify, WooCommerce and custom Next.js) and mobile apps. We also produce branding, ad creatives and video Reels."
+      },
+      {
+        "q": "Where is Helix24 located, and which areas do you serve?",
+        "a": "Our registered office is in Kochi, Kerala. We work with businesses across Kochi, Kozhikode and Trivandrum, and run campaigns for clients in the UAE, Saudi Arabia and the wider GCC."
+      },
+      {
+        "q": "How soon will Meta Ads or Google Ads bring enquiries?",
+        "a": "Well-targeted campaigns usually start bringing enquiries within 24 to 72 hours of launch. Results then improve over the first 14 to 30 days as the ad platforms learn which audiences convert best and we refine targeting and creatives."
+      },
+      {
+        "q": "How long does it take to build a business website?",
+        "a": "A business website or landing page typically takes 2 to 3 weeks. Larger web applications, dashboards and portals take 4 to 8 weeks, with demos at each milestone so you can review progress."
+      },
+      {
+        "q": "Will I own my website, ad accounts and data?",
+        "a": "Yes. Your website code, domain, ad accounts, Meta Pixel and analytics data are set up in your name and remain fully yours, whether or not you continue working with us."
+      },
+      {
+        "q": "How do I get started with Helix24?",
+        "a": "Message us on WhatsApp or call +91 9048009044, email info@helix24.in, or send your details through the contact form. We review your current website and ads and send a proposal for your business within 24 hours."
+      }
+    ]
+  },
+  "cta": {
+    "badge": "Free consultation",
+    "title": "Ready to get more enquiries?",
+    "text": "Tell us about your business. We will look at your website, Google profile and ads, and suggest what to do first.",
+    "whatsappMessage": "Hi Helix24, I would like a free consultation for my business."
+  }
+}

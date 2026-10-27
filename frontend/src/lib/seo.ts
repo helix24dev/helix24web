@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SETTINGS } from '@/lib/content';
 
 export const SITE_URL = 'https://helix24.in';
 export const SITE_NAME = 'Helix24 Solutions';
@@ -13,7 +14,7 @@ export const OG_IMAGE = {
 // One business entity, defined once (in the root layout) and referenced everywhere else by @id,
 // so search engines and AI systems see a single consistent organisation rather than several variants.
 export const ORG_ID = `${SITE_URL}/#organization`;
-export const GBP_URL = 'https://share.google/9wuyhr3TC4Utsw4V1';
+export const GBP_URL = SETTINGS.googleBusinessProfile;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 export const organizationSchema = {
@@ -29,23 +30,21 @@ export const organizationSchema = {
       image: `${SITE_URL}${OG_IMAGE.url}`,
       description:
         'Digital marketing and web development company in Kochi, Kerala: Meta Ads, Google Ads, SEO, websites, online stores and mobile apps for businesses in Kerala and the GCC.',
-      telephone: '+91 9048009044',
-      email: 'info@helix24.in',
-      identifier: [
-        { '@type': 'PropertyValue', name: 'CIN', value: 'U62011KL2026PTC107185' },
-      ],
+      telephone: SETTINGS.phone,
+      email: SETTINGS.email,
+      identifier: SETTINGS.cin ? [{ '@type': 'PropertyValue', name: 'CIN', value: SETTINGS.cin }] : undefined,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Kochi',
-        addressRegion: 'Kerala',
-        postalCode: '682030',
+        addressLocality: SETTINGS.address.locality,
+        addressRegion: SETTINGS.address.region,
+        postalCode: SETTINGS.address.postalCode,
         addressCountry: 'IN',
       },
       hasMap: GBP_URL,
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+91 9048009044',
-        email: 'info@helix24.in',
+        telephone: SETTINGS.phone,
+        email: SETTINGS.email,
         contactType: 'sales',
         areaServed: ['IN', 'AE', 'SA'],
         availableLanguage: ['English'],
@@ -58,13 +57,8 @@ export const organizationSchema = {
         { '@type': 'Country', name: 'United Arab Emirates' },
         { '@type': 'Country', name: 'Saudi Arabia' },
       ],
-      // Official profiles: keep in sync when a profile URL changes
-      sameAs: [
-        'https://www.linkedin.com/company/helix24-solutions/',
-        'https://www.instagram.com/helix24solutions/',
-        'https://www.facebook.com/profile.php?id=61591480144101',
-        GBP_URL,
-      ],
+      // Official profiles (CMS: Site settings → Social profiles)
+      sameAs: [SETTINGS.social.linkedin, SETTINGS.social.instagram, SETTINGS.social.facebook, GBP_URL].filter(Boolean),
     },
     {
       '@type': 'WebSite',

@@ -1,0 +1,139 @@
+{
+  "seo": {
+    "title": "E-Commerce Website Development in Kerala | Helix24",
+    "description": "Shopify, WooCommerce and headless Next.js online stores with fast mobile checkout, Razorpay and Stripe payments, and WhatsApp cart recovery."
+  },
+  "breadcrumb": "E-Commerce Websites",
+  "schema": {
+    "name": "E-Commerce Website Development",
+    "serviceType": "E-Commerce Development",
+    "areaServed": [
+      "Kerala",
+      "India",
+      "United Arab Emirates",
+      "Saudi Arabia"
+    ]
+  },
+  "hero": {
+    "eyebrow": "Shopify · WooCommerce · Custom Stores",
+    "title": "E-Commerce Website Development in",
+    "highlight": "Kerala & the GCC",
+    "intro": "Helix24 builds online stores that are easy to run and easy to buy from, with payments, shipping and WhatsApp order updates connected from the start.",
+    "primaryLabel": "Plan Your Online Store",
+    "primaryHref": "/contact",
+    "whatsappMessage": "Hi Helix24, I would like to discuss an online store."
+  },
+  "servicesSection": {
+    "title": "What your store includes",
+    "intro": "We handle the setup and connections so you can focus on products and customers."
+  },
+  "stepsTitle": "How a store project works",
+  "related": [
+    {
+      "label": "Instagram & Facebook marketing",
+      "href": "/social-media-marketing"
+    },
+    {
+      "label": "Google Ads & SEO",
+      "href": "/digital-marketing-seo"
+    },
+    {
+      "label": "Website development",
+      "href": "/web-development"
+    },
+    {
+      "label": "Selling online in the UAE & GCC",
+      "href": "/blog/ecommerce-expansion-kerala-to-uae-gcc"
+    }
+  ],
+  "faqTitle": "E-commerce FAQs",
+  "contact": {
+    "title": "Tell us about your store",
+    "text": "Share your products and plans, and we will reply within 24 hours with a recommended platform, timeline and quote."
+  },
+  "services": [
+    {
+      "icons": [
+        "logo-shopify"
+      ],
+      "title": "Shopify & WooCommerce Stores",
+      "text": "Online stores on the platform that suits your products and budget, set up so you can add products, run offers and manage orders yourself.",
+      "points": [
+        "Store design for mobile shoppers",
+        "Product, category and offer setup",
+        "Training for your team"
+      ]
+    },
+    {
+      "icons": [
+        "logo-razorpay"
+      ],
+      "title": "Payments",
+      "text": "Razorpay, Cashfree or PayU for India, Stripe for international cards, and Cash on Delivery where it makes sense."
+    },
+    {
+      "icons": [
+        "3d-delivery-truck"
+      ],
+      "title": "Shipping & Orders",
+      "text": "Courier integrations such as Shiprocket and Delhivery, with order tracking links sent to your customers automatically."
+    },
+    {
+      "icons": [
+        "logo-whatsapp"
+      ],
+      "title": "WhatsApp Order Updates",
+      "text": "Order confirmations, COD checks and abandoned-cart reminders sent on WhatsApp, which most customers here read quickly."
+    },
+    {
+      "icons": [
+        "logo-google"
+      ],
+      "title": "Product Feeds for Ads",
+      "text": "Your catalogue connected to Meta and Google Merchant Center, so you can run shopping and retargeting ads."
+    },
+    {
+      "icons": [
+        "3d-globe-with-meridians"
+      ],
+      "title": "Selling to the GCC",
+      "text": "Multi-currency pricing (INR, AED, SAR) and local payment options such as Tabby or Tamara for shoppers in the UAE and Saudi Arabia."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Plan",
+      "text": "Products, payments, shipping and the platform that fits, agreed in writing."
+    },
+    {
+      "title": "Design",
+      "text": "Store pages designed around how your customers browse and buy on their phones."
+    },
+    {
+      "title": "Build & connect",
+      "text": "Store setup with payments, couriers, WhatsApp and ad feeds connected and tested."
+    },
+    {
+      "title": "Launch & grow",
+      "text": "Go live, then optional ads and SEO to bring in your first customers."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I choose Shopify or WooCommerce?",
+      "a": "Shopify is usually the simpler choice: hosting, security and checkout are handled for you for a monthly fee. WooCommerce runs on WordPress and gives you more control over hosting and customisation, but needs more upkeep. We recommend one to suit your products, budget and team."
+    },
+    {
+      "q": "Can customers pay by UPI and Cash on Delivery?",
+      "a": "Yes. Razorpay and similar gateways support UPI, cards, net banking and wallets, and Cash on Delivery can be offered with WhatsApp confirmation to reduce fake orders."
+    },
+    {
+      "q": "Can my store sell to customers in the UAE and Saudi Arabia?",
+      "a": "Yes. We can set up multi-currency pricing, international payments and shipping options for GCC customers, either on the same store or a separate one."
+    },
+    {
+      "q": "Will I be able to manage the store myself?",
+      "a": "Yes. You will be able to add products, change prices, run discounts and handle orders, and we include a training session before launch."
+    }
+  ]
+}

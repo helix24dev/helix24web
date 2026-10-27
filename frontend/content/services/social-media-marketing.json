@@ -1,0 +1,141 @@
+{
+  "seo": {
+    "title": "Social Media Marketing Agency in Kerala | Helix24",
+    "description": "Instagram and Facebook marketing for Kerala businesses: content, Reels, community management and Meta Ads that send enquiries to your WhatsApp."
+  },
+  "breadcrumb": "Social Media Marketing",
+  "schema": {
+    "name": "Social Media Marketing",
+    "serviceType": "Social Media Marketing",
+    "areaServed": [
+      "Kerala",
+      "United Arab Emirates",
+      "Saudi Arabia"
+    ]
+  },
+  "hero": {
+    "eyebrow": "Instagram · Facebook · WhatsApp",
+    "title": "Social Media Marketing Agency in",
+    "highlight": "Kerala",
+    "intro": "Helix24 plans, creates and runs social media for businesses in Kochi, Kozhikode, Trivandrum and the GCC: posts and Reels for your pages, and Meta Ads that bring enquiries to your WhatsApp and phone.",
+    "primaryLabel": "Get a Social Media Proposal",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Estimate Your Ad Results",
+    "secondaryHref": "/calculator"
+  },
+  "servicesSection": {
+    "title": "What our social media marketing includes",
+    "intro": "Choose the full service or just the parts you need. Every engagement is measured by the enquiries it brings in."
+  },
+  "highlight": {
+    "title": "Followers are nice. Enquiries pay the bills.",
+    "paragraphs": [
+      "Plenty of agencies in Kerala can post regularly and report on likes. We set up every campaign around the action that matters to your business, whether that is a WhatsApp message, a call, a store visit or an online order, and we track it properly.",
+      "You keep full ownership of your pages, ad account and Meta Pixel. If you ever move on, everything stays with you."
+    ],
+    "points": [
+      "Content planned around your offers and seasons, not filler posts",
+      "Reels scripted for the first three seconds, where viewers decide to stay",
+      "Ads targeted by city, from Kochi to Dubai",
+      "Leads routed straight into WhatsApp",
+      "Clear monthly reports on enquiries and cost per lead"
+    ]
+  },
+  "stepsTitle": "How we work",
+  "related": [
+    {
+      "label": "Google Ads & SEO services",
+      "href": "/digital-marketing-seo"
+    },
+    {
+      "label": "Branding & creative design",
+      "href": "/branding-design"
+    },
+    {
+      "label": "Google Ads vs Meta Ads: which is better?",
+      "href": "/blog/google-ads-vs-meta-ads-kerala"
+    },
+    {
+      "label": "Social media marketing cost in Kerala",
+      "href": "/blog/social-media-marketing-cost-kerala"
+    }
+  ],
+  "faqTitle": "Social media marketing FAQs",
+  "services": [
+    {
+      "icons": [
+        "3d-spiral-calendar"
+      ],
+      "title": "Social Media Management",
+      "text": "A monthly content calendar, post and carousel design, captions and community replies across Instagram and Facebook, so your pages stay active and on-brand without taking up your time."
+    },
+    {
+      "icons": [
+        "logo-instagram"
+      ],
+      "title": "Instagram Reels & Video Content",
+      "text": "Short vertical videos scripted around a clear hook, shot or edited for Reels, YouTube Shorts and ads. Video is where most reach on Instagram comes from today."
+    },
+    {
+      "icons": [
+        "logo-meta"
+      ],
+      "title": "Meta Ads (Facebook & Instagram Ads)",
+      "text": "Paid campaigns targeted by location, interest and behaviour, from your city in Kerala to Malayali audiences in the UAE and Saudi Arabia. Budgets are set around cost per enquiry, not likes."
+    },
+    {
+      "icons": [
+        "logo-whatsapp"
+      ],
+      "title": "WhatsApp Lead Funnels",
+      "text": "Click-to-WhatsApp ads and instant forms that put interested customers straight into a WhatsApp conversation with your team, which is how most Kerala customers prefer to enquire."
+    },
+    {
+      "icons": [
+        "logo-analytics"
+      ],
+      "title": "Tracking & Reporting",
+      "text": "Meta Pixel and server-side Conversions API set up correctly, so ad results are measured accurately. Reports show enquiries, cost per lead and sales, not just followers."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Review",
+      "text": "We look at your current pages, past ads and competitors, and agree on what a good result looks like for your business."
+    },
+    {
+      "title": "Plan",
+      "text": "A content plan and ad plan for the month: themes, Reels ideas, offers, audiences and budget."
+    },
+    {
+      "title": "Create & launch",
+      "text": "We produce the posts, videos and ad creatives, publish on schedule and launch campaigns."
+    },
+    {
+      "title": "Measure & improve",
+      "text": "We track enquiries and cost per lead, keep what works, replace what does not, and report back to you."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does a social media marketing agency do?",
+      "a": "A social media marketing agency plans and creates content for your Instagram and Facebook pages, manages comments and messages, and runs paid ads (Meta Ads) to reach new customers. Helix24 focuses on getting you enquiries on WhatsApp and phone."
+    },
+    {
+      "q": "Do you handle both organic posting and paid ads?",
+      "a": "Yes. Organic content builds trust with people who already follow you, while Meta Ads reach new customers. Most businesses get the best results from both working together, and we can run either one on its own."
+    },
+    {
+      "q": "Which platforms do you work with?",
+      "a": "Mainly Instagram and Facebook, which are where most Kerala customers spend their time, plus WhatsApp for lead handling. We also adapt video content for YouTube Shorts."
+    },
+    {
+      "q": "Can you target customers in the UAE and Saudi Arabia?",
+      "a": "Yes. Meta Ads can target specific cities and audiences in the GCC, including Malayali communities in Dubai, Abu Dhabi and Riyadh, which suits real estate, education and export-focused brands."
+    },
+    {
+      "q": "How much does social media marketing cost in Kerala?",
+      "a": "It depends on how much content you need and your ad budget, which is paid to Meta separately from our management fee. Tell us your goals on WhatsApp or through the contact form and we will send a clear proposal."
+    }
+  ]
+}
