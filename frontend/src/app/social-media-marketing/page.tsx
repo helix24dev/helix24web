@@ -16,19 +16,18 @@ export const metadata: Metadata = pageMetadata({
 const services = [
   {
     icon: CalendarDays,
-    brands: logos('instagram', 'facebook'),
-    title: 'Social Media Management',
+        title: 'Social Media Management',
     text: 'A monthly content calendar, post and carousel design, captions and community replies across Instagram and Facebook, so your pages stay active and on-brand without taking up your time.',
   },
   {
     icon: Clapperboard,
-    brands: logos('instagram', 'youtube'),
+    brands: logos('instagram'),
     title: 'Instagram Reels & Video Content',
     text: 'Short vertical videos scripted around a clear hook, shot or edited for Reels, YouTube Shorts and ads. Video is where most reach on Instagram comes from today.',
   },
   {
     icon: Target,
-    brands: logos('facebook', 'instagram'),
+    brands: logos('meta'),
     title: 'Meta Ads (Facebook & Instagram Ads)',
     text: 'Paid campaigns targeted by location, interest and behaviour, from your city in Kerala to Malayali audiences in the UAE and Saudi Arabia. Budgets are set around cost per enquiry, not likes.',
   },
@@ -40,7 +39,7 @@ const services = [
   },
   {
     icon: ChartColumn,
-    brands: logos('analytics', 'meta'),
+    brands: logos('analytics'),
     title: 'Tracking & Reporting',
     text: 'Meta Pixel and server-side Conversions API set up correctly, so ad results are measured accurately. Reports show enquiries, cost per lead and sales, not just followers.',
   },

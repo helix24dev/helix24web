@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FeatureIcon from '@/components/FeatureIcon';
 import CaseJourney from '@/components/CaseJourney';
@@ -47,9 +47,9 @@ export default function ResultsPage() {
           ))}
         </div>
 
-        <section className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {shown.map((p) => (
-            <article key={p.id} className="glass-panel p-6 sm:p-9 border border-slate-200 bg-white space-y-6">
+            <article key={p.id} className="glass-panel p-6 sm:p-8 border border-slate-200 bg-white space-y-5">
               <div className="flex items-center justify-between flex-wrap gap-3">
                 <span className="flex items-center gap-3">
                   <FeatureIcon icon={p.icon} />
@@ -60,27 +60,10 @@ export default function ResultsPage() {
 
               <div className="space-y-2">
                 <h2 className="text-xl sm:text-2xl font-bold text-white font-heading leading-snug">{p.title}</h2>
-                <p className="text-sm sm:text-base text-purple-200 leading-relaxed">
-                  <strong className="text-white">The problem:</strong> {p.problem}
-                </p>
+                <p className="text-sm sm:text-base text-purple-200 leading-relaxed">{p.problem}</p>
               </div>
 
-              <div className="space-y-3">
-                <h3 className="text-sm font-bold text-white">How their customers find them now</h3>
-                <CaseJourney steps={p.journey} />
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-sm font-bold text-white">What we did</h3>
-                <ul className="space-y-2 text-sm sm:text-base text-purple-100">
-                  {p.work.map((w) => (
-                    <li key={w} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
-                      <span>{w}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <CaseJourney steps={p.journey} />
 
               {p.results && (
                 <ul className="pt-4 border-t border-slate-100 space-y-1 text-sm text-white">

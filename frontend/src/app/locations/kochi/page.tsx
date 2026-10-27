@@ -28,7 +28,7 @@ const content: LocationContent = {
   services: [
     { icon: MapPin, brands: logos('googleMaps'), title: 'Local SEO & Google Maps', text: 'A complete Google Business Profile and local listings so you appear for searches in your part of Kochi.' },
     { icon: Search, brands: logos('googleAds'), title: 'Google Ads', text: 'Search ads for people in Kochi already looking for your service, with tracked calls and forms.' },
-    { icon: Target, brands: logos('facebook', 'instagram'), title: 'Instagram & Facebook Ads', text: 'Meta campaigns targeted by area and interest, with leads sent straight to WhatsApp.' },
+    { icon: Target, brands: logos('meta'), title: 'Instagram & Facebook Ads', text: 'Meta campaigns targeted by area and interest, with leads sent straight to WhatsApp.' },
     { icon: Laptop, title: 'Websites', text: 'Fast, mobile-first websites and landing pages built to convert local visitors.' },
   ],
   areas: ['Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Kaloor', 'Vyttila', 'Fort Kochi', 'Aluva', 'Tripunithura', 'Ernakulam North'],

@@ -28,7 +28,7 @@ const services = [
   },
   {
     icon: PencilRuler,
-    brands: logos('googleAds', 'facebook'),
+    brands: logos('googleAds'),
     title: 'Landing Pages for Ads',
     text: 'Focused pages for Google and Meta campaigns, built to load quickly and turn ad clicks into enquiries.',
   },
@@ -39,8 +39,7 @@ const services = [
   },
   {
     icon: Plug,
-    brands: logos('razorpay', 'whatsapp', 'sheets'),
-    title: 'Integrations',
+        title: 'Integrations',
     text: 'Connect your site to the tools you already use: Razorpay or Stripe payments, WhatsApp, CRMs such as Zoho, and Google Sheets.',
   },
   {

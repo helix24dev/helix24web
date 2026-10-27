@@ -33,13 +33,13 @@ const services = [
   },
   {
     icon: Clapperboard,
-    brands: logos('instagram', 'youtube'),
+    brands: logos('youtube'),
     title: 'Reels & Video Ads',
     text: 'Short vertical videos and motion graphics for Instagram, Facebook and YouTube Shorts, planned around a clear opening hook.',
   },
   {
     icon: ImageIcon,
-    brands: logos('instagram', 'facebook'),
+    brands: logos('instagram'),
     title: 'Social Media Creatives',
     text: 'Post, carousel and ad designs in your brand style, ready for organic posting or paid campaigns.',
   },

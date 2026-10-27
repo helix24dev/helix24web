@@ -37,7 +37,7 @@ const services = [
   },
   {
     icon: Target,
-    brands: logos('facebook', 'instagram'),
+    brands: logos('meta'),
     title: 'Meta Ads',
     text: 'Facebook and Instagram campaigns that reach people before they start searching. See our social media marketing page for content and Reels.',
     points: ['Audience targeting by city or region', 'Lead forms and Click-to-WhatsApp ads', 'Creative testing'],

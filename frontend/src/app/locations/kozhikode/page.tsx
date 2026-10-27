@@ -26,8 +26,8 @@ const content: LocationContent = {
     'Malabar also has some of the strongest family links to the GCC in Kerala, so a single campaign can reach customers in Kozhikode, Malappuram and Dubai at the same time, if it is set up for each audience.',
   ],
   services: [
-    { icon: Target, brands: logos('facebook', 'instagram'), title: 'Instagram & Facebook Ads', text: 'Meta campaigns for Malabar and GCC audiences, with enquiries sent to WhatsApp.' },
-    { icon: ShoppingBag, brands: logos('shopify', 'woocommerce'), title: 'Online Stores', text: 'Shopify and WooCommerce stores with UPI, COD and courier integrations for Calicut brands.' },
+    { icon: Target, brands: logos('meta'), title: 'Instagram & Facebook Ads', text: 'Meta campaigns for Malabar and GCC audiences, with enquiries sent to WhatsApp.' },
+    { icon: ShoppingBag, brands: logos('shopify'), title: 'Online Stores', text: 'Shopify and WooCommerce stores with UPI, COD and courier integrations for Calicut brands.' },
     { icon: Stethoscope, title: 'Healthcare Marketing', text: 'Google Ads and local SEO for clinics and hospitals, with appointment enquiries tracked.' },
     { icon: MapPin, brands: logos('googleMaps'), title: 'Local SEO', text: 'Google Business Profile and local listings for searches in Calicut and nearby towns.' },
   ],

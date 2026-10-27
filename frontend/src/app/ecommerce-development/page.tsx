@@ -16,7 +16,7 @@ export const metadata: Metadata = pageMetadata({
 const services = [
   {
     icon: ShoppingBag,
-    brands: logos('shopify', 'woocommerce'),
+    brands: logos('shopify'),
     title: 'Shopify & WooCommerce Stores',
     text: 'Online stores on the platform that suits your products and budget, set up so you can add products, run offers and manage orders yourself.',
     points: ['Store design for mobile shoppers', 'Product, category and offer setup', 'Training for your team'],
@@ -40,7 +40,7 @@ const services = [
   },
   {
     icon: Megaphone,
-    brands: logos('google', 'meta'),
+    brands: logos('google'),
     title: 'Product Feeds for Ads',
     text: 'Your catalogue connected to Meta and Google Merchant Center, so you can run shopping and retargeting ads.',
   },

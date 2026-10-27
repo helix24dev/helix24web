@@ -16,8 +16,7 @@ export const metadata: Metadata = pageMetadata({
 const services = [
   {
     icon: Smartphone,
-    brands: logos('apple', 'android'),
-    title: 'iOS & Android Apps',
+        title: 'iOS & Android Apps',
     text: 'One codebase in Flutter or React Native for both platforms, which keeps cost and timelines down without giving up a native feel.',
     points: ['Booking, delivery and shopping apps', 'Camera, location and login features', 'Works offline where needed'],
   },

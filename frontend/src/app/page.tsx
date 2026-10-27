@@ -20,7 +20,6 @@ import TechEcosystemStrip from '@/components/TechEcosystemStrip';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
-import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing & Web Development in Kerala | Helix24',
@@ -35,7 +34,6 @@ export default function HomePage() {
   const capabilities = [
     {
       num: '01',
-      brands: logos('googleAds', 'facebook', 'instagram'),
       title: 'Digital Marketing',
       icon: Target,
       tagline: 'Google, Instagram & Facebook Ads',
@@ -54,7 +52,6 @@ export default function HomePage() {
     },
     {
       num: '03',
-      brands: logos('googleMaps', 'google'),
       title: 'Local SEO & Google Maps',
       icon: Search,
       tagline: 'Get Found in Local Search',
@@ -64,7 +61,6 @@ export default function HomePage() {
     },
     {
       num: '04',
-      brands: logos('figma', 'instagram'),
       title: 'Branding & Video Content',
       icon: Palette,
       tagline: 'Logos, Design & Reels',
@@ -92,7 +88,6 @@ export default function HomePage() {
     },
     {
       icon: Phone,
-      brands: logos('whatsapp'),
       title: 'Talk to the People Doing the Work',
       text: 'Reach the team directly on WhatsApp or phone at +91 9048009044. No call centres and no account managers passing messages along.',
     },
@@ -251,18 +246,12 @@ export default function HomePage() {
                 <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-purple-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
               </div>
 
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-purple-700 transition-colors leading-snug font-heading">
-                  {work.title}
-                </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  <strong className="text-slate-900">The problem:</strong> {work.problem}
-                </p>
-              </div>
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-purple-700 transition-colors leading-snug font-heading">
+                {work.title}
+              </h3>
 
-              <div className="space-y-2.5 pt-4 border-t border-slate-100">
-                <span className="text-xs font-semibold text-slate-500 block">How their customers find them now</span>
-                <CaseJourney steps={work.journey} compact />
+              <div className="mt-auto pt-4 border-t border-slate-100">
+                <CaseJourney steps={work.journey} />
               </div>
             </Link>
           ))}
@@ -293,7 +282,7 @@ export default function HomePage() {
                 <div className="space-y-5">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <FeatureIcon icon={item.icon} brands={item.brands} />
+                      <FeatureIcon icon={item.icon} />
                       <div>
                         <span className="text-xs font-mono text-purple-700 font-bold block uppercase tracking-wider">
                           {item.tagline}
@@ -359,7 +348,7 @@ export default function HomePage() {
                 key={point.title}
                 className="glass-panel p-7 sm:p-8 flex gap-5 border border-purple-200 bg-white/70"
               >
-                <FeatureIcon icon={point.icon} brands={point.brands} />
+                <FeatureIcon icon={point.icon} />
                 <div className="space-y-2">
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-heading">{point.title}</h3>
                   <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{point.text}</p>
