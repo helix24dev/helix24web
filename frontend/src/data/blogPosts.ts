@@ -48,7 +48,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Helix24 Growth Lab',
       role: 'Performance Marketing Team',
-      location: 'Kochi & Kozhikode',
+      location: 'Kochi, Kerala',
     },
     excerpt: 'Running profitable Facebook and Instagram campaigns in Kerala requires far more than clicking "Boost Post". Learn the exact Server-Side CAPI tracking, WhatsApp conversion funnels, and ROAS attribution models you must demand from an agency partner.',
     keyTakeaways: [
@@ -131,7 +131,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Helix24 Pricing Desk',
       role: 'Growth Strategy',
-      location: 'Kochi & Kozhikode',
+      location: 'Kochi, Kerala',
     },
     excerpt: 'What should you actually pay for social media management in Kerala? We break down the true costs of graphic design, video production, community management, and ad execution across Kochi, Kozhikode, and Trivandrum.',
     keyTakeaways: [
@@ -201,7 +201,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Helix24 SEO Division',
       role: 'Search Engine Optimization',
-      location: 'Kochi & Kozhikode',
+      location: 'Kochi, Kerala',
     },
     excerpt: 'Over 65% of high-intent local purchase clicks go directly to the top 3 spots in Google Maps. Discover the exact local ranking factors, citation audits, and schema markup required to dominate search results in Kochi and Kozhikode.',
     keyTakeaways: [
@@ -266,7 +266,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Helix24 Engineering Team',
       role: 'Full-Stack Web Systems',
-      location: 'Kochi Kakkanad Hub',
+      location: 'Kochi, Kerala',
     },
     excerpt: 'WordPress powers 40% of the web, but 80% of Kerala WordPress sites take 4+ seconds to load on mobile and suffer from plugin vulnerabilities. Here is why high-growth brands are upgrading to Next.js App Router.',
     keyTakeaways: [
@@ -326,7 +326,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Helix24 GCC Desk',
       role: 'Cross-Border Commerce',
-      location: 'Dubai & Kochi',
+      location: 'Kochi, Kerala',
     },
     excerpt: 'The Gulf Cooperation Council (GCC) market represents one of the highest Average Order Value (AOV) customer bases in the world. Learn how Kerala brands scale across the UAE and Saudi Arabia with localized funnels, Tabby/Tamara BNPL, and cross-border logistics.',
     keyTakeaways: [
@@ -390,7 +390,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: 'Helix24 Media Buying Desk',
       role: 'Paid Acquisition',
-      location: 'Kochi & Kozhikode',
+      location: 'Kochi, Kerala',
     },
     excerpt: 'Should you allocate your digital marketing budget to Google Search Ads or Meta Ads? We compare capture intent versus discovery intent across healthcare, real estate, retail, and B2B services in Kerala.',
     keyTakeaways: [

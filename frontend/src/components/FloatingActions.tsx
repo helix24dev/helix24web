@@ -37,7 +37,7 @@ export default function FloatingActions() {
         href="https://wa.me/919048009044?text=Hi%20Helix24,%20I%20would%20like%20to%20discuss%20a%20strategy%20consultation%20for%20my%20business."
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center justify-center gap-2.5 w-14 h-14 sm:w-auto sm:h-auto sm:px-5 sm:py-3 rounded-full bg-[#25D366] hover:bg-[#22c35e] text-white font-semibold text-sm shadow-xl shadow-emerald-950/40 hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 hover:-translate-y-0.5 active:scale-95"
+        className="group relative flex items-center justify-center gap-2.5 w-14 h-14 sm:w-auto sm:h-auto sm:px-5 sm:py-3 rounded-full bg-[#25D366] hover:bg-[#22c35e] text-[#0B141A] font-semibold text-sm shadow-xl shadow-emerald-950/40 hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 hover:-translate-y-0.5 active:scale-95"
         aria-label="Chat directly with Helix24 on WhatsApp"
         title="Chat on WhatsApp (+91 9048009044)"
       >
@@ -48,10 +48,11 @@ export default function FloatingActions() {
         </span>
 
         {/* Official WhatsApp Vector Icon */}
-        <WhatsAppIcon className="w-7 h-7 sm:w-5 sm:h-5 fill-white shrink-0 group-hover:scale-110 transition-transform" />
+        {/* Dark glyph and label on WhatsApp green: white on #25D366 is only ~2:1 contrast */}
+        <WhatsAppIcon className="w-7 h-7 sm:w-5 sm:h-5 fill-[#0B141A] shrink-0 group-hover:scale-110 transition-transform" />
 
         {/* Text Label: icon-only round button on mobile */}
-        <span className="hidden sm:inline font-heading tracking-tight text-white whitespace-nowrap">
+        <span className="hidden sm:inline tracking-tight text-[#0B141A] whitespace-nowrap">
           Chat on WhatsApp
         </span>
       </a>

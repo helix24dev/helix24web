@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Raised one step from Tailwind's defaults (12px / 14px): most copy on the site uses text-xs and text-sm
+      fontSize: {
+        xs: ['0.8125rem', { lineHeight: '1.3rem' }],
+        sm: ['0.9375rem', { lineHeight: '1.55rem' }],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

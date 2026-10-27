@@ -47,7 +47,7 @@ export default function KozhikodeLocationPage() {
           <div className="flex items-center justify-center gap-2">
             <span className="hud-tag">
               <MapPin className="w-3.5 h-3.5 text-purple-400" />
-              KOZHIKODE (CALICUT) DESK // MALABAR GROWTH HUB
+              SERVING KOZHIKODE (CALICUT) · MALABAR
             </span>
           </div>
 

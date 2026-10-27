@@ -47,7 +47,7 @@ export default function KochiLocationPage() {
           <div className="flex items-center justify-center gap-2">
             <span className="hud-tag">
               <MapPin className="w-3.5 h-3.5 text-purple-400" />
-              KOCHI REGIONAL DESK // KAKKANAD &amp; INFOPARK
+              SERVING KOCHI · KAKKANAD · INFOPARK
             </span>
           </div>
 

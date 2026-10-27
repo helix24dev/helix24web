@@ -47,7 +47,7 @@ export default function TrivandrumLocationPage() {
           <div className="flex items-center justify-center gap-2">
             <span className="hud-tag">
               <MapPin className="w-3.5 h-3.5 text-purple-400" />
-              TRIVANDRUM DESK // TECHNOPARK &amp; ENTERPRISE HUB
+              SERVING TRIVANDRUM · TECHNOPARK
             </span>
           </div>
 

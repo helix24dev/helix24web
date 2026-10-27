@@ -5,7 +5,7 @@ import { organizationSchema } from '@/lib/seo';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-purple-900/30 bg-[#070310] pt-20 pb-12 text-sm text-[#A39BB5] relative z-10">
+    <footer className="border-t border-purple-900/30 bg-[#070310] pt-20 pb-28 text-sm text-[#A39BB5] relative z-10">
       {/* Crawler-Accessible Structured Entity Schema */}
       <script
         type="application/ld+json"

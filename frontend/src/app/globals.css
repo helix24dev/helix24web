@@ -5,19 +5,24 @@
 @tailwind utilities;
 
 :root {
-  --paper: #090514;
-  --surface: #110B22;
-  --surface-alt: #1A1230;
+  /* Deep brand violet rather than near-black: bright text on #090514 haloed and tired the eyes */
+  --paper: #141026;
+  --surface: #1B1533;
+  --surface-alt: #231B40;
   --surface-border: rgba(139, 92, 246, 0.18);
-  --ink: #F3EEFE;
+  --ink: #F4F1FA;
   --ink-secondary: #C4B5FD;
-  --muted: #A39BB5;
+  --muted: #BDB5D0;
+  /* Readable text tiers for dark mode (all fully opaque, contrast on --paper in brackets) */
+  --text-body: #DCD6EA;     /* paragraphs (~12:1) */
+  --text-soft: #C3BBD8;     /* secondary copy, captions (~9:1) */
+  --text-accent: #C9B8FF;   /* purple labels and links (~9.5:1) */
   --violet: #8B5CF6;
   --violet-bright: #A78BFA;
   --violet-deep: #2E1065;
   --primary-accent: #7C3AED;
-  --glass-bg: rgba(25, 16, 48, 0.72);
-  --glass-bg-hover: rgba(35, 22, 66, 0.92);
+  --glass-bg: rgba(34, 26, 62, 0.78);
+  --glass-bg-hover: rgba(42, 32, 76, 0.92);
   --glass-border: rgba(139, 92, 246, 0.22);
   --glass-border-hover: rgba(167, 139, 250, 0.5);
   --radius: 20px;
@@ -54,8 +59,8 @@ body {
   background-color: var(--paper);
   color: var(--ink);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
@@ -100,6 +105,84 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background: linear-gradient(135deg, #C4B5FD 0%, #A855F7 50%, #EC4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   Readability (both themes)
+   ========================================================================== */
+
+/* Theme-matched logo lockups (HelixLogo variant="auto") */
+[data-theme="light"] .logo-on-dark,
+:root:not([data-theme="light"]) .logo-on-light {
+  display: none;
+}
+
+/* Minimum label size: 10–11px uppercase mono labels were too small to read */
+.text-\[10px\],
+.text-\[11px\] {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+/* ==========================================================================
+   Dark Theme Text Tiers
+   Lavender at 70–80% opacity on a dark background blurred into the page.
+   Body copy is now a soft neutral; purple is kept for accents and labels.
+   ========================================================================== */
+
+/* Selectors match whole class names only (start of attribute or after a space), so hover:/group-hover:
+   variants such as "group-hover:text-purple-200" are not caught. Opacity suffixes (/70, /80) are dropped on purpose. */
+:root:not([data-theme="light"]) [class^="text-purple-100"],
+:root:not([data-theme="light"]) [class*=" text-purple-100"],
+:root:not([data-theme="light"]) [class^="text-purple-200"],
+:root:not([data-theme="light"]) [class*=" text-purple-200"],
+:root:not([data-theme="light"]) [class*=" dark:text-purple-100"],
+:root:not([data-theme="light"]) [class*=" dark:text-purple-200"] {
+  color: var(--text-body);
+}
+
+:root:not([data-theme="light"]) [class^="text-[#A39BB5]"],
+:root:not([data-theme="light"]) [class*=" text-[#A39BB5]"],
+:root:not([data-theme="light"]) [class^="text-zinc-400"],
+:root:not([data-theme="light"]) [class*=" text-zinc-400"],
+:root:not([data-theme="light"]) [class^="text-zinc-500"],
+:root:not([data-theme="light"]) [class*=" text-zinc-500"],
+:root:not([data-theme="light"]) [class^="text-slate-400"],
+:root:not([data-theme="light"]) [class*=" text-slate-400"] {
+  color: var(--text-soft);
+}
+
+:root:not([data-theme="light"]) [class^="text-purple-300"],
+:root:not([data-theme="light"]) [class*=" text-purple-300"],
+:root:not([data-theme="light"]) [class*=" dark:text-purple-300"],
+:root:not([data-theme="light"]) [class^="text-purple-400"],
+:root:not([data-theme="light"]) [class*=" text-purple-400"],
+:root:not([data-theme="light"]) [class*=" dark:text-purple-400"] {
+  color: var(--text-accent);
+}
+
+/* Keep interactive hover states working over the tiers above */
+:root:not([data-theme="light"]) [class*="hover:text-white"]:hover,
+:root:not([data-theme="light"]) .group:hover [class*="group-hover:text-white"] {
+  color: #FFFFFF;
+}
+
+:root:not([data-theme="light"]) .group:hover [class*="dark:group-hover:text-purple-200"] {
+  color: #E9DFFF;
+}
+
+/* Footer sits on its own darker band */
+:root:not([data-theme="light"]) footer.bg-\[\#070310\] {
+  background-color: #100C20;
+}
+
+/* Header pill and mobile drawer: match the lifted palette */
+:root:not([data-theme="light"]) .bg-\[\#110B22\]\/85 {
+  background-color: rgba(27, 21, 51, 0.9);
+}
+
+:root:not([data-theme="light"]) .bg-\[\#110B22\] {
+  background-color: #1B1533;
 }
 
 /* ==========================================================================
