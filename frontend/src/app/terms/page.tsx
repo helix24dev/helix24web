@@ -27,7 +27,7 @@ export default function TermsPage() {
           paragraphs: ['By engaging Helix24 Solutions via WhatsApp or requesting consultations on our site:'],
           items: [
             'You agree to receive operational messages, proposal details, project updates, and consultation follow-ups via WhatsApp Cloud API.',
-            'You may opt-out at any time by messaging STOP or requesting removal via email at support@helix24.in.',
+            'You may opt-out at any time by messaging STOP or requesting removal via email at info@helix24.in.',
             'All WhatsApp messages are processed under Meta Cloud API security policies with end-to-end transport encryption.',
           ],
         },
@@ -46,7 +46,7 @@ export default function TermsPage() {
         {
           heading: '5. Governing Law & Jurisdiction',
           paragraphs: [
-            'These terms are governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Kerala, India. For official inquiries regarding these Terms, contact us at support@helix24.in or phone/WhatsApp at +91 9048009044.',
+            'These terms are governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Kerala, India. For official inquiries regarding these Terms, contact us at info@helix24.in or phone/WhatsApp at +91 9048009044.',
           ],
         },
       ]}

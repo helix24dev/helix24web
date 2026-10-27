@@ -77,7 +77,7 @@ export default function LeadForm() {
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            placeholder="rahul@company.com"
+            placeholder="name@yourbusiness.com"
             className="w-full py-2.5 px-3.5 rounded-xl bg-purple-950/80 border border-purple-500/30 text-white text-xs focus:outline-none focus:border-purple-400"
           />
         </div>

@@ -49,8 +49,8 @@ export default function PrivacyPolicyPage() {
             "By initiating a chat via our website's WhatsApp action button or submitting your phone number on our quote forms, you consent to receive direct business communications from Helix24 Solutions.",
           ],
           items: [
-            'Opt-Out at Any Time: You can stop receiving WhatsApp messages at any time by replying STOP to any message or emailing support@helix24.in.',
-            'Right to Erasure (Data Deletion): You may request complete deletion of your personal records and WhatsApp conversation history by contacting our Data Protection Officer at support@helix24.in. We comply with all GDPR & CCPA data deletion requests within 48 hours.',
+            'Opt-Out at Any Time: You can stop receiving WhatsApp messages at any time by replying STOP to any message or emailing info@helix24.in.',
+            'Right to Erasure (Data Deletion): You may request complete deletion of your personal records and WhatsApp conversation history by contacting our Data Protection Officer at info@helix24.in. We comply with all GDPR & CCPA data deletion requests within 48 hours.',
           ],
         },
         {
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
           ],
           items: [
             'Entity: Helix24 Solutions',
-            'Email: support@helix24.in',
+            'Email: info@helix24.in',
             'Phone / WhatsApp: +91 9048009044',
             'Location: Kochi, Kerala 682030, India',
           ],
