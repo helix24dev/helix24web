@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { pageMetadata, ORG_ID } from '@/lib/seo';
+import { Smartphone, Server, Bell, Store, PencilRuler, LifeBuoy } from 'lucide-react';
+import { pageMetadata, serviceSchema } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import Link from 'next/link';
+import Faq from '@/components/Faq';
 import LeadForm from '@/components/LeadForm';
-import { Smartphone, CheckCircle2, Layers, ArrowRight, Zap } from 'lucide-react';
+import { PageHero, SectionHeading, CardGrid, Steps, RelatedLinks, ContactBlock } from '@/components/ServiceSections';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Mobile App Development Company in Kochi, Kerala | Helix24',
@@ -11,129 +12,109 @@ export const metadata: Metadata = pageMetadata({
   path: '/mobile-app-development',
 });
 
+const services = [
+  {
+    icon: Smartphone,
+    title: 'iOS & Android Apps',
+    text: 'One codebase in Flutter or React Native for both platforms, which keeps cost and timelines down without giving up a native feel.',
+    points: ['Booking, delivery and shopping apps', 'Camera, location and login features', 'Works offline where needed'],
+  },
+  {
+    icon: PencilRuler,
+    title: 'App Design',
+    text: 'Screens designed and prototyped in Figma, so you can tap through the app and approve it before development starts.',
+  },
+  {
+    icon: Server,
+    title: 'Backend & Admin Panel',
+    text: 'The server, database and admin dashboard your team needs to manage users, orders and content.',
+  },
+  {
+    icon: Bell,
+    title: 'Push Notifications',
+    text: 'Order updates, reminders and offers sent to users through Firebase notifications.',
+  },
+  {
+    icon: Store,
+    title: 'App Store & Play Store Launch',
+    text: 'We prepare listings, screenshots and submissions, and handle review feedback from Apple and Google.',
+  },
+  {
+    icon: LifeBuoy,
+    title: 'Updates & Support',
+    text: 'Bug fixes, OS updates and new features after launch, on a monthly plan or as needed.',
+  },
+];
+
+const steps = [
+  { title: 'Scope', text: 'Features, users and budget agreed, with a written scope and timeline.' },
+  { title: 'Design', text: 'Clickable Figma prototype for you to review on your phone.' },
+  { title: 'Build', text: 'App and backend development with regular test builds you can install.' },
+  { title: 'Launch', text: 'Store submission, launch and a support period for fixes.' },
+];
+
+const faqs = [
+  {
+    q: 'How long does it take to build a mobile app?',
+    a: 'A simple app usually takes 6 to 10 weeks. Apps with payments, real-time tracking or complex admin panels take longer. We give you a timeline after scoping.',
+  },
+  {
+    q: 'Should I build a native app or a cross-platform app?',
+    a: 'For most businesses, a cross-platform app in Flutter or React Native is the better value: one codebase covers both iPhone and Android. Fully native apps make sense for very graphics-heavy or hardware-specific features.',
+  },
+  {
+    q: 'Do you publish the app to the App Store and Play Store?',
+    a: 'Yes. We prepare the listings and handle the submission. The developer accounts are created in your business name so you own the apps.',
+  },
+];
+
 export default function MobileAppDevelopmentPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Mobile App Development Services',
+  const jsonLd = serviceSchema({
+    name: 'Mobile App Development',
+    description: metadata.description as string,
+    path: '/mobile-app-development',
     serviceType: 'Mobile Application Development',
-    provider: { '@id': ORG_ID },
-    areaServed: [
-      { '@type': 'City', name: 'Kochi' },
-      { '@type': 'City', name: 'Kozhikode' },
-      { '@type': 'State', name: 'Kerala' },
-      { '@type': 'Country', name: 'India' },
-      { '@type': 'Country', name: 'United Arab Emirates' },
-    ],
-  };
+    areaServed: ['Kerala', 'India', 'United Arab Emirates'],
+  });
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Breadcrumbs items={[{ name: 'Mobile App Development', path: '/mobile-app-development' }]} />
 
-      <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
-        
-        {/* Hero */}
-        <div className="space-y-6 text-center max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-2">
-            <span className="hud-tag">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              NATIVE 60FPS FLUTTER & REACT NATIVE APPS
-            </span>
-          </div>
+      <div className="max-w-[1240px] mx-auto px-6 py-10 space-y-20">
+        <PageHero
+          eyebrow="iOS · Android · Flutter · React Native"
+          title="Mobile App Development in"
+          highlight="Kochi, Kerala"
+          intro="Helix24 designs and builds mobile apps for businesses in Kerala and the GCC, from booking and delivery apps to customer loyalty and shopping apps."
+          primary={{ label: 'Discuss Your App Idea', href: '/contact' }}
+          whatsappMessage="Hi Helix24, I would like to discuss a mobile app."
+        />
 
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
-            Mobile App Development in <span className="gradient-text">Kochi, Kerala</span>
-          </h1>
-
-          <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-            From on-demand booking systems and logistics tracking to D2C mobile shopping apps. <strong>Helix24 Solutions Pvt Ltd</strong> builds fast, crash-resilient <strong>iOS and Android applications</strong> with seamless NestJS backend APIs.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Link
-              href="/contact"
-              className="px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm shadow-xl shadow-purple-900/40 hover:opacity-95 transition-all flex items-center gap-2"
-            >
-              <span>Get Mobile App Estimate</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Pillars */}
-        <section className="space-y-10">
-          <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Mobile App Architecture</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white">Cross-Platform Engineering for iOS &amp; Android</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass-panel p-8 space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
-                <Smartphone className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-white">Cross-Platform Flutter & React Native</h3>
-            <p className="text-xs text-purple-200/75 leading-relaxed">
-              Target both iOS and Android simultaneously with one clean codebase. Enjoy buttery 60fps animations, native hardware access, and reduced development costs.
-            </p>
-            <ul className="space-y-2 text-xs text-purple-300/80 pt-2 border-t border-purple-900/30">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Unified iOS & Android development</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Native device camera, GPS & biometric authentication</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Offline data caching with SQLite/Hive</li>
-            </ul>
-          </div>
-
-          <div className="glass-panel p-8 space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
-              <Zap className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold text-white">Real-Time Backend & Push Notification CRM</h3>
-            <p className="text-xs text-purple-200/75 leading-relaxed">
-              Reliable NestJS cloud APIs, real-time WebSockets, Firebase Cloud Messaging (FCM), and automated user retention triggers.
-            </p>
-            <ul className="space-y-2 text-xs text-purple-300/80 pt-2 border-t border-purple-900/30">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Sub-second REST & GraphQL API response</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Automated push notification sequences via FCM</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Secure JWT token authorization</li>
-            </ul>
-          </div>
-
-          <div className="glass-panel p-8 space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
-              <Layers className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold text-white">App Store & Play Store Deployment</h3>
-            <p className="text-xs text-purple-200/75 leading-relaxed">
-              We manage the entire submission pipeline: Apple App Store guidelines compliance, Google Play Console setup, App Store Optimization (ASO), and crashlytics.
-            </p>
-            <ul className="space-y-2 text-xs text-purple-300/80 pt-2 border-t border-purple-900/30">
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> 100% App Store approval guarantee</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> App Store keyword optimization (ASO)</li>
-              <li className="flex items-center gap-2"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> Crashlytics & performance monitoring</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-        {/* Lead Form */}
-        <section className="glass-panel p-8 sm:p-12 border border-purple-500/30">
-          <div className="text-center space-y-3 max-w-xl mx-auto mb-8">
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-              Launch Your <span className="gradient-text">Mobile Application</span>
-            </h2>
-            <p className="text-xs text-purple-200/70">
-              Tell us about your app concept. Helix24 Solutions Pvt Ltd will provide a comprehensive technical scoping document and timeline.
-            </p>
-          </div>
-          <LeadForm />
+        <section aria-labelledby="app-services" className="space-y-10">
+          <SectionHeading id="app-services" title="What we offer" intro="Design, development and launch handled by one team." />
+          <CardGrid items={services} />
         </section>
 
+        <Steps id="app-process" title="How an app project works" steps={steps} />
+
+        <RelatedLinks
+          id="app-related"
+          links={[
+            { href: '/web-development', label: 'Website development' },
+            { href: '/ecommerce-development', label: 'E-commerce websites' },
+            { href: '/branding-design', label: 'Branding & design' },
+            { href: '/contact', label: 'Contact our team' },
+          ]}
+        />
+
+        <Faq id="app-faq" title="Mobile app FAQs" items={faqs} />
+
+        <section className="space-y-8">
+          <ContactBlock title="Tell us about your app" text="Share your idea and we will reply within 24 hours with questions and next steps." />
+          <LeadForm />
+        </section>
       </div>
     </>
   );

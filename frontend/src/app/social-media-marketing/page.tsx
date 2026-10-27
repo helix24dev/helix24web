@@ -109,7 +109,7 @@ export default function SocialMediaMarketingPage() {
               <span>Get a Social Media Proposal</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/calculator" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-purple-500/30 bg-purple-950/40 text-purple-200 hover:text-white text-sm font-semibold transition-all">
+            <Link href="/calculator" className="btn-secondary inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold transition-all">
               Estimate Your Ad Results
             </Link>
           </div>

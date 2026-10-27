@@ -10,7 +10,6 @@ import {
   Store,
   Zap,
   Building2,
-  CheckCircle2,
   ShieldCheck,
   KeyRound,
   ChartColumn,
@@ -31,44 +30,33 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function HomePage() {
+  // Project summaries without outcome figures; add confirmed client results on /results first
   const selectedWorks = [
     {
-      category: 'Omnichannel Retail',
-      sectorBadge: 'Retail & Showrooms',
+      sectorBadge: 'Multi-branch retail',
       icon: Store,
       illustration: '/images/service_web_real.svg',
-      title: '18 Retail Outlets Unified Under One Live Digital System',
-      highlight: '₹4.75 Cr',
-      metricLabel: 'Attributed Sales',
-      summary: 'Connected store operations with targeted Instagram ads and automated WhatsApp lead routing across all branches.',
-      simpleBenefit: 'Every store walk-in and lead tracked directly from social ads into WhatsApp.',
-      tags: ['Custom Website', 'Instagram & FB Ads', 'WhatsApp Lead Routing'],
+      title: 'Connecting store enquiries across a retail group',
+      summary: 'One website with a page for each branch, local Instagram and Facebook ads, and WhatsApp routing so every enquiry reaches the right store.',
+      tags: ['Website', 'Meta Ads', 'WhatsApp routing'],
       link: '/results',
     },
     {
-      category: 'D2C Consumer Brands',
-      sectorBadge: 'Online Store',
+      sectorBadge: 'D2C online store',
       icon: Zap,
       illustration: '/images/service_ecom_real.svg',
-      title: 'High-Converting Online Store With Targeted Social Ads',
-      highlight: '36.9×',
-      metricLabel: 'Peak Campaign ROAS',
-      summary: 'Launched a fast-loading mobile store paired with targeted Instagram ads and a 1-second checkout experience.',
-      simpleBenefit: 'Instant page loading doubled online sales and cut abandoned carts.',
-      tags: ['1-Second Checkout', 'Instagram Store Ads', 'Cart Recovery'],
+      title: 'Rebuilding an online store for mobile shoppers',
+      summary: 'A faster store built for checkout on a phone, accurate sales tracking, short video ads and abandoned-cart reminders on WhatsApp.',
+      tags: ['Online store', 'Video ads', 'Cart recovery'],
       link: '/results',
     },
     {
-      category: 'Real Estate & Luxury Builders',
-      sectorBadge: 'Luxury Villas',
+      sectorBadge: 'Real estate',
       icon: Building2,
       illustration: '/images/hero_real.svg',
-      title: 'Connecting Premium Builders with NRI Homebuyers in the GCC',
-      highlight: '₹14 Cr',
-      metricLabel: 'Closed Property Pipeline',
-      summary: 'Interactive project showcase pages combined with targeted ads reaching high-intent Malayali investors in Dubai and Saudi Arabia.',
-      simpleBenefit: 'Directly reached verified Malayali NRI investors with instant WhatsApp project tours.',
-      tags: ['Project Showcase Page', 'UAE & Gulf NRI Ads', 'WhatsApp Tours'],
+      title: 'Reaching NRI home buyers in the Gulf',
+      summary: 'Project landing pages and Meta lead campaigns aimed at Malayali audiences in the UAE and Saudi Arabia, with brochures sent instantly on WhatsApp.',
+      tags: ['Landing pages', 'GCC campaigns', 'WhatsApp follow-up'],
       link: '/results',
     },
   ];
@@ -76,39 +64,39 @@ export default function HomePage() {
   const capabilities = [
     {
       num: '01',
-      title: 'Performance Marketing',
+      title: 'Digital Marketing',
       icon: Target,
-      tagline: 'Targeted Social & Search Ads',
-      simpleExplainer: 'We run targeted ads on Instagram, Facebook & Google that bring real customers straight to your WhatsApp and phone, without wasting your marketing budget.',
+      tagline: 'Google, Instagram & Facebook Ads',
+      simpleExplainer: 'Ads on Google, Instagram and Facebook that send enquiries to your phone and WhatsApp, with tracking so you can see what each rupee brings in.',
       link: '/digital-marketing-seo',
-      tags: ['Instagram & Facebook Ads', 'Google Search Ads', 'Direct WhatsApp Leads'],
+      tags: ['Meta Ads', 'Google Ads', 'WhatsApp leads'],
     },
     {
       num: '02',
       title: 'Websites & Online Stores',
       icon: Laptop,
-      tagline: 'Instant Load Speed & Easy CMS',
-      simpleExplainer: 'We build websites that open instantly on mobile. Every site includes an easy point-and-click CMS so you can update text, photos, and products anytime without paying a developer.',
+      tagline: 'Fast, Mobile-First Websites',
+      simpleExplainer: 'Websites and online stores that load quickly on a phone and are easy for your team to update, so you do not need a developer for every change.',
       link: '/web-development',
-      tags: ['Sub-Second Loading', 'Easy Point-and-Click CMS', 'Shopify & Custom Web'],
+      tags: ['Business websites', 'Online stores', 'Easy editing'],
     },
     {
       num: '03',
       title: 'Local SEO & Google Maps',
       icon: Search,
-      tagline: 'Top 3 on Google Maps & Search',
-      simpleExplainer: 'When customers in Kochi, Kozhikode, Trivandrum, or Dubai search for your services, your business appears at the top of Google Maps and local search.',
+      tagline: 'Get Found in Local Search',
+      simpleExplainer: 'A complete Google Business Profile, consistent listings and genuine reviews, so you show up when people nearby search for what you do.',
       link: '/digital-marketing-seo',
-      tags: ['Google Maps Top 3', 'Local SEO in Kerala', 'Verified Customer Reviews'],
+      tags: ['Google Business Profile', 'Local SEO', 'Reviews'],
     },
     {
       num: '04',
       title: 'Branding & Video Content',
       icon: Palette,
-      tagline: 'Professional Visuals & Reels',
-      simpleExplainer: 'We produce vertical video Reels, product creatives, and clean brand identities that make your business look like an established market leader.',
+      tagline: 'Logos, Design & Reels',
+      simpleExplainer: 'Logos, brand identities, social media creatives and short videos that make your business look professional and consistent everywhere.',
       link: '/branding-design',
-      tags: ['Brand Identity & Logo', 'High-Hook Video Reels', 'Website UI Design'],
+      tags: ['Brand identity', 'Reels & video', 'Website design'],
     },
   ];
 
@@ -223,7 +211,7 @@ export default function HomePage() {
 
         {/* Subhead */}
         <p className="text-base sm:text-lg text-slate-700 dark:text-purple-200/85 font-medium max-w-2xl mx-auto leading-relaxed">
-          We help growing businesses in Kerala and the GCC generate consistent inquiries, sales, and verified return on ad spend through targeted Meta Ads, Google PPC, Local SEO, and fast websites.
+          We help businesses in Kerala and the GCC get more enquiries and sales through social media marketing, Google Ads, local SEO and fast websites.
         </p>
 
         {/* Action Buttons */}
@@ -238,9 +226,9 @@ export default function HomePage() {
 
           <Link
             href="/results"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-300 dark:border-purple-500/30 bg-purple-50 dark:bg-purple-950/30 text-purple-900 dark:text-purple-200 font-semibold text-sm hover:bg-purple-100 dark:hover:bg-purple-900/40 transition-all shadow-xs"
+            className="btn-secondary inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm transition-all"
           >
-            <span>View Case Studies</span>
+            <span>See Our Work</span>
             <ArrowUpRight className="w-4 h-4 text-purple-700 dark:text-purple-300" />
           </Link>
         </div>
@@ -258,10 +246,10 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-purple-200 dark:border-purple-900/30 pb-8">
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
-              Proven Outcomes
+              Our Work
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
-              Work that moves the needle.
+              Recent projects
             </h2>
           </div>
 
@@ -269,7 +257,7 @@ export default function HomePage() {
             href="/results"
             className="inline-flex items-center gap-2 text-sm font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors shrink-0"
           >
-            <span>All Case Studies</span>
+            <span>See all projects</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -298,21 +286,13 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="space-y-1">
-                    <span className="block text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors font-heading">
-                      {work.highlight}
-                    </span>
-                    <span className="block text-xs uppercase tracking-wider text-slate-700 dark:text-purple-300 font-mono font-semibold">
-                      {work.metricLabel}
-                    </span>
-                  </div>
 
                   {/* Clean Visual Graphic */}
                   {/* 3:2 tile matches the illustrations' viewBox so the image fills it at 100% */}
                   <div className="relative w-full aspect-[3/2] rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/40 overflow-hidden">
                     <Image
                       src={work.illustration}
-                      alt={work.title}
+                      alt=""
                       fill
                       sizes="(min-width: 1024px) 380px, 100vw"
                       className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-300"
@@ -323,11 +303,6 @@ export default function HomePage() {
                     {work.title}
                   </h3>
 
-                  {/* Plain Language Benefit */}
-                  <div className="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-purple-950/40 border border-emerald-200 dark:border-purple-500/30 text-sm text-slate-800 dark:text-purple-100 flex items-start gap-2.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                    <span className="font-medium leading-relaxed">{work.simpleBenefit}</span>
-                  </div>
 
                   <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">
                     {work.summary}
@@ -357,7 +332,7 @@ export default function HomePage() {
             What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
-            Clear, Results-Driven Digital Services.
+            Our services
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 max-w-xl font-medium leading-relaxed">
             Everything your business needs to attract customers, generate inquiries, and look like an established market leader.
@@ -525,15 +500,15 @@ export default function HomePage() {
         <div className="cta-banner p-10 sm:p-16 rounded-3xl bg-gradient-to-br from-purple-950/80 via-slate-950 to-purple-950/50 border border-purple-500/30 text-center space-y-6 shadow-2xl">
           <div className="cta-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-900/50 border border-purple-500/30 text-[11px] font-mono text-purple-300">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Direct Strategy Consultation</span>
+            <span>Free consultation</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-2xl mx-auto font-heading">
-            Ready to scale your customer acquisition?
+            Ready to get more enquiries?
           </h2>
 
           <p className="text-base text-purple-200/80 max-w-xl mx-auto leading-relaxed">
-            Talk directly with our marketing leads and web engineers. We review your current online presence and ad strategy on a direct consultation call.
+            Tell us about your business. We will look at your website, Google profile and ads, and suggest what to do first.
           </p>
 
           <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
@@ -541,17 +516,17 @@ export default function HomePage() {
               href="https://wa.me/919048009044?text=Hi%20Helix24,%20I%20would%20like%20to%20discuss%20a%20strategy%20consultation%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-zinc-950 font-bold text-sm transition-all shadow-lg shadow-emerald-950/40 hover:-translate-y-0.5 active:scale-95"
+              className="btn-whatsapp inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm transition-all"
             >
-              <WhatsAppIcon className="w-5 h-5 fill-zinc-950 shrink-0" />
+              <WhatsAppIcon className="w-5 h-5 shrink-0" />
               <span>Chat on WhatsApp</span>
             </a>
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-500/40 bg-purple-900/30 text-white font-medium text-sm hover:bg-purple-800/40 transition-all keep-white"
+              className="btn-secondary inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm transition-all"
             >
-              <span>Schedule Corporate Call</span>
+              <span>Send Your Details</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

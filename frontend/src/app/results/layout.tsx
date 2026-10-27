@@ -3,8 +3,8 @@ import { pageMetadata } from '@/lib/seo';
 
 // results/page.tsx is a client component, so its metadata lives here
 export const metadata: Metadata = pageMetadata({
-  title: 'Digital Marketing Case Studies, Kerala & GCC | Helix24',
-  description: 'Real client results from Helix24: Meta Ads ROAS, local SEO lead growth and web development case studies from across Kerala and the GCC.',
+  title: 'Our Work: Marketing & Website Projects | Helix24',
+  description: 'Examples of Helix24 projects for retail, healthcare and real estate businesses in Kerala and the GCC: the challenge and what we did.',
   path: '/results',
 });
 

@@ -111,6 +111,77 @@ h1, h2, h3, h4, h5, h6, .font-heading {
    Readability (both themes)
    ========================================================================== */
 
+/* ==========================================================================
+   Button system: primary = purple gradient (inline classes), plus the shared variants below.
+   Use these instead of ad-hoc emerald/amber/teal buttons so both themes stay consistent.
+   ========================================================================== */
+
+/* WhatsApp: official green with dark text in both themes (white on #25D366 is ~2:1) */
+.btn-whatsapp {
+  background-color: #25D366 !important;
+  color: #0B141A !important;
+  border: 1px solid transparent;
+}
+.btn-whatsapp:hover { background-color: #1FBE5B !important; }
+.btn-whatsapp *, .btn-whatsapp svg { color: #0B141A !important; fill: #0B141A !important; stroke: none; }
+.btn-whatsapp svg[class*="lucide"] { fill: none !important; stroke: #0B141A !important; }
+[data-theme="light"] .btn-whatsapp,
+[data-theme="light"] .btn-whatsapp * { color: #0B141A !important; }
+[data-theme="light"] .btn-whatsapp svg:not([class*="lucide"]) { fill: #0B141A !important; stroke: none !important; }
+
+/* Secondary: outline button */
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  color: #F4F1FA;
+}
+.btn-secondary:hover { background-color: rgba(167, 139, 250, 0.14); border-color: rgba(196, 181, 253, 0.8); }
+[data-theme="light"] .btn-secondary {
+  background-color: #FFFFFF !important;
+  border-color: #C4B5FD !important;
+  color: #3B0764 !important;
+}
+[data-theme="light"] .btn-secondary:hover { background-color: #F5F3FF !important; border-color: #8B5CF6 !important; }
+[data-theme="light"] .btn-secondary * { color: inherit !important; }
+
+/* Selectable chips (filters, toggles): outline when idle, solid brand violet when selected */
+.chip {
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #DCD6EA;
+  border-radius: 9999px;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.chip:hover { border-color: rgba(196, 181, 253, 0.8); color: #FFFFFF; }
+.chip[aria-pressed="true"],
+.chip.is-active {
+  background-color: #7C3AED !important;
+  border-color: #7C3AED !important;
+  color: #FFFFFF !important;
+}
+[data-theme="light"] .chip { background-color: #FFFFFF !important; border-color: #DDD6FE !important; color: #3B0764 !important; }
+[data-theme="light"] .chip:hover { border-color: #8B5CF6 !important; }
+[data-theme="light"] .chip[aria-pressed="true"],
+[data-theme="light"] .chip.is-active { background-color: #6D28D9 !important; border-color: #6D28D9 !important; color: #FFFFFF !important; }
+[data-theme="light"] .chip[aria-pressed="true"] *,
+[data-theme="light"] .chip.is-active * { color: #FFFFFF !important; }
+
+/* Visible keyboard focus on every interactive element */
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 2px solid #A78BFA;
+  outline-offset: 2px;
+}
+
+/* Native dropdown lists: options were transparent with white text, i.e. invisible on Windows' white popup */
+:root:not([data-theme="light"]) select option {
+  background-color: #1B1533;
+  color: #F4F1FA;
+}
+
+/* Inputs inside a styled .field wrapper take the wrapper's background (light theme forces inputs white otherwise) */
+:root[data-theme="light"] .field { background-color: #FFFFFF !important; border-color: rgba(109, 40, 217, 0.25) !important; }
+:root[data-theme="light"] .field input:not([type="range"]) { background-color: transparent !important; border: 0 !important; }
+
 /* Theme-matched logo lockups (HelixLogo variant="auto") */
 [data-theme="light"] .logo-on-dark,
 :root:not([data-theme="light"]) .logo-on-light {

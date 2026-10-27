@@ -35,7 +35,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-purple-200 hover:text-white transition-colors"
             >
-              <span>5.0 Rating on Google Business Profile</span>
+              <span>See our reviews on Google</span>
               <ExternalLink className="w-3 h-3 text-purple-400" />
             </a>
           </div>

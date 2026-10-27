@@ -52,11 +52,11 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/digital-marketing-seo', label: 'Performance Ads' },
-    { href: '/web-development', label: 'Web & Apps' },
-    { href: '/results', label: 'Work' },
-    { href: '/calculator', label: 'ROI Calculator' },
-    { href: '/blog', label: 'Playbooks' },
+    { href: '/digital-marketing-seo', label: 'Digital Marketing' },
+    { href: '/social-media-marketing', label: 'Social Media' },
+    { href: '/web-development', label: 'Websites' },
+    { href: '/results', label: 'Our Work' },
+    { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
   ];
 

@@ -1,282 +1,173 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { 
-  ArrowRight, 
-  ExternalLink, 
-  Star, 
-  CheckCircle2
-} from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
+
+// Project summaries describe the work done. Specific outcome figures were removed until each one is
+// confirmed with the client; add confirmed results back as `results: ['…']` on the relevant project.
+type Project = {
+  id: string;
+  category: 'retail' | 'healthcare' | 'realestate';
+  sector: string;
+  region: string;
+  title: string;
+  image: string;
+  challenge: string;
+  work: string[];
+  results?: string[];
+};
+
+const projects: Project[] = [
+  {
+    id: 'retail-group',
+    category: 'retail',
+    sector: 'Multi-branch retail',
+    region: 'Kerala',
+    title: 'Connecting store enquiries across a retail group',
+    image: '/images/service_web_real.svg',
+    challenge: 'A retail group with several branches was running ads for each store separately, and enquiries were followed up late or not at all.',
+    work: [
+      'One website with a page for each branch',
+      'Instagram and Facebook ads targeted around each store',
+      'WhatsApp routing so every enquiry reaches the right branch',
+    ],
+  },
+  {
+    id: 'd2c-store',
+    category: 'retail',
+    sector: 'D2C online store',
+    region: 'Kerala & GCC',
+    title: 'Rebuilding an online store for mobile shoppers',
+    image: '/images/service_ecom_real.svg',
+    challenge: 'A consumer brand had a slow store that was hard to use on a phone, and ad results were difficult to measure.',
+    work: [
+      'A faster store designed for mobile checkout',
+      'Meta Pixel and Conversions API set up to measure sales accurately',
+      'Short video ads and abandoned-cart reminders on WhatsApp',
+    ],
+  },
+  {
+    id: 'clinic',
+    category: 'healthcare',
+    sector: 'Healthcare clinic',
+    region: 'Kochi',
+    title: 'Getting a clinic found on Google Maps',
+    image: '/images/service_seo_real.svg',
+    challenge: 'A specialist clinic rarely appeared in local search results and was paying for broad keywords that brought few bookings.',
+    work: [
+      'Google Business Profile completed and kept active',
+      'Search ads focused on specific treatments in nearby areas',
+      'Appointment enquiries tracked from ad to booking',
+    ],
+  },
+  {
+    id: 'real-estate',
+    category: 'realestate',
+    sector: 'Real estate developer',
+    region: 'Kochi & GCC',
+    title: 'Reaching NRI home buyers in the Gulf',
+    image: '/images/hero_real.svg',
+    challenge: 'A developer was getting many low-quality leads from property portals and few from serious buyers working abroad.',
+    work: [
+      'Project landing pages with plans, photos and pricing',
+      'Meta lead campaigns targeted at Malayali audiences in the UAE and Saudi Arabia',
+      'Brochures and site-visit booking sent instantly on WhatsApp',
+    ],
+  },
+];
+
+const filters: { id: 'all' | Project['category']; label: string }[] = [
+  { id: 'all', label: 'All projects' },
+  { id: 'retail', label: 'Retail & e-commerce' },
+  { id: 'healthcare', label: 'Healthcare' },
+  { id: 'realestate', label: 'Real estate' },
+];
 
 export default function ResultsPage() {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'ecommerce' | 'realestate' | 'healthcare'>('all');
-
-  const cases = [
-    {
-      id: 'retail',
-      filterCategory: 'ecommerce',
-      category: 'Jewellery & Retail Group',
-      location: 'Kochi & UAE',
-      tag: 'Omnichannel Command Center',
-      title: '18 Disconnected Outlets Unified Under One Next.js Command Center',
-      svgIllustration: '/images/service_web_real.svg',
-      problem: 'A leading multi-branch retail jewellery brand struggled with siloed POS systems, delayed customer follow-ups, and fragmented local ad spend across 18 regional outlets.',
-      solution: 'Engineered a unified Next.js 14 executive command portal with real-time PostgreSQL database sync, automated WhatsApp lead distribution to local branch managers, and localized Meta CAPI campaigns.',
-      highlightMetric: '₹4.75 Cr',
-      highlightLabel: 'Attributed Sales',
-      whyItWorked: 'By cutting response time from 3 hours to under 90 seconds on WhatsApp, store visit rates jumped by 46%.',
-      metrics: [
-        { label: 'Attributed Sales', value: '₹4.75 Cr' },
-        { label: 'Peak Campaign ROAS', value: '24.5×' },
-        { label: 'Lead Response Time', value: '<90 seconds' },
-        { label: 'Systems Unified', value: '18 of 18' },
-      ],
-    },
-    {
-      id: 'd2c',
-      filterCategory: 'ecommerce',
-      category: 'D2C Home & Kitchen Appliances',
-      location: 'Kerala & GCC',
-      tag: 'Meta Ads + Server-Side CAPI',
-      title: 'Scaling an Appliances Brand to 36.9× Peak ROAS & 5,316 Orders',
-      svgIllustration: '/images/service_ecom_real.svg',
-      problem: 'High customer acquisition costs (CAC) and severe ad tracking discrepancies caused by iOS 14.5+ privacy updates on their legacy WooCommerce store.',
-      solution: 'Replaced slow frontend with a custom fast-loading Next.js storefront, integrated First-Party Meta CAPI with a 9.4/10 Event Match Quality score, and produced high-hook vertical Reels video ad creatives.',
-      highlightMetric: '36.9×',
-      highlightLabel: 'Peak ROAS Delivered',
-      whyItWorked: 'Sub-second mobile checkout speed paired with server-side CAPI enabled the algorithm to discover buyers other agencies missed.',
-      metrics: [
-        { label: 'Peak ROAS', value: '36.9×' },
-        { label: 'Orders Captured', value: '5,316' },
-        { label: 'Cost Per Acquisition', value: '-38%' },
-        { label: 'Page Load Speed', value: '0.8s' },
-      ],
-    },
-    {
-      id: 'clinic',
-      filterCategory: 'healthcare',
-      category: 'Healthcare & Speciality Clinic',
-      location: 'Kochi & Calicut',
-      tag: 'Google Ads & Local SEO 3-Pack',
-      title: '+340% Inbound Patient Consultations via Google 3-Pack & PPC',
-      svgIllustration: '/images/service_seo_real.svg',
-      problem: 'The clinic was invisible on Google Maps for high-intent keywords like "best orthodontist in kochi" and was overpaying for generic search keywords with low inquiry conversion.',
-      solution: 'Executed an aggressive Google Business Profile local 3-pack optimization with structured LocalBusiness schema, coupled with tightly targeted Google Search ads and automated WhatsApp consultation booking.',
-      highlightMetric: '#1 Rank',
-      highlightLabel: 'Google Maps 3-Pack',
-      whyItWorked: 'Optimized local citations and structured review workflows secured top-3 visibility across Kakkanad and Edappally.',
-      metrics: [
-        { label: 'Google 3-Pack Rank', value: '#1 Dominance' },
-        { label: 'Inbound Inquiries', value: '+340%' },
-        { label: 'Cost Per Lead', value: '-42%' },
-        { label: 'Booking Conversion', value: '31%' },
-      ],
-    },
-    {
-      id: 'realestate',
-      filterCategory: 'realestate',
-      category: 'Luxury Real Estate & Villas',
-      location: 'Kochi & Dubai NRI Market',
-      tag: 'Meta Lead Ads & CRM Nurturing',
-      title: '₹14 Cr in Closed Villa Deals from Ultra-Targeted NRI Campaigns',
-      svgIllustration: '/images/hero_real.svg',
-      problem: 'High lead drop-off and cold leads generated by traditional property portals with zero verification of NRI purchasing power.',
-      solution: 'Built high-converting Next.js project landing pages with interactive 3D floorplan previews, combined with Meta Lead Forms featuring dynamic income gating and instant video brochure dispatch on WhatsApp.',
-      highlightMetric: '₹14 Cr',
-      highlightLabel: 'Closed Property Value',
-      whyItWorked: 'Geo-fenced Meta campaigns in Dubai, Abu Dhabi, and Riyadh pre-qualified buyers based on annual household income.',
-      metrics: [
-        { label: 'Closed Deal Value', value: '₹14 Cr' },
-        { label: 'Qualified NRI Buyers', value: '340+' },
-        { label: 'Tour Booking Rate', value: '28%' },
-        { label: 'Cost Per Buyer', value: '₹420' },
-      ],
-    },
-  ];
-
-  const filteredCases = activeFilter === 'all' 
-    ? cases 
-    : cases.filter(c => c.filterCategory === activeFilter);
+  const [active, setActive] = useState<(typeof filters)[number]['id']>('all');
+  const shown = active === 'all' ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-16">
-      
-      {/* Telemetry Header */}
-      <div className="space-y-6 text-center max-w-4xl mx-auto">
-        <div className="flex items-center justify-center gap-2">
-          <span className="hud-tag">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            PROVEN RESULTS // VERIFIED CLIENT GROWTH
-          </span>
+    <>
+      <Breadcrumbs items={[{ name: 'Our Work', path: '/results' }]} />
+
+      <div className="max-w-[1240px] mx-auto px-6 py-10 space-y-14">
+        <section className="text-center space-y-4 max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight font-heading">
+            Our <span className="gradient-text">Work</span>
+          </h1>
+          <p className="text-base sm:text-lg text-purple-200 leading-relaxed">
+            A selection of projects for businesses in Kerala and the GCC: what each client needed and what we did. Client names are kept private.
+          </p>
+        </section>
+
+        <div role="group" aria-label="Filter projects by sector" className="flex flex-wrap items-center justify-center gap-2">
+          {filters.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              aria-pressed={active === f.id}
+              onClick={() => setActive(f.id)}
+              className="chip px-4 py-2 text-sm font-semibold"
+            >
+              {f.label}
+            </button>
+          ))}
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
-          Client Results &amp; <span className="gradient-text">Proven Sales Growth</span>
-        </h1>
-
-        <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
-          Every campaign we run and every web platform we engineer is measured against bottom-line revenue. Explore how <strong>Helix24 Solutions Pvt Ltd</strong> scales ambitious brands across Kerala and the GCC.
-        </p>
-
-        {/* Google 5.0 Proof Badge */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="https://share.google/9wuyhr3TC4Utsw4V1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs font-semibold hover:bg-amber-500/20 transition-all shadow-md"
-          >
-            <div className="flex text-amber-400">
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
-            </div>
-            <span>5.0 Star Verified Reviews on Google Business Profile</span>
-            <ExternalLink className="w-3.5 h-3.5 text-amber-400" />
-          </a>
-        </div>
-      </div>
-
-      {/* Filter Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 p-1.5 rounded-2xl bg-purple-950/40 border border-purple-800/40 max-w-xl mx-auto">
-        <button
-          onClick={() => setActiveFilter('all')}
-          className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-            activeFilter === 'all'
-              ? 'bg-purple-600 text-white shadow-sm'
-              : 'text-purple-300 hover:text-white'
-          }`}
-        >
-          All Case Studies
-        </button>
-        <button
-          onClick={() => setActiveFilter('ecommerce')}
-          className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-            activeFilter === 'ecommerce'
-              ? 'bg-purple-600 text-white shadow-sm'
-              : 'text-purple-300 hover:text-white'
-          }`}
-        >
-          Retail &amp; E-Commerce
-        </button>
-        <button
-          onClick={() => setActiveFilter('healthcare')}
-          className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-            activeFilter === 'healthcare'
-              ? 'bg-purple-600 text-white shadow-sm'
-              : 'text-purple-300 hover:text-white'
-          }`}
-        >
-          Healthcare &amp; SEO
-        </button>
-        <button
-          onClick={() => setActiveFilter('realestate')}
-          className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-            activeFilter === 'realestate'
-              ? 'bg-purple-600 text-white shadow-sm'
-              : 'text-purple-300 hover:text-white'
-          }`}
-        >
-          Real Estate &amp; NRI
-        </button>
-      </div>
-
-      {/* Case Studies Visual Grid */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {filteredCases.map((item) => (
-          <div 
-            key={item.id} 
-            className="glass-panel p-8 sm:p-10 border border-purple-500/30 flex flex-col justify-between space-y-6 group hover:border-purple-400/60 transition-all rounded-3xl relative overflow-hidden bg-[#0F0822]/80"
-          >
-            <div className="space-y-5">
-              
-              {/* Header Badges */}
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="px-3 py-1 rounded-full bg-purple-900/60 border border-purple-700/40 text-[11px] font-mono font-semibold text-purple-300 uppercase tracking-wider">
-                  {item.tag}
-                </span>
-                <span className="text-xs font-mono text-emerald-400 font-semibold">{item.location}</span>
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {shown.map((p) => (
+            <article key={p.id} className="glass-panel p-7 sm:p-9 border border-purple-500/20 space-y-5">
+              <div className="flex items-center justify-between flex-wrap gap-2 text-sm">
+                <span className="chip px-3 py-1 text-xs font-semibold">{p.sector}</span>
+                <span className="text-purple-300 font-mono text-xs">{p.region}</span>
               </div>
-
-              {/* Title & Highlight */}
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-200 transition-colors leading-snug">
-                  {item.title}
-                </h3>
+              <h2 className="text-xl sm:text-2xl font-bold text-white font-heading leading-snug">{p.title}</h2>
+              <div className="w-full aspect-[3/2] rounded-2xl bg-purple-950/40 border border-purple-800/40 overflow-hidden relative">
+                <Image src={p.image} alt="" fill sizes="(min-width: 1024px) 600px, 100vw" className="object-cover" />
               </div>
-
-              {/* Visual SVG Illustration Banner */}
-              {/* 3:2 tile matches the illustrations' viewBox so the image fills it at 100% */}
-              <div className="w-full aspect-[3/2] rounded-2xl bg-purple-950/40 border border-purple-800/40 overflow-hidden relative group-hover:scale-[1.01] transition-transform">
-                <Image
-                  src={item.svgIllustration}
-                  alt={item.title}
-                  fill
-                  sizes="(min-width: 1024px) 600px, 100vw"
-                  className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                />
+              <p className="text-sm sm:text-base text-purple-200 leading-relaxed">
+                <strong className="text-white">The challenge:</strong> {p.challenge}
+              </p>
+              <div className="space-y-2">
+                <h3 className="text-sm font-bold text-white">What we did</h3>
+                <ul className="space-y-2 text-sm sm:text-base text-purple-100">
+                  {p.work.map((w) => (
+                    <li key={w} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
+                      <span>{w}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+              {p.results && (
+                <ul className="pt-4 border-t border-purple-900/30 space-y-1 text-sm text-white">
+                  {p.results.map((r) => <li key={r}>{r}</li>)}
+                </ul>
+              )}
+            </article>
+          ))}
+        </section>
 
-              {/* Problem / Solution */}
-              <div className="space-y-2 text-xs text-purple-200/75 leading-relaxed">
-                <p><strong>The Challenge:</strong> {item.problem}</p>
-                <p><strong>The Helix24 Solution:</strong> {item.solution}</p>
-              </div>
-
-              {/* Plain Language Value Driver */}
-              <div className="p-3.5 rounded-xl bg-purple-950/60 border border-purple-700/40 text-xs text-purple-200 flex items-start gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span><strong>Why it worked:</strong> {item.whyItWorked}</span>
-              </div>
-            </div>
-
-            {/* Metrics Breakdown Grid */}
-            <div className="pt-6 border-t border-purple-900/30 grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {item.metrics.map((metric, mIdx) => (
-                <div key={mIdx} className="p-3 rounded-xl bg-purple-950/50 border border-purple-800/40 text-center">
-                  <span className="block font-mono text-base sm:text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
-                    {metric.value}
-                  </span>
-                  <span className="text-[10px] uppercase tracking-wider text-purple-300/70 block mt-0.5 font-mono">
-                    {metric.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-
+        <section className="glass-panel p-8 sm:p-12 text-center space-y-5 border border-purple-500/20">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-heading">Have a similar project?</h2>
+          <p className="text-sm sm:text-base text-purple-200 max-w-xl mx-auto leading-relaxed">
+            Tell us where you are today and what you want to achieve. We will review your website and ads and suggest a plan.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-sm font-semibold hover:opacity-95 transition-all keep-white">
+              <span>Get a Free Review</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link href="/calculator" className="btn-secondary inline-flex items-center px-6 py-3.5 rounded-full text-sm font-semibold">
+              Estimate Ad Results
+            </Link>
           </div>
-        ))}
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="glass-panel p-8 sm:p-12 text-center space-y-5 border border-purple-500/30 rounded-3xl">
-        <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-          Want Similar Measurable Outcomes for Your <span className="gradient-text">Brand?</span>
-        </h2>
-        <p className="text-xs sm:text-sm text-purple-200/70 max-w-xl mx-auto leading-relaxed">
-          We audit your current ads, tracking, and web architecture for free. Discover exactly where you are losing revenue and how to capture it.
-        </p>
-        <div className="pt-2 flex flex-wrap justify-center gap-4">
-          <Link
-            href="/contact"
-            className="px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-semibold shadow-xl hover:opacity-95 transition-all flex items-center gap-2"
-          >
-            <span>Request Free Strategy Proposal</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            href="/calculator"
-            className="px-6 py-3.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-200 hover:text-white text-xs font-semibold transition-all"
-          >
-            Run ROI Simulation
-          </Link>
-        </div>
-      </section>
-
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
