@@ -28,6 +28,15 @@ One-time setup for the GitHub login (Netlify's OAuth provider):
 1. GitHub → Settings → Developer settings → OAuth Apps → New OAuth App. Homepage URL `https://helix24.in`, callback URL `https://api.netlify.com/auth/done`. Create a client secret.
 2. Netlify → helix4web → Site configuration → Access & security → OAuth → Install provider → GitHub, and paste the client ID and secret.
 
+## Performance notes
+
+- Fonts are self-hosted through `next/font` (`frontend/src/app/layout.tsx`); don't add Google Fonts `<link>`/`@import`.
+- GTM and the Meta Pixel load on the first scroll/tap/key or after 4 s (`DeferredTracking.tsx`), not during page load.
+- Photos and logos in `next/image` are resized and converted to AVIF/WebP by Netlify's Image CDN. Icons and CMS images
+  shown with `<img>` use `cdnImage()` (`frontend/src/lib/image.ts`) for the same effect on raster files.
+- Keep uploads reasonably sized (under ~1 MB); the CDN resizes them, but the original is what gets stored and fetched first.
+- Browser caching for static folders is set in `netlify.toml`.
+
 ## Deploy notes
 
 - `@netlify/plugin-nextjs` must stay in `netlify.toml`; without it every route returns 404.

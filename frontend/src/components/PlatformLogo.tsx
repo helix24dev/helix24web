@@ -1,4 +1,5 @@
 import type { PlatformItem } from '@/lib/content';
+import { cdnImage } from '@/lib/image';
 
 // One logo in the "Platforms we work with" wall. Wordmarks already spell the brand name, so they render alone;
 // icon logos get the name beside them. Plain <img> for the same reason as FeatureIcon.
@@ -7,7 +8,7 @@ export default function PlatformLogo({ item }: { item: PlatformItem }) {
     <span className="inline-flex items-center gap-2" title={item.name}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={item.logo}
+        src={cdnImage(item.logo, item.wordmark ? 312 : 84)}
         alt={item.wordmark ? item.name : ''}
         width={item.wordmark ? 104 : 28}
         height={item.wordmark ? 24 : 28}

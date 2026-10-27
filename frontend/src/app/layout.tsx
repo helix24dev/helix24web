@@ -1,10 +1,18 @@
 import type { Metadata } from 'next';
+import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import TrackingScripts from '@/components/TrackingScripts';
+import DeferredTracking from '@/components/DeferredTracking';
 import { SITE_URL, SITE_NAME, OG_IMAGE } from '@/lib/seo';
+
+// Fonts are downloaded at build time and served from this site (no request to Google before text can render).
+// All three are variable fonts, so each is a single file covering every weight the site uses.
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], display: 'swap', variable: '--font-jakarta' });
+const mono = JetBrains_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-mono', preload: false });
 
 // Fallback for routes without their own metadata (e.g. 404). Pages use pageMetadata() from '@/lib/seo';
 // canonicals are set per page because one here would be inherited by every route.
@@ -32,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     // The site has a single white theme; the [data-theme="light"] rules in globals.css adapt the components to it
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className={`${inter.variable} ${jakarta.variable} ${mono.variable}`}>
       <head>
         <TrackingScripts />
       </head>
@@ -41,6 +49,7 @@ export default function RootLayout({
         <main className="flex-grow pt-24 sm:pt-28">{children}</main>
         <Footer />
         <FloatingActions />
+        <DeferredTracking />
       </body>
     </html>
   );

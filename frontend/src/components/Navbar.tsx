@@ -55,7 +55,7 @@ export default function Navbar() {
         
         {/* Brand Logo */}
         <Link href="/" className="group shrink-0">
-          <HelixLogo size="sm" />
+          <HelixLogo size="sm" priority />
         </Link>
 
         {/* Desktop Navigation Links */}

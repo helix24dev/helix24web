@@ -1,4 +1,5 @@
 import ICONS from '@/data/icons.json';
+import { cdnImage } from '@/lib/image';
 
 // A card's picture, chosen in the CMS: up to two icons from src/data/icons.json (official brand logos, "logo-…",
 // and Fluent Emoji 3D icons, MIT, "3d-…"), or an uploaded image, which replaces them.
@@ -20,7 +21,7 @@ export default function FeatureIcon({ icons, image, size = 'md' }: { icons?: str
         // eslint-disable-next-line @next/next/no-img-element
         <img
           key={i.key}
-          src={i.src}
+          src={cdnImage(i.src, px * 3)}
           alt={isLogo ? i.label.replace(/^Logo: /, '') : ''}
           width={px}
           height={px}

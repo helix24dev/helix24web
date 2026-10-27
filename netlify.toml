@@ -12,11 +12,26 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Security headers live in frontend/next.config.mjs
+# Security headers for pages live in frontend/next.config.mjs.
+# Browser caching for static files (Netlify's CDN already serves them from edge locations and refreshes on each deploy).
+# Next.js build files (/_next/static, self-hosted fonts) are fingerprinted and cached for a year automatically.
+# Logos and photos: 7 days, then revalidate in the background
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+# 3D icons rarely change: 30 days
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+
+# CMS uploads can be replaced under the same name: 1 day
+[[headers]]
+  for = "/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
 
 # The CMS editor is a static file, so it gets its headers here: next.config.mjs headers only reach pages Next.js renders.
 # Keep this CSP in sync with adminHeaders in frontend/next.config.mjs (used when running the site locally).
