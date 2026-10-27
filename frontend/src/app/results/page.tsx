@@ -1,20 +1,24 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Store, ShoppingBag, Stethoscope, Building2, type LucideIcon } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import FeatureIcon from '@/components/FeatureIcon';
+import PlatformLogo from '@/components/PlatformLogo';
+import type { PlatformId } from '@/data/platforms';
 
 // Project summaries describe the work done. Specific outcome figures were removed until each one is
 // confirmed with the client; add confirmed results back as `results: ['…']` on the relevant project.
+// No illustrations: add real screenshots only with the client's permission.
 type Project = {
   id: string;
   category: 'retail' | 'healthcare' | 'realestate';
   sector: string;
   region: string;
   title: string;
-  image: string;
+  icon: LucideIcon;
+  platforms: PlatformId[];
   challenge: string;
   work: string[];
   results?: string[];
@@ -27,7 +31,8 @@ const projects: Project[] = [
     sector: 'Multi-branch retail',
     region: 'Kerala',
     title: 'Connecting store enquiries across a retail group',
-    image: '/images/service_web_real.svg',
+    icon: Store,
+    platforms: ['nextjs', 'meta', 'whatsapp'],
     challenge: 'A retail group with several branches was running ads for each store separately, and enquiries were followed up late or not at all.',
     work: [
       'One website with a page for each branch',
@@ -41,7 +46,8 @@ const projects: Project[] = [
     sector: 'D2C online store',
     region: 'Kerala & GCC',
     title: 'Rebuilding an online store for mobile shoppers',
-    image: '/images/service_ecom_real.svg',
+    icon: ShoppingBag,
+    platforms: ['shopify', 'meta', 'instagram', 'razorpay'],
     challenge: 'A consumer brand had a slow store that was hard to use on a phone, and ad results were difficult to measure.',
     work: [
       'A faster store designed for mobile checkout',
@@ -55,7 +61,8 @@ const projects: Project[] = [
     sector: 'Healthcare clinic',
     region: 'Kochi',
     title: 'Getting a clinic found on Google Maps',
-    image: '/images/service_seo_real.svg',
+    icon: Stethoscope,
+    platforms: ['googleAds', 'analytics', 'wordpress'],
     challenge: 'A specialist clinic rarely appeared in local search results and was paying for broad keywords that brought few bookings.',
     work: [
       'Google Business Profile completed and kept active',
@@ -69,7 +76,8 @@ const projects: Project[] = [
     sector: 'Real estate developer',
     region: 'Kochi & GCC',
     title: 'Reaching NRI home buyers in the Gulf',
-    image: '/images/hero_real.svg',
+    icon: Building2,
+    platforms: ['meta', 'nextjs', 'whatsapp'],
     challenge: 'A developer was getting many low-quality leads from property portals and few from serious buyers working abroad.',
     work: [
       'Project landing pages with plans, photos and pricing',
@@ -121,14 +129,14 @@ export default function ResultsPage() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {shown.map((p) => (
             <article key={p.id} className="glass-panel p-7 sm:p-9 border border-purple-500/20 space-y-5">
-              <div className="flex items-center justify-between flex-wrap gap-2 text-sm">
-                <span className="chip px-3 py-1 text-xs font-semibold">{p.sector}</span>
-                <span className="text-purple-300 font-mono text-xs">{p.region}</span>
+              <div className="flex items-center justify-between flex-wrap gap-3">
+                <span className="flex items-center gap-3">
+                  <FeatureIcon icon={p.icon} />
+                  <span className="text-xs font-mono uppercase tracking-wider text-slate-600 font-bold">{p.sector}</span>
+                </span>
+                <span className="text-slate-500 font-mono text-xs">{p.region}</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-white font-heading leading-snug">{p.title}</h2>
-              <div className="w-full aspect-[3/2] rounded-2xl bg-purple-950/40 border border-purple-800/40 overflow-hidden relative">
-                <Image src={p.image} alt="" fill sizes="(min-width: 1024px) 600px, 100vw" className="object-cover" />
-              </div>
               <p className="text-sm sm:text-base text-purple-200 leading-relaxed">
                 <strong className="text-white">The challenge:</strong> {p.challenge}
               </p>
@@ -142,6 +150,12 @@ export default function ResultsPage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+              <div className="pt-4 border-t border-slate-100 space-y-2">
+                <h3 className="text-xs font-semibold text-slate-500">Built with</h3>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  {p.platforms.map((id) => <PlatformLogo key={id} id={id} size="sm" />)}
+                </div>
               </div>
               {p.results && (
                 <ul className="pt-4 border-t border-purple-900/30 space-y-1 text-sm text-white">

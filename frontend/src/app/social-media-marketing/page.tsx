@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Clapperboard, MessageCircle, Target, Calendar
 import { pageMetadata, serviceSchema } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeadForm from '@/components/LeadForm';
+import FeatureIcon from '@/components/FeatureIcon';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Social Media Marketing Agency in Kerala | Helix24',
@@ -124,12 +125,9 @@ export default function SocialMediaMarketingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((item) => {
-              const Icon = item.icon;
               return (
                 <div key={item.title} className="glass-panel p-7 space-y-3 border border-purple-500/20">
-                  <div className="w-11 h-11 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-purple-300" />
-                  </div>
+                  <FeatureIcon icon={item.icon} />
                   <h3 className="text-lg font-bold text-white font-heading">{item.title}</h3>
                   <p className="text-sm text-purple-200/80 leading-relaxed">{item.text}</p>
                 </div>

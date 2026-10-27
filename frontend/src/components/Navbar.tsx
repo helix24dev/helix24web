@@ -3,13 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import HelixLogo from '@/components/HelixLogo';
 
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [hidden, setHidden] = useState(false);
 
   // Hide on scroll down, reveal on scroll up; always shown near the top of the page
@@ -35,21 +34,6 @@ export default function Navbar() {
     setHidden(false);
   }, [pathname]);
 
-  useEffect(() => {
-    const savedTheme = (localStorage.getItem('helix_theme') as 'dark' | 'light') || 'dark';
-    setTheme(savedTheme);
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-  }, []);
-
-  const toggleTheme = () => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(nextTheme);
-    localStorage.setItem('helix_theme', nextTheme);
-    document.documentElement.setAttribute('data-theme', nextTheme);
-    document.documentElement.classList.toggle('dark', nextTheme === 'dark');
-  };
-
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/digital-marketing-seo', label: 'Digital Marketing' },
@@ -67,7 +51,7 @@ export default function Navbar() {
         hidden && !mobileMenuOpen ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <div className="max-w-[1240px] mx-auto px-6 py-3.5 flex items-center justify-between rounded-full bg-[#110B22]/85 border border-purple-500/20 backdrop-blur-xl shadow-2xl">
+      <div className="max-w-[1240px] mx-auto px-6 py-3.5 flex items-center justify-between rounded-full bg-white border border-slate-200 shadow-[0_8px_30px_rgba(15,23,42,0.08)]">
         
         {/* Brand Logo */}
         <Link href="/" className="group shrink-0">
@@ -84,8 +68,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-xs font-medium tracking-wide transition-colors ${
                   isActive
-                    ? 'text-white font-semibold'
-                    : 'text-purple-300/80 hover:text-white'
+                    ? 'nav-active text-slate-950 font-semibold'
+                    : 'text-slate-600 hover:text-slate-950'
                 }`}
               >
                 {link.label}
@@ -94,19 +78,11 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Action Button & Theme Toggle */}
+        {/* Action Button */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={toggleTheme}
-            aria-label="Toggle visual theme"
-            className="p-2 rounded-full text-purple-300 hover:text-white hover:bg-purple-900/40 transition-all"
-          >
-            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
-
           <Link
             href="/contact"
-            className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold text-xs shadow-md transition-all keep-white"
+            className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-slate-900 hover:bg-slate-700 text-white font-semibold text-xs transition-all keep-white"
           >
             <span>Let&apos;s Talk</span>
           </Link>
@@ -115,7 +91,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
-            className="lg:hidden p-2 text-purple-300 hover:text-white"
+            className="lg:hidden p-2 text-slate-700 hover:text-slate-950"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -125,14 +101,14 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden mt-3 max-w-[1240px] mx-auto p-6 rounded-2xl bg-[#110B22] border border-purple-500/30 shadow-2xl space-y-4">
+        <div className="lg:hidden mt-3 max-w-[1240px] mx-auto p-6 rounded-2xl bg-white border border-slate-200 shadow-[0_8px_30px_rgba(15,23,42,0.1)] space-y-4">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-medium text-purple-200 hover:text-white py-1"
+                className="text-sm font-medium text-slate-700 hover:text-slate-950 py-1"
               >
                 {link.label}
               </Link>
@@ -140,7 +116,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-center py-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-xs mt-2"
+              className="text-center py-3 rounded-full bg-slate-900 hover:bg-slate-700 text-white font-semibold text-xs mt-2 keep-white"
             >
               Let&apos;s Talk
             </Link>

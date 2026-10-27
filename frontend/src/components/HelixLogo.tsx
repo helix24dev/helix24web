@@ -39,7 +39,7 @@ export default function HelixLogo({
           alt="Helix24 Logo Mark"
           width={pixelDimensions}
           height={pixelDimensions}
-          className="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(147,51,234,0.35)]"
+          className="w-full h-full object-contain"
           priority
         />
       </div>
@@ -82,37 +82,21 @@ export default function HelixLogo({
 
   const pixelWidth = Math.round(pixelHeight * 2.5);
 
-  const imgClass = `${heightClasses} max-w-none object-contain filter drop-shadow-[0_2px_10px_rgba(147,51,234,0.35)]`;
-
-  // 'auto' renders both lockups and lets globals.css show the one that suits the active theme
-  // (the dark-mode lockup has white lettering, which disappears on the light theme's white header)
-  const showDark = variant === 'auto' || variant === 'dark' || variant === 'white';
-  const showLight = variant === 'auto' || variant === 'light';
+  // The white-lettered lockup is only for dark backgrounds; the site itself is white
+  const src = variant === 'dark' || variant === 'white'
+    ? '/assets/helix-logo-horizontal-darkmode.png'
+    : '/assets/helix-logo-horizontal.png';
 
   return (
     <div className={`flex items-center shrink-0 group-hover:scale-[1.02] transition-transform ${className}`}>
-      <div className="relative flex items-center">
-        {showDark && (
-          <Image
-            src="/assets/helix-logo-horizontal-darkmode.png"
-            alt="Helix24 Solutions Pvt. Ltd."
-            width={pixelWidth}
-            height={pixelHeight}
-            className={`${imgClass} ${variant === 'auto' ? 'logo-on-dark' : ''}`}
-            priority
-          />
-        )}
-        {showLight && (
-          <Image
-            src="/assets/helix-logo-horizontal.png"
-            alt={showDark ? '' : 'Helix24 Solutions Pvt. Ltd.'}
-            aria-hidden={showDark ? true : undefined}
-            width={pixelWidth}
-            height={pixelHeight}
-            className={`${imgClass} ${variant === 'auto' ? 'logo-on-light' : ''}`}
-          />
-        )}
-      </div>
+      <Image
+        src={src}
+        alt="Helix24 Solutions Pvt. Ltd."
+        width={pixelWidth}
+        height={pixelHeight}
+        className={`${heightClasses} max-w-none object-contain`}
+        priority
+      />
     </div>
   );
 }

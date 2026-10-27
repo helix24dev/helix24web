@@ -4,6 +4,7 @@ import { pageMetadata, SITE_URL, WEBSITE_ID, ORG_ID, GBP_URL } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeadForm from '@/components/LeadForm';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import FeatureIcon from '@/components/FeatureIcon';
 import { whatsappLink } from '@/components/ServiceSections';
 
 export const metadata: Metadata = pageMetadata({
@@ -50,12 +51,9 @@ export default function ContactPage() {
 
             <ul className="space-y-5 text-sm">
               {details.map((d) => {
-                const Icon = d.icon;
                 return (
                   <li key={d.label} className="flex items-start gap-3">
-                    <span className="p-2.5 rounded-xl bg-purple-900/40 border border-purple-700/30">
-                      <Icon className="w-4 h-4 text-purple-300" />
-                    </span>
+                    <FeatureIcon icon={d.icon} size="sm" />
                     <span>
                       <span className="block font-semibold text-white">{d.label}</span>
                       {d.href ? (

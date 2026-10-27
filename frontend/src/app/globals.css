@@ -4,45 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Single white theme. Components were written with dark-theme Tailwind classes; the
+   [data-theme="light"] rules further down (html always carries data-theme="light") map them to the white palette. */
 :root {
-  /* Deep brand violet rather than near-black: bright text on #090514 haloed and tired the eyes */
-  --paper: #141026;
-  --surface: #1B1533;
-  --surface-alt: #231B40;
-  --surface-border: rgba(139, 92, 246, 0.18);
-  --ink: #F4F1FA;
-  --ink-secondary: #C4B5FD;
-  --muted: #BDB5D0;
-  /* Readable text tiers for dark mode (all fully opaque, contrast on --paper in brackets) */
-  --text-body: #DCD6EA;     /* paragraphs (~12:1) */
-  --text-soft: #C3BBD8;     /* secondary copy, captions (~9:1) */
-  --text-accent: #C9B8FF;   /* purple labels and links (~9.5:1) */
-  --violet: #8B5CF6;
-  --violet-bright: #A78BFA;
-  --violet-deep: #2E1065;
-  --primary-accent: #7C3AED;
-  --glass-bg: rgba(34, 26, 62, 0.78);
-  --glass-bg-hover: rgba(42, 32, 76, 0.92);
-  --glass-border: rgba(139, 92, 246, 0.22);
-  --glass-border-hover: rgba(167, 139, 250, 0.5);
-  --radius: 20px;
-}
-
-[data-theme="light"] {
   --paper: #FFFFFF;
   --surface: #F8F5FD;
   --surface-alt: #F1EAFC;
   --surface-border: rgba(124, 58, 237, 0.12);
   --ink: #110B22;
   --ink-secondary: #4C1D95;
-  --muted: #64748B;
+  --muted: #475569;
   --violet: #6D28D9;
   --violet-bright: #7C3AED;
   --violet-deep: #2E1065;
-  --glass-bg: rgba(255, 255, 255, 0.94);
+  --primary-accent: #7C3AED;
+  --glass-bg: rgba(255, 255, 255, 0.96);
   --glass-bg-hover: rgba(248, 245, 253, 0.98);
   --glass-border: rgba(109, 40, 217, 0.14);
   --glass-border-hover: rgba(109, 40, 217, 0.35);
+  /* Blueprint grid behind the page, as on the original static site */
+  --grid-line: rgba(109, 40, 217, 0.07);
+  --grid-size: 40px;
+  --radius: 20px;
 }
 
 * {
@@ -64,7 +47,19 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
-  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Fixed grid of faint violet boxes behind all content (z-index -1 keeps it under every section) */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
@@ -108,173 +103,60 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 /* ==========================================================================
-   Readability (both themes)
-   ========================================================================== */
-
-/* ==========================================================================
    Button system: primary = purple gradient (inline classes), plus the shared variants below.
-   Use these instead of ad-hoc emerald/amber/teal buttons so both themes stay consistent.
+   Use these instead of ad-hoc emerald/amber/teal buttons so every page stays consistent.
+   (!important because the colour mappings below would otherwise recolour button text.)
    ========================================================================== */
 
-/* WhatsApp: official green with dark text in both themes (white on #25D366 is ~2:1) */
-.btn-whatsapp {
+/* WhatsApp: official brand green (#25D366) with the white logo and white label */
+:root .btn-whatsapp {
   background-color: #25D366 !important;
-  color: #0B141A !important;
+  color: #FFFFFF !important;
   border: 1px solid transparent;
 }
-.btn-whatsapp:hover { background-color: #1FBE5B !important; }
-.btn-whatsapp *, .btn-whatsapp svg { color: #0B141A !important; fill: #0B141A !important; stroke: none; }
-.btn-whatsapp svg[class*="lucide"] { fill: none !important; stroke: #0B141A !important; }
-[data-theme="light"] .btn-whatsapp,
-[data-theme="light"] .btn-whatsapp * { color: #0B141A !important; }
-[data-theme="light"] .btn-whatsapp svg:not([class*="lucide"]) { fill: #0B141A !important; stroke: none !important; }
+:root .btn-whatsapp:hover { background-color: #1EBE5D !important; }
+:root .btn-whatsapp, :root .btn-whatsapp * { color: #FFFFFF !important; }
+:root .btn-whatsapp svg:not([class*="lucide"]) { fill: #FFFFFF !important; stroke: none !important; }
+:root .btn-whatsapp svg[class*="lucide"] { fill: none !important; stroke: #FFFFFF !important; }
 
 /* Secondary: outline button */
-.btn-secondary {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(167, 139, 250, 0.45);
-  color: #F4F1FA;
-}
-.btn-secondary:hover { background-color: rgba(167, 139, 250, 0.14); border-color: rgba(196, 181, 253, 0.8); }
-[data-theme="light"] .btn-secondary {
+:root .btn-secondary {
   background-color: #FFFFFF !important;
-  border-color: #C4B5FD !important;
+  border: 1px solid #C4B5FD !important;
   color: #3B0764 !important;
 }
-[data-theme="light"] .btn-secondary:hover { background-color: #F5F3FF !important; border-color: #8B5CF6 !important; }
-[data-theme="light"] .btn-secondary * { color: inherit !important; }
+:root .btn-secondary:hover { background-color: #F5F3FF !important; border-color: #8B5CF6 !important; }
+:root .btn-secondary * { color: inherit !important; }
 
 /* Selectable chips (filters, toggles): outline when idle, solid brand violet when selected */
-.chip {
-  border: 1px solid rgba(167, 139, 250, 0.4);
-  background-color: rgba(255, 255, 255, 0.03);
-  color: #DCD6EA;
+:root .chip {
+  border: 1px solid #DDD6FE !important;
+  background-color: #FFFFFF !important;
+  color: #3B0764 !important;
   border-radius: 9999px;
   transition: background-color .2s, border-color .2s, color .2s;
 }
-.chip:hover { border-color: rgba(196, 181, 253, 0.8); color: #FFFFFF; }
-.chip[aria-pressed="true"],
-.chip.is-active {
-  background-color: #7C3AED !important;
-  border-color: #7C3AED !important;
-  color: #FFFFFF !important;
-}
-[data-theme="light"] .chip { background-color: #FFFFFF !important; border-color: #DDD6FE !important; color: #3B0764 !important; }
-[data-theme="light"] .chip:hover { border-color: #8B5CF6 !important; }
-[data-theme="light"] .chip[aria-pressed="true"],
-[data-theme="light"] .chip.is-active { background-color: #6D28D9 !important; border-color: #6D28D9 !important; color: #FFFFFF !important; }
-[data-theme="light"] .chip[aria-pressed="true"] *,
-[data-theme="light"] .chip.is-active * { color: #FFFFFF !important; }
+:root .chip:hover { border-color: #8B5CF6 !important; }
+:root .chip[aria-pressed="true"],
+:root .chip.is-active { background-color: #6D28D9 !important; border-color: #6D28D9 !important; color: #FFFFFF !important; }
+:root .chip[aria-pressed="true"] *,
+:root .chip.is-active * { color: #FFFFFF !important; }
 
 /* Visible keyboard focus on every interactive element */
 a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
-  outline: 2px solid #A78BFA;
+  outline: 2px solid #7C3AED;
   outline-offset: 2px;
 }
 
-/* Native dropdown lists: options were transparent with white text, i.e. invisible on Windows' white popup */
-:root:not([data-theme="light"]) select option {
-  background-color: #1B1533;
-  color: #F4F1FA;
-}
-
-/* Inputs inside a styled .field wrapper take the wrapper's background (light theme forces inputs white otherwise) */
+/* Inputs inside a styled .field wrapper take the wrapper's background (inputs are forced white otherwise) */
 :root[data-theme="light"] .field { background-color: #FFFFFF !important; border-color: rgba(109, 40, 217, 0.25) !important; }
 :root[data-theme="light"] .field input:not([type="range"]) { background-color: transparent !important; border: 0 !important; }
-
-/* Theme-matched logo lockups (HelixLogo variant="auto") */
-[data-theme="light"] .logo-on-dark,
-:root:not([data-theme="light"]) .logo-on-light {
-  display: none;
-}
 
 /* Minimum label size: 10–11px uppercase mono labels were too small to read */
 .text-\[10px\],
 .text-\[11px\] {
   font-size: 12px !important;
   line-height: 1.5 !important;
-}
-
-/* ==========================================================================
-   Dark Theme Text Tiers
-   Lavender at 70–80% opacity on a dark background blurred into the page.
-   Body copy is now a soft neutral; purple is kept for accents and labels.
-   ========================================================================== */
-
-/* Selectors match whole class names only (start of attribute or after a space), so hover:/group-hover:
-   variants such as "group-hover:text-purple-200" are not caught. Opacity suffixes (/70, /80) are dropped on purpose. */
-:root:not([data-theme="light"]) [class^="text-purple-100"],
-:root:not([data-theme="light"]) [class*=" text-purple-100"],
-:root:not([data-theme="light"]) [class^="text-purple-200"],
-:root:not([data-theme="light"]) [class*=" text-purple-200"],
-:root:not([data-theme="light"]) [class*=" dark:text-purple-100"],
-:root:not([data-theme="light"]) [class*=" dark:text-purple-200"] {
-  color: var(--text-body);
-}
-
-:root:not([data-theme="light"]) [class^="text-[#A39BB5]"],
-:root:not([data-theme="light"]) [class*=" text-[#A39BB5]"],
-:root:not([data-theme="light"]) [class^="text-zinc-400"],
-:root:not([data-theme="light"]) [class*=" text-zinc-400"],
-:root:not([data-theme="light"]) [class^="text-zinc-500"],
-:root:not([data-theme="light"]) [class*=" text-zinc-500"],
-:root:not([data-theme="light"]) [class^="text-slate-400"],
-:root:not([data-theme="light"]) [class*=" text-slate-400"] {
-  color: var(--text-soft);
-}
-
-:root:not([data-theme="light"]) [class^="text-purple-300"],
-:root:not([data-theme="light"]) [class*=" text-purple-300"],
-:root:not([data-theme="light"]) [class*=" dark:text-purple-300"],
-:root:not([data-theme="light"]) [class^="text-purple-400"],
-:root:not([data-theme="light"]) [class*=" text-purple-400"],
-:root:not([data-theme="light"]) [class*=" dark:text-purple-400"] {
-  color: var(--text-accent);
-}
-
-/* Keep interactive hover states working over the tiers above */
-:root:not([data-theme="light"]) [class*="hover:text-white"]:hover,
-:root:not([data-theme="light"]) .group:hover [class*="group-hover:text-white"] {
-  color: #FFFFFF;
-}
-
-:root:not([data-theme="light"]) .group:hover [class*="dark:group-hover:text-purple-200"] {
-  color: #E9DFFF;
-}
-
-/* Footer sits on its own darker band */
-:root:not([data-theme="light"]) footer.bg-\[\#070310\] {
-  background-color: #100C20;
-}
-
-/* Header pill and mobile drawer: match the lifted palette */
-:root:not([data-theme="light"]) .bg-\[\#110B22\]\/85 {
-  background-color: rgba(27, 21, 51, 0.9);
-}
-
-:root:not([data-theme="light"]) .bg-\[\#110B22\] {
-  background-color: #1B1533;
-}
-
-/* ==========================================================================
-   Complete Light / White Theme Rules & Inversions
-   ========================================================================== */
-
-[data-theme="light"] {
-  --paper: #FFFFFF;
-  --surface: #F8F5FD;
-  --surface-alt: #F1EAFC;
-  --surface-border: rgba(124, 58, 237, 0.12);
-  --ink: #110B22;
-  --ink-secondary: #4C1D95;
-  --muted: #475569;
-  --violet: #6D28D9;
-  --violet-bright: #7C3AED;
-  --violet-deep: #2E1065;
-  --glass-bg: rgba(255, 255, 255, 0.96);
-  --glass-bg-hover: rgba(248, 245, 253, 0.98);
-  --glass-border: rgba(109, 40, 217, 0.14);
-  --glass-border-hover: rgba(109, 40, 217, 0.35);
 }
 
 /* ==========================================================================
@@ -483,13 +365,10 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
   color: #334155 !important;
 }
 
-[data-theme="light"] header nav a:hover {
-  color: #6D28D9 !important;
-}
-
-[data-theme="light"] header nav a.text-white {
+/* Navbar is neutral (white, slate text): no purple hover */
+[data-theme="light"] header nav a:hover,
+[data-theme="light"] header nav a.nav-active {
   color: #0F0A1C !important;
-  font-weight: 700 !important;
 }
 
 [data-theme="light"] header button {
@@ -508,7 +387,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible
 [data-theme="light"] div[class*="rounded-"][class*="bg-purple-"] svg:not([class*="text-emerald"]):not([class*="text-amber"]):not([class*="text-green"]),
 [data-theme="light"] svg[class*="text-purple-"],
 [data-theme="light"] [class*="text-purple-"] > svg:not([class*="text-emerald"]):not([class*="text-amber"]),
-[data-theme="light"] a svg:not([class*="text-emerald"]):not([class*="text-amber"]):not(.keep-white svg) {
+[data-theme="light"] a svg:not([class*="text-emerald"]):not([class*="text-amber"]):not(.keep-white svg):not(.btn-whatsapp svg) {
   color: #4C1D95 !important; /* Deep Royal Purple - 12:1 contrast against light backgrounds */
   stroke: #4C1D95 !important;
 }

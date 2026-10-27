@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -8,7 +7,7 @@ import {
   Search,
   Palette,
   Store,
-  Zap,
+  ShoppingBag,
   Building2,
   ShieldCheck,
   KeyRound,
@@ -17,7 +16,9 @@ import {
   MapPin,
   ChevronDown,
 } from 'lucide-react';
-import ProofMetricsStrip from '@/components/ProofMetricsStrip';
+import FeatureIcon from '@/components/FeatureIcon';
+import PlatformLogo from '@/components/PlatformLogo';
+import type { PlatformId } from '@/data/platforms';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import type { Metadata } from 'next';
@@ -30,33 +31,34 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function HomePage() {
-  // Project summaries without outcome figures; add confirmed client results on /results first
-  const selectedWorks = [
+  // Project summaries without outcome figures; add confirmed client results on /results first.
+  // No illustrations: the old dashboard mock-ups looked generated. Add real screenshots only with the client's permission.
+  const selectedWorks: { sectorBadge: string; icon: typeof Store; title: string; summary: string; tags: string[]; platforms: PlatformId[]; link: string }[] = [
     {
       sectorBadge: 'Multi-branch retail',
       icon: Store,
-      illustration: '/images/service_web_real.svg',
       title: 'Connecting store enquiries across a retail group',
       summary: 'One website with a page for each branch, local Instagram and Facebook ads, and WhatsApp routing so every enquiry reaches the right store.',
       tags: ['Website', 'Meta Ads', 'WhatsApp routing'],
+      platforms: ['nextjs', 'meta', 'whatsapp'],
       link: '/results',
     },
     {
       sectorBadge: 'D2C online store',
-      icon: Zap,
-      illustration: '/images/service_ecom_real.svg',
+      icon: ShoppingBag,
       title: 'Rebuilding an online store for mobile shoppers',
       summary: 'A faster store built for checkout on a phone, accurate sales tracking, short video ads and abandoned-cart reminders on WhatsApp.',
       tags: ['Online store', 'Video ads', 'Cart recovery'],
+      platforms: ['shopify', 'instagram', 'razorpay'],
       link: '/results',
     },
     {
       sectorBadge: 'Real estate',
       icon: Building2,
-      illustration: '/images/hero_real.svg',
       title: 'Reaching NRI home buyers in the Gulf',
       summary: 'Project landing pages and Meta lead campaigns aimed at Malayali audiences in the UAE and Saudi Arabia, with brochures sent instantly on WhatsApp.',
       tags: ['Landing pages', 'GCC campaigns', 'WhatsApp follow-up'],
+      platforms: ['meta', 'googleAds', 'whatsapp'],
       link: '/results',
     },
   ];
@@ -193,7 +195,7 @@ export default function HomePage() {
         {/* Display Headline with Tom Fishburne Hook; the H1 carries the search keyword, the quote is the visual hook */}
         <div className="max-w-5xl mx-auto space-y-6">
           <figure className="space-y-6">
-            <blockquote className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] font-heading block">
+            <blockquote className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.15] font-heading block">
               &ldquo;The best marketing <span className="gradient-text">doesn&apos;t feel like marketing.&rdquo;</span>
             </blockquote>
 
@@ -204,13 +206,13 @@ export default function HomePage() {
             </figcaption>
           </figure>
 
-          <h1 className="text-xl sm:text-2xl font-semibold text-purple-700 dark:text-purple-300 tracking-tight font-heading block">
+          <h1 className="text-xl sm:text-2xl font-semibold text-purple-700 tracking-tight font-heading block">
             Digital Marketing &amp; Web Development Company in Kerala
           </h1>
         </div>
 
         {/* Subhead */}
-        <p className="text-base sm:text-lg text-slate-700 dark:text-purple-200/85 font-medium max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg text-slate-700 font-medium max-w-2xl mx-auto leading-relaxed">
           We help businesses in Kerala and the GCC get more enquiries and sales through social media marketing, Google Ads, local SEO and fast websites.
         </p>
 
@@ -229,33 +231,30 @@ export default function HomePage() {
             className="btn-secondary inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm transition-all"
           >
             <span>See Our Work</span>
-            <ArrowUpRight className="w-4 h-4 text-purple-700 dark:text-purple-300" />
+            <ArrowUpRight className="w-4 h-4 text-purple-700" />
           </Link>
         </div>
 
       </section>
 
-      {/* Proof Metrics Strip */}
-      <ProofMetricsStrip />
-
-      {/* Accredited Partner & Tech Ecosystem Strip */}
+      {/* Platforms we work with */}
       <TechEcosystemStrip />
 
       {/* Selected Work (Case Studies) */}
       <section className="px-6 max-w-[1240px] mx-auto space-y-12">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-purple-200 dark:border-purple-900/30 pb-8">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-purple-200 pb-8">
           <div className="space-y-2">
-            <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+            <span className="text-xs uppercase tracking-widest text-purple-700 font-bold block font-mono">
               Our Work
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-heading">
               Recent projects
             </h2>
           </div>
 
           <Link
             href="/results"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-purple-700 hover:text-purple-900 transition-colors shrink-0"
           >
             <span>See all projects</span>
             <ArrowRight className="w-4 h-4" />
@@ -263,119 +262,100 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {selectedWorks.map((work, idx) => {
-            const WorkIcon = work.icon;
-            return (
-              <Link
-                key={idx}
-                href={work.link}
-                className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/60 transition-all group relative overflow-hidden bg-white/70 dark:bg-purple-950/20"
-              >
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 shadow-xs">
-                        <WorkIcon className="w-4.5 h-4.5" />
-                      </div>
-                      <span className="text-xs font-mono uppercase tracking-wider text-purple-700 dark:text-purple-400 font-bold">
-                        {work.sectorBadge}
-                      </span>
-                    </div>
-                    <div className="w-8 h-8 rounded-full border border-purple-200 dark:border-purple-500/30 bg-purple-50 dark:bg-transparent flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:border-purple-500 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-xs">
-                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </div>
+          {selectedWorks.map((work) => (
+            <Link
+              key={work.title}
+              href={work.link}
+              className="glass-panel p-8 flex flex-col justify-between gap-8 border border-slate-200 hover:border-purple-300 transition-all group bg-white"
+            >
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <FeatureIcon icon={work.icon} />
+                    <span className="text-xs font-mono uppercase tracking-wider text-slate-600 font-bold">
+                      {work.sectorBadge}
+                    </span>
                   </div>
-
-
-                  {/* Clean Visual Graphic */}
-                  {/* 3:2 tile matches the illustrations' viewBox so the image fills it at 100% */}
-                  <div className="relative w-full aspect-[3/2] rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/40 overflow-hidden">
-                    <Image
-                      src={work.illustration}
-                      alt=""
-                      fill
-                      sizes="(min-width: 1024px) 380px, 100vw"
-                      className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-300"
-                    />
-                  </div>
-
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors leading-snug">
-                    {work.title}
-                  </h3>
-
-
-                  <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">
-                    {work.summary}
-                  </p>
+                  <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-purple-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </div>
 
-                <div className="pt-6 border-t border-purple-100 dark:border-purple-900/40 flex flex-wrap gap-2">
-                  {work.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="text-xs px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-500/30 text-purple-900 dark:text-purple-300 font-mono font-semibold"
-                    >
+                <h3 className="text-xl font-bold text-slate-900 group-hover:text-purple-700 transition-colors leading-snug font-heading">
+                  {work.title}
+                </h3>
+
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {work.summary}
+                </p>
+              </div>
+
+              <div className="space-y-4 pt-5 border-t border-slate-100">
+                <div className="space-y-2">
+                  <span className="text-xs font-semibold text-slate-500 block">Built with</span>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                    {work.platforms.map((id) => <PlatformLogo key={id} id={id} size="sm" />)}
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {work.tags.map((tag) => (
+                    <span key={tag} className="text-xs px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-slate-700 font-semibold">
                       {tag}
                     </span>
                   ))}
                 </div>
-              </Link>
-            );
-          })}
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
       {/* Core Capabilities */}
       <section className="px-6 max-w-[1240px] mx-auto space-y-12">
-        <div className="space-y-2 border-b border-purple-200 dark:border-purple-900/30 pb-8">
-          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+        <div className="space-y-2 border-b border-purple-200 pb-8">
+          <span className="text-xs uppercase tracking-widest text-purple-700 font-bold block font-mono">
             What We Do
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-heading">
             Our services
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 max-w-xl font-medium leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 max-w-xl font-medium leading-relaxed">
             Everything your business needs to attract customers, generate inquiries, and look like an established market leader.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {capabilities.map((item, idx) => {
-            const CapIcon = item.icon;
             return (
               <div
                 key={idx}
-                className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/50 transition-all group bg-white/70 dark:bg-purple-950/20"
+                className="glass-panel p-8 sm:p-10 flex flex-col justify-between space-y-8 border border-purple-200 hover:border-purple-400/50 transition-all group bg-white/70"
               >
                 <div className="space-y-5">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-xl bg-purple-100 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center text-purple-700 dark:text-purple-300 group-hover:text-purple-900 dark:group-hover:text-white transition-all shadow-xs">
-                        <CapIcon className="w-5 h-5 text-purple-700 dark:text-purple-300" />
-                      </div>
+                      <FeatureIcon icon={item.icon} />
                       <div>
-                        <span className="text-xs font-mono text-purple-700 dark:text-purple-400 font-bold block uppercase tracking-wider">
+                        <span className="text-xs font-mono text-purple-700 font-bold block uppercase tracking-wider">
                           {item.tagline}
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-200 transition-colors font-heading">
+                  <h3 className="text-2xl font-bold text-slate-900 group-hover:text-purple-700 transition-colors font-heading">
                     {item.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-slate-700 dark:text-purple-100/90 leading-relaxed">
+                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
                     {item.simpleExplainer}
                   </p>
                 </div>
 
-                <div className="pt-6 border-t border-purple-100 dark:border-purple-900/40 flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-6 border-t border-purple-100 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-xs text-purple-700 dark:text-purple-300/80 font-mono"
+                        className="text-xs text-purple-700 font-mono"
                       >
                         {tag} {tIdx < item.tags.length - 1 && '•'}
                       </span>
@@ -385,7 +365,7 @@ export default function HomePage() {
                   <Link
                     href={item.link}
                     aria-label={`Explore ${item.title}`}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-purple-700 dark:text-purple-400 hover:text-purple-900 dark:hover:text-purple-300 transition-colors"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-purple-700 hover:text-purple-900 transition-colors"
                   >
                     <span>Explore Service</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -399,32 +379,29 @@ export default function HomePage() {
 
       {/* Trust & Accountability */}
       <section aria-labelledby="trust-heading" className="px-6 max-w-[1240px] mx-auto space-y-12">
-        <div className="space-y-2 border-b border-purple-200 dark:border-purple-900/30 pb-8">
-          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+        <div className="space-y-2 border-b border-purple-200 pb-8">
+          <span className="text-xs uppercase tracking-widest text-purple-700 font-bold block font-mono">
             Why Businesses Trust Us
           </span>
-          <h2 id="trust-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+          <h2 id="trust-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-heading">
             A digital partner you can hold accountable.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-purple-200/80 max-w-2xl font-medium leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl font-medium leading-relaxed">
             Choosing a marketing agency is a decision about trust. Here is what you get from us in writing, from the first call onwards.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {trustPoints.map((point) => {
-            const PointIcon = point.icon;
             return (
               <div
                 key={point.title}
-                className="glass-panel p-7 sm:p-8 flex gap-5 border border-purple-200 dark:border-purple-500/20 bg-white/70 dark:bg-purple-950/20"
+                className="glass-panel p-7 sm:p-8 flex gap-5 border border-purple-200 bg-white/70"
               >
-                <div className="w-11 h-11 shrink-0 rounded-xl bg-purple-100 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-500/30 flex items-center justify-center">
-                  <PointIcon className="w-5 h-5 text-purple-700 dark:text-purple-300" />
-                </div>
+                <FeatureIcon icon={point.icon} />
                 <div className="space-y-2">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">{point.title}</h3>
-                  <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">{point.text}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-heading">{point.title}</h3>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{point.text}</p>
                 </div>
               </div>
             );
@@ -434,14 +411,14 @@ export default function HomePage() {
 
       {/* Service Areas: internal links to location pages */}
       <section aria-labelledby="areas-heading" className="px-6 max-w-[1240px] mx-auto space-y-12">
-        <div className="space-y-2 border-b border-purple-200 dark:border-purple-900/30 pb-8">
-          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+        <div className="space-y-2 border-b border-purple-200 pb-8">
+          <span className="text-xs uppercase tracking-widest text-purple-700 font-bold block font-mono">
             Where We Work
           </span>
-          <h2 id="areas-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+          <h2 id="areas-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-heading">
             Digital marketing across Kerala and the GCC.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-purple-200/80 max-w-2xl font-medium leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl font-medium leading-relaxed">
             We know how customers in each market search, scroll and buy, and plan campaigns and websites around that.
           </p>
         </div>
@@ -451,16 +428,16 @@ export default function HomePage() {
             <Link
               key={area.name}
               href={area.href}
-              className="glass-panel p-7 space-y-3 border border-purple-200 dark:border-purple-500/20 hover:border-purple-400/60 transition-all group bg-white/70 dark:bg-purple-950/20"
+              className="glass-panel p-7 space-y-3 border border-purple-200 hover:border-purple-400/60 transition-all group bg-white/70"
             >
               <div className="flex items-center justify-between">
-                <span className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white font-heading">
-                  <MapPin className="w-4 h-4 text-purple-700 dark:text-purple-400" />
+                <span className="flex items-center gap-2 text-lg font-bold text-slate-900 font-heading">
+                  <MapPin className="w-4 h-4 text-purple-700" />
                   {area.name}
                 </span>
-                <ArrowUpRight className="w-4 h-4 text-purple-700 dark:text-purple-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-4 h-4 text-purple-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </div>
-              <p className="text-sm text-slate-600 dark:text-purple-200/80 leading-relaxed">{area.text}</p>
+              <p className="text-sm text-slate-600 leading-relaxed">{area.text}</p>
             </Link>
           ))}
         </div>
@@ -469,10 +446,10 @@ export default function HomePage() {
       {/* FAQ: mirrors the FAQPage JSON-LD above */}
       <section aria-labelledby="faq-heading" className="px-6 max-w-[900px] mx-auto space-y-10">
         <div className="space-y-2 text-center">
-          <span className="text-xs uppercase tracking-widest text-purple-700 dark:text-purple-400 font-bold block font-mono">
+          <span className="text-xs uppercase tracking-widest text-purple-700 font-bold block font-mono">
             Questions & Answers
           </span>
-          <h2 id="faq-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+          <h2 id="faq-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-heading">
             Frequently asked questions
           </h2>
         </div>
@@ -481,13 +458,13 @@ export default function HomePage() {
           {faqs.map((item) => (
             <details
               key={item.q}
-              className="group glass-panel border border-purple-200 dark:border-purple-500/20 bg-white/70 dark:bg-purple-950/20 [&_summary::-webkit-details-marker]:hidden"
+              className="group glass-panel border border-purple-200 bg-white/70 [&_summary::-webkit-details-marker]:hidden"
             >
-              <summary className="flex cursor-pointer items-center justify-between gap-4 p-6 text-base sm:text-lg font-semibold text-slate-900 dark:text-white">
+              <summary className="flex cursor-pointer items-center justify-between gap-4 p-6 text-base sm:text-lg font-semibold text-slate-900">
                 <h3 className="font-heading">{item.q}</h3>
-                <ChevronDown className="w-5 h-5 shrink-0 text-purple-700 dark:text-purple-300 transition-transform group-open:rotate-180" />
+                <ChevronDown className="w-5 h-5 shrink-0 text-purple-700 transition-transform group-open:rotate-180" />
               </summary>
-              <p className="px-6 pb-6 -mt-1 text-sm sm:text-base text-slate-600 dark:text-purple-200/85 leading-relaxed">
+              <p className="px-6 pb-6 -mt-1 text-sm sm:text-base text-slate-600 leading-relaxed">
                 {item.a}
               </p>
             </details>

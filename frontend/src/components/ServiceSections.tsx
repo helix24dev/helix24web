@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, type LucideIcon } from 'lucide-react';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
+import FeatureIcon from '@/components/FeatureIcon';
 
 // Shared building blocks for service and location pages, so headings, cards and buttons look the same everywhere
 
@@ -75,12 +76,9 @@ export function CardGrid({ items, columns = 3 }: { items: ServiceCard[]; columns
   return (
     <div className={`grid grid-cols-1 md:grid-cols-2 ${columns === 3 ? 'lg:grid-cols-3' : ''} gap-6`}>
       {items.map((item) => {
-        const Icon = item.icon;
         return (
           <div key={item.title} className="glass-panel p-7 space-y-3 border border-purple-500/20">
-            <div className="w-11 h-11 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center">
-              <Icon className="w-5 h-5 text-purple-300" />
-            </div>
+            <FeatureIcon icon={item.icon} />
             <h3 className="text-lg font-bold text-white font-heading">{item.title}</h3>
             <p className="text-sm text-purple-200 leading-relaxed">{item.text}</p>
             {item.points && (

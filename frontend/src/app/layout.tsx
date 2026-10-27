@@ -31,11 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark" className="dark">
+    // The site has a single white theme; the [data-theme="light"] rules in globals.css adapt the components to it
+    <html lang="en" data-theme="light">
       <head>
         <TrackingScripts />
       </head>
-      <body className="min-h-screen flex flex-col relative antialiased bg-[var(--paper)] text-[var(--ink)] selection:bg-purple-600 selection:text-white transition-colors duration-200">
+      <body className="min-h-screen flex flex-col relative antialiased bg-[var(--paper)] text-[var(--ink)] selection:bg-purple-600 selection:text-white">
         <Navbar />
         <main className="flex-grow pt-24 sm:pt-28">{children}</main>
         <Footer />
