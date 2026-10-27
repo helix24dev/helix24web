@@ -1,6 +1,6 @@
 import LeadForm from '@/components/LeadForm';
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, SITE_URL, WEBSITE_ID, ORG_ID } from '@/lib/seo';
 import { 
   Mail, 
   Phone, 
@@ -23,22 +23,9 @@ export default function ContactPage() {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
     name: 'Contact Helix24 Solutions Pvt Ltd',
-    description: 'Get in touch with Helix24 Solutions Pvt Ltd for performance marketing, SEO, and web development consultations.',
-    mainEntity: {
-      '@type': 'Corporation',
-      name: 'Helix24 Solutions Pvt Ltd',
-      telephone: '+91 9048009044',
-      email: 'hello@helix24.in',
-      taxID: 'AAJCH0136Q',
-      hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Kochi & Kozhikode',
-        addressRegion: 'Kerala',
-        postalCode: '682030',
-        addressCountry: 'IN',
-      },
-    },
+    url: `${SITE_URL}/contact`,
+    isPartOf: { '@id': WEBSITE_ID },
+    mainEntity: { '@id': ORG_ID },
   };
 
   return (
@@ -121,10 +108,10 @@ export default function ContactPage() {
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="block font-semibold text-white">Operating Locations</span>
-                    <span className="text-purple-200/70 block leading-relaxed">
-                      Kochi (Infopark / Kakkanad) & Kozhikode, Kerala, India (Serving India & GCC)
-                    </span>
+                    <span className="block font-semibold text-white">Office</span>
+                    <address className="not-italic text-purple-200/70 block leading-relaxed">
+                      Helix24 Solutions Pvt Ltd, Kochi, Kerala 682030, India (serving Kerala &amp; the GCC)
+                    </address>
                   </div>
                 </div>
 
@@ -144,7 +131,7 @@ export default function ContactPage() {
 
             <div className="pt-4 space-y-3 border-t border-purple-900/30">
               <a
-                href="https://share.google/bRqB2ePsNrm8f73wR"
+                href="https://share.google/9wuyhr3TC4Utsw4V1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs font-semibold hover:bg-amber-500/20 transition-all"

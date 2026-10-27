@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, ORG_ID } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { Smartphone, CheckCircle2, Layers, ArrowRight, Zap } from 'lucide-react';
@@ -16,14 +17,7 @@ export default function MobileAppDevelopmentPage() {
     '@type': 'Service',
     name: 'Mobile App Development Services',
     serviceType: 'Mobile Application Development',
-    provider: {
-      '@type': 'Corporation',
-      name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.in',
-      telephone: '+91 9048009044',
-      taxID: 'AAJCH0136Q',
-      hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-    },
+    provider: { '@id': ORG_ID },
     areaServed: [
       { '@type': 'City', name: 'Kochi' },
       { '@type': 'City', name: 'Kozhikode' },
@@ -39,6 +33,8 @@ export default function MobileAppDevelopmentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <Breadcrumbs items={[{ name: 'Mobile App Development', path: '/mobile-app-development' }]} />
 
       <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
         

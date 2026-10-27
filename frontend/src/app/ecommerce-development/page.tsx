@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, ORG_ID } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -27,14 +28,7 @@ export default function EcommerceDevelopmentPage() {
     '@type': 'Service',
     name: 'E-Commerce Website Development Services',
     serviceType: 'E-Commerce Development',
-    provider: {
-      '@type': 'Corporation',
-      name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.in',
-      telephone: '+91 9048009044',
-      taxID: 'AAJCH0136Q',
-      hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-    },
+    provider: { '@id': ORG_ID },
     areaServed: [
       { '@type': 'City', name: 'Kochi' },
       { '@type': 'City', name: 'Kozhikode' },
@@ -86,6 +80,8 @@ export default function EcommerceDevelopmentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+
+      <Breadcrumbs items={[{ name: 'E-Commerce Websites', path: '/ecommerce-development' }]} />
 
       <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
         
@@ -323,6 +319,10 @@ export default function EcommerceDevelopmentPage() {
               Tell us about your brand and product catalog. Helix24 Solutions Pvt Ltd will provide a tailored e-commerce blueprint within 24 hours.
             </p>
           </div>
+          <p className="text-sm text-purple-200/80 text-center">
+            Related guide:{' '}
+            <Link href="/blog/ecommerce-expansion-kerala-to-uae-gcc" className="text-purple-300 underline underline-offset-4 hover:text-white">How Kerala brands start selling online in the UAE and GCC</Link>
+          </p>
           <LeadForm />
         </section>
 

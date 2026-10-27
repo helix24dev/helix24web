@@ -102,7 +102,7 @@ export default function KeralaToGCCStory() {
             <div>
               <span className="text-xs font-bold text-white block">Operating Hubs in Kerala & GCC</span>
               <span className="text-[11px] text-purple-200/70 font-mono">
-                Kochi (Infopark Corridor) • Kozhikode (Calicut Hub) • Dubai, UAE Desk
+                Based in Kochi • Serving Kozhikode, Trivandrum &amp; the UAE
               </span>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, SITE_URL, WEBSITE_ID, ORG_ID } from '@/lib/seo';
 import Link from 'next/link';
 import { 
   Target, 
@@ -20,41 +20,11 @@ export const metadata: Metadata = pageMetadata({
 export default function AboutPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Corporation',
-    name: 'Helix24 Solutions Pvt Ltd',
-    alternateName: 'Helix24 Solutions',
-    url: 'https://helix24.in/about',
-    logo: 'https://helix24.in/assets/logo.png',
-    telephone: '+91 9048009044',
-    email: 'hello@helix24.in',
-    taxID: 'AAJCH0136Q',
-    vatID: 'CHNH05061A',
-    identifier: [
-      {
-        '@type': 'PropertyValue',
-        name: 'CIN',
-        value: 'U62011KL2026PTC107185',
-      },
-      {
-        '@type': 'PropertyValue',
-        name: 'PAN',
-        value: 'AAJCH0136Q',
-      },
-      {
-        '@type': 'PropertyValue',
-        name: 'TAN',
-        value: 'CHNH05061A',
-      },
-    ],
-    hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-    description: 'Helix24 Solutions Pvt Ltd is an officially incorporated corporate entity delivering engineering-grade Next.js web applications, Meta Ads with server-side CAPI tracking, Google Ads PPC, and Local SEO.',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Kochi & Kozhikode',
-      addressRegion: 'Kerala',
-      postalCode: '682030',
-      addressCountry: 'IN',
-    },
+    '@type': 'AboutPage',
+    name: 'About Helix24 Solutions Pvt Ltd',
+    url: `${SITE_URL}/about`,
+    isPartOf: { '@id': WEBSITE_ID },
+    mainEntity: { '@id': ORG_ID },
   };
 
   return (
@@ -85,7 +55,7 @@ export default function AboutPage() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <a
-              href="https://share.google/bRqB2ePsNrm8f73wR"
+              href="https://share.google/9wuyhr3TC4Utsw4V1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs font-semibold hover:bg-amber-500/20 transition-all"
@@ -168,51 +138,52 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Geographic Hubs: Kochi, Kozhikode, Trivandrum, GCC */}
+        {/* Service areas: the only office is the registered office in Kochi; other cities are served remotely */}
         <section className="glass-panel p-8 sm:p-12 border border-purple-500/20 space-y-8">
           <div className="text-center space-y-2 max-w-2xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Strategic Footprint</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Kochi · Kozhikode · Trivandrum · GCC</h2>
+            <span className="text-xs font-bold uppercase tracking-wider text-purple-400 font-mono">Where We Work</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Based in Kochi, Serving Kerala &amp; the GCC</h2>
+            <p className="text-sm text-purple-200/80 leading-relaxed">We work with clients across these regions on WhatsApp, phone and video calls.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
               <div className="flex items-center gap-2 text-white font-bold text-base">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span>Kochi Hub</span>
+                <Link href="/locations/kochi" className="hover:text-purple-200">Kochi</Link>
               </div>
-              <p className="text-xs text-purple-200/70 leading-relaxed">
-                Central operational base serving tech startups, retail groups, and enterprise clients across Kakkanad, Infopark, and Ernakulam.
+              <p className="text-sm text-purple-200/75 leading-relaxed">
+                Our registered office and home base, serving startups, retail groups and established businesses across Kakkanad, Infopark and Ernakulam.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
               <div className="flex items-center gap-2 text-white font-bold text-base">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span>Kozhikode Hub</span>
+                <Link href="/locations/kozhikode" className="hover:text-purple-200">Kozhikode (Calicut)</Link>
               </div>
-              <p className="text-xs text-purple-200/70 leading-relaxed">
-                Malabar regional hub dedicated to retail chains, healthcare brands, and high-growth D2C consumer brands across Calicut.
+              <p className="text-sm text-purple-200/75 leading-relaxed">
+                Serving retail chains, healthcare brands and growing D2C brands across Calicut and the Malabar region.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
               <div className="flex items-center gap-2 text-white font-bold text-base">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span>Trivandrum Hub</span>
+                <Link href="/locations/trivandrum" className="hover:text-purple-200">Trivandrum</Link>
               </div>
-              <p className="text-xs text-purple-200/70 leading-relaxed">
-                South Kerala operational presence supporting Technopark technology enterprises, institutions, and premium commercial projects.
+              <p className="text-sm text-purple-200/75 leading-relaxed">
+                Serving Technopark technology companies, institutions and commercial projects across South Kerala.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-purple-950/40 border border-purple-800/30 space-y-2">
               <div className="flex items-center gap-2 text-white font-bold text-base">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span>GCC Desk</span>
+                <Link href="/social-media-marketing" className="hover:text-purple-200">UAE &amp; GCC</Link>
               </div>
-              <p className="text-xs text-purple-200/70 leading-relaxed">
-                Cross-border desk facilitating luxury real estate marketing, NRI investor funnels, and e-commerce across Dubai, Abu Dhabi, and Saudi Arabia.
+              <p className="text-sm text-purple-200/75 leading-relaxed">
+                Campaigns for real estate, NRI audiences and e-commerce brands across Dubai, Abu Dhabi and Saudi Arabia.
               </p>
             </div>
           </div>

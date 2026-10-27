@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, ORG_ID } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -24,14 +25,7 @@ export default function WebDevelopmentPage() {
     '@type': 'Service',
     name: 'Custom Web & Next.js Software Development Services',
     serviceType: 'Web Development',
-    provider: {
-      '@type': 'Corporation',
-      name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.in',
-      telephone: '+91 9048009044',
-      taxID: 'AAJCH0136Q',
-      hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-    },
+    provider: { '@id': ORG_ID },
     areaServed: [
       { '@type': 'City', name: 'Kochi' },
       { '@type': 'City', name: 'Kozhikode' },
@@ -84,6 +78,8 @@ export default function WebDevelopmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
+      <Breadcrumbs items={[{ name: 'Website Development', path: '/web-development' }]} />
+
       <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
         
         {/* Telemetry Header & Hero */}
@@ -112,7 +108,7 @@ export default function WebDevelopmentPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://share.google/bRqB2ePsNrm8f73wR"
+              href="https://share.google/9wuyhr3TC4Utsw4V1"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-200 hover:text-white text-sm font-semibold transition-all flex items-center gap-2"
@@ -378,6 +374,10 @@ export default function WebDevelopmentPage() {
               Get in touch with Helix24 Solutions Pvt Ltd. We will provide a free speed audit of your existing website and a detailed project roadmap within 24 hours.
             </p>
           </div>
+          <p className="text-sm text-purple-200/80 text-center">
+            Related guide:{' '}
+            <Link href="/blog/nextjs-vs-wordpress-website-cost-kerala" className="text-purple-300 underline underline-offset-4 hover:text-white">Next.js vs WordPress: which is better for your business website?</Link>
+          </p>
           <LeadForm />
         </section>
 

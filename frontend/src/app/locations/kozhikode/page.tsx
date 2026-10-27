@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, serviceSchema } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -21,39 +22,14 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function KozhikodeLocationPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://helix24.in/locations/kozhikode#localbusiness',
-    name: 'Helix24 Solutions Pvt Ltd — Kozhikode Strategy Hub',
-    image: 'https://helix24.in/og-image.png',
-    telephone: '+91 9048009044',
-    email: 'hello@helix24.in',
-    url: 'https://helix24.in/locations/kozhikode',
-    taxID: 'AAJCH0136Q',
-    priceRange: '₹₹₹',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Cyberpark & Hilite Business Corridor',
-      addressLocality: 'Kozhikode',
-      addressRegion: 'Kerala',
-      postalCode: '673016',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '11.2588',
-      longitude: '75.7804',
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '09:30',
-        closes: '19:00',
-      },
-    ],
-  };
+  // Service-area page: Helix24's only office is in Kochi (see organizationSchema), so this is a Service, not a LocalBusiness
+  const jsonLd = serviceSchema({
+    name: 'Digital Marketing Services in Calicut (Kozhikode)',
+    description: 'Meta Ads, Google Ads, e-commerce and fast websites for retail, healthcare and D2C brands in Calicut and the Malabar region.',
+    path: '/locations/kozhikode',
+    serviceType: 'Digital Marketing',
+    areaServed: ['Kozhikode', 'Malabar'],
+  });
 
   return (
     <>
@@ -61,6 +37,8 @@ export default function KozhikodeLocationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <Breadcrumbs items={[{ name: 'Digital Marketing in Calicut', path: '/locations/kozhikode' }]} />
 
       <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
         
@@ -96,7 +74,7 @@ export default function KozhikodeLocationPage() {
               className="px-6 py-3.5 rounded-full bg-emerald-600/90 hover:bg-emerald-500 text-white text-sm font-semibold transition-all flex items-center gap-2 shadow-lg shadow-emerald-950/40"
             >
               <Phone className="w-4 h-4" />
-              <span>WhatsApp Calicut Desk (+91 9048009044)</span>
+              <span>WhatsApp Us (+91 9048009044)</span>
             </a>
           </div>
 
@@ -167,16 +145,16 @@ export default function KozhikodeLocationPage() {
             <div className="space-y-4">
               <span className="hud-tag">
                 <Building2 className="w-3.5 h-3.5 text-emerald-400" />
-                OFFICIAL CALICUT STRATEGY DESK
+                SERVING CALICUT
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-                Visit Us or Connect Directly in Kozhikode
+                Work With Us in Kozhikode
               </h2>
               <p className="text-xs sm:text-sm text-purple-200/80 leading-relaxed">
-                Helix24 Solutions Pvt Ltd maintains an active strategic presence serving businesses across Kozhikode, Malappuram, and Wayanad. Meet our performance leads for direct ad strategy reviews.
+                Helix24 Solutions Pvt Ltd works with businesses across Kozhikode, Malappuram and Wayanad from our Kochi base, with strategy calls on WhatsApp, phone or video.
               </p>
               <div className="space-y-2 text-xs text-purple-300/90 pt-2 font-mono">
-                <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-purple-400" /> Cyberpark / Hilite Business Corridor, Kozhikode, Kerala 673016</div>
+                <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-purple-400" /> Serving Kozhikode, Malappuram &amp; Wayanad from Kochi</div>
                 <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-purple-400" /> Monday – Saturday: 9:30 AM – 7:00 PM IST</div>
                 <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-purple-400" /> Direct Desk: +91 9048009044</div>
               </div>

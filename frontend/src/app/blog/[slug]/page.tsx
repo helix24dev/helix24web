@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_NAME, OG_IMAGE } from '@/lib/seo';
+import { SITE_URL, SITE_NAME, OG_IMAGE, ORG_ID } from '@/lib/seo';
 import { 
   ArrowLeft, 
   Calendar, 
@@ -86,20 +86,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.metaDescription,
     datePublished: post.publishedDate,
     dateModified: post.updatedDate,
+    image: [`${SITE_URL}${OG_IMAGE.url}`],
+    inLanguage: 'en-IN',
+    // Team bylines are organisations; switch to '@type': 'Person' with a profile URL once posts carry named authors
     author: {
       '@type': 'Organization',
       name: post.author.name,
-      url: 'https://helix24.in',
+      url: SITE_URL,
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.in',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://helix24.in/assets/helix24-logo.png',
-      },
-    },
+    publisher: { '@id': ORG_ID },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://helix24.in/blog/${post.slug}`,
@@ -317,7 +312,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="https://share.google/bRqB2ePsNrm8f73wR"
+              href="https://share.google/9wuyhr3TC4Utsw4V1"
               target="_blank"
               rel="noopener noreferrer"
               className="text-emerald-400 hover:underline font-mono text-[11px]"

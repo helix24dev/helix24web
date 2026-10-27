@@ -40,6 +40,9 @@ const nextConfig = {
       { source: '/blog.html', destination: '/blog', permanent: true },
       { source: '/privacy-policy.html', destination: '/privacy-policy', permanent: true },
       { source: '/terms.html', destination: '/terms', permanent: true },
+      // Consolidated duplicate/thin routes (one URL per topic avoids keyword cannibalisation)
+      { source: '/services/web-development', destination: '/web-development', permanent: true },
+      { source: '/services/meta-ads', destination: '/social-media-marketing', permanent: true },
     ];
   },
 };

@@ -153,7 +153,7 @@ export default function HomePage() {
     },
     {
       name: 'UAE & GCC',
-      href: '/services/meta-ads',
+      href: '/social-media-marketing',
       text: 'Meta Ads and e-commerce for brands in Dubai, Abu Dhabi and Saudi Arabia, including campaigns that reach Malayali NRI buyers.',
     },
   ];

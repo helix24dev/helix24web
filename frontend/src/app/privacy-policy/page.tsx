@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             'Entity: Helix24 Solutions',
             'Email: support@helix24.in',
             'Phone / WhatsApp: +91 9048009044',
-            'Location: Kochi & Kozhikode, Kerala, India',
+            'Location: Kochi, Kerala 682030, India',
           ],
         },
       ]}

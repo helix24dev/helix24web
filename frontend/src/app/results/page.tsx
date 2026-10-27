@@ -123,7 +123,7 @@ export default function ResultsPage() {
         {/* Google 5.0 Proof Badge */}
         <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://share.google/bRqB2ePsNrm8f73wR"
+            href="https://share.google/9wuyhr3TC4Utsw4V1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs font-semibold hover:bg-amber-500/20 transition-all shadow-md"

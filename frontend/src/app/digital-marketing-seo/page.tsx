@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, ORG_ID } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { 
@@ -15,8 +16,8 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Digital Marketing Company in Kochi | Ads & SEO | Helix24',
-  description: 'Meta Ads, Google Ads, server-side conversion tracking and local SEO from Helix24, a digital marketing company in Kochi serving Kerala and the GCC.',
+  title: 'Digital Marketing & SEO Company in Kerala | Helix24',
+  description: 'Google Ads, SEO, local Google Maps ranking and Meta Ads from Helix24, a Kochi-based digital marketing company serving businesses across Kerala and the GCC.',
   path: '/digital-marketing-seo',
 });
 
@@ -26,14 +27,7 @@ export default function DigitalMarketingSeoPage() {
     '@type': 'Service',
     name: 'Performance Marketing & SEO Services',
     serviceType: 'Digital Marketing',
-    provider: {
-      '@type': 'Corporation',
-      name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.in',
-      telephone: '+91 9048009044',
-      taxID: 'AAJCH0136Q',
-      hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-    },
+    provider: { '@id': ORG_ID },
     areaServed: [
       { '@type': 'City', name: 'Kochi' },
       { '@type': 'City', name: 'Kozhikode' },
@@ -86,6 +80,8 @@ export default function DigitalMarketingSeoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
+      <Breadcrumbs items={[{ name: 'Digital Marketing & SEO', path: '/digital-marketing-seo' }]} />
+
       <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
         
         {/* Telemetry Header & Hero */}
@@ -98,7 +94,7 @@ export default function DigitalMarketingSeoPage() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight">
-            Digital Marketing Company in <span className="gradient-text">Kochi, Kerala</span>
+            Digital Marketing &amp; SEO Company in <span className="gradient-text">Kerala</span>
           </h1>
 
           <p className="text-base sm:text-lg text-purple-200/80 leading-relaxed max-w-3xl mx-auto">
@@ -205,7 +201,7 @@ export default function DigitalMarketingSeoPage() {
               <div className="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-500/40 flex items-center justify-center text-purple-300">
                 <Share2 className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white">Social Media Management (SMM)</h3>
+              <h3 className="text-xl font-bold text-white"><Link href="/social-media-marketing" className="hover:text-purple-200">Social Media Management (SMM)</Link></h3>
               <p className="text-xs text-purple-200/75 leading-relaxed">
                 Build authority and organic reach that compounds. We handle complete feed aesthetics, educational carousel design, weekly Reels production, and community engagement.
               </p>

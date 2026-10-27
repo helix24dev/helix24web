@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, ORG_ID } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import { Palette, PenTool, CheckCircle2, ArrowRight, Video } from 'lucide-react';
@@ -16,14 +17,7 @@ export default function BrandingDesignPage() {
     '@type': 'Service',
     name: 'Branding & UI/UX Design Services',
     serviceType: 'Design Services',
-    provider: {
-      '@type': 'Corporation',
-      name: 'Helix24 Solutions Pvt Ltd',
-      url: 'https://helix24.in',
-      telephone: '+91 9048009044',
-      taxID: 'AAJCH0136Q',
-      hasMap: 'https://share.google/bRqB2ePsNrm8f73wR',
-    },
+    provider: { '@id': ORG_ID },
     areaServed: [
       { '@type': 'City', name: 'Kochi' },
       { '@type': 'City', name: 'Kozhikode' },
@@ -39,6 +33,8 @@ export default function BrandingDesignPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <Breadcrumbs items={[{ name: 'Branding & Design', path: '/branding-design' }]} />
 
       <div className="max-w-[1280px] mx-auto px-6 py-10 space-y-20">
         
