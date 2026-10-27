@@ -79,7 +79,6 @@ export default function HomePage() {
       icon: Target,
       tagline: 'Targeted Social & Search Ads',
       simpleExplainer: 'We run targeted ads on Instagram, Facebook & Google that bring real customers straight to your WhatsApp and phone, without wasting your marketing budget.',
-      desc: 'Focused strictly on real inquiries and sales revenue, not vanity likes or impressions.',
       link: '/digital-marketing-seo',
       tags: ['Instagram & Facebook Ads', 'Google Search Ads', 'Direct WhatsApp Leads'],
     },
@@ -89,7 +88,6 @@ export default function HomePage() {
       icon: Laptop,
       tagline: 'Instant Load Speed & Easy CMS',
       simpleExplainer: 'We build websites that open instantly on mobile. Every site includes an easy point-and-click CMS so you can update text, photos, and products anytime without paying a developer.',
-      desc: 'Sub-second mobile speed, clean design, and easy client editing built right in.',
       link: '/web-development',
       tags: ['Sub-Second Loading', 'Easy Point-and-Click CMS', 'Shopify & Custom Web'],
     },
@@ -99,7 +97,6 @@ export default function HomePage() {
       icon: Search,
       tagline: 'Top 3 on Google Maps & Search',
       simpleExplainer: 'When customers in Kochi, Kozhikode, Trivandrum, or Dubai search for your services, your business appears at the top of Google Maps and local search.',
-      desc: 'Dominate local 3-pack rankings and high-intent customer searches in your city.',
       link: '/digital-marketing-seo',
       tags: ['Google Maps Top 3', 'Local SEO in Kerala', 'Verified Customer Reviews'],
     },
@@ -109,7 +106,6 @@ export default function HomePage() {
       icon: Palette,
       tagline: 'Professional Visuals & Reels',
       simpleExplainer: 'We produce vertical video Reels, product creatives, and clean brand identities that make your business look like an established market leader.',
-      desc: 'Modern visual design and video production that builds trust and captures attention.',
       link: '/branding-design',
       tags: ['Brand Identity & Logo', 'High-Hook Video Reels', 'Website UI Design'],
     },
@@ -393,18 +389,8 @@ export default function HomePage() {
                     {item.title}
                   </h3>
 
-                  {/* Plain Language Benefit Box */}
-                  <div className="p-4 rounded-xl bg-purple-50/80 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-500/20 space-y-1.5">
-                    <span className="text-xs uppercase font-mono tracking-wider text-purple-900 dark:text-purple-300 font-bold block">
-                      What this means for your business:
-                    </span>
-                    <p className="text-sm sm:text-base text-slate-800 dark:text-purple-100 font-medium leading-relaxed">
-                      {item.simpleExplainer}
-                    </p>
-                  </div>
-
-                  <p className="text-sm sm:text-base text-slate-600 dark:text-purple-200/80 leading-relaxed">
-                    {item.desc}
+                  <p className="text-sm sm:text-base text-slate-700 dark:text-purple-100/90 leading-relaxed">
+                    {item.simpleExplainer}
                   </p>
                 </div>
 
