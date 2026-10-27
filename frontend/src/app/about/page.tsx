@@ -36,7 +36,7 @@ const principles = [
 ];
 
 const areas = [
-  { name: 'Kochi', href: '/locations/kochi', text: 'Our registered office and home base, serving businesses across Ernakulam.' },
+  { name: 'Kochi', href: '/locations/kochi', text: 'Our registered office. We work with businesses across Ernakulam.' },
   { name: 'Kozhikode (Calicut)', href: '/locations/kozhikode', text: 'Retail, healthcare and D2C brands across Calicut and the Malabar region.' },
   { name: 'Trivandrum', href: '/locations/trivandrum', text: 'Technopark companies, institutions and local businesses in South Kerala.' },
   { name: 'UAE & GCC', href: '/social-media-marketing', text: 'Campaigns for brands selling to customers in Dubai, Abu Dhabi and Saudi Arabia.' },
@@ -64,7 +64,7 @@ export default function AboutPage() {
             Marketing and websites, <span className="gradient-text">under one roof</span>
           </h1>
           <p className="text-base sm:text-lg text-purple-200 leading-relaxed">
-            Helix24 Solutions Pvt Ltd is a digital marketing and web development company based in Kochi, Kerala. We help businesses across Kerala and the GCC get found online, build websites that work on every phone, and turn that attention into real enquiries.
+            Helix24 Solutions Pvt Ltd is a digital marketing and web development company in Kochi, Kerala. We help businesses across Kerala and the GCC get found online, build websites that work well on a phone, and get more calls and WhatsApp messages from customers.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm shadow-lg hover:opacity-95 transition-all keep-white">
@@ -99,7 +99,7 @@ export default function AboutPage() {
 
         <section aria-labelledby="about-areas" className="space-y-8">
           <div className="space-y-2">
-            <h2 id="about-areas" className="text-2xl sm:text-4xl font-extrabold text-white font-heading">Based in Kochi, serving Kerala and the GCC</h2>
+            <h2 id="about-areas" className="text-2xl sm:text-4xl font-extrabold text-white font-heading">From Kochi, working across Kerala and the GCC</h2>
             <p className="text-sm sm:text-base text-purple-200">We work with clients in these regions on WhatsApp, phone and video calls.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

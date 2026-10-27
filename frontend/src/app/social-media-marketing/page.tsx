@@ -42,7 +42,7 @@ const services = [
 
 const steps = [
   { title: 'Review', text: 'We look at your current pages, past ads and competitors, and agree on what a good result looks like for your business.' },
-  { title: 'Plan', text: 'A content plan and ad strategy for the month: themes, Reels ideas, offers, audiences and budget.' },
+  { title: 'Plan', text: 'A content plan and ad plan for the month: themes, Reels ideas, offers, audiences and budget.' },
   { title: 'Create & launch', text: 'We produce the posts, videos and ad creatives, publish on schedule and launch campaigns.' },
   { title: 'Measure & improve', text: 'We track enquiries and cost per lead, keep what works, replace what does not, and report back to you.' },
 ];
@@ -50,7 +50,7 @@ const steps = [
 const faqs = [
   {
     q: 'What does a social media marketing agency do?',
-    a: 'A social media marketing agency plans and creates content for your Instagram and Facebook pages, manages comments and messages, and runs paid ads (Meta Ads) to reach new customers. Helix24 focuses on turning that attention into enquiries on WhatsApp and phone.',
+    a: 'A social media marketing agency plans and creates content for your Instagram and Facebook pages, manages comments and messages, and runs paid ads (Meta Ads) to reach new customers. Helix24 focuses on getting you enquiries on WhatsApp and phone.',
   },
   {
     q: 'Do you handle both organic posting and paid ads?',
@@ -103,7 +103,7 @@ export default function SocialMediaMarketingPage() {
             Social Media Marketing Agency in <span className="gradient-text">Kerala</span>
           </h1>
           <p className="text-base sm:text-lg text-purple-200/85 leading-relaxed">
-            Helix24 plans, creates and runs social media for businesses in Kochi, Kozhikode, Trivandrum and the GCC: content people actually stop for, and Meta Ads that turn that attention into enquiries on your WhatsApp and phone.
+            Helix24 plans, creates and runs social media for businesses in Kochi, Kozhikode, Trivandrum and the GCC: posts and Reels for your pages, and Meta Ads that bring enquiries to your WhatsApp and phone.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm shadow-lg transition-all hover:opacity-95 keep-white">

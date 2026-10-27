@@ -1,6 +1,6 @@
 # Helix24 Solutions
 
-> Helix24 Solutions Pvt Ltd is a digital marketing and web development company based in Kochi, Kerala, India (CIN U62011KL2026PTC107185). It serves businesses across Kerala (Kochi, Kozhikode/Calicut, Thiruvananthapuram/Trivandrum) and the UAE/GCC. Services: social media marketing and Meta Ads (Facebook & Instagram), Google Ads, SEO and local Google Maps ranking, websites, e-commerce stores, mobile apps, and branding/UI design. Contact: +91 9048009044, hello@helix24.in.
+> Helix24 Solutions Pvt Ltd is a digital marketing and web development company in Kochi, Kerala, India (CIN U62011KL2026PTC107185). It serves businesses across Kerala (Kochi, Kozhikode/Calicut, Thiruvananthapuram/Trivandrum) and the UAE/GCC. Services: social media marketing and Meta Ads (Facebook & Instagram), Google Ads, SEO and local Google Maps ranking, websites, e-commerce stores, mobile apps, and branding/UI design. Contact: +91 9048009044, hello@helix24.in.
 
 ## Services
 
@@ -13,14 +13,14 @@
 
 ## Locations
 
-- [Kochi](https://helix24.in/locations/kochi): Head office; Kakkanad, Infopark and Ernakulam
+- [Kochi](https://helix24.in/locations/kochi): Registered office; Kakkanad, Infopark and Ernakulam
 - [Kozhikode (Calicut)](https://helix24.in/locations/kozhikode): Calicut and the Malabar region
 - [Trivandrum](https://helix24.in/locations/trivandrum): Technopark and Thiruvananthapuram
 
 ## Company
 
 - [About Helix24](https://helix24.in/about): Who we are and how we work
-- [Results & Case Studies](https://helix24.in/results): Client outcomes and growth metrics
+- [Our Work](https://helix24.in/results): Project summaries by sector: what each client needed and what we did
 - [Ad Spend ROI Calculator](https://helix24.in/calculator): Estimate cost per lead and ROAS
 - [Blog](https://helix24.in/blog): Guides on ad costs, local SEO, website pricing and GCC e-commerce
 - [Contact](https://helix24.in/contact): Request a proposal by phone, WhatsApp or form

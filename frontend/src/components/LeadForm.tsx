@@ -38,7 +38,7 @@ export default function LeadForm() {
       if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
 
       setStatus('success');
-      setResponseMsg(`Thank you, ${formData.name}! Your inquiry has been submitted. Our strategy team will contact you within 24 hours.`);
+      setResponseMsg(`Thank you, ${formData.name}! We have received your enquiry and will get back to you within 24 hours.`);
       setFormData({ name: '', email: '', phone: '', service: 'meta-ads', message: '', location: 'Kerala' });
     } catch {
       setStatus('error');
@@ -49,8 +49,8 @@ export default function LeadForm() {
   return (
     <form onSubmit={handleSubmit} className="glass-panel p-8 space-y-5 max-w-xl mx-auto">
       <div className="space-y-1">
-        <h3 className="text-xl font-bold text-white">Request Free Strategy Proposal</h3>
-        <p className="text-xs text-purple-200/70">Submit your project details to receive a customized ad & web strategy proposal within 24 hours.</p>
+        <h3 className="text-xl font-bold text-white">Request a Free Proposal</h3>
+        <p className="text-xs text-purple-200/70">Send us your project details and we will reply with a proposal within 24 hours.</p>
       </div>
 
       <p className="hidden">
@@ -131,7 +131,7 @@ export default function LeadForm() {
         {status === 'loading' ? (
           <>
             <Loader2 className="w-4 h-4 animate-spin" />
-            <span>Submitting to Strategy Team...</span>
+            <span>Sending...</span>
           </>
         ) : (
           <>

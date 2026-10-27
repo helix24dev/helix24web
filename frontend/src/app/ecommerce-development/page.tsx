@@ -56,7 +56,7 @@ const steps = [
 const faqs = [
   {
     q: 'Should I choose Shopify or WooCommerce?',
-    a: 'Shopify is usually the simpler choice: hosting, security and checkout are handled for you for a monthly fee. WooCommerce runs on WordPress and gives you more control over hosting and customisation, but needs more upkeep. We recommend one based on your products, budget and team.',
+    a: 'Shopify is usually the simpler choice: hosting, security and checkout are handled for you for a monthly fee. WooCommerce runs on WordPress and gives you more control over hosting and customisation, but needs more upkeep. We recommend one to suit your products, budget and team.',
   },
   {
     q: 'Can customers pay by UPI and Cash on Delivery?',

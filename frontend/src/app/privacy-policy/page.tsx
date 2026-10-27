@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
         {
           heading: '1. SSL/TLS Encryption & Data Security',
           paragraphs: [
-            'All traffic between your browser or device and Helix24 Solutions is encrypted using industry-standard SSL (Secure Sockets Layer) and TLS 1.3 protocols. We enforce HTTPS across all domains, API endpoints, and messaging integrations to ensure complete data privacy and prevent unauthorized third-party interception.',
+            'All traffic between your browser or device and Helix24 Solutions is encrypted with HTTPS (TLS). We use HTTPS on all our domains, forms and messaging integrations so that third parties cannot read the data in transit.',
           ],
         },
         {
@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage() {
         {
           heading: '5. Service Providers & Data Security',
           paragraphs: [
-            'We utilize industry-standard, secure infrastructure providers to deliver our services, including Meta Platforms Inc. (WhatsApp Business Cloud API) and Google Webmaster Services. All service partners adhere to modern web data protection standards.',
+            'We use third-party providers to deliver our services, including Meta Platforms Inc. (WhatsApp Business Cloud API), Google and Netlify (website hosting and form handling). Each provider handles data under its own privacy policy.',
           ],
         },
         {

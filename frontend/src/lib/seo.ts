@@ -31,10 +31,8 @@ export const organizationSchema = {
         'Digital marketing and web development company in Kochi, Kerala: Meta Ads, Google Ads, SEO, websites, online stores and mobile apps for businesses in Kerala and the GCC.',
       telephone: '+91 9048009044',
       email: 'hello@helix24.in',
-      taxID: 'AAJCH0136Q',
       identifier: [
         { '@type': 'PropertyValue', name: 'CIN', value: 'U62011KL2026PTC107185' },
-        { '@type': 'PropertyValue', name: 'PAN', value: 'AAJCH0136Q' },
       ],
       address: {
         '@type': 'PostalAddress',

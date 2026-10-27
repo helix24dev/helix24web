@@ -17,7 +17,7 @@ export default function CalculatorPage() {
         <div className="text-center space-y-3 max-w-2xl mx-auto">
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white font-heading">Ad Spend &amp; ROI Calculator</h1>
           <p className="text-base sm:text-lg text-purple-200">
-            See roughly what a monthly ad budget could bring in for your business, based on your own numbers.
+            See roughly what a monthly ad budget could bring in for your business, using your own numbers.
           </p>
         </div>
         <AdSpendCalculator />

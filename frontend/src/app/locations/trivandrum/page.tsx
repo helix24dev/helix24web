@@ -21,7 +21,7 @@ const content: LocationContent = {
   whatsappMessage: 'Hi Helix24, I am looking for digital marketing services in Trivandrum.',
   marketTitle: 'Marketing for B2B and institutions',
   market: [
-    'Trivandrum has a large base of technology companies around Technopark and Kazhakoottam, along with government-linked organisations, colleges and hospitals. For many of them, the goal is fewer but better leads: a demo request, an admission enquiry or a consultation booking.',
+    'Trivandrum has many technology companies around Technopark and Kazhakoottam, along with government-linked organisations, colleges and hospitals. For many of them, the goal is fewer but better leads: a demo request, an admission enquiry or a consultation booking.',
     'That usually means search ads and SEO aimed at specific services, clear landing pages, and tracking that shows which campaigns bring qualified enquiries rather than just traffic.',
   ],
   services: [
@@ -34,7 +34,7 @@ const content: LocationContent = {
   faqs: [
     { q: 'Do you work with Technopark companies?', a: 'Yes. We build websites and run lead generation campaigns for IT and technology companies, including campaigns aimed at clients outside India.' },
     { q: 'Can you run admission campaigns for a college or school in Trivandrum?', a: 'Yes. We plan Google and Meta campaigns around admission dates, with landing pages and enquiry tracking so you can see which courses get interest.' },
-    { q: 'Do I need to visit your office?', a: 'No. Our team is based in Kochi and works with Trivandrum clients on WhatsApp, phone and video calls.' },
+    { q: 'Do I need to visit your office?', a: 'No. Our team works from Kochi and talks to Trivandrum clients on WhatsApp, phone and video calls.' },
   ],
 };
 

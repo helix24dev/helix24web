@@ -9,7 +9,7 @@ import { whatsappLink } from '@/components/ServiceSections';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Contact Helix24 | Digital Marketing Agency in Kochi',
-  description: 'Call or WhatsApp +91 9048009044, or send your project details for a tailored Meta Ads, Google Ads or website proposal within 24 hours.',
+  description: 'Call or WhatsApp +91 9048009044, or send your project details and get a Meta Ads, Google Ads or website proposal within 24 hours.',
   path: '/contact',
 });
 
@@ -90,7 +90,6 @@ export default function ContactPage() {
 
             <div className="pt-4 border-t border-purple-900/30 text-xs text-purple-300 font-mono space-y-1">
               <div>CIN: U62011KL2026PTC107185</div>
-              <div>PAN: AAJCH0136Q</div>
             </div>
           </aside>
 

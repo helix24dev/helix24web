@@ -26,7 +26,7 @@ import { pageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing & Web Development in Kerala | Helix24',
-  description: 'Helix24 is a Kochi-based digital marketing and web development company. Meta Ads, Google Ads, local SEO and fast websites for Kerala and GCC businesses.',
+  description: 'Helix24 is a digital marketing and web development company in Kochi. Meta Ads, Google Ads, local SEO and fast websites for Kerala and GCC businesses.',
   path: '/',
 });
 
@@ -116,7 +116,7 @@ export default function HomePage() {
     {
       icon: ChartColumn,
       title: 'Reports Built on Leads and Sales',
-      text: 'We report on enquiries, cost per lead and return on ad spend, not likes or impressions, so you can see exactly what your budget delivers.',
+      text: 'We report on enquiries, cost per lead and return on ad spend, not likes or impressions, so you can see what your budget brings in.',
     },
     {
       icon: Phone,
@@ -129,7 +129,7 @@ export default function HomePage() {
     {
       name: 'Kochi',
       href: '/locations/kochi',
-      text: 'Our home base. Meta Ads, Google Ads, local SEO and websites for businesses in Ernakulam, Kakkanad and Infopark.',
+      text: 'Where our registered office is. Meta Ads, Google Ads, local SEO and websites for businesses in Ernakulam, Kakkanad and Infopark.',
     },
     {
       name: 'Kozhikode',
@@ -154,8 +154,8 @@ export default function HomePage() {
       a: 'Helix24 is a digital marketing and web development company in Kerala. We run Meta Ads (Facebook and Instagram), Google Ads, local SEO and Google Maps optimisation, and build fast websites, online stores (Shopify, WooCommerce and custom Next.js) and mobile apps. We also produce branding, ad creatives and video Reels.',
     },
     {
-      q: 'Where is Helix24 based, and which areas do you serve?',
-      a: 'We are based in Kochi, Kerala. We work with businesses across Kochi, Kozhikode and Trivandrum, and run campaigns for clients in the UAE, Saudi Arabia and the wider GCC.',
+      q: 'Where is Helix24 located, and which areas do you serve?',
+      a: 'Our registered office is in Kochi, Kerala. We work with businesses across Kochi, Kozhikode and Trivandrum, and run campaigns for clients in the UAE, Saudi Arabia and the wider GCC.',
     },
     {
       q: 'How soon will Meta Ads or Google Ads bring enquiries?',
@@ -171,7 +171,7 @@ export default function HomePage() {
     },
     {
       q: 'How do I get started with Helix24?',
-      a: 'Message us on WhatsApp or call +91 9048009044, email hello@helix24.in, or send your details through the contact form. We review your current website and ads and send a tailored proposal within 24 hours.',
+      a: 'Message us on WhatsApp or call +91 9048009044, email hello@helix24.in, or send your details through the contact form. We review your current website and ads and send a proposal for your business within 24 hours.',
     },
   ];
 
@@ -318,7 +318,7 @@ export default function HomePage() {
             Our services
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-xl font-medium leading-relaxed">
-            Everything your business needs to attract customers, generate inquiries, and look like an established market leader.
+            Ads, websites, local search and design, each aimed at getting you more enquiries.
           </p>
         </div>
 
@@ -377,17 +377,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust & Accountability */}
+      {/* How we work */}
       <section aria-labelledby="trust-heading" className="px-6 max-w-[1240px] mx-auto space-y-12">
         <div className="space-y-2 border-b border-purple-200 pb-8">
           <span className="text-xs uppercase tracking-widest text-purple-700 font-bold block font-mono">
             Why Businesses Trust Us
           </span>
           <h2 id="trust-heading" className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-heading">
-            A digital partner you can hold accountable.
+            What you get when you work with us.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl font-medium leading-relaxed">
-            Choosing a marketing agency is a decision about trust. Here is what you get from us in writing, from the first call onwards.
+            These are the terms we work on with every client.
           </p>
         </div>
 

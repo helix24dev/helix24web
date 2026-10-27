@@ -22,7 +22,7 @@ const services = [
   {
     icon: Search,
     title: 'SEO Built In',
-    text: 'Clean page structure, titles, descriptions, schema markup and a sitemap from day one, so Google can understand and rank your pages.',
+    text: 'Clean page structure, titles, descriptions, schema markup and a sitemap from the start, so Google can understand and rank your pages.',
   },
   {
     icon: PencilRuler,
@@ -91,7 +91,7 @@ export default function WebDevelopmentPage() {
           eyebrow="Websites · Landing Pages · Web Apps"
           title="Web Development Company in"
           highlight="Kochi, Kerala"
-          intro="Helix24 builds fast, search-friendly websites and web applications for businesses in Kerala and the GCC, designed to turn visitors into enquiries."
+          intro="Helix24 builds fast, search-friendly websites and web applications for businesses in Kerala and the GCC, designed to bring in enquiries."
           primary={{ label: 'Get a Website Quote', href: '/contact' }}
           whatsappMessage="Hi Helix24, I would like a quote for a website."
         />

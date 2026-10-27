@@ -72,7 +72,7 @@ export default function LocationPage({ c }: { c: LocationContent }) {
           <div className="glass-panel p-8 border border-purple-500/20 space-y-3 text-sm sm:text-base text-purple-200">
             <h2 className="text-xl sm:text-2xl font-extrabold text-white font-heading">How we work with {c.city} businesses</h2>
             <p className="leading-relaxed">
-              Our team is based in Kochi and works with clients across Kerala and the GCC on WhatsApp, phone and video calls.
+              Our team works from Kochi with clients across Kerala and the GCC, on WhatsApp, phone and video calls.
             </p>
             <div className="space-y-2 pt-1">
               <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-purple-300" /> Helix24 Solutions Pvt Ltd, Kochi, Kerala 682030</div>
@@ -99,7 +99,7 @@ export default function LocationPage({ c }: { c: LocationContent }) {
 
         <section className="space-y-8">
           <ContactBlock
-            title={`Grow your business in ${c.city}`}
+            title={`Talk to us about your business in ${c.city}`}
             text="Tell us about your business and goals, and we will reply within 24 hours with a plan."
           />
           <LeadForm />

@@ -8,7 +8,7 @@ import { PageHero, SectionHeading, CardGrid, RelatedLinks, ContactBlock } from '
 
 export const metadata: Metadata = pageMetadata({
   title: 'Branding & UI/UX Design Agency in Kochi | Helix24',
-  description: 'Brand identity, logo design, Figma UI/UX prototypes and vertical video Reels that make your business look established. Based in Kochi, Kerala.',
+  description: 'Brand identity, logo design, Figma UI/UX prototypes and vertical video Reels for your business, from Helix24 in Kochi, Kerala.',
   path: '/branding-design',
 });
 

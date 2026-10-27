@@ -162,7 +162,7 @@ export const BLOG_POSTS: BlogPost[] = [
         bulletPoints: [
           'Video: shooting and editing Reels takes far more time than designing posts.',
           'Volume: the number of posts, stories and videos each month.',
-          'Ads: managing paid campaigns, testing creatives and reporting adds strategy time.',
+          'Ads: managing paid campaigns, testing creatives and reporting adds planning time.',
           'Platforms: Instagram and Facebook together, or more channels.',
         ],
         callout: {
@@ -218,7 +218,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'How Google ranks local results',
         paragraphs: [
-          'Google says local results are based mainly on relevance (how well your profile matches the search), distance (how far you are from the searcher) and prominence (how well known and well reviewed your business is). You cannot change distance, so the work goes into the other two.',
+          'Google says it ranks local results mainly on relevance (how well your profile matches the search), distance (how far you are from the searcher) and prominence (how well known and well reviewed your business is). You cannot change distance, so the work goes into the other two.',
         ],
       },
       {
@@ -240,7 +240,7 @@ export const BLOG_POSTS: BlogPost[] = [
         callout: {
           type: 'warning',
           title: 'Do not use addresses you do not operate from',
-          text: 'Listing virtual offices or addresses where you have no staff breaks Google\'s guidelines and can get a profile suspended. If you serve several cities from one base, create helpful pages for each area on your website instead.',
+          text: 'Listing virtual offices or addresses where you have no staff breaks Google\'s guidelines and can get a profile suspended. If you serve several cities from one office, create helpful pages for each area on your website instead.',
         },
       },
       {

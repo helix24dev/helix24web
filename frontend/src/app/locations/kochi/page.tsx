@@ -5,7 +5,7 @@ import LocationPage, { type LocationContent } from '@/components/LocationPage';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing Agency in Kochi, Ernakulam | Helix24',
-  description: 'Meta Ads, Google Ads, local SEO and web development for businesses in Kochi, Kakkanad, Infopark and across Ernakulam, from a Kochi-based team.',
+  description: 'Meta Ads, Google Ads, local SEO and web development for businesses in Kochi, Kakkanad, Infopark and across Ernakulam, from a team in Kochi.',
   path: '/locations/kochi',
 });
 
@@ -17,7 +17,7 @@ const content: LocationContent = {
   eyebrow: 'Kochi · Kakkanad · Ernakulam',
   title: 'Digital Marketing Agency in',
   highlight: 'Kochi',
-  intro: 'Kochi is our home base. We help local businesses get found on Google, reach the right people on Instagram and Facebook, and turn that into calls and WhatsApp enquiries.',
+  intro: 'Our registered office is in Kochi. We help local businesses get found on Google, run ads on Instagram and Facebook, and get more calls and WhatsApp enquiries.',
   whatsappMessage: 'Hi Helix24, I am looking for digital marketing services in Kochi.',
   marketTitle: 'Marketing in a competitive city',
   market: [
@@ -32,7 +32,7 @@ const content: LocationContent = {
   ],
   areas: ['Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Kaloor', 'Vyttila', 'Fort Kochi', 'Aluva', 'Tripunithura', 'Ernakulam North'],
   faqs: [
-    { q: 'How do you work with Kochi businesses?', a: 'Our team is based in Kochi. Planning, approvals and updates happen on WhatsApp, phone and video calls, with a monthly report on results.' },
+    { q: 'How do you work with Kochi businesses?', a: 'Our team works from Kochi. Planning, approvals and updates happen on WhatsApp, phone and video calls, with a monthly report on results.' },
     { q: 'Which types of Kochi businesses do you work with?', a: 'Service businesses such as clinics, builders, education providers and professional firms, as well as retailers and restaurants that want more local customers.' },
     { q: 'How do I rank higher on Google Maps in Kochi?', a: 'Complete every section of your Google Business Profile, choose the right categories, post regularly, keep your name, address and phone identical everywhere online, and ask happy customers for reviews. We can handle this for you.' },
   ],

@@ -8,7 +8,7 @@ import { PageHero, SectionHeading, CardGrid, Steps, RelatedLinks, ContactBlock }
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing & SEO Company in Kerala | Helix24',
-  description: 'Google Ads, SEO, local Google Maps ranking and Meta Ads from Helix24, a Kochi-based digital marketing company serving businesses across Kerala and the GCC.',
+  description: 'Google Ads, SEO, local Google Maps ranking and Meta Ads from Helix24, a digital marketing company in Kochi working with businesses across Kerala and the GCC.',
   path: '/digital-marketing-seo',
 });
 
@@ -51,7 +51,7 @@ const services = [
 
 const steps = [
   { title: 'Audit', text: 'We review your website, Google Business Profile, past ads and competitors, and agree on goals.' },
-  { title: 'Plan', text: 'A channel plan and budget split between Google, Meta and SEO, based on how your customers buy.' },
+  { title: 'Plan', text: 'A channel plan and budget split between Google, Meta and SEO, planned around how your customers buy.' },
   { title: 'Launch', text: 'Tracking first, then campaigns, page updates and profile improvements.' },
   { title: 'Review', text: 'Monthly reports on enquiries and cost per lead, with changes made from what the numbers show.' },
 ];
@@ -94,7 +94,7 @@ export default function DigitalMarketingSeoPage() {
           eyebrow="Google Ads · SEO · Local SEO · Meta Ads"
           title="Digital Marketing & SEO Company in"
           highlight="Kerala"
-          intro="Helix24 helps businesses in Kochi, Kozhikode, Trivandrum and the GCC get found on Google and turn that attention into calls, WhatsApp messages and sales."
+          intro="Helix24 helps businesses in Kochi, Kozhikode, Trivandrum and the GCC get found on Google and get more calls, WhatsApp messages and sales."
           primary={{ label: 'Get a Free Marketing Review', href: '/contact' }}
           whatsappMessage="Hi Helix24, I would like to discuss digital marketing for my business."
         />

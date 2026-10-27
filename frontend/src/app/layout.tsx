@@ -11,7 +11,7 @@ import { SITE_URL, SITE_NAME, OG_IMAGE } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'Helix24 Solutions | Digital Marketing & Web Development, Kerala',
-  description: 'Helix24 is a Kochi-based digital marketing and web development company. Meta Ads, Google Ads, local SEO and fast websites for Kerala and GCC businesses.',
+  description: 'Helix24 is a digital marketing and web development company in Kochi. Meta Ads, Google Ads, local SEO and fast websites for Kerala and GCC businesses.',
   applicationName: SITE_NAME,
   openGraph: {
     type: 'website',
