@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Faq from '@/components/Faq';
 import LeadForm from '@/components/LeadForm';
 import { PageHero, SectionHeading, CardGrid, Steps, RelatedLinks, ContactBlock } from '@/components/ServiceSections';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'E-Commerce Website Development in Kerala | Helix24',
@@ -15,12 +16,14 @@ export const metadata: Metadata = pageMetadata({
 const services = [
   {
     icon: ShoppingBag,
+    brands: logos('shopify', 'woocommerce'),
     title: 'Shopify & WooCommerce Stores',
     text: 'Online stores on the platform that suits your products and budget, set up so you can add products, run offers and manage orders yourself.',
     points: ['Store design for mobile shoppers', 'Product, category and offer setup', 'Training for your team'],
   },
   {
     icon: CreditCard,
+    brands: logos('razorpay'),
     title: 'Payments',
     text: 'Razorpay, Cashfree or PayU for India, Stripe for international cards, and Cash on Delivery where it makes sense.',
   },
@@ -31,11 +34,13 @@ const services = [
   },
   {
     icon: MessageCircle,
+    brands: logos('whatsapp'),
     title: 'WhatsApp Order Updates',
     text: 'Order confirmations, COD checks and abandoned-cart reminders sent on WhatsApp, which most customers here read quickly.',
   },
   {
     icon: Megaphone,
+    brands: logos('google', 'meta'),
     title: 'Product Feeds for Ads',
     text: 'Your catalogue connected to Meta and Google Merchant Center, so you can run shopping and retargeting ads.',
   },

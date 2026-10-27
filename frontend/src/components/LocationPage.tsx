@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Faq, { type FaqItem } from '@/components/Faq';
 import LeadForm from '@/components/LeadForm';
 import { PageHero, SectionHeading, CardGrid, RelatedLinks, ContactBlock } from '@/components/ServiceSections';
+import type { BrandId } from '@/data/platforms';
 
 export type LocationContent = {
   slug: string;
@@ -17,7 +18,7 @@ export type LocationContent = {
   whatsappMessage: string;
   marketTitle: string;
   market: string[];        // paragraphs about the local market, unique per city
-  services: { icon: LucideIcon; title: string; text: string }[];
+  services: { icon: LucideIcon; brands?: BrandId[]; title: string; text: string }[];
   areas: string[];         // neighbourhoods and nearby towns served
   faqs: FaqItem[];
 };

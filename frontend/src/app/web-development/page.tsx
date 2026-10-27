@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Gauge, PencilRuler, Search, Plug, LayoutDashboard, LifeBuoy } from 'lucide-react';
+import { Laptop, PencilRuler, Search, Plug, LayoutDashboard, LifeBuoy } from 'lucide-react';
 import { pageMetadata, serviceSchema } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Faq from '@/components/Faq';
 import LeadForm from '@/components/LeadForm';
 import { PageHero, SectionHeading, CardGrid, Steps, RelatedLinks, ContactBlock } from '@/components/ServiceSections';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Web Development Company in Kochi, Kerala | Helix24',
@@ -14,18 +15,20 @@ export const metadata: Metadata = pageMetadata({
 
 const services = [
   {
-    icon: Gauge,
+    icon: Laptop,
     title: 'Business Websites',
     text: 'Fast, mobile-first websites for service businesses, clinics, builders and retailers. Most visitors in Kerala arrive on a phone, so we design for that first.',
     points: ['Custom design, not a reused template', 'Contact forms and WhatsApp buttons', 'Easy-to-edit content'],
   },
   {
     icon: Search,
+    brands: logos('google'),
     title: 'SEO Built In',
     text: 'Clean page structure, titles, descriptions, schema markup and a sitemap from the start, so Google can understand and rank your pages.',
   },
   {
     icon: PencilRuler,
+    brands: logos('googleAds', 'facebook'),
     title: 'Landing Pages for Ads',
     text: 'Focused pages for Google and Meta campaigns, built to load quickly and turn ad clicks into enquiries.',
   },
@@ -36,6 +39,7 @@ const services = [
   },
   {
     icon: Plug,
+    brands: logos('razorpay', 'whatsapp', 'sheets'),
     title: 'Integrations',
     text: 'Connect your site to the tools you already use: Razorpay or Stripe payments, WhatsApp, CRMs such as Zoho, and Google Sheets.',
   },

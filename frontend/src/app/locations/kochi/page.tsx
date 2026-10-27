@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import { Search, MapPin, Target, Gauge } from 'lucide-react';
+import { Search, MapPin, Target, Laptop } from 'lucide-react';
 import { pageMetadata } from '@/lib/seo';
 import LocationPage, { type LocationContent } from '@/components/LocationPage';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing Agency in Kochi, Ernakulam | Helix24',
@@ -25,10 +26,10 @@ const content: LocationContent = {
     'Many Kochi businesses also sell to Malayalis working in the Gulf, especially in real estate and education. Campaigns can target Kochi and GCC audiences separately, with their own budgets and messages.',
   ],
   services: [
-    { icon: MapPin, title: 'Local SEO & Google Maps', text: 'A complete Google Business Profile and local listings so you appear for searches in your part of Kochi.' },
-    { icon: Search, title: 'Google Ads', text: 'Search ads for people in Kochi already looking for your service, with tracked calls and forms.' },
-    { icon: Target, title: 'Instagram & Facebook Ads', text: 'Meta campaigns targeted by area and interest, with leads sent straight to WhatsApp.' },
-    { icon: Gauge, title: 'Websites', text: 'Fast, mobile-first websites and landing pages built to convert local visitors.' },
+    { icon: MapPin, brands: logos('googleMaps'), title: 'Local SEO & Google Maps', text: 'A complete Google Business Profile and local listings so you appear for searches in your part of Kochi.' },
+    { icon: Search, brands: logos('googleAds'), title: 'Google Ads', text: 'Search ads for people in Kochi already looking for your service, with tracked calls and forms.' },
+    { icon: Target, brands: logos('facebook', 'instagram'), title: 'Instagram & Facebook Ads', text: 'Meta campaigns targeted by area and interest, with leads sent straight to WhatsApp.' },
+    { icon: Laptop, title: 'Websites', text: 'Fast, mobile-first websites and landing pages built to convert local visitors.' },
   ],
   areas: ['Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Kaloor', 'Vyttila', 'Fort Kochi', 'Aluva', 'Tripunithura', 'Ernakulam North'],
   faqs: [

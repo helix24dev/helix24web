@@ -5,6 +5,7 @@ import { pageMetadata, serviceSchema } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import LeadForm from '@/components/LeadForm';
 import FeatureIcon from '@/components/FeatureIcon';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Social Media Marketing Agency in Kerala | Helix24',
@@ -15,26 +16,31 @@ export const metadata: Metadata = pageMetadata({
 const services = [
   {
     icon: CalendarDays,
+    brands: logos('instagram', 'facebook'),
     title: 'Social Media Management',
     text: 'A monthly content calendar, post and carousel design, captions and community replies across Instagram and Facebook, so your pages stay active and on-brand without taking up your time.',
   },
   {
     icon: Clapperboard,
+    brands: logos('instagram', 'youtube'),
     title: 'Instagram Reels & Video Content',
     text: 'Short vertical videos scripted around a clear hook, shot or edited for Reels, YouTube Shorts and ads. Video is where most reach on Instagram comes from today.',
   },
   {
     icon: Target,
+    brands: logos('facebook', 'instagram'),
     title: 'Meta Ads (Facebook & Instagram Ads)',
     text: 'Paid campaigns targeted by location, interest and behaviour, from your city in Kerala to Malayali audiences in the UAE and Saudi Arabia. Budgets are set around cost per enquiry, not likes.',
   },
   {
     icon: MessageCircle,
+    brands: logos('whatsapp'),
     title: 'WhatsApp Lead Funnels',
     text: 'Click-to-WhatsApp ads and instant forms that put interested customers straight into a WhatsApp conversation with your team, which is how most Kerala customers prefer to enquire.',
   },
   {
     icon: ChartColumn,
+    brands: logos('analytics', 'meta'),
     title: 'Tracking & Reporting',
     text: 'Meta Pixel and server-side Conversions API set up correctly, so ad results are measured accurately. Reports show enquiries, cost per lead and sales, not just followers.',
   },
@@ -127,7 +133,7 @@ export default function SocialMediaMarketingPage() {
             {services.map((item) => {
               return (
                 <div key={item.title} className="glass-panel p-7 space-y-3 border border-purple-500/20">
-                  <FeatureIcon icon={item.icon} />
+                  <FeatureIcon icon={item.icon} brands={item.brands} />
                   <h3 className="text-lg font-bold text-white font-heading">{item.title}</h3>
                   <p className="text-sm text-purple-200/80 leading-relaxed">{item.text}</p>
                 </div>

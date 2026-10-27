@@ -83,7 +83,7 @@ export default function Footer() {
           </address>
           <div className="pt-2 space-y-1.5">
             <div><a href="tel:+919048009044" className="hover:text-white text-purple-200">+91 9048009044</a></div>
-            <div><a href="mailto:hello@helix24.in" className="hover:text-white text-purple-200">hello@helix24.in</a></div>
+            <div><a href="mailto:info@helix24.in" className="hover:text-white text-purple-200">info@helix24.in</a></div>
           </div>
         </div>
 

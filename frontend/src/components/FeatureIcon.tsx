@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { BRAND_MARKS, type BrandId } from '@/data/platforms';
 import {
   AlarmClock, Bell, BookOpen, Briefcase, Building2, CalendarDays, ChartColumn, Clapperboard, Clock, CreditCard,
   FileText, Gauge, Globe2, GraduationCap, ImageIcon, KeyRound, LayoutDashboard, LifeBuoy, Laptop, Mail, MapPin,
@@ -23,10 +24,21 @@ const ICONS = new Map<LucideIcon, string>([
   [Truck, 'delivery-truck'], [Zap, 'high-voltage'],
 ]);
 
-export default function FeatureIcon({ icon: Icon, size = 'md' }: { icon: LucideIcon; size?: 'sm' | 'md' }) {
+// `brands` shows the logos of the platforms a service runs on (e.g. Facebook + Instagram for Meta Ads) in place of the
+// 3D icon; customers recognise a logo faster than they read a label. Use 3D icons only where no brand fits.
+export default function FeatureIcon({ icon: Icon, brands, size = 'md' }: { icon: LucideIcon; brands?: BrandId[]; size?: 'sm' | 'md' }) {
   const file = ICONS.get(Icon);
   const box = size === 'sm' ? 'w-10 h-10 rounded-lg' : 'w-12 h-12 rounded-xl';
   const px = size === 'sm' ? 24 : 30;
+  if (brands?.length) {
+    return (
+      <span className={`${size === 'sm' ? 'h-10 rounded-lg px-2 gap-1.5' : 'h-12 rounded-xl px-2.5 gap-2'} shrink-0 inline-flex items-center bg-white border border-slate-200 shadow-sm`}>
+        {brands.map((id) => (
+          <Image key={id} src={BRAND_MARKS[id].src} alt={BRAND_MARKS[id].name} title={BRAND_MARKS[id].name} width={px - 2} height={px - 2} unoptimized className="object-contain" style={{ width: px - 2, height: px - 2 }} />
+        ))}
+      </span>
+    );
+  }
   return (
     <span className={`${box} shrink-0 inline-flex items-center justify-center bg-white border border-slate-200 shadow-sm`}>
       {file ? (

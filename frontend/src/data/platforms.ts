@@ -32,6 +32,38 @@ export const PLATFORMS = {
 
 export type PlatformId = keyof typeof PLATFORMS;
 
+// Square brand marks for service cards, so customers recognise a service from its logo without reading.
+// Extra marks live in /public/assets/brands (Wikimedia Commons, public domain; Simple Icons 13.21.0, CC0).
+export const BRAND_MARKS = {
+  google: { name: 'Google Search', src: '/assets/brands/google.svg' },
+  googleAds: { name: 'Google Ads', src: '/assets/platforms/google-ads.svg' },
+  googleMaps: { name: 'Google Maps', src: '/assets/brands/google-maps.svg' },
+  analytics: { name: 'Google Analytics', src: '/assets/platforms/google-analytics.svg' },
+  sheets: { name: 'Google Sheets', src: '/assets/brands/googlesheets.svg' },
+  facebook: { name: 'Facebook', src: '/assets/platforms/facebook.svg' },
+  instagram: { name: 'Instagram', src: '/assets/platforms/instagram.svg' },
+  meta: { name: 'Meta', src: '/assets/brands/meta.svg' },
+  whatsapp: { name: 'WhatsApp', src: '/assets/platforms/whatsapp.svg' },
+  youtube: { name: 'YouTube', src: '/assets/brands/youtube.svg' },
+  shopify: { name: 'Shopify', src: '/assets/brands/shopify.svg' },
+  woocommerce: { name: 'WooCommerce', src: '/assets/platforms/woocommerce.svg' },
+  wordpress: { name: 'WordPress', src: '/assets/platforms/wordpress.svg' },
+  razorpay: { name: 'Razorpay', src: '/assets/brands/razorpay.svg' },
+  nextjs: { name: 'Next.js', src: '/assets/brands/nextjs.svg' },
+  figma: { name: 'Figma', src: '/assets/platforms/figma.svg' },
+  apple: { name: 'Apple iOS', src: '/assets/brands/apple.svg' },
+  android: { name: 'Android', src: '/assets/brands/android.svg' },
+  appStore: { name: 'App Store', src: '/assets/brands/app-store.svg' },
+  googlePlay: { name: 'Google Play', src: '/assets/brands/google-play.svg' },
+  flutter: { name: 'Flutter', src: '/assets/platforms/flutter.svg' },
+  firebase: { name: 'Firebase', src: '/assets/platforms/firebase.svg' },
+} satisfies Record<string, { name: string; src: string }>;
+
+export type BrandId = keyof typeof BRAND_MARKS;
+
+// Type-checked list of brand marks for card data: `brands: logos('facebook', 'instagram')`
+export const logos = (...ids: BrandId[]) => ids;
+
 export const PLATFORM_GROUPS: { title: string; ids: PlatformId[] }[] = [
   { title: 'Ads & analytics', ids: ['googleAds', 'meta', 'facebook', 'instagram', 'whatsapp', 'analytics'] },
   { title: 'Websites & online stores', ids: ['figma', 'nextjs', 'react', 'wordpress', 'shopify', 'woocommerce', 'razorpay'] },

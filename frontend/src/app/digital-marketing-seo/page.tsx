@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Faq from '@/components/Faq';
 import LeadForm from '@/components/LeadForm';
 import { PageHero, SectionHeading, CardGrid, Steps, RelatedLinks, ContactBlock } from '@/components/ServiceSections';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing & SEO Company in Kerala | Helix24',
@@ -15,35 +16,41 @@ export const metadata: Metadata = pageMetadata({
 const services = [
   {
     icon: Search,
+    brands: logos('googleAds'),
     title: 'Google Ads',
     text: 'Search campaigns that show your business when people are already looking for what you sell, with budgets and keywords set around enquiries rather than clicks.',
     points: ['Keyword research for your city and service', 'Negative keywords to stop wasted spend', 'Call and form tracking'],
   },
   {
     icon: FileText,
+    brands: logos('google'),
     title: 'Search Engine Optimisation (SEO)',
     text: 'Fixing the technical basics, writing pages that answer what your customers search for, and building the signals that help Google trust your site.',
     points: ['Technical SEO audit and fixes', 'Service and location page content', 'Monthly ranking and traffic reports'],
   },
   {
     icon: MapPin,
+    brands: logos('googleMaps'),
     title: 'Local SEO & Google Maps',
     text: 'A complete, active Google Business Profile, consistent listings across directories and a steady flow of genuine reviews, so you show up for "near me" searches.',
     points: ['Google Business Profile setup and posts', 'Directory listings with matching details', 'Review requests from real customers'],
   },
   {
     icon: Target,
+    brands: logos('facebook', 'instagram'),
     title: 'Meta Ads',
     text: 'Facebook and Instagram campaigns that reach people before they start searching. See our social media marketing page for content and Reels.',
     points: ['Audience targeting by city or region', 'Lead forms and Click-to-WhatsApp ads', 'Creative testing'],
   },
   {
     icon: ChartColumn,
+    brands: logos('analytics'),
     title: 'Tracking & Reporting',
     text: 'Google Analytics, Meta Pixel and conversion tracking set up properly, so every report shows where your enquiries actually came from.',
   },
   {
     icon: MessageCircle,
+    brands: logos('whatsapp'),
     title: 'WhatsApp Lead Handling',
     text: 'Enquiries from ads and your website routed to WhatsApp, where most Kerala customers prefer to talk, so your team can reply quickly.',
   },

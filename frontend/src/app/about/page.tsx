@@ -5,6 +5,7 @@ import { pageMetadata, SITE_URL, WEBSITE_ID, ORG_ID, GBP_URL } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { CardGrid, whatsappLink } from '@/components/ServiceSections';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'About Helix24 Solutions | Digital Agency in Kochi, Kerala',
@@ -25,6 +26,7 @@ const principles = [
   },
   {
     icon: MessageCircle,
+    brands: logos('whatsapp'),
     title: 'Direct communication',
     text: 'You talk to the people doing the work, on WhatsApp, phone or video call, without messages passing through layers of account managers.',
   },

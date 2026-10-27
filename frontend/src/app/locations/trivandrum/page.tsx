@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import { Briefcase, Search, GraduationCap, Gauge } from 'lucide-react';
+import { Briefcase, Search, GraduationCap, Laptop } from 'lucide-react';
 import { pageMetadata } from '@/lib/seo';
 import LocationPage, { type LocationContent } from '@/components/LocationPage';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing Agency in Trivandrum | Helix24',
@@ -25,10 +26,10 @@ const content: LocationContent = {
     'That usually means search ads and SEO aimed at specific services, clear landing pages, and tracking that shows which campaigns bring qualified enquiries rather than just traffic.',
   ],
   services: [
-    { icon: Briefcase, title: 'B2B Lead Generation', text: 'Google Ads and landing pages for IT and professional services, with lead tracking.' },
+    { icon: Briefcase, brands: logos('googleAds'), title: 'B2B Lead Generation', text: 'Google Ads and landing pages for IT and professional services, with lead tracking.' },
     { icon: GraduationCap, title: 'Education & Admissions', text: 'Campaigns and pages for schools, colleges and training institutes during admission seasons.' },
-    { icon: Search, title: 'SEO', text: 'Technical fixes and content so your services rank for the searches your buyers make.' },
-    { icon: Gauge, title: 'Websites & Web Apps', text: 'Fast company websites, portals and dashboards built in Next.js.' },
+    { icon: Search, brands: logos('google'), title: 'SEO', text: 'Technical fixes and content so your services rank for the searches your buyers make.' },
+    { icon: Laptop, title: 'Websites & Web Apps', text: 'Fast company websites, portals and dashboards built in Next.js.' },
   ],
   areas: ['Technopark', 'Kazhakoottam', 'Kowdiar', 'Pattom', 'Vellayambalam', 'Kesavadasapuram', 'Kovalam', 'Neyyattinkara', 'Kollam'],
   faqs: [

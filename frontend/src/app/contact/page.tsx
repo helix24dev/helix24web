@@ -6,6 +6,7 @@ import LeadForm from '@/components/LeadForm';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import FeatureIcon from '@/components/FeatureIcon';
 import { whatsappLink } from '@/components/ServiceSections';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Contact Helix24 | Digital Marketing Agency in Kochi',
@@ -14,8 +15,8 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const details = [
-  { icon: Phone, label: 'Phone & WhatsApp', value: '+91 9048009044', href: 'tel:+919048009044' },
-  { icon: Mail, label: 'Email', value: 'hello@helix24.in', href: 'mailto:hello@helix24.in' },
+  { icon: Phone, brands: logos('whatsapp'), label: 'Phone & WhatsApp', value: '+91 9048009044', href: 'tel:+919048009044' },
+  { icon: Mail, label: 'Email', value: 'info@helix24.in', href: 'mailto:info@helix24.in' },
   { icon: MapPin, label: 'Registered office', value: 'Helix24 Solutions Pvt Ltd, Kochi, Kerala 682030, India' },
   { icon: Clock, label: 'Hours', value: 'Monday to Saturday, 9:30 AM to 7:00 PM IST' },
 ];
@@ -53,7 +54,7 @@ export default function ContactPage() {
               {details.map((d) => {
                 return (
                   <li key={d.label} className="flex items-start gap-3">
-                    <FeatureIcon icon={d.icon} size="sm" />
+                    <FeatureIcon icon={d.icon} brands={d.brands} size="sm" />
                     <span>
                       <span className="block font-semibold text-white">{d.label}</span>
                       {d.href ? (

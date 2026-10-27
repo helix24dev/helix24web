@@ -6,9 +6,6 @@ import {
   Laptop,
   Search,
   Palette,
-  Store,
-  ShoppingBag,
-  Building2,
   ShieldCheck,
   KeyRound,
   ChartColumn,
@@ -17,12 +14,13 @@ import {
   ChevronDown,
 } from 'lucide-react';
 import FeatureIcon from '@/components/FeatureIcon';
-import PlatformLogo from '@/components/PlatformLogo';
-import type { PlatformId } from '@/data/platforms';
+import CaseJourney from '@/components/CaseJourney';
+import { PROJECTS } from '@/data/projects';
 import TechEcosystemStrip from '@/components/TechEcosystemStrip';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Digital Marketing & Web Development in Kerala | Helix24',
@@ -31,41 +29,13 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function HomePage() {
-  // Project summaries without outcome figures; add confirmed client results on /results first.
-  // No illustrations: the old dashboard mock-ups looked generated. Add real screenshots only with the client's permission.
-  const selectedWorks: { sectorBadge: string; icon: typeof Store; title: string; summary: string; tags: string[]; platforms: PlatformId[]; link: string }[] = [
-    {
-      sectorBadge: 'Multi-branch retail',
-      icon: Store,
-      title: 'Connecting store enquiries across a retail group',
-      summary: 'One website with a page for each branch, local Instagram and Facebook ads, and WhatsApp routing so every enquiry reaches the right store.',
-      tags: ['Website', 'Meta Ads', 'WhatsApp routing'],
-      platforms: ['nextjs', 'meta', 'whatsapp'],
-      link: '/results',
-    },
-    {
-      sectorBadge: 'D2C online store',
-      icon: ShoppingBag,
-      title: 'Rebuilding an online store for mobile shoppers',
-      summary: 'A faster store built for checkout on a phone, accurate sales tracking, short video ads and abandoned-cart reminders on WhatsApp.',
-      tags: ['Online store', 'Video ads', 'Cart recovery'],
-      platforms: ['shopify', 'instagram', 'razorpay'],
-      link: '/results',
-    },
-    {
-      sectorBadge: 'Real estate',
-      icon: Building2,
-      title: 'Reaching NRI home buyers in the Gulf',
-      summary: 'Project landing pages and Meta lead campaigns aimed at Malayali audiences in the UAE and Saudi Arabia, with brochures sent instantly on WhatsApp.',
-      tags: ['Landing pages', 'GCC campaigns', 'WhatsApp follow-up'],
-      platforms: ['meta', 'googleAds', 'whatsapp'],
-      link: '/results',
-    },
-  ];
+  // Case studies live in src/data/projects.ts (shared with /results)
+  const selectedWorks = ['retail-group', 'd2c-store', 'real-estate'].map((id) => PROJECTS.find((p) => p.id === id)!);
 
   const capabilities = [
     {
       num: '01',
+      brands: logos('googleAds', 'facebook', 'instagram'),
       title: 'Digital Marketing',
       icon: Target,
       tagline: 'Google, Instagram & Facebook Ads',
@@ -84,6 +54,7 @@ export default function HomePage() {
     },
     {
       num: '03',
+      brands: logos('googleMaps', 'google'),
       title: 'Local SEO & Google Maps',
       icon: Search,
       tagline: 'Get Found in Local Search',
@@ -93,6 +64,7 @@ export default function HomePage() {
     },
     {
       num: '04',
+      brands: logos('figma', 'instagram'),
       title: 'Branding & Video Content',
       icon: Palette,
       tagline: 'Logos, Design & Reels',
@@ -120,6 +92,7 @@ export default function HomePage() {
     },
     {
       icon: Phone,
+      brands: logos('whatsapp'),
       title: 'Talk to the People Doing the Work',
       text: 'Reach the team directly on WhatsApp or phone at +91 9048009044. No call centres and no account managers passing messages along.',
     },
@@ -171,7 +144,7 @@ export default function HomePage() {
     },
     {
       q: 'How do I get started with Helix24?',
-      a: 'Message us on WhatsApp or call +91 9048009044, email hello@helix24.in, or send your details through the contact form. We review your current website and ads and send a proposal for your business within 24 hours.',
+      a: 'Message us on WhatsApp or call +91 9048009044, email info@helix24.in, or send your details through the contact form. We review your current website and ads and send a proposal for your business within 24 hours.',
     },
   ];
 
@@ -264,44 +237,32 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {selectedWorks.map((work) => (
             <Link
-              key={work.title}
-              href={work.link}
-              className="glass-panel p-8 flex flex-col justify-between gap-8 border border-slate-200 hover:border-purple-300 transition-all group bg-white"
+              key={work.id}
+              href="/results"
+              className="glass-panel p-7 flex flex-col gap-5 border border-slate-200 hover:border-purple-300 transition-all group bg-white"
             >
-              <div className="space-y-5">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <FeatureIcon icon={work.icon} />
-                    <span className="text-xs font-mono uppercase tracking-wider text-slate-600 font-bold">
-                      {work.sectorBadge}
-                    </span>
-                  </div>
-                  <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-purple-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <FeatureIcon icon={work.icon} />
+                  <span className="text-xs font-mono uppercase tracking-wider text-slate-600 font-bold">
+                    {work.sector}
+                  </span>
                 </div>
+                <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-purple-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              </div>
 
+              <div className="space-y-2">
                 <h3 className="text-xl font-bold text-slate-900 group-hover:text-purple-700 transition-colors leading-snug font-heading">
                   {work.title}
                 </h3>
-
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  {work.summary}
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <strong className="text-slate-900">The problem:</strong> {work.problem}
                 </p>
               </div>
 
-              <div className="space-y-4 pt-5 border-t border-slate-100">
-                <div className="space-y-2">
-                  <span className="text-xs font-semibold text-slate-500 block">Built with</span>
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                    {work.platforms.map((id) => <PlatformLogo key={id} id={id} size="sm" />)}
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {work.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-slate-700 font-semibold">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className="space-y-2.5 pt-4 border-t border-slate-100">
+                <span className="text-xs font-semibold text-slate-500 block">How their customers find them now</span>
+                <CaseJourney steps={work.journey} compact />
               </div>
             </Link>
           ))}
@@ -332,7 +293,7 @@ export default function HomePage() {
                 <div className="space-y-5">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <FeatureIcon icon={item.icon} />
+                      <FeatureIcon icon={item.icon} brands={item.brands} />
                       <div>
                         <span className="text-xs font-mono text-purple-700 font-bold block uppercase tracking-wider">
                           {item.tagline}
@@ -398,7 +359,7 @@ export default function HomePage() {
                 key={point.title}
                 className="glass-panel p-7 sm:p-8 flex gap-5 border border-purple-200 bg-white/70"
               >
-                <FeatureIcon icon={point.icon} />
+                <FeatureIcon icon={point.icon} brands={point.brands} />
                 <div className="space-y-2">
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-heading">{point.title}</h3>
                   <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{point.text}</p>

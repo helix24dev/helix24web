@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Faq from '@/components/Faq';
 import LeadForm from '@/components/LeadForm';
 import { PageHero, SectionHeading, CardGrid, RelatedLinks, ContactBlock } from '@/components/ServiceSections';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Branding & UI/UX Design Agency in Kochi | Helix24',
@@ -26,16 +27,19 @@ const services = [
   },
   {
     icon: PencilRuler,
+    brands: logos('figma'),
     title: 'Website & App Design (UI/UX)',
     text: 'Page and screen designs in Figma, built around what your customers need to find and do.',
   },
   {
     icon: Clapperboard,
+    brands: logos('instagram', 'youtube'),
     title: 'Reels & Video Ads',
     text: 'Short vertical videos and motion graphics for Instagram, Facebook and YouTube Shorts, planned around a clear opening hook.',
   },
   {
     icon: ImageIcon,
+    brands: logos('instagram', 'facebook'),
     title: 'Social Media Creatives',
     text: 'Post, carousel and ad designs in your brand style, ready for organic posting or paid campaigns.',
   },

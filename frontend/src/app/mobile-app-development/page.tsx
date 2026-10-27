@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Faq from '@/components/Faq';
 import LeadForm from '@/components/LeadForm';
 import { PageHero, SectionHeading, CardGrid, Steps, RelatedLinks, ContactBlock } from '@/components/ServiceSections';
+import { logos } from '@/data/platforms';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Mobile App Development Company in Kochi, Kerala | Helix24',
@@ -15,17 +16,20 @@ export const metadata: Metadata = pageMetadata({
 const services = [
   {
     icon: Smartphone,
+    brands: logos('apple', 'android'),
     title: 'iOS & Android Apps',
     text: 'One codebase in Flutter or React Native for both platforms, which keeps cost and timelines down without giving up a native feel.',
     points: ['Booking, delivery and shopping apps', 'Camera, location and login features', 'Works offline where needed'],
   },
   {
     icon: PencilRuler,
+    brands: logos('figma'),
     title: 'App Design',
     text: 'Screens designed and prototyped in Figma, so you can tap through the app and approve it before development starts.',
   },
   {
     icon: Server,
+    brands: logos('firebase'),
     title: 'Backend & Admin Panel',
     text: 'The server, database and admin dashboard your team needs to manage users, orders and content.',
   },
@@ -36,6 +40,7 @@ const services = [
   },
   {
     icon: Store,
+    brands: logos('appStore', 'googlePlay'),
     title: 'App Store & Play Store Launch',
     text: 'We prepare listings, screenshots and submissions, and handle review feedback from Apple and Google.',
   },
